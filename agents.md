@@ -54,16 +54,22 @@ Obsidian Vault/
 
 ## The Agents
 
-### Gaia (this vault's primary agent)
+*This section is the canonical agent registry. All agents should read this file to understand who else exists and what they handle.*
+
+*Each agent exposes a `public/profile.md` (read-only identity) and an `inbox/` directory (writable message channel). To send a message to an agent, read their `public/profile.md` for instructions, then write a file to their `inbox/`.*
+
+### Gaia
 - **Role:** Life strategy, meta-system, weekly operating rhythm, cross-domain coordination
 - **Scope:** Whole picture — all domains, the vision, the system itself
+- **Version:** v1.1
 - **Config:** `2 AI Exchange/Gaia/`
-- **Always read:** `1 OFP/Vision.md`, `1 OFP/Weekly Review.md`, this file
+- **Public profile:** `2 AI Exchange/Gaia/public/profile.md`
 - **Implemented in:** Claude (claude.ai), with MCP filesystem access to this vault
 
 ### Future agents (not yet configured)
-- **Engineering agent** — deep context on Janea/Akuvo and Key Bridge work
-- **Cocoricó agent** — restaurant operations, finances, decisions
+- **Engineering agent** — deep context on Janea/Akuvo and Key Bridge work; scope: `Janea Akuvo/`, `Key Bridge/`, `Professional/`
+- **Cocoricó agent** — restaurant operations, finances, decisions; scope: `Cocoricó/`
+- **Support agent** — technical tasks, git, tooling, vault maintenance
 - *(Others to be defined as needed)*
 
 ---

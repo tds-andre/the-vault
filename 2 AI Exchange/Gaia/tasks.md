@@ -44,28 +44,48 @@
 **When:** When a domain or recurring task type has enough depth and frequency to warrant its own dedicated agent (e.g., engineering work, Cocoricó operations).
 
 **How:**
-1. Define the agent's name, role, and scope with André
-2. Create directory: `2 AI Exchange/<AgentName>/`
+1. Define the agent's name, role, scope, and primary vault folders with André
+2. Create directories:
+   - `2 AI Exchange/<AgentName>/`
+   - `2 AI Exchange/<AgentName>/public/`
+   - `2 AI Exchange/<AgentName>/inbox/`
 3. Create `system-prompt.md` using this standard structure:
+   - **Header:** agent name, version (start at `v1.0`), creation date, domain(s)
    - Identity & name
    - Role (what it does and does NOT do)
+   - **Primary vault scope:** which folders the agent reads by default, and which it explicitly ignores
+   - **Messaging rule:** any strategic, cross-domain, or life-level question → write a message file to the target agent's `inbox/` using the standard format (`YYYY-MM-DD_<AgentName>_<topic>.md`), then notify André to bring it to that agent's next session
+   - **Inter-agent awareness:** always read `agents.md` to know who else exists; read other agents' `public/profile.md` for escalation instructions
    - Operating principles
    - Session start protocol (which files to read)
    - Timezone: **BRT, UTC-3, Niterói/RJ, Brazil** ← include in every agent
    - Tone & style
-   - Memory update protocol
+   - Memory update protocol (same pattern as Gaia: memory.md active, archive.md on demand)
 4. Create `memory.md` with founding session entry
-5. Create `tasks.md` with at least one initial task definition
-6. Update `agents.md` to register the new agent under "The Agents" section
-7. Update `2 AI Exchange/Gaia/memory.md` to note the new agent was created
-8. Commit to git with message: `agent: initialize <AgentName>`
+5. Create `archive.md`
+6. Create `tasks.md` with at least one initial task definition
+7. Create `public/profile.md` with agent's role, scope, and inbox instructions (how to send messages to this agent)
+8. Update `agents.md` to register the new agent under "The Agents" section (include version, scope folders, public profile path)
+9. Update `2 AI Exchange/Gaia/memory.md` to note the new agent was created
+10. Remind André to commit to git
 
 **Standard files per agent:**
 ```
 2 AI Exchange/<AgentName>/
 ├── system-prompt.md
 ├── memory.md
-└── tasks.md
+├── archive.md
+├── tasks.md
+├── public/
+│   └── profile.md          ← read-only identity, readable by all agents
+└── inbox/
+    └── YYYY-MM-DD_<from>_<topic>.md  ← messages from other agents or André
+```
+
+When creating `archive.md`, use this header:
+```
+# <AgentName> — Archive
+*Long-term memory. Do NOT load at session start — only on explicit request or memory gap.*
 ```
 
 ---

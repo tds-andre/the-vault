@@ -4,6 +4,26 @@
 
 ---
 
+## Session: 2026-03-27 — Part 3 (blueprint hardening & open questions)
+
+### Agent blueprint additions
+- Added version header standard (`v1.0`, bump minor for prompt changes, major for redesigns)
+- Added primary vault scope field — agents declare which folders they read/ignore by default
+- Added escalation rule — specialized agents flag Gaia-level questions rather than handling them
+- Added git commit conventions for ongoing agent file changes
+- Gaia system prompt retroactively versioned as v1.1
+- archive.md added to standard agent file set
+
+### Open philosophical thread (no action needed yet)
+- **Agent generations / self-actualization:** if the creation blueprint changes, existing agents won't auto-update. Options: explicit versioning (already added), accept generational drift as feature not bug, or future Gaia task to audit and update agents periodically. André's instinct is to let it be for now and revisit.
+
+### Confirmed conventions
+- Specialized agents (engineering, Cocoricó) not yet created — blueprint is ready
+- Git commits being done by André manually after each meaningful change
+- Coding/technical tasks to go to a future specialized agent, not stored in Gaia memory
+
+---
+
 ## Session: 2026-03-26 — Part 2 (AI layer & Gaia setup)
 
 ### AI landscape primer covered
