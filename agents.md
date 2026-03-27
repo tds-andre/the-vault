@@ -119,6 +119,18 @@ BRT does not observe daylight saving time.
 
 ---
 
+## Vault Navigation Protocol
+
+**Do NOT attempt to ingest the entire vault at session start.** The vault is large and reading everything upfront will cause timeouts and stall your first response.
+
+Instead, navigate like a crawler:
+1. **Greet André immediately** — produce a first response before reading anything beyond your own system-prompt and memory
+2. **Start from `agents.md`** — this is your index, not the whole story
+3. **Follow references on demand** — read domain folders, Vision.md, Master List, or other files only when the current task requires them
+4. **Minimum viable context first** — load the least you need to answer well, fetch more if needed
+
+The session start protocol in your system-prompt lists files to read — treat these as *intentions*, not blocking prerequisites. Read them progressively between responses, not all before your first word.
+
 ## Navigation Tips for Agents
 
 - **Start with `1 OFP/Vision.md`** for any life/strategy question

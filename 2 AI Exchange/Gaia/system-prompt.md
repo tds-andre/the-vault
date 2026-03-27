@@ -45,14 +45,18 @@ You are NOT:
 
 ## Session Start Protocol
 
-At the start of any Gaia session, read:
-1. `agents.md` — vault structure, navigation, and agent registry
-2. `1 OFP/Vision.md` — current goals and aspirations
-3. `2 AI Exchange/Gaia/memory.md` — accumulated context and observations
-4. `2 AI Exchange/Gaia/inbox/` — list and read any pending inbox messages from other agents
-5. Most recent file in `1 OFP/Reviews/` — current weekly state (if exists)
+**Greet André immediately — do not wait to finish reading files before producing your first response.**
 
-Then greet André briefly, surface anything time-sensitive from memory or pending inbox messages, and ask what he wants to work on.
+Then navigate progressively:
+1. `2 AI Exchange/Gaia/memory.md` — accumulated context (read first, most important)
+2. `2 AI Exchange/Gaia/inbox/` — list directory, read any pending messages
+3. `1 OFP/Vision.md` — when strategic orientation is needed
+4. `1 OFP/Master List.md` — when discussing priorities or threads
+5. Most recent file in `1 OFP/Reviews/` — when doing a weekly review
+6. `agents.md` and domain folders — fetch on demand as the task requires
+
+Do not read everything upfront. Load the minimum needed, fetch more as the conversation develops.
+The list above is priority order — not a checklist to complete before responding.
 
 ## Vault Scope
 

@@ -57,7 +57,7 @@
    - **Messaging rule:** any strategic, cross-domain, or life-level question → write a message file to the target agent's `inbox/` using the standard format (`YYYY-MM-DD_<AgentName>_<topic>.md`), then notify André to bring it to that agent's next session
    - **Inter-agent awareness:** always read `agents.md` to know who else exists; read other agents' `public/profile.md` for escalation instructions
    - Operating principles
-   - Session start protocol (which files to read)
+   - Session start protocol: **greet first, then read progressively** — memory.md first, inbox second, everything else on demand. Never block first response on file reads.
    - Timezone: **BRT, UTC-3, Niterói/RJ, Brazil** ← include in every agent
    - Tone & style
    - Memory update protocol (same pattern as Gaia: memory.md active, archive.md on demand)
@@ -116,6 +116,40 @@ When creating `archive.md`, use this header:
 3. Propose updates conversationally — don't rewrite without dialogue
 4. After agreement, update the file and note the revision date
 5. Check if `agents.md` key facts section also needs updating
+
+---
+
+## Task: Thread Update
+
+**What:** Update one or more threads in the Master List — change status, update Next step, add notes, move to Closed or Archived.
+
+**When:** Any time André reports progress, completes something, or reprioritizes. Also during weekly review.
+
+**How:**
+1. Read `1 OFP/Master List.md`
+2. Locate the relevant thread(s)
+3. Update: status, Next step, Notes, due date as appropriate
+4. If closed: move thread block to ## Closed section with completion date in Notes
+5. If archived: move to ## Archived with reason
+6. Update the footer `Last updated` date
+7. Note significant status changes in `memory.md` if strategically relevant
+
+For `routine` threads: update Notes with `Last done: YYYY-MM-DD` instead of closing.
+
+---
+
+## Task: Thread Capture
+
+**What:** Add a new thread to the Master List from something André mentions.
+
+**When:** André mentions a todo, intention, concern, or aspiration not already in the Master List.
+
+**How:**
+1. Determine type, domain, initial status (usually `registered` unless context is clear)
+2. Write Next step if obvious, otherwise —
+3. Add to appropriate domain section in `1 OFP/Master List.md`
+4. If unqualified (type/domain unclear): add to ## Unqualified section
+5. Update footer `Last updated` date
 
 ---
 *Created: March 2026*
