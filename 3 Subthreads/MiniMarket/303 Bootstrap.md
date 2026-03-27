@@ -1,0 +1,29 @@
+## O que precisa para o primeiro mini-mercado?
+- Local
+- Estrutura jurídica
+	- CNPJ/Contrato social
+- Infraestrutura
+	- Marcenaria
+	- Equipamentos
+	- Internet
+		- Ethernet e/ou wifi local
+		- Própria com chip m2m?
+- Sistemas
+	- Integração: totem físico, POS (maquininha+banco), PDV (vendas), ERP (inventário)
+	- Totem físico (hardware)
+		- Mesa auxiliar (colocar compras, etc)
+		- Impressora fiscal
+		- Tela
+		- Computador com ethernet ou wifi (ambos de preferência, de redes distintas)
+		- Leitor de código de barras
+	- ERP (Inventário, APIs para integração)
+	- PDV integrado ao POS
+		- De preferência com Pix próprio e sem taxas
+	- Consulta online de itens (p/ clientes, tipo cardapio digital mas sem checkout)
+- Marketing
+	- Cardápdio/produtos e fornecimento
+	- (Opcional) Nome, marca e identidade (AI)
+	- (Opcional) Site institucional (AI) + dominio + host
+- Operações/logística
+	- Monitoramento de inventário
+	- 1 cabrone com carro para fazer compras/recebimentos e abastecimentos de madrugada

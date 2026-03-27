@@ -1,0 +1,66 @@
+## Vision
+- 007
+
+## OKRs
+- Pretty Face
+	- Teeth
+		- [ ] Whitening
+		- [ ] Implants
+- Shaped Body
+	- Tattoo
+	- Gym
+		- [ ] Reach 87kg by December
+		- [ ] Reach 85kg by January
+		- [ ] Reach 82kg by February and 23%BF
+	- Diet
+- Professional
+
+## Short Term Goals
+- [ ] ~~Pass at Google~~
+	- [ ] ~~Read resources~~
+	- [ ] ~~Practice/exercises~~
+- [x] Stay at Keybridge: do a good job and change Jesses mind by December
+	- [ ] Become a Java asset
+	- [ ] Become an operations asset
+	- [ ] Become an ESC asset
+	- [x] Become a Map/Viz asset
+- [ ] Become more professionally attractive
+	- [ ] Write long posts
+	- [ ] Read books
+	- [ ] Do courses
+	- [ ] Go to events/networking
+- [ ] ~~Upsell Energisa~~
+	- [ ] ~~Next Step~~
+		- [ ] ~~Documentation Reintegration~~
+			- [ ] ~~Redo readmes (install, system/infra requirements, configs)~~
+			- [ ] ~~Cleanup (data & code directories)~~
+	- [ ] ~~Training~~
+		- [ ] ~~Document Reintegration~~
+		- [ ] ~~Overall Prefect 3 archtecture~~
+	- [ ] ~~Closing Presentation~~
+		- [ ] ~~Scope & Issues Analysis~~
+			- [ ] ~~Non-Issues x New Code Issues x Per Flow Normalization~~
+		- [ ] ~~Documentation Reintegration~~
+			- [ ] ~~Documentation suggestions with code review cycles~~
+		- [ ] ~~Recommendations~~
+			- [ ] ~~Why ? How it helps? In numbers (create fear)~~
+			- [ ] ~~Currently they pay $8000 per year = 40k~~
+			- [ ] ~~Pay me 80k and I improve the systems and get rid of prefect~~
+			- [ ] ~~Other meeting just with the decision-maker~~
+				- [ ] ~~How do you feel?~~
+				- [ ] ~~Future proofyourself~~
+				- [ ] ~~**Build internal capability**~~
+					- [ ] ~~Pair programming~~
+					- [ ] ~~Code reviews~~
+					- [ ] ~~1 Python lesson per week (2h)~~
+		- [ ] ~~How can I help?~~
+			- [ ] ~~Do by myself~~
+			- [ ] ~~Train, architect, mentor and review~~
+- [ ] Implant Invisalign & get started in other aesthetics process
+- [ ] Chicken
+	- [ ] Leverage Father to do a basic continuous improvement and evaluation routine
+	- [ ] Delegate extra activites to Anna (Adm) and Max (Supply)
+	- [ ] Delegate Marketing 
+	- [ ] Change iFood contract
+	- [ ] Change CNPJ and formalize Henrique
+

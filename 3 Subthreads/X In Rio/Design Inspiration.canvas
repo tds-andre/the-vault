@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"66210c2a24f29a6d","type":"file","file":"3 Subthreads/X In Rio/Pasted image 20251107150258.png","x":-540,"y":-300,"width":400,"height":265},
+		{"id":"86611f301cec5010","type":"text","text":"- Multicolored gradient\n- Big fucking image\n- Impact text\n- Topnav (logo, nav, CTA)","x":-540,"y":-35,"width":250,"height":140},
+		{"id":"4043d998689a963b","type":"file","file":"3 Subthreads/X In Rio/Pasted image 20251107150410.png","x":-20,"y":-300,"width":400,"height":230},
+		{"id":"49b02671f44d3e0a","type":"text","text":"- Multicolored gradient\n- Topnav (logo, nav, CTA)\n- 2xCTA: lets talk (no price)\n","x":-20,"y":-70,"width":250,"height":140}
+	],
+	"edges":[]
+}

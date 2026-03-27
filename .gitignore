@@ -1,0 +1,25 @@
+# Obsidian workspace state — changes constantly, not meaningful in history
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# Image attachments — binary files, bloat the repo
+# Comment these out if you want image history
+**/attachments/*.png
+**/attachments/*.jpg
+**/attachments/*.jpeg
+**/attachments/*.gif
+**/attachments/*.webp
+Pasted image*.png
+Pasted image*.jpg
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary/swap files
+*.tmp
+*.swp
+*~

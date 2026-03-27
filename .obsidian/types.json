@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "myprop": "multitext",
+    "otherprop": "text",
+    "Acquisition": "date",
+    "Nominal Value": "number",
+    "next action": "checkbox",
+    "done": "checkbox"
+  }
+}

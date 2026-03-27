@@ -1,0 +1,37 @@
+**10/12**
+- It is a cashflow delta prediction
+	- We could predict the delta (sequence-to-sequence), or statistics of the delta (e.g., peak, average)
+- Do we have data of the debt collection actions?
+	- What other non-regression data do we have?
+- Fourier analysis
+- Why do we want to predict that? What decisions would be made or automated based on that?
+- ![](Pasted%20image%2020251210111609.png)
+	- Is y-axis related only to that installment?
+- !Should cluster the clients - based on what?
+- ![](Pasted%20image%2020251210113825.png)
+	- !DqDays don't matter
+	- But intensity can by anywhere in the future - is that useful?
+	- Related that to actions
+	- Makes sense next and overall
+		- Debt collector actions
+		- Borrower patterns
+	- example action: duration: make it current + a fee
+	- example action: list by risk (duration + intensity)
+	- example action: more cost efficient actions (given the expected duration)
+	- a prior stats x updated stats
+	- ! suggest more actionable customers
+	- Do we have internal technical meetings?
+	- It seems there is no clear requirement/decision/action - is more of: given the data/tech we have, what can we provide the collect so he can do his job more effectively?
+		- The overall goal of the business is to make people pay on time
+			- If we can predict behavior, we can manage risk
+			- If we can correlate collector actions with behavior, we can reduce risk
+- Apriori cohorts (keep sample size > 1000)
+	- Descriptive: general/contract
+	- Personal
+	- Updated
+
+- It seems there is no clear requirement/decision/action - is more of: given the data/tech we have, what can we provide the collect so he can do his job more effectively?
+	- The overall goal of the business is to make people pay on time
+		- If we can predict behavior, we can assess/**measure risk**
+			- Useful for strategic risk management: lend more or be more strict
+		- If we can correlate collector actions with behavior, we can **reduce risk**
