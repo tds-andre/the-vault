@@ -4,6 +4,41 @@
 
 ---
 
+## Session: 2026-03-27 — Part 5 (day wrap-up & Janea prep)
+
+### Janea escalation analysis
+- André has a 10am meeting on the Escalation feature
+- Notebook `25_escalation.ipynb` reviewed — data from COMFIRSTCU (prod-33), Feb 2026
+- **Key proven numbers:**
+  - 37,337 accounts / 37,174 people
+  - 18% of people have 2+ accounts; 37% of accounts have escalation potential
+  - 33% of multi-account holders were DQ in more than one account
+  - Multi-account people are 1.3x more likely to go DQ
+  - Shared accounts 1.2x more likely to go DQ; 30% more DQ episodes
+- **What's missing:** outcome analysis (charge-offs, repossessions, timing of escalation detection)
+- **Recommendation given:** present existing numbers as Phase 1 (prevalence confirmed), position outcome analysis as next step — do NOT try to produce missing numbers at 4am
+- KB meeting at 9:30am (Jesse feedbacks) not yet addressed — ran out of time
+
+### Gaia name origin confirmed
+- André took the name from the video game Horizon (Horizon Zero Dawn / Forbidden West)
+- Horizon's Gaia is a meta-system overseeing and coordinating all subsystems — maps precisely to this agent's role
+- Horizon in turn drew from the Greek primordial goddess
+
+### Session context
+- André was working at 4am BRT, tired, with back-to-back meetings starting 9:30am
+- Recruiter intro video promised for today — risk of being forgotten under meeting pressure
+- Cocoricó packages — online buy, needs to happen today
+- Henrique likely to send annoying messages in the morning re: salary anticipation
+
+### Reminders for next session
+- ⚠️ Commit to git
+- Set up Claude Projects for Gaia, Alex, Ben, Apollo
+- KB: what were Jesse's specific feedbacks? Pre-compute estimates for US-wide scenes?
+- Restaurant decision session with Ben — schedule before June/July deadline
+- Toggl data review — 1-2 more weeks of tracking first
+
+---
+
 ## Session: 2026-03-27 — Part 4 (agent creation)
 
 ### Agents created
