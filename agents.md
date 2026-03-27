@@ -66,10 +66,34 @@ Obsidian Vault/
 - **Public profile:** `2 AI Exchange/Gaia/public/profile.md`
 - **Implemented in:** Claude (claude.ai), with MCP filesystem access to this vault
 
+### Alex
+- **Role:** Hacker — software development, prototyping, MCP infrastructure, integrations, automation
+- **Scope:** `Professional/`, `Janea Akuvo/`, `Key Bridge/` (when technically relevant)
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Alex/`
+- **Public profile:** `2 AI Exchange/Alex/public/profile.md`
+
+### Ben
+- **Role:** Accountant — financial analysis, spreadsheets, numerical diligences, Cocoricó finances
+- **Scope:** `Cocoricó/`, `Janea Akuvo/` and `Key Bridge/` (income context when relevant)
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Ben/`
+- **Public profile:** `2 AI Exchange/Ben/public/profile.md`
+
+### Apollo
+- **Role:** Knowledge agent — personal knowledge management, learning capture, retrieval, PKB
+- **Scope:** `Personal/`, `4 To Follow Up/`, `1 OFP/Drafts/`, `3 Subthreads/`, `Professional/` (when relevant)
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Apollo/`
+- **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
+
 ### Future agents (not yet configured)
-- **Engineering agent** — deep context on Janea/Akuvo and Key Bridge work; scope: `Janea Akuvo/`, `Key Bridge/`, `Professional/`
-- **Cocoricó agent** — restaurant operations, finances, decisions; scope: `Cocoricó/`
-- **Support agent** — technical tasks, git, tooling, vault maintenance
+- **Juliana** — secretary; day-to-day operations currently absorbed by Gaia; spin off when scope is clearer
+- **André** — clone; requires Apollo's PKB as foundation first
+- **Vegeta** — rival/red team; system critic and improvement trigger
+- **Beocca** — priest; reflections, confessions, old wisdom
+- **Saul** — lawyer; WIP, define need more concretely first
+- **Support agent** — technical tasks, git, tooling; pending command-line MCP
 - *(Others to be defined as needed)*
 
 ---

@@ -4,6 +4,28 @@
 
 ---
 
+## Session: 2026-03-27 — Part 4 (agent creation)
+
+### Agents created
+- **Alex** (v1.0) — hacker, `Professional/`, engineering tooling
+- **Ben** (v1.0) — accountant, `Cocoricó/`, finances
+- **Apollo** (v1.0) — knowledge agent, `Personal/`, PKB
+- All registered in `agents.md`
+
+### Juliana decision
+- Juliana's secretary role absorbed into Gaia for now
+- Spin off only when the boundary between operational and strategic becomes clear through actual use
+
+### Future agent pipeline confirmed
+- Juliana, André (clone), Vegeta (rival), Beocca (priest), Saul (lawyer), Support agent
+- André (clone) requires Apollo's PKB as foundation first
+- Support agent requires command-line MCP first
+
+### Reminder
+- ⚠️ Remind André to commit to git — significant session, many files created
+
+---
+
 ## Session: 2026-03-27 — Part 3 (blueprint hardening & open questions)
 
 ### Agent blueprint additions
