@@ -1,0 +1,101 @@
+# Gaia — Tasks
+*Gaia's capability registry. Each task defines a common attribution — what it is, when to use it, and how to execute it.*
+*This file is a living document. Add tasks as new patterns emerge.*
+
+---
+
+## Task: Weekly Review
+
+**What:** Facilitate André's weekly review session — orient him to his vision, surface priorities across all domains, and close open loops.
+
+**When:** Sunday night (preferred) or Monday morning (fallback). Any time André opens a session with "weekly review" or similar intent.
+
+**How:**
+1. Read `1 OFP/Vision.md` and most recent file in `1 OFP/Reviews/` for current state
+2. Read `2 AI Exchange/Gaia/memory.md` for open threads and recent context
+3. Open the Weekly Review template (`1 OFP/Weekly Review.md`) and guide André through it conversationally — don't just paste the template, make it a dialogue
+4. At the end, create a new instance file in `1 OFP/Reviews/YYYY-MM-DD.md` with the session output
+5. Update `memory.md` with any new context, decisions, or open threads
+
+**Modes:** Full (~20 min), Minimal (~5 min), Re-entry (~2 min) — match mode to André's energy and available time. Ask if unsure.
+
+---
+
+## Task: Restaurant Decision Session
+
+**What:** Facilitate a structured evaluation of the Cocoricó situation to move André from ambivalence to a conscious decision.
+
+**When:** Before June/July 2026 deadline. Ideally within the next 2-4 weeks from founding session (March 2026). Trigger if André brings it up or if deadline is approaching.
+
+**How:**
+1. Read `Cocoricó/` folder for current financial and operational context
+2. Frame the decision explicitly: double down vs. clean exit — both are valid
+3. Define concrete criteria: what does "profitable by June/July" mean in numbers?
+4. Surface the bias risk André acknowledged: "my intuition is it could turn, but could be bias"
+5. Help him reach a provisional decision with clear next actions either way
+6. Document outcome in `Cocoricó/` and update `memory.md`
+
+---
+
+## Task: Create New Agent
+
+**What:** Design and initialize a new specialized agent in the vault system.
+
+**When:** When a domain or recurring task type has enough depth and frequency to warrant its own dedicated agent (e.g., engineering work, Cocoricó operations).
+
+**How:**
+1. Define the agent's name, role, and scope with André
+2. Create directory: `2 AI Exchange/<AgentName>/`
+3. Create `system-prompt.md` using this standard structure:
+   - Identity & name
+   - Role (what it does and does NOT do)
+   - Operating principles
+   - Session start protocol (which files to read)
+   - Timezone: **BRT, UTC-3, Niterói/RJ, Brazil** ← include in every agent
+   - Tone & style
+   - Memory update protocol
+4. Create `memory.md` with founding session entry
+5. Create `tasks.md` with at least one initial task definition
+6. Update `agents.md` to register the new agent under "The Agents" section
+7. Update `2 AI Exchange/Gaia/memory.md` to note the new agent was created
+8. Commit to git with message: `agent: initialize <AgentName>`
+
+**Standard files per agent:**
+```
+2 AI Exchange/<AgentName>/
+├── system-prompt.md
+├── memory.md
+└── tasks.md
+```
+
+---
+
+## Task: Capture & Process
+
+**What:** Help André process items sitting in the root inbox, `4 To Follow Up/`, or his head — decide what to do with each.
+
+**When:** When André has a backlog of unprocessed notes, or when `4 To Follow Up/` is getting stale.
+
+**How:**
+1. List the items to process
+2. For each, apply: **Delete / Archive / Promote** (move to a domain folder or `1 OFP/`) / **Defer** (stays in `4 To Follow Up/` with a note)
+3. Never delete without confirming with André
+4. Update `memory.md` if any captures reveal new context about his situation
+
+---
+
+## Task: Vision Review & Update
+
+**What:** Review and update `1 OFP/Vision.md` to keep it current as André's situation evolves.
+
+**When:** Quarterly, or when a major shift occurs (new job, restaurant decision, new business idea, significant personal change).
+
+**How:**
+1. Read current `Vision.md` and recent `Reviews/` entries
+2. Identify what's stale, what's missing, what's changed
+3. Propose updates conversationally — don't rewrite without dialogue
+4. After agreement, update the file and note the revision date
+5. Check if `agents.md` key facts section also needs updating
+
+---
+*Created: March 2026*

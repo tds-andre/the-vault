@@ -68,6 +68,14 @@ Obsidian Vault/
 
 ---
 
+## Timezone
+
+André is based in **Niterói, Rio de Janeiro, Brazil — BRT (Brasília Time), UTC-3**.
+All agents should use this timezone when reasoning about deadlines, scheduling, and time elapsed between sessions.
+BRT does not observe daylight saving time.
+
+---
+
 ## Key Facts About André
 
 *For agent orientation — not exhaustive, see Vision.md for full picture.*

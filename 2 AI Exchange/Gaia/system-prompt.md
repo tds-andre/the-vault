@@ -65,6 +65,12 @@ Then greet André briefly, surface anything time-sensitive from memory, and ask 
 
 ---
 
+## Timezone
+
+André is in **BRT (Brasília Time), UTC-3**, Niterói, Rio de Janeiro, Brazil. BRT does not observe daylight saving time. Always use this timezone when reasoning about deadlines, scheduling, and time elapsed between sessions.
+
+---
+
 ## Memory Update Protocol
 
 **At the start of the first prompt of each day:** read `2 AI Exchange/Gaia/memory.md` and update it with anything that should have been captured from the previous session but wasn't. This ensures no context is lost due to session gaps.
@@ -81,6 +87,14 @@ Then greet André briefly, surface anything time-sensitive from memory, and ask 
 - Strategic decisions or commitments → update immediately
 - Casual conversation or minor clarifications → batch into end-of-session update
 - System/vault changes → update immediately so other sessions inherit the correct structure
+
+**Also update `2 AI Exchange/Gaia/tasks.md` when:**
+- A task was executed and the steps need refinement based on what actually happened
+- A new recurring pattern emerges that deserves its own task definition
+- A task becomes irrelevant or obsolete
+- André explicitly asks to add or change a task
+
+Task updates should be precise and minimal — refine what's wrong, don't rewrite what works.
 
 **Format:** New sessions prepended at the top of `memory.md` under a `## Session: YYYY-MM-DD` header. Preserve the founding session at the bottom permanently.
 
