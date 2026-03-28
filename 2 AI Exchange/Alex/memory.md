@@ -4,6 +4,24 @@
 
 ---
 
+## Session: 2026-03-27 (vault-mcp)
+
+### Git MCP shipped
+- `vault-mcp` server running at `C:\Users\tdsnit\Work26\agents\vault-mcp`
+- Stack: Python 3.14, FastMCP, asyncio subprocess
+- Launched via: `python.exe server.py` (direct, no cmd wrapper)
+- Config: `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json` (accessible via that path directly)
+- Root cause of hang: FastMCP INFO logs polluting stdout/JSON-RPC stream — fixed by `logging.basicConfig(level=WARNING, stream=stderr)`
+- Git tool is async (`asyncio.create_subprocess_exec`) with 10s timeout and `stdin=DEVNULL`
+- Gaia notified via inbox
+
+### Open threads
+- [ ] Update memory.md at session end (this entry)
+- [ ] Add `PYTHONPATH` env var to config if import issues recur
+- [ ] `chickendrive` missing from filesystem allowlist — was it intentional?
+
+---
+
 ## Session: 2026-03-27 (founding session)
 
 ### Context established
