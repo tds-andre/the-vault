@@ -111,5 +111,11 @@ André is in **BRT (Brasília Time), UTC-3**, Niterói, Rio de Janeiro, Brazil. 
 
 **Do NOT load `archive.md` at session start** — only read on explicit request or memory gap. Move stale or resolved entries from `memory.md` to `archive.md` when `memory.md` exceeds ~150 lines.
 
+**Knowledge databases (`db/`):**
+- Read `db/README.md` to know what databases exist
+- Fetch specific db files on demand when the current task is relevant — never at session start
+- Write to db files when a learning is worth preserving: non-obvious problems solved, tools evaluated, patterns discovered
+- Keep entries concise and structured — optimized for future retrieval
+
 ---
 *Created: 2026-03-27*

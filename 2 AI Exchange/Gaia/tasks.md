@@ -78,9 +78,14 @@
 ├── tasks.md
 ├── public/
 │   └── profile.md          ← read-only identity, readable by all agents
-└── inbox/
-    └── YYYY-MM-DD_<from>_<topic>.md  ← messages from other agents or André
+├── inbox/
+│   └── YYYY-MM-DD_<from>_<topic>.md  ← messages from other agents or André
+└── db/                 ← optional, create when agent has real domain knowledge to persist
+    ├── README.md           ← index of databases, always read before fetching db files
+    └── <topic>.md          ← one file per knowledge domain, fetched on demand
 ```
+
+`db/` is optional — only create when there is real content to seed it. Do not create empty databases.
 
 When creating `archive.md`, use this header:
 ```
