@@ -4,6 +4,23 @@
 
 ---
 
+## Session: 2026-03-27 — Part 6 (git automation live)
+
+### vault-mcp operational
+- Alex built vault-mcp Python MCP server at `C:\Users\tdsnit\Work26\agents\vault-mcp`
+- Root cause of all previous timeouts: FastMCP INFO logs going to stdout, polluting JSON-RPC stream. Fixed by redirecting to stderr.
+- Git tool now live: subcommands status, add, commit, push, pull, log, diff
+- Limitation: commit messages cannot contain spaces — use hyphens (e.g. `gaia-YYYY-MM-DD-summary`)
+- Modular architecture: new tools added to `vault_mcp/tools/`
+- First automated commit done: `gaia-session-2026-03-27`
+- Alex left message in Gaia inbox confirming completion — inter-agent communication working
+
+### Thread updates
+- Command-line MCP thread: closed
+- Master List updated accordingly
+
+---
+
 ## Session: 2026-03-27 — Part 5 (day wrap-up & Janea prep)
 
 ### Janea escalation analysis

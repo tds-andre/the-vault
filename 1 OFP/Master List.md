@@ -332,9 +332,9 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 > Next: set up Gaia first using 2 AI Exchange/project-prompt-template.md
 
 ### Thread: Command-line MCP para automacao de git e scripts
-`type:project` `domain:meta` `status:open`
-> Next: open Alex session and set up mcp-shell or equivalent; test with git commit
-> Notes: enables Gaia to run git commits automatically at end of sessions. Interim: Alex writes a one-click commit script. This is the unlock for full vault automation.
+`type:project` `domain:meta` `status:closed`
+> Next: —
+> Notes: vault-mcp built by Alex 2026-03-27. Git automation live. Server at C:\Users\tdsnit\Work26\agents\vault-mcp. Subcommands: status, add, commit, push, pull, log, diff. Modular — new tools can be added to vault_mcp/tools/. Commit messages must use hyphens (no spaces in args).
 
 ### Thread: Microsoft ToDo integration com o Vault
 `type:project` `domain:meta` `status:someday`

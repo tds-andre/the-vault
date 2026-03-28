@@ -29,6 +29,9 @@ Set up a command-line MCP server so Gaia can run shell commands directly:
 - This is the unlock for full vault automation — other automation tasks will depend on it
 - Keep scope narrow initially: git only, then expand as trust is established
 
+**Status: Resolved — 2026-03-27**
+Alex built vault-mcp at `C:\Users\tdsnit\Work26\agents\vault-mcp`. Git automation live. See Gaia inbox for full summary.
+
 ---
 
 ## Technical Background (added by Gaia)
