@@ -23,3 +23,10 @@ desktop.ini
 *.tmp
 *.swp
 *~
+
+# Binary/sensitive personal files — not tracked in git
+*.pdf
+*.xmind
+
+# Local-only files — sensitive, binary, or not worth tracking
+_local/
