@@ -4,6 +4,38 @@
 
 ---
 
+## Session: 2026-03-29 — Part 3 (Life Plan + About Me + Codex seeded)
+
+### New context from Life Plan 2026 and About Me
+- **Enzo** — 11yo half-brother, most important person in André's life. "I'm not sure if I would still exist if he wasn't around." Priority 1.
+- **Dark past** — referenced obliquely (coming home drunk, drugged, paranoid). Enzo credited for his survival. Not elaborated further.
+- **Last relationship ended 2017** — 9 years single at time of writing.
+- **Mother was physically violent** in childhood — around education and eating. Origin of his pattern-extraction learning style.
+- **Physics championship story** — got everything right, disqualified. Classic André: cares about correctness, indifferent to institutional rules.
+- **College at UFRJ age 17, Electronics and Computer Engineering** — didn't complete formally (bureaucratic), passed all disciplines.
+- **First job age 19** — web crawlers and Captcha solvers with neural nets, before Python was standard.
+- **ADHD confirmed** — Venvanse 70mg, trying new brand that worked better.
+- **Transparent brackets already implanted** — 14 month orthodontic treatment underway.
+- **Currently 87kg for 1.74m** — target 70-80kg.
+- **Key Bridge low wage due to financial reasons** — expectation of back pay.
+- **Janea 3 months in** — struggling to showcase value to stakeholders.
+- **Concrete 2026 plans:** Bonaire (30 May), South trip (5 May), Oceanic trip (September), Enzo extracurriculars + English classes.
+- **Writing is becoming a practice** — André noted he's writing more; it forces concrete thinking.
+
+### Codex seeded
+- `Personal/Codex.md` created with v0.1 — rich first pass from About Me and Life Plan
+- `Personal/About Me.md` created — moved from vault root, preserved in full
+- Apollo should mine these files and expand the Codex over time
+
+### Key facts for agents.md to update
+- Enzo (half-brother, 11) is Priority 1 — more important than any professional or financial goal
+- Last relationship 2017 — actively working on social/romantic life
+- Orthodontic treatment underway (transparent brackets, 14 months)
+- Target weight 70-80kg, currently 87kg
+- Key Bridge back pay situation — financial context
+
+---
+
 ## Session: 2026-03-29 — Part 2 (aesthetics + evolution + business idea)
 
 ### QOVES report processed

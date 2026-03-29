@@ -116,14 +116,20 @@ BRT does not observe daylight saving time.
 
 ## Key Facts About André
 
-*For agent orientation — not exhaustive, see Vision.md for full picture.*
+*For agent orientation — not exhaustive. See `Personal/Codex.md` for deep identity context, `1 OFP/Vision.md` for goals, `1 OFP/Andre's Life Plan 2026.md` for current plan.*
 
-- Runs in **cycles**: diligence → drift → reflection → rebuild. Design for re-entry, not perfection.
-- **Top-down thinker** — needs to orient to the big picture before descending into tasks
-- **Generalist with deep spikes** — end-to-end delivery is his natural mode
-- Primary language is **Portuguese (BR)**, but works and thinks in English professionally
-- Current priority: stabilize professional income, turn Cocoricó profitable by June/July 2026 or exit cleanly, build toward long-term financial independence through business ownership
-- Tools in use: Obsidian (this vault), Microsoft ToDo (capture/ops), Toggl (time tracking), Asana (planning), XMind (vision mapping)
+- **Age:** 37, born 1988, Tijuca, Rio de Janeiro. Carioca.
+- **Most important person in his life:** Enzo, his 11yo half-brother (father's side). Priority 1 above all else.
+- **Relationship status:** Single since 2017. Actively working on this.
+- **Lives with:** His mother currently (low household burden).
+- **Runs in cycles:** diligence → drift → reflection → rebuild. Design for re-entry, not perfection.
+- **Top-down thinker** — needs big picture before tasks. Pattern-extractor, not memorizer.
+- **Generalist with deep spikes** — end-to-end delivery is his natural mode. 13+ years in ML/software.
+- **ADHD** — on Venvanse 70mg. New brand working better as of March 2026.
+- **Health:** 87kg/1.74m, target 70-80kg. Transparent orthodontic brackets installed (14 month treatment). Gym membership active, habit not yet established.
+- **Primary language:** Portuguese (BR), works and thinks in English professionally.
+- **Current professional situation:** Janea/Akuvo (main, 3 months in, struggling to showcase value), Key Bridge (part-time, low wage, back pay expected), Cocoricó (restaurant, negative profit, June/July 2026 decision deadline).
+- **Tools:** Obsidian (vault), Microsoft ToDo (mobile capture), Toggl (time tracking, started March 2026), Asana (planning), XMind (vision mapping).
 
 ---
 
