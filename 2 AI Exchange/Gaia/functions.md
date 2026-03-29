@@ -212,4 +212,28 @@ This message has been moved to: messages/[state]/[filename]
 5. Update footer `Last updated` date
 
 ---
+
+## Function: Asana Sync
+
+**What:** Create, update, or close tasks in Gaia One (Asana) to reflect Master List thread states.
+
+**When:** When a thread changes state, next step changes, or during weekly review.
+
+**Gaia One GIDs:**
+- Project: `1213847489121972`
+- Domain custom field: `1213847448665011`
+- Section Prioritized: `1213848089615369`
+- Section Open: `1213848053325711`
+- Section Dormant: `1213848120073607`
+
+**How:**
+1. Identify threads with state or next-step changes
+2. New prioritized/open: create Asana task, set Domain, add to correct section, note `asana:GID` back in Master List
+3. Closed threads: mark Asana task complete
+4. State changes: move task to correct section
+5. Next step changes: update task notes
+
+**Rule:** Master List is always source of truth. Asana reflects it, not the reverse.
+
+---
 *Created: March 2026 | Renamed from tasks.md: 2026-03-27*

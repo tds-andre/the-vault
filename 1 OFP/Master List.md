@@ -454,3 +454,6 @@ Not all fields are required — only include what's present.
 ---
 *Last updated: 2026-03-29 by Gaia*
 *Asana workspace: Grieb Emmerich (connected 2026-03-29)*
+*Gaia One project GID: 1213847489121972*
+*Domain custom field GID: 1213847448665011*
+*Sections: Prioritized=1213848089615369, Open=1213848053325711, Dormant=1213848120073607*

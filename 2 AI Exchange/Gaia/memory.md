@@ -4,6 +4,27 @@
 
 ---
 
+## Session: 2026-03-29 — Part 5 (Asana Gaia One populated)
+
+### Asana Gaia One fully populated
+- 8 tasks in Prioritized: Bonaire tickets, South Trip (R$2,650 due Apr 22), CBRS Studio, Capability Building Akuvo, Eye improvement, Skin improvement, IR/contador, Decisao Frango
+- 7 tasks in Open: North Trip, Enzo cursos, Exames medicos, Leverage popularity, Limpar nome, KB back pay, Money with dad
+- Domain custom field GID: 1213847448665011
+- Sections: Prioritized=1213848089615369, Open=1213848053325711, Dormant=1213848120073607
+- Asana Sync function added to Gaia functions.md
+- Master List is source of truth; Asana is UI intermediated by Gaia
+
+### Personal vault notes created from old Asana
+- `Personal/Andre Cursos - Ideia de Negocio.md` — teaching business idea (AI for kids, Power Analyst, ENEM)
+- `Personal/Enzo - Atividades e Desenvolvimento.md` — full activity list for Enzo
+- `Personal/Treadstone - Conceitos e Visao.md` — old system concepts + raw vision note
+
+### South Trip financial alert
+- R$2,650 second installment due 2026-04-22 (24 days from today)
+- Ben should be aware for cash flow planning
+
+---
+
 ## Session: 2026-03-29 — Part 4 (Keybridge + Janea agents created)
 
 ### Agents created
