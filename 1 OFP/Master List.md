@@ -157,6 +157,11 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:building` `status:registered`
 > Next: — (tem coisa no Asana)
 
+### Thread: Negocio — setup de agentes para executivos
+`type:project` `domain:building` `status:dormant`
+> Next: revisit when personal agent system is more mature and proven
+> Notes: service for executives/entrepreneurs — setup of virtual agents + optional dispatch via power of attorney. Model: setup fee + monthly maintenance, with or without dispatch service. Seed idea from a friend. Directly validated by what André is building for himself — this system IS the proof of concept. Original prompt (PT): "Queria desenvolver um negócio/serviço para acessoria de setup de agentes virtuais, voltado para executivos e empresarios, tendo como opcional serviço de despacho via procuração." Full context in memory.
+
 ### Thread: Falar com o Rodrigo
 `type:action` `domain:building` `status:registered`
 > Next: —

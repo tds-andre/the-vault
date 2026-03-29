@@ -22,10 +22,15 @@ QOVES identified a strong masculine base. Most features (nose, lips, ears, hair,
 - [ ] **Caffeine eye cream** ← *this week's action* — most targeted for dark circles + puffiness, fast results, low cost, no risk
 - [ ] Vitamin C eye serum — brightens vascular shadows, supports thin skin
 - [ ] Niacinamide — reduces pigmentation, strengthens skin barrier
+- [ ] Peptides — support collagen, skin firmness and repair around eye area
+- [ ] Light moisturiser — hydration without heaviness for thin eye skin
 - [ ] Retinol eye cream — improves texture and fine lines over time
 - [ ] Kojic acid / Alpha arbutin — targeted pigmentation reduction
+- [ ] Zinc — anti-inflammatory, supports skin repair (topical or supplement)
+- [ ] Potassium — supports fluid balance, may reduce puffiness (supplement)
 - [ ] SPF50 — non-negotiable, prevents further darkening
 - [ ] Peach/yellow colour-correcting concealer — immediate visual fix for visible days
+- [ ] High quality red light therapy device — stimulates collagen, reduces inflammation, has systemic benefits beyond skin (sleep, energy, recovery). Worth researching as a device investment.
 
 **Prescription (requires dermatologist):**
 - [ ] Tretinoin — stronger retinoid, more effective than OTC retinol

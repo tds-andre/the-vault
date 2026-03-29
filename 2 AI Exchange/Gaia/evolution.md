@@ -68,6 +68,46 @@ vault-mcp git tool splits args on spaces, so commit messages use hyphens. Alex s
 `2026-03-27`
 vault-mcp currently only exposes git. Modular architecture supports adding new tools. Next candidates: shell script execution (for automation), file move/delete (for message routing), Toggl API wrapper.
 
+### System bloat / pruning / rejuvenation
+`2026-03-29`
+Fear that long-running systems get bloated over time — memory grows, functions accumulate, agents drift, context gets stale. Need a periodic pruning, recalibration and rejuvenation mechanism. Could be a Gaia function: "System Health Review" — audit all agents, archive stale memory, validate that functions still reflect reality, check that vault structure is still serving its purpose. Quarterly cadence probably right. Related to agent generations problem already noted.
+
+### Token efficiency
+`2026-03-29`
+Not about being cheap — about being smart. As sessions grow and more files are read, token usage scales. Key levers: crawler pattern already implemented (don't load everything), memory pruning already designed, archive.md pattern already exists. Future: smarter context loading (only fetch files when directly relevant), compressed memory summaries for older sessions, Gaia should be aware of context window limits and manage gracefully.
+
+### WhatsApp capability
+`2026-03-29`
+Ability for agents (especially Gaia) to send/receive messages via WhatsApp. Enables mobile-native interaction without opening Claude Desktop. Options: WhatsApp Business API, Twilio, unofficial libraries (risky). High value for Gaia's daily operating rhythm — André could message Gaia from his phone naturally.
+
+### Email capability
+`2026-03-29`
+Agents read and send email. Enables: Gaia receiving context from email chains, automated follow-ups, report delivery. Gmail MCP or Microsoft Graph API (already relevant for ToDo integration). Needs careful permission scoping — read vs. send are different trust levels.
+
+### Phone/SMS/call capability
+`2026-03-29`
+SMS and potentially phone call capability. Twilio is the standard route. SMS for urgent notifications or quick captures. Calls more complex and probably low priority.
+
+### Internet access + account login + 2FA handling
+`2026-03-29`
+Full browser automation capability — login to accounts, handle 2FA, navigate web interfaces. Alex's Claude in Chrome tools already partially address this. 2FA handling is the hard part — requires access to authenticator or SMS. High capability, high security risk — needs careful design. Could unlock enormous automation surface.
+
+### Sandboxed filesystem / dedicated hardware
+`2026-03-29`
+Question: what's the best human-machine shared filesystem architecture? Options: current approach (local Windows vault + git), dedicated home server (Raspberry Pi or similar), cloud VM, NAS. Key requirements: always-on for agent access, fast MCP reads, secure, versioned. A dedicated low-power server running the MCP services 24/7 would decouple agent availability from André's laptop being on. Worth designing when system is stable.
+
+### Website creation and publishing capability
+`2026-03-29`
+Agents can create and publish websites to a domain. Alex already has prototyping capability. Adding: static site generation (Hugo, Jekyll, or simple HTML), domain management via API (Namecheap, Cloudflare), deployment (GitHub Pages, Netlify, Vercel via CLI). Directly relevant to X In Rio and future business ventures.
+
+### Automatic digital marketing + lead routing
+`2026-03-29`
+Agents manage digital marketing campaigns and route leads automatically. Ambitious — requires: ad platform APIs (Meta, Google), CRM integration, lead scoring logic. Most relevant to future businesses. Probably a dedicated marketing agent when the time comes. Seed idea for the agentic ecosystem business (see Master List).
+
+### Microsoft ToDo MCP integration
+`2026-03-27` *(moved here from earlier)*
+Already tracked in Master List as someday thread. André uses ToDo as mobile capture inbox; vault is source of truth. Periodic import of ToDo items into Master List Unqualified section.
+
 ### XMind files reconciliation with Vision.md
 `2026-03-27`
 OFP 2025.xmind and OFP 2026.xmind not yet read or reconciled with Vision.md. André to open these and flag anything missing. XMind format not readable by agents directly — export to markdown or summarize manually.

@@ -4,6 +4,29 @@
 
 ---
 
+## Session: 2026-03-29 — Part 2 (aesthetics + evolution + business idea)
+
+### QOVES report processed
+- Full report read and synthesized into `Personal/Aesthetics/action-plan.md`
+- Three threads created: Eye improvement, Skin improvement, Jaw improvement (dormant)
+- This week: caffeine eye cream (eyes) + SPF50 + cleanser (skin) + shave neck beard (free jaw win)
+- Eye list from André's own research added: sunscreen, peptides, light moisturiser, potassium, microneedling, high quality red light, zinc
+- Red light therapy device noted as interesting — systemic benefits beyond skin
+- No fillers for eyes for now — defer to after non-invasive options plateau
+- Jaw dormant until QOVES surgical report arrives
+
+### Evolution.md updated
+- Added: system bloat/pruning/rejuvenation, token efficiency, WhatsApp, email, phone/SMS, internet+2FA, sandboxed filesystem, website publishing, digital marketing+lead routing, MS ToDo (moved)
+
+### Business idea captured
+- **Agentic ecosystem setup for executives** — dormant thread in Master List (Building domain)
+- Service model: setup fee + monthly maintenance + optional dispatch via power of attorney
+- Key insight: what André is building for himself IS the proof of concept for this business
+- Seed from a friend. Revisit when personal system is mature and proven.
+- Full original prompt in PT saved in Master List notes
+
+---
+
 ## Session: 2026-03-29 (first weekly review)
 
 ### First weekly review completed
