@@ -4,6 +4,21 @@
 
 ---
 
+## Session: 2026-03-29 — Part 4 (Keybridge + Janea agents created)
+
+### Agents created
+- **Keybridge** (v1.0) — Key Bridge part-time job, CBRS Studio, Jesse meeting prep
+- **Janea** (v1.0) — main job, Akuvo ML/Analytics, Escalation feature, capability building
+- Both registered in `agents.md`
+- Asana MCP added to evolution.md
+
+### Architecture note
+- André will interact with agents directly via Claude Desktop Projects
+- Gaia handles strategy and delegation via inbox notes; no automated agent triggering for now
+- Timezone: date injected automatically, time-of-day not injected — André mentions time when relevant
+
+---
+
 ## Session: 2026-03-29 — Part 3 (Life Plan + About Me + Codex seeded)
 
 ### New context from Life Plan 2026 and About Me

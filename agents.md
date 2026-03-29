@@ -95,6 +95,22 @@ Obsidian Vault/
 - **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
 - **Functions:** `2 AI Exchange/Apollo/functions.md`
 
+### Keybridge
+- **Role:** CBRS Studio development, RF planning domain, Jesse meeting prep, KB technical work
+- **Scope:** `Key Bridge/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Keybridge/`
+- **Public profile:** `2 AI Exchange/Keybridge/public/profile.md`
+- **Functions:** `2 AI Exchange/Keybridge/functions.md`
+
+### Janea
+- **Role:** Akuvo ML/Analytics work, Escalation feature, capability building initiative, stakeholder visibility
+- **Scope:** `Janea Akuvo/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Janea/`
+- **Public profile:** `2 AI Exchange/Janea/public/profile.md`
+- **Functions:** `2 AI Exchange/Janea/functions.md`
+
 ### Future agents (not yet configured)
 - **Juliana** — secretary; day-to-day operations currently absorbed by Gaia; spin off when scope is clearer
 - **André** — clone; requires Apollo's PKB as foundation first

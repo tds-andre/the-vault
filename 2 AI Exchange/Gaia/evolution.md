@@ -112,6 +112,10 @@ Agents can create and publish websites to a domain. Alex already has prototyping
 `2026-03-29`
 Agents manage digital marketing campaigns and route leads automatically. Ambitious — requires: ad platform APIs (Meta, Google), CRM integration, lead scoring logic. Most relevant to future businesses. Probably a dedicated marketing agent when the time comes. Seed idea for the agentic ecosystem business (see Master List).
 
+### Asana MCP integration
+`2026-03-29`
+André uses Asana for planning and tracking — has existing projects and tasks there. Build an MCP integration via Asana REST API to allow agents to read and update Asana tasks. Most relevant for Janea (tracking Akuvo deliverables) and Gaia (weekly review cross-referencing). Manual sync for now. Alex's territory.
+
 ### Microsoft ToDo MCP integration
 `2026-03-27` *(moved here from earlier)*
 Already tracked in Master List as someday thread. André uses ToDo as mobile capture inbox; vault is source of truth. Periodic import of ToDo items into Master List Unqualified section.
