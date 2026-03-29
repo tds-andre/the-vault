@@ -4,6 +4,24 @@
 
 ---
 
+## Session: 2026-03-29 — Part 6 (Joane + Kaybee rename, Ben created)
+
+### Agent renames
+- Janea → **Joane** (config: `2 AI Exchange/Joane/`)
+- Keybridge → **Kaybee** (config: `2 AI Exchange/Kaybee/`)
+- Old folders `2 AI Exchange/Janea/` and `2 AI Exchange/Keybridge/` can be deleted manually by André
+- agents.md updated, duplicate Ben entry removed
+
+### Ben created
+- **Ben** (v1.0) — Cocoricó finances, P&L, June/July 2026 decision framework
+- Config: `2 AI Exchange/Ben/`
+- First session: bring cost data (iFood fees, chicken invoices, payroll records)
+
+### Active agent roster
+- Gaia, Alex, Ben, Apollo, Joane, Kaybee
+
+---
+
 ## Session: 2026-03-29 — Part 5 (Asana Gaia One populated)
 
 ### Asana Gaia One fully populated

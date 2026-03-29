@@ -80,44 +80,38 @@ Obsidian Vault/
 - **Functions:** `2 AI Exchange/Alex/functions.md`
 
 ### Ben
-- **Role:** Accountant — financial analysis, spreadsheets, numerical diligences, Cocoricó finances
-- **Scope:** `Cocoricó/`, `Janea Akuvo/` and `Key Bridge/` (income context when relevant)
-- **Version:** v1.0
-- **Config:** `2 AI Exchange/Ben/`
-- **Public profile:** `2 AI Exchange/Ben/public/profile.md`
-- **Functions:** `2 AI Exchange/Ben/functions.md`
-
-### Apollo
-- **Role:** Knowledge agent — personal knowledge management, learning capture, retrieval, PKB
-- **Scope:** `Personal/`, `4 To Follow Up/`, `1 OFP/Drafts/`, `3 Subthreads/`, `Professional/` (when relevant)
-- **Version:** v1.0
-- **Config:** `2 AI Exchange/Apollo/`
-- **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
-- **Functions:** `2 AI Exchange/Apollo/functions.md`
-
-### Ben
-- **Role:** Cocoricó P&L, financial analysis, stay vs exit decision framework, team compensation
+- **Role:** Cocoricó finances — P&L, cash flow, stay vs exit decision framework, team compensation
 - **Scope:** `Cocoricó/`
 - **Version:** v1.0
 - **Config:** `2 AI Exchange/Ben/`
 - **Public profile:** `2 AI Exchange/Ben/public/profile.md`
 - **Functions:** `2 AI Exchange/Ben/functions.md`
 
-### Keybridge
-- **Role:** CBRS Studio development, RF planning domain, Jesse meeting prep, KB technical work
-- **Scope:** `Key Bridge/`
+### Apollo
+- **Role:** Knowledge agent — personal knowledge management, learning capture, retrieval, Codex
+- **Scope:** `Personal/`, `4 To Follow Up/`, `1 OFP/Drafts/`, `3 Subthreads/`, `Professional/`
 - **Version:** v1.0
-- **Config:** `2 AI Exchange/Keybridge/`
-- **Public profile:** `2 AI Exchange/Keybridge/public/profile.md`
-- **Functions:** `2 AI Exchange/Keybridge/functions.md`
+- **Config:** `2 AI Exchange/Apollo/`
+- **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
+- **Functions:** `2 AI Exchange/Apollo/functions.md`
 
-### Janea
+### Joane
 - **Role:** Akuvo ML/Analytics work, Escalation feature, capability building initiative, stakeholder visibility
 - **Scope:** `Janea Akuvo/`
 - **Version:** v1.0
-- **Config:** `2 AI Exchange/Janea/`
-- **Public profile:** `2 AI Exchange/Janea/public/profile.md`
-- **Functions:** `2 AI Exchange/Janea/functions.md`
+- **Config:** `2 AI Exchange/Joane/`
+- **Public profile:** `2 AI Exchange/Joane/public/profile.md`
+- **Functions:** `2 AI Exchange/Joane/functions.md`
+- **Note:** Folders `2 AI Exchange/Janea/` can be deleted manually (renamed to Joane)
+
+### Kaybee
+- **Role:** CBRS Studio development, RF planning domain, Jesse meeting prep, KB technical work
+- **Scope:** `Key Bridge/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Kaybee/`
+- **Public profile:** `2 AI Exchange/Kaybee/public/profile.md`
+- **Functions:** `2 AI Exchange/Kaybee/functions.md`
+- **Note:** Folder `2 AI Exchange/Keybridge/` can be deleted manually (renamed to Kaybee)
 
 ### Future agents (not yet configured)
 - **Juliana** — secretary; day-to-day operations currently absorbed by Gaia; spin off when scope is clearer
