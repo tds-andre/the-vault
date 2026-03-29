@@ -4,6 +4,38 @@
 
 ---
 
+## Session: 2026-03-29 (first weekly review)
+
+### First weekly review completed
+- Saved to `1 OFP/Reviews/2026-03-29.md`
+- Mode: full
+- Energy: poor sleep, no exercise, good mood, new Venvanse brand working well
+- Toggl tracked: yes
+
+### This week's priorities
+- Janea: capability building plan — integrate scattered work, present to stakeholders
+- Key Bridge: functional Studio app with Jesse's feedbacks
+- Cocoricó: next step in delegating to Anna, Rodrigo or Ben (agent)
+- Personal: follow up on QUVOS recommendations — context unknown to Gaia, needs clarification
+- Building: advance tax declaration, find new accountant
+
+### Key observations from review
+- Week was more productive than it felt — system built, Toggl tracked, Akuvo strategy ownership taken, quality time with brother
+- Main miss: time estimation — agent system took longer than expected, crowded out KB Studio and Escalation close
+- Cocoricó pulse section empty — revenue/status unknown. Needs attention given June/July deadline
+- QUVOS: appeared in journal (18/03 entry), context unclear to Gaia — ask André to clarify
+- Bonaire and Curitiba (South Trip) tickets not yet bought — time-sensitive given May travel
+- Upper back pain noted — physical health flag
+
+### Open threads surfaced
+- [ ] QUVOS — clarify with André what this is
+- [ ] Bonaire tickets — due before May
+- [ ] Curitiba (South Trip) tickets
+- [ ] Find new accountant for IR/tax declaration
+- [ ] Henrique replacement training — start process
+
+---
+
 ## Session: 2026-03-27 — Part 7 (messaging system)
 
 ### Inter-agent messaging system built

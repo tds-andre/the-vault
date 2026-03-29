@@ -121,6 +121,11 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 > Next: define policy on salary anticipation requests so response is not reactive each time
 > Notes: pattern of disruptive morning messages — needs a boundary, not just a response
 
+### Thread: Treinar substituto para Henrique
+`type:project` `domain:cocoroco` `status:open`
+> Next: identify candidate and start process
+> Notes: surfaced in weekly review 2026-03-29
+
 ### Thread: Estabelecer reuniao de rotina com Ana ou time
 `type:system` `domain:cocoroco` `status:registered`
 > Next: —
@@ -211,6 +216,11 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:personal` `status:registered`
 > Next: —
 
+### Thread: QUVOS — acompanhamento de recomendacoes
+`type:project` `domain:personal` `status:prioritized`
+> Next: clarify with Gaia what QUVOS is, then define concrete next step
+> Notes: appeared in journal 18/03 and weekly review 2026-03-29. Context unclear to Gaia — needs qualification.
+
 ### Thread: Fazer curso de frances
 `type:skill` `domain:personal` `status:someday`
 > Next: —
@@ -248,9 +258,10 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:skill` `domain:life` `status:someday`
 > Next: —
 
-### Thread: Planejar viagem Bonaire
-`type:project` `domain:life` `status:open` `due:2026-05`
-> Next: define dates and book
+### Thread: Comprar passagens Bonaire
+`type:action` `domain:life` `status:prioritized` `due:2026-04`
+> Next: buy tickets — departure May, time-sensitive
+> Notes: surfaced in weekly review 2026-03-29
 
 ### Thread: Planejar viagem Tailandia
 `type:project` `domain:life` `status:open` `due:2026-06`
@@ -264,9 +275,10 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:life` `status:registered`
 > Next: —
 
-### Thread: Planejar viagem ao Sul (Brasil)
-`type:project` `domain:life` `status:registered`
-> Next: —
+### Thread: Planejar viagem ao Sul (Brasil) — Curitiba
+`type:project` `domain:life` `status:open`
+> Next: buy tickets
+> Notes: surfaced in weekly review 2026-03-29
 
 ### Thread: Curtir em Sao Paulo
 `type:action` `domain:life` `status:someday`
@@ -288,10 +300,10 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:admin` `status:registered`
 > Next: —
 
-### Thread: Declarar IR
-`type:action` `domain:admin` `status:open`
-> Next: check deadline and gather documents
-> Notes: flagged multiple times — likely time-sensitive
+### Thread: Declarar IR — encontrar contador
+`type:project` `domain:admin` `status:prioritized`
+> Next: find new accountant this week
+> Notes: flagged multiple times — time-sensitive. Current priority per weekly review 2026-03-29.
 
 ### Thread: Ajustar CNPJ
 `type:project` `domain:admin` `status:open`
