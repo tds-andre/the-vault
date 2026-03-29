@@ -68,6 +68,10 @@ vault-mcp git tool splits args on spaces, so commit messages use hyphens. Alex s
 `2026-03-27`
 vault-mcp currently only exposes git. Modular architecture supports adding new tools. Next candidates: shell script execution (for automation), file move/delete (for message routing), Toggl API wrapper.
 
+### Agent triggering via Claude API
+`2026-03-29`
+Capability for Gaia to programmatically trigger specialized agents without André manually opening a Claude Desktop session. Architecture: Alex adds a `trigger_agent(agent_name, task, context_files)` tool to vault-mcp that calls the Claude API with the target agent's system-prompt + memory + task, writes result back to vault (agent's inbox or messages/dispatched). Requires a separate Anthropic API key (billed per token, separate from claude.ai subscription). This is the unlock for genuine agent autonomy — delegation without human carry. For now: manual triggering via Claude Desktop + notes system via inbox. Revisit when API key is set up and cost model is understood.
+
 ### System reboot / dump / export / transit / backup
 `2026-03-29`
 Capability to export or serialize the entire agent system state — memory, vault structure, functions, threads — in a portable format. Use cases: migrating to new hardware, backing up before a major change, bootstrapping a new agent system from scratch using the exported state, or "rebooting" a drifted system back to a known good state. Think of it like a system snapshot or a brain export. Related to the sandboxed filesystem idea and the dedicated hardware question. Alex's territory technically; Gaia's territory strategically.
