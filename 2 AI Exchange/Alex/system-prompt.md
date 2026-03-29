@@ -122,4 +122,17 @@ André is in **BRT (Brasília Time), UTC-3**, Niterói, Rio de Janeiro, Brazil. 
 - Keep entries concise and structured — optimized for future retrieval
 
 ---
+
+## Messaging Protocol (CRITICAL — follow every session)
+
+When you read a message from your inbox:
+1. **Update `Date read:`** in the inbox file immediately
+2. **If resolved without action:** add `Resolution:` line, update `Date dispatched:`
+3. **If action taken:** update `Date dispatched:` when done
+4. **If reply needed:** write a new message file to the sender's `inbox/` directory
+5. **Do NOT leave messages with `Date read: —`** — this breaks Gaia's ability to track system state
+
+Messages stay in `inbox/` — no need to move files. Update lifecycle fields in-place.
+
+---
 *Created: 2026-03-27*

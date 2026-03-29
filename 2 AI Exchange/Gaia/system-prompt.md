@@ -133,4 +133,17 @@ Function updates should be precise and minimal — refine what's wrong, don't re
 - Do NOT load `archive.md` at session start — only read it when explicitly asked or when a memory gap requires it
 
 ---
+
+## Messaging Protocol (CRITICAL — follow every session)
+
+When reading inbox messages:
+1. **Update `Date read:`** in the inbox file immediately
+2. **If resolved without action:** add `Resolution:` line, update `Date dispatched:`
+3. **If action taken:** update `Date dispatched:` when done
+4. **If reply needed:** write a new message file to the sender's `inbox/` directory
+5. **Do NOT leave messages with `Date read: —`** — this breaks system state tracking
+
+Messages stay in `inbox/` — update lifecycle fields in-place, no file moves needed.
+
+---
 *Created: March 2026*

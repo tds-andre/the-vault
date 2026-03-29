@@ -51,18 +51,18 @@ Examples:
 - `reply` — response to a previous message (always set origin_ref)
 - `escalation` — question or decision that requires the recipient's specific authority
 
-## Message Flow
-```
-inbox/          ← sender drops message here (write-only for senders)
-    ↓ agent reads
-messages/ingested/   ← no action needed (notification, resolved reply)
-messages/pending/    ← action/decision/follow-up required (request, escalation)
-    ↓ agent handles
-messages/dispatched/ ← handled, no further action needed from this agent
-messages/archived/   ← closed, stalled, or superseded
-```
+## Message Flow (simplified — in-place lifecycle tracking)
 
-## Lifecycle Timestamps
-- **Date read** — fill when moving from inbox to ingested or pending
-- **Date dispatched** — fill when moving from pending to dispatched
-- **Date archived** — fill when moving to archived from any state
+Messages stay in `inbox/` — no file moves required. Update the Lifecycle fields in place:
+
+1. **On read:** fill `Date read` + add `Resolution:` note if already resolved
+2. **On completion:** fill `Date dispatched` + write reply to sender's `inbox/` if reply needed
+3. **On close:** fill `Date archived`
+
+The `messages/` subdirectories (ingested, pending, dispatched, archived) are available for agents that prefer moving files, but in-place tracking is the default and simpler approach.
+
+## Lifecycle Fields
+- **Date read** — fill when message is first read
+- **Date dispatched** — fill when action is complete or reply sent
+- **Date archived** — fill when thread is fully closed
+- **Resolution** — optional one-liner describing what was done

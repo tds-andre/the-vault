@@ -4,6 +4,41 @@
 
 ---
 
+## Session: 2026-03-29 (shell MCP shipped)
+
+### shell.py shipped
+- Added `shell(cmd, cwd="")` tool to vault-mcp
+- Allowlist in `config.py`: mv, cp, rm, mkdir, rmdir, touch, ls, dir, cat, type, echo, python, pip, curl, wget, git, and more
+- `shlex.split` for proper quoted arg handling
+- 30s timeout, stdin=DEVNULL, returns stdout+stderr+exit code
+- Scoped to vault via `SHELL_WORKING_DIR` (symlink at `C:\Users\tdsnit\winlinks\obsidian-default-vault`)
+
+### now() tool shipped
+- Returns BRT datetime string (`2026-03-29 14:32:00 BRT`)
+- Uses `zoneinfo.ZoneInfo("America/Sao_Paulo")`
+
+### git rm added
+- `git rm` added to `GIT_ALLOWED_SUBCOMMANDS` in config.py
+
+### Inbox messages resolved (retroactively)
+- `2026-03-27_Gaia_command-line-mcp-git.md` — resolved by vault-mcp git tool (2026-03-27)
+- `2603291200_Gaia_file-move-tool-vault-mcp.md` — resolved by shell.py mv command
+- `2603291300_Gaia_full-command-line-mcp.md` — resolved by shell.py
+- Reply dispatched to Gaia inbox: `2603291_Alex_shell-mcp-shipped.md`
+
+### Messaging protocol note
+- Gaia noted inter-agent messaging was not followed properly this session
+- Protocol: update `Date read:` in inbox file when read, update `Date dispatched:` when done, write reply to sender's inbox
+- Simpler approach going forward: update lifecycle fields in-place, no need to move files
+
+### Open threads
+- [ ] Set up Alex as Claude Project
+- [ ] Evaluate Cursor/Windsurf
+- [ ] Consider Toggl API wrapper as next vault-mcp tool
+- [ ] `chickendrive` missing from filesystem allowlist — intentional?
+
+---
+
 ## Session: 2026-03-27 (vault-mcp)
 
 ### Git MCP shipped

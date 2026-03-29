@@ -4,6 +4,26 @@
 
 ---
 
+## Session: 2026-03-29 — Part 7 (messaging protocol fixed)
+
+### Inter-agent messaging post-mortem
+- Alex shipped shell.py + now() — solid work
+- But didn't follow messaging protocol: left 3 inbox messages with `Date read: —`
+- Root cause: protocol wasn't explicit enough in system prompts, file-move approach was too heavy
+- Fix: simplified to in-place lifecycle tracking (update fields, no file moves)
+- Messaging protocol section added to ALL agent system prompts (Gaia, Alex, Ben, Apollo, Joane, Kaybee)
+- message-template.md updated to reflect simplified flow
+- Alex inbox messages retroactively resolved, reply dispatched to Gaia inbox
+- evolution.md updated: command-line MCP marked as SHIPPED
+
+### What Alex actually shipped
+- `shell(cmd, cwd)` — allowlisted shell execution (mv, cp, rm, mkdir, python, curl, etc.)
+- `now()` — BRT datetime string
+- `git rm` added to git tool
+- Vault path via symlink: `C:\Users\tdsnit\winlinks\obsidian-default-vault`
+
+---
+
 ## Session: 2026-03-29 — Part 6 (Joane + Kaybee rename, Ben created)
 
 ### Agent renames

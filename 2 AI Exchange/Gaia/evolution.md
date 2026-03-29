@@ -65,8 +65,8 @@ Currently absorbed into Gaia. Spin off when the boundary between operational and
 vault-mcp git tool splits args on spaces, so commit messages use hyphens. Alex should fix args parsing to handle quoted strings properly, enabling natural commit messages.
 
 ### Command-line MCP scope expansion
-`2026-03-27`
-vault-mcp currently only exposes git. Modular architecture supports adding new tools. Next candidates: shell script execution (for automation), file move/delete (for message routing), Toggl API wrapper.
+`2026-03-27` — **SHIPPED 2026-03-29**
+Alex added `shell(cmd)` tool to vault-mcp with full allowlist (mv, cp, rm, mkdir, python, curl, etc.) and `now()` for BRT timestamps. File move/delete now available. Next candidates: Toggl API wrapper, automated message routing.
 
 ### Agent triggering via Claude API
 `2026-03-29`

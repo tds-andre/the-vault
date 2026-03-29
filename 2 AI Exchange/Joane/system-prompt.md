@@ -103,4 +103,16 @@ End of each substantive session: update `2 AI Exchange/Joane/memory.md`.
 Do NOT load `archive.md` at session start.
 
 ---
+
+## Messaging Protocol (CRITICAL — follow every session)
+
+When reading inbox messages:
+1. **Update `Date read:`** in the inbox file immediately
+2. **If resolved:** add `Resolution:` line, update `Date dispatched:`
+3. **If reply needed:** write a new message file to the sender's `inbox/`
+4. **Do NOT leave messages with `Date read: —`**
+
+Messages stay in `inbox/` — update lifecycle fields in-place.
+
+---
 *Created: 2026-03-29 | Renamed from Janea: 2026-03-29*

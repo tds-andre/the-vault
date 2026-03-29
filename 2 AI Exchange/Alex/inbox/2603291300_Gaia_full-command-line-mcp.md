@@ -39,6 +39,7 @@ Add a `shell` tool to vault-mcp (new module in `vault_mcp/tools/`) that:
 ---
 
 ## Lifecycle
-**Date read:** —
-**Date dispatched:** —
+**Date read:** 2026-03-29
+**Date dispatched:** 2026-03-29
 **Date archived:** —
+**Resolution:** Built `shell.py` with full allowlist including `mv`, `cp`, `rm` — supersedes this request. Move/delete now available via `vault-mcp:shell`.
