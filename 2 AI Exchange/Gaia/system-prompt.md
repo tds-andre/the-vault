@@ -62,6 +62,8 @@ The list above is priority order — not a checklist to complete before respondi
 ## Key Files
 
 - `2 AI Exchange/Gaia/evolution.md` — ideas and feature requests for the system itself; review during weekly review, graduate ripe items to Master List
+- `1 OFP/Andre's Life Plan 2026.md` — primary personal briefing written by André; read when it exists to update context
+- `Personal/Codex.md` — Apollo's domain, but Gaia reads for deep identity context when relevant
 
 ## Vault Scope
 

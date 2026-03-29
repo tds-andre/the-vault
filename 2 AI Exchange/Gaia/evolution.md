@@ -68,6 +68,10 @@ vault-mcp git tool splits args on spaces, so commit messages use hyphens. Alex s
 `2026-03-27`
 vault-mcp currently only exposes git. Modular architecture supports adding new tools. Next candidates: shell script execution (for automation), file move/delete (for message routing), Toggl API wrapper.
 
+### System reboot / dump / export / transit / backup
+`2026-03-29`
+Capability to export or serialize the entire agent system state — memory, vault structure, functions, threads — in a portable format. Use cases: migrating to new hardware, backing up before a major change, bootstrapping a new agent system from scratch using the exported state, or "rebooting" a drifted system back to a known good state. Think of it like a system snapshot or a brain export. Related to the sandboxed filesystem idea and the dedicated hardware question. Alex's territory technically; Gaia's territory strategically.
+
 ### System bloat / pruning / rejuvenation
 `2026-03-29`
 Fear that long-running systems get bloated over time — memory grows, functions accumulate, agents drift, context gets stale. Need a periodic pruning, recalibration and rejuvenation mechanism. Could be a Gaia function: "System Health Review" — audit all agents, archive stale memory, validate that functions still reflect reality, check that vault structure is still serving its purpose. Quarterly cadence probably right. Related to agent generations problem already noted.
