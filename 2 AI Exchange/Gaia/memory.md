@@ -4,6 +4,25 @@
 
 ---
 
+## Session: 2026-03-27 — Part 7 (messaging system)
+
+### Inter-agent messaging system built
+- `inbox/` stays public write-only (unchanged)
+- `messages/` added to all agents with 4 subdirectories: ingested, pending, dispatched, archived
+- `2 AI Exchange/message-template.md` created — standard message format
+- Message filename format: `YYMMDDHHMM_[Sender]_[Subject-with-hyphens].md`
+- Message types: notification, request, reply, escalation
+- Lifecycle timestamps: date read, date dispatched, date archived
+- Origin ref field enables chain backlinks without a conversation entity
+- All public profiles updated with new inbox/messages pattern
+- All system prompts updated: messaging rule + session protocol includes messages/pending check
+- `Send Message` and `Process Inbox` functions added to Gaia functions.md
+- Agent blueprint updated with messages/ structure
+- Alex's existing inbox message migrated to messages/dispatched/ (first message in new system)
+- "Moving" a file = write to destination + overwrite source with redirect stub (no delete tool available)
+
+---
+
 ## Session: 2026-03-27 — Part 6 (git automation live)
 
 ### vault-mcp operational

@@ -56,7 +56,11 @@ Obsidian Vault/
 
 *This section is the canonical agent registry. All agents should read this file to understand who else exists and what they handle.*
 
-*Each agent exposes a `public/profile.md` (read-only identity) and an `inbox/` directory (writable message channel). To send a message to an agent, read their `public/profile.md` for instructions, then write a file to their `inbox/`.*
+*Each agent exposes a `public/profile.md` (read-only identity), an `inbox/` directory (public write-only channel), and a `messages/` directory (private processing states).*
+
+*To send a message: read the target agent's `public/profile.md` for instructions, then write a message file to their `inbox/` using the standard format in `2 AI Exchange/message-template.md`.*
+
+*Message flow: `inbox/` → `messages/ingested/` (no action) or `messages/pending/` (action required) → `messages/dispatched/` (handled) → `messages/archived/` (closed/stale).*
 
 ### Gaia
 - **Role:** Life strategy, meta-system, weekly operating rhythm, cross-domain coordination
@@ -64,6 +68,7 @@ Obsidian Vault/
 - **Version:** v1.1
 - **Config:** `2 AI Exchange/Gaia/`
 - **Public profile:** `2 AI Exchange/Gaia/public/profile.md`
+- **Functions:** `2 AI Exchange/Gaia/functions.md`
 - **Implemented in:** Claude (claude.ai), with MCP filesystem access to this vault
 
 ### Alex
@@ -72,6 +77,7 @@ Obsidian Vault/
 - **Version:** v1.0
 - **Config:** `2 AI Exchange/Alex/`
 - **Public profile:** `2 AI Exchange/Alex/public/profile.md`
+- **Functions:** `2 AI Exchange/Alex/functions.md`
 
 ### Ben
 - **Role:** Accountant — financial analysis, spreadsheets, numerical diligences, Cocoricó finances
@@ -79,6 +85,7 @@ Obsidian Vault/
 - **Version:** v1.0
 - **Config:** `2 AI Exchange/Ben/`
 - **Public profile:** `2 AI Exchange/Ben/public/profile.md`
+- **Functions:** `2 AI Exchange/Ben/functions.md`
 
 ### Apollo
 - **Role:** Knowledge agent — personal knowledge management, learning capture, retrieval, PKB
@@ -86,6 +93,7 @@ Obsidian Vault/
 - **Version:** v1.0
 - **Config:** `2 AI Exchange/Apollo/`
 - **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
+- **Functions:** `2 AI Exchange/Apollo/functions.md`
 
 ### Future agents (not yet configured)
 - **Juliana** — secretary; day-to-day operations currently absorbed by Gaia; spin off when scope is clearer

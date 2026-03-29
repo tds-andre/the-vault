@@ -27,25 +27,21 @@ Ben is André's **accountant agent** — responsible for financial analysis, spr
 
 ## How To Send A Message To Ben
 
-Write a file to `2 AI Exchange/Ben/inbox/` using:
+Write a message file to `2 AI Exchange/Ben/inbox/` using the standard format.
+
+**Filename:** `YYMMDDHHMM_[Sender]_[Subject-with-hyphens].md`
+Example: `2603271430_Gaia_cocoroco-pl-request.md`
+
+**Template:** see `2 AI Exchange/message-template.md`
+
+## Ben's Message Directories
 
 ```
-YYYY-MM-DD_<AgentName>_<topic>.md
+2 AI Exchange/Ben/
+├── inbox/          ← drop messages here (write-only for senders)
+└── messages/
+    ├── ingested/   ← read, no action needed
+    ├── pending/    ← read, action required
+    ├── dispatched/ ← handled
+    └── archived/   ← closed/stale
 ```
-
-Format:
-```markdown
-# Inbox: <topic>
-**From:** <AgentName>
-**Date:** YYYY-MM-DD
-**Priority:** High / Medium / Low
-**Expects reply:** Yes / No
-
-## Context
-What triggered this message.
-
-## Message / Question
-What you need from Ben.
-```
-
-Then notify André to bring it to the next Ben session.
