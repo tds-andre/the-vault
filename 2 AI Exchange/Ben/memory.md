@@ -1,37 +1,47 @@
 # Ben — Memory
-*Persistent context accumulated across sessions. Most recent entries at the top.*
-*Do not load archive.md at session start — only on explicit request.*
+*Persistent context. Most recent entries at the top.*
 
 ---
 
-## Session: 2026-03-27 (founding session)
+## Session: 2026-03-29 (founding session)
 
 ### Context established
-- Ben created as André's accountant/financial agent
-- Primary role: financial analysis, spreadsheets, Cocoricó finances, numerical diligences
+- Ben agent created to support Cocoricó financial analysis and the June/July 2026 decision
+- Restaurant has been running ~2 years, currently not profitable
+- Hard deadline: June/July 2026 — profitable or clean exit
 
-### Critical financial context
-- **Cocoricó hard deadline: profitable by June/July 2026 or clean exit**
-- Restaurant has been open 2 years, has constant income but still negative profit
-- André is ambivalent — suspects more attention could turn it around but acknowledges possible bias
-- Henrique was a former business partner — departure cost man/brain power; some financial reconciliation notes exist in `Cocoricó/`
-- Restaurant financial data partially documented in vault (`Cocoricó/`) and a separate operational vault
+### Revenue known (Q4 2025)
+- October: R$12,847.48
+- November: R$15,285.50
+- December: R$11,668.02
+- Average ~R$13,267/month gross revenue
+- Source: Cocoricó 25Q4 and Bônus 2026 Q1 vault files
 
-### André's financial profile
-- Income sources: Janea (main, full-time), Key Bridge (part-time), Cocoricó (weekend, currently negative)
-- Self-financing approach to business building — recognized as unsustainable, looking to shift to external investment model
-- Financial aspirations: break engineering income ceiling, build long-term revenue-generating assets
-- Has a CNPJ (business registration) — needs regularization (noted in List of Everything)
-- Needs to file IR (income tax) — flagged as pending task
-- Name change and credit cleanup also flagged as pending personal admin
+### Costs — NOT YET KNOWN
+- COGS (chicken, ingredients, packaging) — unknown
+- Platform fees (iFood commission ~30%?) — unknown
+- Labor (Henrique, Ana, Max, Sophia, others) — partial data in Henrique Contas file
+- Overhead (rent, utilities, gas, equipment) — unknown
+- True P&L does not exist yet — building this is priority 1
 
-### Open threads
-- [ ] Set up Ben as Claude Project using template in `2 AI Exchange/project-prompt-template.md`
-- [ ] Restaurant decision session — Ben should prepare financial analysis before Gaia facilitates the decision
-- [ ] Build Cocoricó P&L baseline — what does "profitable" actually mean in numbers?
-- [ ] Map André's full income picture across Janea + Key Bridge + Cocoricó
-- [ ] IR filing — understand current status and deadlines
-- [ ] CNPJ regularization — understand current status
+### Team payment context (from Henrique Contas 14 Jan 2025)
+Payments owed/tracked for Dec 2025 and Jan 2026:
+- Multiple shift payments to Henrique, Sophia, Max, Lucia, George
+- Amounts range R$5 to R$200 per shift/event
+- Some items marked as pending — data quality uncertain
+
+### Potential partners under consideration
+- Pedro: investment + food safety management
+- Jeff: financial/accounting/systems, quality control
+- Brunão: quality control, management, marketing
+- Status: under consideration, no decisions made
+
+### Open items for first Ben session
+- [ ] André to provide: monthly cost breakdown (COGS, labor, overhead, platform fees)
+- [ ] Build first P&L template from whatever data is available
+- [ ] Understand iFood commission rate and payment terms
+- [ ] Clarify Henrique's formal employment status (CLT vs Associado — from Q4 plan)
+- [ ] Understand what "exit" would look like (equipment owned, any contracts, deposits)
 
 ---
 *Format: new sessions prepended at top, founding session preserved permanently*

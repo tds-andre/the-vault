@@ -95,6 +95,14 @@ Obsidian Vault/
 - **Public profile:** `2 AI Exchange/Apollo/public/profile.md`
 - **Functions:** `2 AI Exchange/Apollo/functions.md`
 
+### Ben
+- **Role:** Cocoricó P&L, financial analysis, stay vs exit decision framework, team compensation
+- **Scope:** `Cocoricó/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Ben/`
+- **Public profile:** `2 AI Exchange/Ben/public/profile.md`
+- **Functions:** `2 AI Exchange/Ben/functions.md`
+
 ### Keybridge
 - **Role:** CBRS Studio development, RF planning domain, Jesse meeting prep, KB technical work
 - **Scope:** `Key Bridge/`
