@@ -11,19 +11,33 @@ QOVES identified a strong masculine base. Most features (nose, lips, ears, hair,
 
 ---
 
-## Priority 1 — Under-Eye
+## Priority 1 — Eyes (Under-Eye + Expression Lines)
 
 **What's happening:** Two issues combined — vascular darkening (dark circles) + early volume hollows, worse on the right. This is why it looks heavy and tired rather than just "dark."
+**Decision:** No fillers for now. Build from non-invasive options upward.
 
-### Tier 1 — Start now (daily, free/cheap)
-- [ ] Vitamin C eye serum — morning, after cleanser, before moisturiser
-- [ ] SPF50 broad spectrum — daily, non-negotiable for this area
-- [ ] Peach or yellow colour-correcting concealer — for days when appearance matters
+### Full options list (André's research + QOVES)
 
-### Tier 2 — Clinic (when ready)
-- [ ] Tear-trough filler — lifts hollows, improves transition from under-eye to cheek
-- [ ] Polynucleotide injections — thickens thin skin, improves texture and elasticity
-- [ ] Conservative botulinum toxin — optional, for outer corner expression lines only
+**At home — start here:**
+- [ ] **Caffeine eye cream** ← *this week's action* — most targeted for dark circles + puffiness, fast results, low cost, no risk
+- [ ] Vitamin C eye serum — brightens vascular shadows, supports thin skin
+- [ ] Niacinamide — reduces pigmentation, strengthens skin barrier
+- [ ] Retinol eye cream — improves texture and fine lines over time
+- [ ] Kojic acid / Alpha arbutin — targeted pigmentation reduction
+- [ ] SPF50 — non-negotiable, prevents further darkening
+- [ ] Peach/yellow colour-correcting concealer — immediate visual fix for visible days
+
+**Prescription (requires dermatologist):**
+- [ ] Tretinoin — stronger retinoid, more effective than OTC retinol
+
+**Clinic — when ready:**
+- [ ] Superficial chemical peel — brightens pigmentation, improves texture
+- [ ] Microneedling (periorbital) — collagen stimulation, skin thickening
+- [ ] PRP (Platelet Rich Plasma) — skin regeneration, hollows and texture
+- [ ] Polynucleotide / PDRN injections — thickens thin skin, improves elasticity
+- [ ] Q-switch / Nd:YAG laser — targeted vascular/pigmentation treatment
+- [ ] Conservative botulinum toxin — optional, outer corner expression lines only
+- [ ] Tear-trough filler — deferred, reconsider after non-invasive options plateau
 
 ---
 
@@ -94,13 +108,13 @@ It's already in your gym plan — just worth knowing it's doing aesthetic work t
 
 ---
 
-## Next Steps
+## This Week's Actions (one per area)
 
-- [ ] Buy: Vitamin C serum (face + eye), SPF50, moisturiser (HA or niacinamide), retinol 0.25%, azelaic acid
-- [ ] Start morning and night routines this week
-- [ ] Shave neck beard
-- [ ] Research and book: dermatology/aesthetics consult in Niterói/RJ for under-eye and jaw filler
-- [ ] Complete QOVES surgical photos upload for their enhanced recommendations
+- [ ] **Eyes:** Buy caffeine eye cream — start immediately
+- [ ] **Skin:** Buy SPF50 + gentle cleanser — start morning routine
+- [ ] **Jaw:** Dormant — wait for QOVES surgical report
+- [ ] Shave neck beard (free, immediate jaw win)
+- [ ] Upload photos to QOVES for surgical report
 
 ---
 *Source: QOVES Aesthetics Protocol, March 2026*

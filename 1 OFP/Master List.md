@@ -217,10 +217,25 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:personal` `status:registered`
 > Next: —
 
-### Thread: QOVES — implementar plano de estetica
+### Thread: QOVES — upload surgical photos
+`type:action` `domain:personal` `status:open`
+> Next: upload additional photos to QOVES for surgical recommendations report
+> Notes: current report is non-surgical only. Surgical report requires more photo angles.
+
+### Thread: Eye improvement
 `type:project` `domain:personal` `status:prioritized`
-> Next: buy skincare products this week (Vit C serum, SPF50, moisturiser HA/niacinamide, retinol 0.25%, azelaic acid) + shave neck beard
-> Notes: Report synthesized 2026-03-29. Action plan at `Personal/Aesthetics/action-plan.md`. Three priorities: under-eye (daily routine now + filler when ready), skin (daily routine now), jaw+chin (filler when ready). Upload surgical photos to QOVES for enhanced report.
+> Next: **this week — start caffeine eye cream** (most targeted for dark circles + puffiness, low cost, no risk)
+> Notes: no fillers for now. Full options list at `Personal/Aesthetics/action-plan.md`. Progression: caffeine eye cream → Vit C eye serum → retinol/tretinoin → clinic (polynucleotides, laser, PRP) when ready.
+
+### Thread: Skin improvement
+`type:project` `domain:personal` `status:prioritized`
+> Next: **this week — buy and start SPF50 + gentle cleanser** (foundation of everything else, non-negotiable)
+> Notes: full routine at `Personal/Aesthetics/action-plan.md`. Morning: cleanser → Vit C → moisturiser (HA/niacinamide) → SPF50. Night: cleanser → retinol 0.25% 3x/week → azelaic acid on red areas.
+
+### Thread: Jaw improvement
+`type:project` `domain:personal` `status:dormant`
+> Next: wait for QOVES surgical report before deciding
+> Notes: non-surgical option is jaw filler + chin filler. Fat reduction amplifies results. Report will clarify surgical options. Reactivate when surgical report arrives.
 
 ### Thread: Fazer curso de frances
 `type:skill` `domain:personal` `status:someday`
