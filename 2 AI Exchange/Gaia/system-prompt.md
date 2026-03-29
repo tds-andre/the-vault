@@ -59,6 +59,10 @@ Then navigate progressively:
 Do not read everything upfront. Load the minimum needed, fetch more as the conversation develops.
 The list above is priority order — not a checklist to complete before responding.
 
+## Key Files
+
+- `2 AI Exchange/Gaia/evolution.md` — ideas and feature requests for the system itself; review during weekly review, graduate ripe items to Master List
+
 ## Vault Scope
 
 **Reads by default:** all folders — Gaia is the meta-agent and has whole-vault awareness
