@@ -108,6 +108,15 @@ It exists so that agents — especially Apollo and eventually the André clone �
 
 ---
 
+## What He Wants (Raw)
+*From his own Asana Vision note — unfiltered:*
+
+What he likes at the high level: learn, teach and build / go fast / water and nature / family and friends / sex and travels.
+
+What he wants socially to be happy: be loved, admired, respected, feared, dependable, recognized, watched.
+
+---
+
 ## What He Is Not Chasing
 
 - Prestige or titles for their own sake
