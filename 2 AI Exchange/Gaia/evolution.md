@@ -114,7 +114,7 @@ Agents manage digital marketing campaigns and route leads automatically. Ambitio
 
 ### Asana MCP integration
 `2026-03-29`
-André uses Asana for planning and tracking — has existing projects and tasks there. Build an MCP integration via Asana REST API to allow agents to read and update Asana tasks. Most relevant for Janea (tracking Akuvo deliverables) and Gaia (weekly review cross-referencing). Manual sync for now. Alex's territory.
+Asana MCP connected to Claude Desktop (2026-03-29) but pointing to personal workspace (andrebahamut@gmail.com, old 2015 tasks). The correct workspace is "Grieb Emmerich" which is likely tied to a different/work email account. Need to re-authenticate or add a second Asana connection with the correct account. Once connected to Grieb Emmerich, most relevant for: Janea agent (Akuvo deliverables), Gaia (weekly review). MCP tools available: get_projects, get_tasks, create_task, create_project, get_task, get_stories, search, etc.
 
 ### Microsoft ToDo MCP integration
 `2026-03-27` *(moved here from earlier)*
