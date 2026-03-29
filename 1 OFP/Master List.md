@@ -172,8 +172,9 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 > Notes: also "Definir sistema de aprimoramento de Beleza"
 
 ### Thread: Research and implement eye and skin routine
-`type:routine` `domain:personal` `status:registered`
-> Next: research first, then establish as daily routine
+`type:routine` `domain:personal` `status:closed`
+> Next: —
+> Notes: superseded by QOVES action plan 2026-03-29. See `Personal/Aesthetics/action-plan.md`
 
 ### Thread: Concluir exames medicos
 `type:project` `domain:personal` `status:registered`
@@ -216,10 +217,10 @@ Note: `routine` threads don't close — they cycle. Mark last completion in Note
 `type:project` `domain:personal` `status:registered`
 > Next: —
 
-### Thread: QUVOS — acompanhamento de recomendacoes
+### Thread: QOVES — implementar plano de estetica
 `type:project` `domain:personal` `status:prioritized`
-> Next: clarify with Gaia what QUVOS is, then define concrete next step
-> Notes: appeared in journal 18/03 and weekly review 2026-03-29. Context unclear to Gaia — needs qualification.
+> Next: buy skincare products this week (Vit C serum, SPF50, moisturiser HA/niacinamide, retinol 0.25%, azelaic acid) + shave neck beard
+> Notes: Report synthesized 2026-03-29. Action plan at `Personal/Aesthetics/action-plan.md`. Three priorities: under-eye (daily routine now + filler when ready), skin (daily routine now), jaw+chin (filler when ready). Upload surgical photos to QOVES for enhanced report.
 
 ### Thread: Fazer curso de frances
 `type:skill` `domain:personal` `status:someday`
