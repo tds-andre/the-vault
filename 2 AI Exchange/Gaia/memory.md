@@ -4,6 +4,21 @@
 
 ---
 
+## Session: current (Cocoria created)
+
+### Cocoria agent created
+- **Cocoria** (v1.0) — Cocoricó operational agent: team, product, standards, systems, marketing
+- Ben repositioned as macro financial agent (P&L, stay/exit decision, scenario modeling)
+- Clear division: Cocoria = operational engine, Ben = financial analysis of that engine
+- Cocoria has full briefing context from `Cocoricó/0329 Cocoricó Briefing.md`
+- agents.md updated with both agents' revised scopes
+- Key context: online score at 4.6 (urgent), R$1,500/month rent just started, Rodrigo is a new potential team member
+
+### Active agent roster
+- Gaia, Alex, Ben, Cocoria, Apollo, Joane, Kaybee
+
+---
+
 ## Session: 2026-03-29 — Part 8 (thread system migration complete)
 
 ### Thread system migrated

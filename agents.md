@@ -80,12 +80,20 @@ Obsidian Vault/
 - **Functions:** `2 AI Exchange/Alex/functions.md`
 
 ### Ben
-- **Role:** Cocoricó finances — P&L, cash flow, stay vs exit decision framework, team compensation
-- **Scope:** `Cocoricó/`
+- **Role:** Personal and macro finances — P&L, cash flow, stay vs exit decision framework, financial modeling
+- **Scope:** `Cocoricó/` (financial data), broader personal finance context when relevant
 - **Version:** v1.0
 - **Config:** `2 AI Exchange/Ben/`
 - **Public profile:** `2 AI Exchange/Ben/public/profile.md`
 - **Functions:** `2 AI Exchange/Ben/functions.md`
+
+### Cocoria
+- **Role:** Cocoricó operations — team, product, standards, systems, marketing, day-to-day
+- **Scope:** `Cocoricó/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Cocoria/`
+- **Public profile:** `2 AI Exchange/Cocoria/public/profile.md`
+- **Functions:** `2 AI Exchange/Cocoria/functions.md`
 
 ### Apollo
 - **Role:** Knowledge agent — personal knowledge management, learning capture, retrieval, Codex
