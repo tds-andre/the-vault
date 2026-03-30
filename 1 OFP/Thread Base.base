@@ -1,8 +1,8 @@
 filters:
   and:
-    - file.folder == "1 OFP/threads"
+    - file.folder == "1 OFP/Threads"
 views:
-  - type: list
+  - type: table
     name: All Threads
     order:
       - file.name
@@ -14,6 +14,13 @@ views:
     indentProperties: true
   - type: table
     name: Active Threads
+    filters:
+      or:
+        - status == "active"
+        - status == "prioritized"
+    groupBy:
+      property: status
+      direction: DESC
     order:
       - file.name
       - domain
@@ -24,5 +31,5 @@ views:
       - file.backlinks
       - file.ctime
     sort:
-      - property: file.ctime
-        direction: ASC
+      - property: file.mtime
+        direction: DESC

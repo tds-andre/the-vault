@@ -7,17 +7,18 @@
 ## Session: 2026-03-29 — Part 8 (thread system migration complete)
 
 ### Thread system migrated
-- All ~55 threads converted from Master List to individual files in `1 OFP/threads/`
+- All 55 threads converted from Master List to individual files in `1 OFP/Threads/` (capital T)
 - Thread Index at `1 OFP/Thread Index.md` — load first each session
 - Thread System doc at `1 OFP/Thread System.md` — schema and conventions
 - Master List retired — replaced by Thread System.md
-- Asana integration retired — Obsidian Base replaces Gaia One as UI
-- Status vocabulary updated: registered→captured, open→active, someday→eventually, archived merged into closed
-- Gaia session protocol updated: load Thread Index first, read individual files on demand
+- Asana integration retired — Obsidian Base (Threads.base) replaces Gaia One as UI
+- Status vocabulary: prioritized, active, eventually, dormant, captured, closed
+- Directory renamed threads/ → Threads/ by André
+- Obsidian Base confirmed working
 
 ### New operating protocol
 1. Load `1 OFP/Thread Index.md` at session start (fast, one file)
-2. Read specific thread files when working on or updating them
+2. Read specific `1 OFP/Threads/<file>.md` files when working on them
 3. Update thread file + Thread Index when state changes
 4. Commit
 

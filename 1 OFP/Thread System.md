@@ -12,18 +12,18 @@ A thread is any evolving unit of intent — from a single action to a years-long
 
 ## Directory
 
-All threads live in `1 OFP/threads/` as individual markdown files.
+All threads live in `1 OFP/Threads/` as individual markdown files.
 
 ```
 1 OFP/
-  threads/
+  Threads/
     life-bonaire-north-trip.md
     professional-cbrs-studio.md
     enzo-cursos-extracurriculares.md
     ...
   Thread System.md       ← this file
   Thread Index.md        ← Gaia's fast-load overview
-  Obsidian Base/         ← André's UI (Obsidian Base config)
+  Threads.base           ← André's UI (Obsidian Base)
 ```
 
 ---
