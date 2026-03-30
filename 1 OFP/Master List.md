@@ -1,6 +1,8 @@
 # Master List
-*Gaia's thread database. One file, all domains, all types.*
-*Updated collaboratively by André and Gaia. Seeded: 2026-03-27. Last updated: 2026-03-29.*
+*RETIRED 2026-03-29. Replaced by individual thread files in `1 OFP/threads/`.*
+*Schema and conventions: `1 OFP/Thread System.md`*
+*Fast overview: `1 OFP/Thread Index.md`*
+*This file kept for reference only. Do not update.*
 
 ---
 

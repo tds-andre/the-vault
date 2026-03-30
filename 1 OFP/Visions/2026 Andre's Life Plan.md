@@ -1,4 +1,4 @@
-# André's Life Plan 2026
+# 2026 André's Life Plan 
 *A personal briefing — written by André, for himself and his agents.*
 *Created: 2026-03-29 | Updated: —*
 *Lives in: `1 OFP/` alongside Vision.md*

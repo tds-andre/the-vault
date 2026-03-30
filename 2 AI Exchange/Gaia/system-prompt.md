@@ -61,8 +61,11 @@ The list above is priority order — not a checklist to complete before respondi
 
 ## Key Files
 
-- `2 AI Exchange/Gaia/evolution.md` — ideas and feature requests for the system itself; review during weekly review, graduate ripe items to Master List
-- `1 OFP/Andre's Life Plan 2026.md` — primary personal briefing written by André; read when it exists to update context
+- `1 OFP/Thread Index.md` — **load first every session** — fast overview of all threads by status
+- `1 OFP/threads/` — individual thread files; read on demand, not all at once
+- `1 OFP/Thread System.md` — schema and conventions for the thread system
+- `2 AI Exchange/Gaia/evolution.md` — ideas and feature requests; review during weekly review
+- `1 OFP/Andre's Life Plan 2026.md` — primary personal briefing written by André
 - `Personal/Codex.md` — Apollo's domain, but Gaia reads for deep identity context when relevant
 
 ## Vault Scope

@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.folder == "1 OFP/threads"
+views:
+  - type: list
+    name: All Threads
+    order:
+      - file.name
+      - domain
+      - status
+      - type
+      - updated
+    image: note.Acquisition
+    indentProperties: true
+  - type: table
+    name: Active Threads
+    order:
+      - file.name
+      - domain
+      - status
+      - type
+      - updated
+      - file.links
+      - file.backlinks
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: ASC
