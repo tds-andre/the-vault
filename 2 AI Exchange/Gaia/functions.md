@@ -236,4 +236,40 @@ This message has been moved to: messages/[state]/[filename]
 **Rule:** Master List is always source of truth. Asana reflects it, not the reverse.
 
 ---
+
+## Function: Create Claude Code Agent (CLAUDE.md)
+
+**What:** Bootstrap a Claude Code session so it behaves as a full vault-connected agent — same identity, same memory, same protocols as Claude Desktop agents.
+
+**When:** When adding a new project that an existing agent should work in via Claude Code, or when creating a new agent that has both a strategic (Desktop) and coding (Code) interface.
+
+**How:**
+1. Identify the agent and the project directory
+2. Read the agent's `system-prompt.md` and `memory.md` from the vault
+3. Read the project's existing context (README, AGENTS.md, pyproject.toml, directory tree)
+4. Write `CLAUDE.md` to the project root with:
+   - **Session start protocol** — greet immediately, then load vault progressively: `memory.md` → `inbox/` → domain notes → relevant threads
+   - **Vault path** — absolute path to vault via filesystem MCP symlink
+   - **Identity** — who the agent is, what it handles, what it doesn't
+   - **Project-specific context** — repo architecture, setup commands, conventions (keep lean — time-varying context lives in `memory.md`)
+   - **Memory update protocol** — both interfaces update the same `memory.md`
+   - **Messaging protocol** — same inbox rules as Desktop
+5. Create `.claude/settings.json` with deny rules for `.env` and secrets
+6. Update the agent's `system-prompt.md` in the vault with a "Claude Code Interface" section
+7. Update the agent's `memory.md` to log the setup
+8. Note in evolution.md if `~/.claude/settings.json` needs updating for vault MCP access
+
+**Key principle:** `CLAUDE.md` is a bootstrap file, not a context dump. Only put things that are always true (vault path, repo conventions, session protocol). Everything time-varying lives in the vault.
+
+**The model:**
+```
+CLAUDE.md          → "I am [Agent], here's where my brain is"
+memory.md          → "here's what's happening right now"
+domain notes       → "here's the raw project material"
+Threads/           → "here's what I'm working on"
+```
+
+**Global MCP requirement:** Claude Code needs `~/.claude/settings.json` with the same `mcpServers` block as `claude_desktop_config.json` to access the vault. Check with André if not already configured.
+
+---
 *Created: March 2026 | Renamed from tasks.md: 2026-03-27*

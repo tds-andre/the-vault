@@ -2,11 +2,12 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: life
-type: project
-status: active
+type: mission
+status: merged
 due: 2026-05-30
 parent:
 ---
+Duplicate of: [life-bonaire-north-trip](life-bonaire-north-trip.md)
 
 next: plan itinerary and buy diving gear after tickets are purchased
 parent: [[life-bonaire-north-trip]]

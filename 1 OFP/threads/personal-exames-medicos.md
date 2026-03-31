@@ -2,7 +2,7 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: personal
-type: project
+type: task
 status: active
 due:
 parent:

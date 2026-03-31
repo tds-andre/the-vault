@@ -2,8 +2,8 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: cocoroco
-type: decision
-status: prioritized
+type: develop
+status: active
 due: 2026-06-30
 parent:
 ---

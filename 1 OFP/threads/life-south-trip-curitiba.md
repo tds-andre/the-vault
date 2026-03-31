@@ -2,7 +2,7 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: life
-type: project
+type: mission
 status: prioritized
 due: 2026-05-05
 parent:

@@ -13,9 +13,9 @@ So here is what I think we've identified:
   
 
 - start with a transmitter configuration
-    - cbsd position       (x, y)
-    - antenna height      (z)
-    - antenna azimuth     (w)
+    - cbsd position       (x, y) - fixed location
+    - antenna height      (z)     - fixed locaton
+    - **antenna azimuth     (w)**
     - configurable defaults
     - antenna gain      (g)
     - antenna beamwidth (bw)   (default 12dB omni)

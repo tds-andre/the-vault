@@ -2,7 +2,7 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: life
-type: project
+type: develop
 status: active
 due: 2026-06-30
 parent:

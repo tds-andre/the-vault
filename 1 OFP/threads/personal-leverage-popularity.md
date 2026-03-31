@@ -2,7 +2,7 @@
 created: 2026-03-29
 updated: 2026-03-29
 domain: personal
-type: mission
+type: develop
 status: active
 due:
 parent:

@@ -3,7 +3,7 @@ created: 2026-03-29
 updated: 2026-03-29
 domain: meta
 type: project
-status: active
+status: done
 due:
 parent:
 ---

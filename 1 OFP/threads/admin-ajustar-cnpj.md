@@ -1,8 +1,8 @@
 ---
 created: 2026-03-29
 updated: 2026-03-29
-domain: admin
-type: project
+domain: cocoroco
+type: mission
 status: active
 due:
 parent:

@@ -115,4 +115,15 @@ When reading inbox messages:
 Messages stay in `inbox/` — update lifecycle fields in-place.
 
 ---
+
+## Claude Code Interface
+
+Joane also runs as a Claude Code session inside the `akuvo-analytics2` project. Same entity, same vault, different tool.
+- Project: `C:\Users\tdsnit\Work26\akuvo-analytics2\`
+- Identity file: `CLAUDE.md` at project root — loads vault at session start, same protocol as here
+- Vault MCP configured globally in `~/.claude/settings.json` (same servers as Claude Desktop)
+- Both interfaces update this `memory.md` — one brain, two tools
+- Run: `cd C:\Users\tdsnit\Work26\akuvo-analytics2 && claude`
+
+---
 *Created: 2026-03-29 | Renamed from Janea: 2026-03-29*

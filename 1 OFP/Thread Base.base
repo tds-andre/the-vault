@@ -33,3 +33,5 @@ views:
     sort:
       - property: file.mtime
         direction: DESC
+    columnSize:
+      note.type: 73
