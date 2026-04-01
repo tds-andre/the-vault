@@ -3,6 +3,59 @@
 
 ---
 
+## Session: 2026-03-31
+
+### What we did
+- Created `docs/DATA.md` in akuvo-analytics2 (continued from 03-30 session)
+- Updated `AGENTS.md` to point agents at DATA.md
+- Improved `list_existing_clients()` Synapse method with recursive dir_size
+- **Client segmentation analysis** — major analytical work:
+  - Analyzed `client-stats.csv` (153 clients × 4 metrics: accounts, activities, dqs, payments)
+  - Applied volume thresholds: accounts ≥ 3K, activities ≥ 2K, DQ ≥ 500, payments ≥ 3K → 41 removed
+  - Removed 4 ratio outliers (dq_rate > 5, pay_rate > 20, act_rate > 60) → **108 clean clients**
+  - Found dq_rate and pay_rate are 0.80 correlated → collapsed into single DQ+PAY density axis
+  - Discovered act_rate is independent (0.05 correlation)
+  - Proved scarce DQ+PAY data is **pipeline coverage issue**, not onboarding timing (148× act-to-txn ratio for scarce vs 1.5× for rich)
+  - 12 pipeline-gap clients identified (large accounts+activities, near-zero DQ/payments)
+  - Proposed 4-tier segmentation: Rich (50) / Moderate (47) / Scarce DQ+PAY (11) / Not ready (45)
+  - Wrote up as `Janea Akuvo/0331 Client Segmentation Analysis.md`
+- **Built React presentation** (`client-segmentation-report.jsx`):
+  - 11 slides, Akuvo branding, assertion-driven titles
+  - Icons for data types: ⚠️ DQ (amber), 💲 payments (green), 📞 activities (violet), 💼 accounts (navy)
+  - Color carries meaning, minimal cards, variable-height slides
+  - Terminology: "Sparse" renamed to "Scarce DQ+PAY" for narrative clarity
+  - tx_density references replaced with DQ+PAY density / icons throughout
+
+### Client segmentation summary (final numbers, LOW_DQ=500)
+- 153 total → 41 low volume removed → 4 outliers → **108 clean clients**
+- DQ+PAY density = sqrt(dq_rate × pay_rate)
+- **50 Rich** (DQ+PAY ≥ 1.5): best for escalation, skews small (35 of 45 small clients)
+- **47 Moderate** (0.1–1.5): decent depth, skews large (20 of 28 large clients)
+- **11 Scarce DQ+PAY** (< 0.1): pipeline coverage gap
+- Rich + large is rare: only MACU, UNIFY, CUTX
+- 12 pipeline-gap clients: large institutions with normal activity but missing DQ/payment pipelines
+- dq×pay correlation: 0.80 | act×DQ+PAY correlation: 0.05
+
+### Data access established
+- Filesystem MCP includes `D:\akuvo-data\stakuvoproddatalake\analytics\integration`
+- Only prod-33 (COMFIRSTCU) present — Synapse-processed download
+- Table names differ: `dqs.parquet` vs `dq_episodes`, `activities.parquet` vs `activity`
+- Cannot run Python against data in sandbox (no pyarrow, no network)
+
+### Open threads
+- [ ] Set up Joane as Claude Project
+- [ ] Wrap Escalation Phase 1 into clean presentation for stakeholders
+- [ ] Consolidate capability building work into one-pager for Guarda/leadership
+- [ ] Test Core Package refactor in Synapse
+- [ ] Build MCP server for datamart (wrapping IntegrationDatamartIO)
+- [ ] Implement segmentation as package function + update DATA.md
+- [ ] Investigate 12 pipeline-gap clients with data engineering
+- [x] Create DATA.md for Claude context (done 2026-03-30)
+- [x] Client segmentation analysis (done 2026-03-31)
+- [x] Client segmentation presentation (done 2026-03-31)
+
+---
+
 ## Session: 2026-03-30
 
 ### What we did
@@ -25,26 +78,6 @@
 - 155 clients, partitioned as prod-{id}
 - TIMECAP: 2026-03-17
 - Notebook 27_escalation.ipynb: DNCU (client 34) — 79K accounts, 83K profiles, 41K DQ episodes, 1.2M activity
-
-### Open threads (updated)
-- [ ] Set up Joane as Claude Project
-- [ ] Wrap Escalation Phase 1 into clean presentation for stakeholders
-- [ ] Consolidate capability building work into one-pager for Guarda/leadership
-- [ ] Test Core Package refactor in Synapse
-- [ ] Build MCP server for datamart (wrapping IntegrationDatamartIO)
-- [x] Create DATA.md for Claude context (done 2026-03-30)
-
----
-
-## Session: 2026-03-30 (Claude Code setup)
-
-### Claude Code session configured
-- `CLAUDE.md` written to `akuvo-analytics2/` project root
-- Carries Joane's identity, Big Problem framing, active work context, code conventions
-- `.claude/settings.json` created with basic deny rules (.env, secrets)
-- Joane now has two interfaces: Claude Desktop (strategy/analysis) + Claude Code (coding)
-- After Claude Code sessions: update this memory.md with what changed in the codebase
-- AGENTS.md in repo remains as-is (coexists with CLAUDE.md)
 
 ---
 

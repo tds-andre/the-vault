@@ -121,6 +121,22 @@ Obsidian Vault/
 - **Functions:** `2 AI Exchange/Kaybee/functions.md`
 - **Note:** Folder `2 AI Exchange/Keybridge/` can be deleted manually (renamed to Kaybee)
 
+### Jax
+- **Role:** AI mastery teacher — skills diagnosis, curriculum, challenges, first-principles teaching
+- **Scope:** `Professional/`, `Janea Akuvo/` (when connecting learning to real work)
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Jax/`
+- **Public profile:** `2 AI Exchange/Jax/public/profile.md`
+- **Functions:** `2 AI Exchange/Jax/functions.md`
+
+### Laix
+- **Role:** X In Rio business — offer design, site, marketing, operations, legal structure
+- **Scope:** `3 Subthreads/X In Rio/`
+- **Version:** v1.0
+- **Config:** `2 AI Exchange/Laix/`
+- **Public profile:** `2 AI Exchange/Laix/public/profile.md`
+- **Functions:** `2 AI Exchange/Laix/functions.md`
+
 ### Future agents (not yet configured)
 - **Juliana** — secretary; day-to-day operations currently absorbed by Gaia; spin off when scope is clearer
 - **André** — clone; requires Apollo's PKB as foundation first

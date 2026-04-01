@@ -112,6 +112,14 @@ Agents can create and publish websites to a domain. Alex already has prototyping
 `2026-03-29`
 Agents manage digital marketing campaigns and route leads automatically. Ambitious — requires: ad platform APIs (Meta, Google), CRM integration, lead scoring logic. Most relevant to future businesses. Probably a dedicated marketing agent when the time comes. Seed idea for the agentic ecosystem business (see Master List).
 
+### WhatsApp MCP via Baileys
+`2026-03-31`
+Unofficial WhatsApp automation using Baileys (or whatsapp-web.js) — open source libraries that automate WhatsApp Web via a headless browser session authenticated to André's personal account. Alex builds a local service exposing vault-mcp tools: `send_whatsapp(number, message)` and `get_messages()`. Risk: Meta occasionally bans accounts using unofficial automation, low probability for personal low-volume use. Prerequisite for the WhatsApp→inbox bridge below.
+
+### WhatsApp → inbox bridge
+`2026-03-31`
+Once WhatsApp MCP is live: messages sent to a designated number/contact are captured by the Baileys service and written to `2 AI Exchange/Gaia/inbox/` as properly formatted message files. Enables mobile-native capture — André messages Gaia from his phone naturally, no Obsidian or GitHub needed. Depends on WhatsApp MCP above.
+
 ### Asana MCP integration
 `2026-03-29`
 Asana MCP connected to Claude Desktop (2026-03-29) but pointing to personal workspace (andrebahamut@gmail.com, old 2015 tasks). The correct workspace is "Grieb Emmerich" which is likely tied to a different/work email account. Need to re-authenticate or add a second Asana connection with the correct account. Once connected to Grieb Emmerich, most relevant for: Janea agent (Akuvo deliverables), Gaia (weekly review). MCP tools available: get_projects, get_tasks, create_task, create_project, get_task, get_stories, search, etc.

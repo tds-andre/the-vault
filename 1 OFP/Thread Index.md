@@ -58,6 +58,7 @@ Format: `[[file]] | type | due | next`
 | [[admin-ajustar-cnpj]] | admin | project | — | understand current status |
 | [[admin-situacao-financeira-pai]] | admin | system | — | — |
 | [[meta-toggl-time-accounting]] | meta | system | 2026-04-03 | review data after 2 weeks |
+| [[building-x-in-rio]] | building | mission | — | open Laix session |
 | [[meta-configurar-claude-projects]] | meta | project | — | set up each agent as Claude Project |
 
 ---
@@ -88,7 +89,7 @@ Format: `[[file]] | type | due | next`
 |---|---|---|---|
 | [[personal-jaw-improvement]] | personal | project | wait for QOVES surgical report |
 | [[building-minimarket]] | building | project | — |
-| [[building-x-in-rio]] | building | project | — |
+
 | [[building-agentes-para-executivos]] | building | project | revisit when personal system proven |
 | [[enzo-build-cavern]] | enzo | project | — |
 | [[enzo-subcavern-mae]] | enzo | project | — |

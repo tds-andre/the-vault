@@ -122,6 +122,9 @@ Background info, history, why this matters. Optional — only when needed.
 - [ ] subtask one
 - [ ] subtask two `due: YYYY-MM-DD`
 
+## Comments
+Free-form notes, ideas, raw details that don't fit elsewhere. Not timestamped — scratchpad, not a log.
+
 ## Updates
 YYYY-MM-DD — first update, appended chronologically
 YYYY-MM-DD — second update
@@ -129,10 +132,11 @@ YYYY-MM-DD — second update
 
 **Rules:**
 - `next:` and `due:` are bare inline text — no header, no bold
-- `## Context`, `## Subtasks`, `## Updates` are headers — only present when needed
-- Section order is always: inlines → Context → Subtasks → Updates
-- Updates are append-only, newest at bottom
-- Closed threads: add a final update line with free-form resolution note (e.g. `2026-05-01 — done, tickets bought and trip completed`)
+- `## Context`, `## Subtasks`, `## Comments`, `## Updates` are headers — only present when needed
+- Section order is always: inlines → Context → Subtasks → Comments → Updates
+- Comments is a free-form scratchpad — no timestamps, raw thoughts, anything that doesn't fit elsewhere
+- Updates are append-only, newest at bottom, timestamped
+- Closed threads: add a final update line with free-form resolution note
 - Parent thread links go inline: `parent: [[life-north-trip]]`
 
 ---

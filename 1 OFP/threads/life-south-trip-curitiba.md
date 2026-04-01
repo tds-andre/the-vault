@@ -1,23 +1,28 @@
 ---
 created: 2026-03-29
-updated: 2026-03-29
+updated: 2026-03-31
 domain: life
-type: mission
+type: project
 status: prioritized
 due: 2026-05-05
 parent:
 ---
 
-next: buy tickets to Curitiba + pay second installment before April 22
+next: pay R$2,650 installment before Apr 22 + buy tickets
 
 ## Context
-Arrive Curitiba May 5 (Tuesday). Course May 6 in Rio Negro-PR (120km from Curitiba). Then Paraguay or Foz do Iguaçu. Buy electric bike in Paraguay.
+- Chegar em Curitiba terça-feira dia 5 de Maio
+- Fazer curso no dia seguinte (Rio Negro-PR, 120km de Curitiba)
+- Quinta, Sexta e Sábado putaria em Curitiba
+- Depois uma ou duas semanas em Paraguay ou Foz do Iguaçu
+- Retorno Rio
 
 ## Subtasks
-- [ ] buy tickets + plan itinerary
-- [ ] pay R$2,650 installment `due: 2026-04-22`
-- [ ] buy electric bike in Paraguay
-- [ ] aula Rio Negro-PR, May 6
+- [ ] planejar itinerário → comprar passagens → fazer reservas
+- [ ] segunda parcela R$2.650,00 `due: 2026-04-22`
+- [ ] aula Rio Negro-PR, 6 de Maio (quarta-feira) — 120km de Curitiba
+- [ ] comprar bicicleta elétrica e pegar no Paraguay
 
 ## Updates
-2026-03-29 — thread created, R$2,650 installment due Apr 22 flagged as urgent
+2026-03-29 — thread created
+2026-03-31 — itinerary details and subtasks added from Asana
