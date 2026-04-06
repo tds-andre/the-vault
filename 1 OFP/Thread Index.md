@@ -26,7 +26,6 @@ Format: `[[file]] | type | due | next`
 | [[personal-eye-improvement]] | personal | project | — | buy caffeine eye cream |
 | [[personal-skin-improvement]] | personal | project | — | buy SPF50 + cleanser |
 | [[admin-declarar-ir]] | admin | project | — | find and contact one accountant |
-| [[life-seguro-moto]] | life | action | — | research insurer options online |
 | [[enzo-cursos-extracurriculares]] | enzo | project | — | follow up with father on CNA English |
 | [[meta-weekly-review-ritual]] | meta | routine | 2026-04-05 | next review Sunday Apr 5 |
 
@@ -94,6 +93,7 @@ Format: `[[file]] | type | due | next`
 | [[enzo-build-cavern]] | enzo | project | — |
 | [[enzo-subcavern-mae]] | enzo | project | — |
 | [[enzo-get-bike]] | enzo | action | — |
+| [[life-seguro-moto]] | life | action | — |
 | [[professional-andre-cursos]] | professional | project | — (superseded by building-andre-cursos) |
 
 ---

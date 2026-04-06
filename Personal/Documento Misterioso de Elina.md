@@ -37,3 +37,38 @@ Originating System: CAI:TRAD
 
 Referência do registro
 "Brasil, São Paulo, Registro Civil, 1925-2023", FamilySearch (https://www.familysearch.org/ark:/61903/1:1:6V4K-BXD5 : Mon Jan 05 21:22:50 UTC 2026), Entry for Silverio Pereira and Antonio Pereira.
+
+
+___
+
+Nome: Elina  
+Sexo: F  
+  
+
+| Família               | Atribuição | Sexo | Idade | Local de nascimento                   |
+| --------------------- | ---------- | ---- | ----- | ------------------------------------- |
+| Catharina Pasqualina  | Mãe        | F    |       |                                       |
+| João Baptista         | Pai        | M    |       |                                       |
+| Virginia Mirandola    | Filha      | F    |       | São Caetano do Sul, São Paulo, Brasil |
+| Maria Cortaulo        |            | F    |       |                                       |
+| Antonio Barilez       |            | M    |       |                                       |
+| Francisco Bellenato   |            | M    |       |                                       |
+| A Barile              |            | U    |       |                                       |
+| Maximiliano Bellenato |            | M    |       |                                       |
+| Maria Peruzzi         |            | F    |       |                                       |
+
+  
+Número da pasta digital: 008160488_009_M99H-ZHB  
+Número da imagem: 35  
+Originating System: CAI:TRAD  
+  
+Referência do registro  
+"Brasil, São Paulo, Registro Civil, 1925-2023", _FamilySearch_ (https://www.familysearch.org/ark:/61903/1:1:6V4L-ZVDP : Mon Jan 05 21:21:24 UTC 2026), Entry for Maria Cortaulo and Antonio Barilez, 10 de setembro de 1919.
+
+https://www.familysearch.org/pt/search/record/results?count=20&q.birthLikePlace=S%C3%A3o%20Paulo%2C%20Brasil&q.filmNumber=8160488&q.surname=Bellianato
+
+Outra Elina
+https://www.familysearch.org/ark:/61903/1:1:6V4L-ZVDG?lang=pt
+
+https://www.familysearch.org/ark:/61903/1:1:6V4L-ZVD5?lang=pt
+![](Pasted%20image%2020260401122518.png)

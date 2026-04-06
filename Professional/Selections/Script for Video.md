@@ -7,7 +7,9 @@ and I would say what really sets me apart
 is the integral view and capability that I bring to AI or adjacent initiaves,
 not only technically, meaning the end-to-end technological stack necessary to bring an AI solution to life,
 but also in terms of business understanding, project management, capability building, 
-marketing, comunication , people management, and so on
+marketing, comunication, people management, and so on
+
+
 
 So I think I'm uniquely positioned with regards to having a very broad set of capabilities,
 along with technical depth

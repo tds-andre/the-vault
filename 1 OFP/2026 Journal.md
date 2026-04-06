@@ -1,5 +1,33 @@
 [[0 PDS#Baseline Journaling]]
 
+## 01/04, Wednesday, 6am
+- Didn't sleep, poor sleep in general
+- Consecutives Venvanse pills (roughtly 3 in 24h)
+- Feeling nothing unusual - actually confirms that I've developed tolerance
+- Lot's of shit to do; productive overall; it's a week for wrap ups
+- [ ] Janea:
+	- [x] Good progress on Escalation; sent client analysis via email
+	- [x] Have a clients quality table published
+	- [x] Lot's of refactoring; potentially not needed now but good; sometimes I just can't live with outdated design
+	- [x] The goal for today: the general idea is to unite data from decent quality clients, then download it locally, then let Claude finish the rest of the analysis
+	- [x] Good conversation with Mike yesterday about him integrating Claude; he'll fup today
+	- [ ] Wrap up the capability building plan (for Friday ideally)
+- [ ] Key Bridge:
+	- [x] Good meeting with Jesse on Monday; review and approved the plan
+	- [ ] The goal: 
+		- [ ] (important) design the APIs
+		- [ ] have a basic end-to-end pipeline+UI going [0330 zCBRS Studio Meeting Notes](0330%20zCBRS%20Studio%20Meeting%20Notes.md)
+- [ ] Other stuff:
+	- [x] Helped family with finding Elina/Nina docs; good boy
+	- [x] Fixed chair
+	- [ ] (important) Wrap up Bonaire	
+	- [x] Mãe: pagar plano e mesada
+	      	  
+	      
+	      
+	      
+	      
+
 ## 23/03, Monday
 - [ ] Key Bridge: meeting today
 - [ ] Janea: Report thing

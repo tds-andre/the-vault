@@ -5,35 +5,42 @@
 ---
 
 ## Function: Weekly Review
+**Current version:** 1 (April 2026)
 
-**What:** Facilitate André's weekly review session — orient him to his vision, surface priorities across all domains, and close open loops.
+**Changelog:**
+- v0 (March 2026) — Gaia writes the full review herself based on conversation with André. Single file output.
+- v1 (April 2026) — Three-phase model: (1) Gaia writes briefing section before André starts, (2) André writes the review in his own voice as a personal time capsule, (3) Gaia adds assessment section after André finishes. Review file is primarily André's writing. Gaia never edits what André wrote. Token-efficient briefing protocol established.
 
-**When:** Sunday night (preferred) or Monday morning (fallback). Any time André opens a session with "weekly review" or similar intent.
+**What:** Facilitate the weekly review session. Gaia opens with a briefing, André writes, Gaia closes with an assessment.
 
-**How:**
-1. Read `1 OFP/Vision.md` and most recent file in `1 OFP/Reviews/` for current state
-2. Read `2 AI Exchange/Gaia/memory.md` for open threads and recent context
-3. Open the Weekly Review template (`1 OFP/Weekly Review.md`) and guide André through it conversationally — don't just paste the template, make it a dialogue
-4. At the end, create a new instance file in `1 OFP/Reviews/YYYY-MM-DD.md` with the session output
-5. Update `memory.md` with any new context, decisions, or open threads
-
-**Modes:** Full (~20 min), Minimal (~5 min), Re-entry (~2 min) — match mode to André's energy and available time. Ask if unsure.
-
----
-
-## Function: Restaurant Decision Session
-
-**What:** Facilitate a structured evaluation of the Cocoricó situation to move André from ambivalence to a conscious decision.
-
-**When:** Before June/July 2026 deadline. Ideally within the next 2-4 weeks from founding session (March 2026). Trigger if André brings it up or if deadline is approaching.
+**When:** Sunday night or Monday morning. Trigger on "weekly review" or similar intent.
 
 **How:**
-1. Read `Cocoricó/` folder for current financial and operational context
-2. Frame the decision explicitly: double down vs. clean exit — both are valid
-3. Define concrete criteria: what does "profitable by June/July" mean in numbers?
-4. Surface the bias risk André acknowledged: "my intuition is it could turn, but could be bias"
-5. Help him reach a provisional decision with clear next actions either way
-6. Document outcome in `Cocoricó/` and update `memory.md`
+
+*Phase 1 — Gaia's Briefing (before André writes):*
+1. `filesystem:read_text_file` — `1 OFP/Thread Index.md` (fast overview, ~3KB)
+2. `vault-mcp:git log --oneline --since=<last Sunday>` — what changed in the vault this week
+3. `filesystem:read_text_file` — most recent file in `1 OFP/Weekly Reviews/` (what was committed to last week)
+4. `filesystem:read_text_file` — individual thread files only if Thread Index is insufficient for a specific item
+5. Create new review file from template: `1 OFP/Weekly Reviews/YYYY-MM-DD.md`
+6. Fill in the `## 📋 Gaia's Briefing` section: what moved, what didn't, urgent/overdue items, thread changes since last review
+7. Tell André the file is ready in Obsidian
+
+*Phase 2 — André writes (Gaia waits):*
+- André opens the file in Obsidian and writes the review in his own voice
+- Gaia does not touch the file during this phase
+- When André says "done" or "review done", proceed to Phase 3
+
+*Phase 3 — Gaia's Assessment (after André writes):*
+1. `filesystem:read_text_file` — read what André wrote
+2. Append to `## 📊 Gaia's Assessment` section: patterns noticed, blind spots, things worth naming that André might not have
+3. Update `meta-weekly-review-ritual` thread: status, next due date
+4. Update `memory.md` with any new strategic context
+
+**Token efficiency rule:** The briefing must be completable from Thread Index + git log + last review alone. Only open individual thread files if something specific requires verification. An accurate Thread Index is the prerequisite for a cheap review.
+
+**Modes:** Full (~20 min), Minimal (~5 min), Re-entry (~2 min). In minimal/re-entry mode, skip Phase 3 assessment.
+
 
 ---
 

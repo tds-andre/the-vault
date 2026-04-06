@@ -15,3 +15,4 @@ Phase 1 proven (COMFIRSTCU, prod-33, data to Feb 2026). Key numbers: 37% of acco
 
 ## Updates
 2026-03-29 — thread created, Phase 1 complete, Phase 2 pending
+2026-04-03 — FUP on Filip's message — do Sunday/Monday morning

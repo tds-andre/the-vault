@@ -53,10 +53,15 @@ type: <type>
 status: <status>
 due: YYYY-MM-DD        # optional
 parent:                # optional — markdown link to parent thread file
+tags:                  # optional — list of free-form tags
+  - tag-name
 ---
 ```
 
-All properties are required except `due` and `parent`.
+All properties are required except `due`, `parent`, and `tags`.
+
+**Known tags (grows organically):**
+- `todo-in-rio` — requires physical presence in Rio to execute
 
 ---
 

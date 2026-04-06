@@ -1,4 +1,4 @@
-# Cidadania Italiana — Resumo e Plano de Ação
+a# Cidadania Italiana — Resumo e Plano de Ação
 
 > Criado em: 31/03/2026  
 > Grupo: família Bellinato/Pires  

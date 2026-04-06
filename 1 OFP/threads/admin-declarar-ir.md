@@ -15,3 +15,4 @@ IR deadline approaching. Time-sensitive. Not "find the perfect accountant" — f
 
 ## Updates
 2026-03-29 — thread created, flagged as time-sensitive
+2026-04-05 — still no movement, find and contact one accountant this week
