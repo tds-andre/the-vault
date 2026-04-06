@@ -1,6 +1,6 @@
 ---
 created: 2026-03-29
-updated: 2026-03-31
+updated: 2026-04-06
 domain: life
 type: project
 status: prioritized
@@ -11,18 +11,24 @@ parent:
 next: pay R$2,650 installment before Apr 22 + buy tickets
 
 ## Context
-- Chegar em Curitiba terça-feira dia 5 de Maio
-- Fazer curso no dia seguinte (Rio Negro-PR, 120km de Curitiba)
-- Quinta, Sexta e Sábado putaria em Curitiba
-- Depois uma ou duas semanas em Paraguay ou Foz do Iguaçu
-- Retorno Rio
+- **May 5 (Tue):** arrive Curitiba
+- **May 6 (Wed):** motorcycling course, Rio Negro-PR (120km from Curitiba)
+- **May 7-9 (Thu-Sat):** Curitiba
+- **May 10+:** Paraguay border region (Ciudad del Este) or Foz do Iguaçu — 1-2 weeks
+- **Return:** Rio
+
+Paraguay goal: buy electric bike at Ciudad del Este, pick it up there or arrange shipping.
+Foz do Iguaçu as alternative/addition — Cataratas, easier logistics.
 
 ## Subtasks
-- [ ] planejar itinerário → comprar passagens → fazer reservas
 - [ ] segunda parcela R$2.650,00 `due: 2026-04-22`
-- [ ] aula Rio Negro-PR, 6 de Maio (quarta-feira) — 120km de Curitiba
-- [ ] comprar bicicleta elétrica e pegar no Paraguay
+- [ ] planejar itinerário → comprar passagens → fazer reservas
+- [ ] aula Rio Negro-PR, 6 de Maio (quarta-feira)
+- [ ] research electric bike options in Ciudad del Este (price, models, logistics)
+- [ ] decide: Ciudad del Este vs Foz do Iguaçu vs both
+- [ ] book accommodation Curitiba + Paraguay/Foz
 
 ## Updates
 2026-03-29 — thread created
-2026-03-31 — itinerary details and subtasks added from Asana
+2026-03-31 — itinerary details added
+2026-04-06 — Paraguay/Foz planning detail added, electric bike logistics flagged

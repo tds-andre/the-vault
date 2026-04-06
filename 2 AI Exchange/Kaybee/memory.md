@@ -3,6 +3,76 @@
 
 ---
 
+## Session: 2026-04-06 (MVP pivot + repo setup)
+
+### Major pivot from meeting transcript (0401)
+- Jesse dramatically simplified the MVP in the 0401 meeting
+- **"Step Zero" MVP:** Two clicks on a map (Tx + Rx), default assumptions, one API call, show elevation + path loss XY plots. Reset button. Done.
+- **Public tool, no auth, no login.** Tx data from SAS is private — not shown in MVP.
+- **Client-side** except for one API call. No database, no persistence.
+- **Jesse will define and send the API spec** for the path loss/elevation service — André's team is the client, not the builder of the computation backend.
+- Previous plans (Tx inventory, coverage heatmaps, Network View) all deferred to portal integration later.
+- Jesse sees this as 80% of the solution — rest is layering data on top.
+- Competitor Federated Wireless spent millions on a similar tool — validates market demand.
+- Friday follow-up meetings with Jesse.
+
+### What was killed from v3 plan
+- ❌ Tx inventory / list sidebar (Tx data is private)
+- ❌ Coverage tiles / heatmaps
+- ❌ Coverage stats / boundary polygons
+- ❌ Network View mode
+- ❌ CSV upload
+- ❌ Heavy Studio API (just a thin backend now)
+
+### Repo setup: cbrs-studio-lite
+- **Location:** `C:\Users\tdsnit\Work26\cbrs-studio-lite`
+- **CLAUDE.md** written — full project brain: identity, MVP spec, API endpoints, visual identity, domain glossary, coding conventions, vault references
+- **tasks.md** written — task queue with session log for sync
+- **initial-prompt.md** written — kickoff prompt for Claude Code
+- André will do the initial prompt himself and course correct
+
+### Three-way workflow established
+- **Kaybee (Claude Desktop):** Planner/brain. Owns CLAUDE.md (read/write). Has vault + browser + repo access. Sets tasks, updates specs.
+- **Claude Code:** Coder/hands. Reads CLAUDE.md (read-only). Writes tasks.md (session logs, task status). Owns all code.
+- **André:** Decision-maker, bridges the two. Relays Jesse feedback and decisions.
+- **Sync mechanism:** Claude Code appends session summaries to tasks.md. Kaybee reads tasks.md + scans repo to catch up. Minimizes André's relay burden.
+- **CLAUDE.md is never modified by Claude Code** — only Kaybee maintains it.
+
+### Visual identity
+- Derived from keybridgewireless.com (stock Bootstrap blue) but more colorful
+- Primary: deeper blue (#1a56db), Secondary: teal (#0d9488), Accent: amber (#d97706)
+- Signal strength scale: green → yellow → orange → red
+- Typography: Inter, 14px body, 600 weight headings
+- Map-first design principle
+
+### Tech stack (confirmed)
+- Backend: Python / FastAPI (serves API + static files)
+- Frontend: Vanilla HTML/CSS/JS (no build step, no React, no npm)
+- Map: MapLibre GL JS (CDN)
+- Charts: Plotly.js (CDN)
+- Mock: Friis free-space path loss + random terrain
+
+### API endpoints (our backend)
+- `GET /api/link` — core MVP: Tx/Rx positions → elevation profile + path loss + link metrics
+- `GET /api/config` — default assumptions and region config
+- `GET /api/health` — alive check
+- Mock implementation until Jesse sends real API spec
+
+### Plan file evolution
+- `0330 CBRS Studio Plan v2.0.md` — first full plan
+- `0330 CBRS Studio Plan v2.1.md` — exists
+- `0330 CBRS Studio Plan v2.2.md` — pre-computed pilot, Forward + Network View
+- `0401 CBRS Studio MVP Plan v3.md` — comprehensive plan with data model, full API spec, mock strategy (superseded by meeting pivot but still reference for future phases)
+
+### Open threads
+- [ ] André running initial prompt in Claude Code — scaffold + mock MVP
+- [ ] **Jesse's API spec** — he'll send it in the next few days. When it arrives, update CLAUDE.md.
+- [ ] Friday follow-up meeting with Jesse — show progress
+- [ ] Copilot/VS Code integration — André exploring better MCP access there; may reduce bridging need if vault accessible from coding agent
+- [ ] Validate: does CLAUDE.md work correctly in André's Copilot setup?
+
+---
+
 ## Session: 2026-03-30 (meeting prep)
 
 ### Work done
@@ -37,12 +107,12 @@
 - Future extensions: Inverse Area, General Optimizer, Analytics (André's broader vision preserved)
 
 ### Open threads
-- [ ] Jesse meeting today (2026-03-30) — use Plan v2 as reference
-- [ ] Regional pre-computation pilot — needs to be scoped and proposed to Jesse
-- [ ] Validate receiver defaults with Jesse (3m AGL, 0 dBi, -90 dBm threshold)
-- [ ] Clarify tower source for Reverse planner (SAS data vs user upload)
-- [ ] Determine acceptable latency: instant (<1s) vs loading state (5-30s)
-- [x] Set up Kaybee as Claude Project (done — this is it)
+- [x] Jesse meeting (2026-03-30 / 0401) — done, resulted in MVP pivot
+- [x] Regional pre-computation pilot — deferred; MVP doesn't need it
+- [ ] Validate receiver defaults with Jesse (3m AGL, 0 dBi, -90 dBm threshold) — deferred to post-MVP
+- [ ] Clarify tower source for Reverse planner — deferred to post-MVP
+- [x] Determine acceptable latency — resolved: MVP uses backend API call, not pre-computed tiles
+- [x] Set up Kaybee as Claude Project (done)
 
 ---
 
@@ -74,9 +144,9 @@
 
 ### Open threads
 - [x] Set up Kaybee as Claude Project
-- [ ] Incorporate Jesse's feedbacks into Studio before next Monday meeting → done in 0330 session
-- [x] Produce pre-computation estimates for US-wide scenes (time + storage)
-- [ ] Advance Forward planner to functional state
+- [x] Incorporate Jesse's feedbacks into Studio → done in 0330 session
+- [x] Produce pre-computation estimates for US-wide scenes → done in 0330 session
+- [ ] Advance Forward planner to functional state → now "advance MVP to functional state"
 
 ---
 *Format: new sessions prepended at top, founding session preserved permanently*

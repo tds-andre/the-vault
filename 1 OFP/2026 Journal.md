@@ -1,5 +1,24 @@
 [[0 PDS#Baseline Journaling]]
 
+
+# April 6, Monday, 4am
+- Active but shit weekend; Jessica really takes up too much time for too little benefit
+- Took 3 Venva caps in 24h but shitty effect (skipped Saturday); only dry mouth and horny.
+- Weekly review with Gaia done; need to round off some edges there.
+- This week:
+	- [ ] Plan SP trip; Resende stay already booked (11->15)
+		- [ ] **Buy bike accessories and checklist**	
+	- [ ] **Plan Bonaire and Parana**
+	- [ ] Key Bridge: *working prototype for today*
+	- [ ] Janea: **FUP on Filip's message** (measure ROI); need to elaborate requirements; one small movement for today
+		- [ ] Then wrap up **capability plan**
+	- [ ] Other shit:
+		- IR / find accountant — one message, keeps slipping
+		- Jax kickoff — agenda already defined, open the session
+		- The Final Push planning** — set a time with Ben/Cocoria
+		
+	
+
 ## 01/04, Wednesday, 6am
 - Didn't sleep, poor sleep in general
 - Consecutives Venvanse pills (roughtly 3 in 24h)
