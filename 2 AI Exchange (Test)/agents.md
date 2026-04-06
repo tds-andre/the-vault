@@ -1,3 +1,11 @@
+---
+created_by: Gaia claude-sonnet-4-6 v2.0
+created_on: 2026-04-06
+updated_by:
+updated_on:
+type: system-entry
+---
+
 # agents.md — System Entry Point
 *For agents booting without Project Instructions: read this, then find and read your `boot.md`.*
 *For humans: this is the map to the agent system.*

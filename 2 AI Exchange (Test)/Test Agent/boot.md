@@ -1,3 +1,11 @@
+---
+created_by: Gaia claude-sonnet-4-6 v2.0
+created_on: 2026-04-06
+updated_by:
+updated_on:
+type: boot
+---
+
 # Test Agent — Boot
 *Version: v2.0 | Created: 2026-04-06 | Domain: meta*
 *Paste this file verbatim as Project Instructions in the Claude Project for Test Agent.*

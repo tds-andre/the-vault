@@ -1,3 +1,11 @@
+---
+created_by: Gaia claude-sonnet-4-6 v2.0
+created_on: 2026-04-06
+updated_by:
+updated_on:
+type: index
+---
+
 # Test Agent — Index
 *Agent-maintained map of all relevant resources. Keep this short and current.*
 *Includes both vault-internal paths and external locations.*
