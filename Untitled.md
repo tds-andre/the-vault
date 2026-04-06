@@ -13,3 +13,10 @@ Potassium
 Microneddlling
 High quality red light
 Zinc
+
+
+- agents.md: short summary and pointer to boot.md
+- shared by agents:
+	- core.md:
+  
+  
