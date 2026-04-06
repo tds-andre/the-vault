@@ -4,6 +4,34 @@
 
 ---
 
+## Function: Version Agent
+
+**What:** Bump an agent's version number and record what changed.
+
+**When:** When an agent's files are meaningfully updated. Use judgment:
+- **Patch (vX.Y.Z)** — typo fixes, minor wording clarifications, small factual updates
+- **Minor (vX.Y)** — new function added, protocol change, tone/style adjustment, domain context updated
+- **Major (vX.0)** — structural redesign, architecture change, fundamental role shift
+
+Current architecture migration (v1.x → v2.0) = major bump for all agents.
+
+**How:**
+1. Identify which files carry the version header (`boot.md` and `system.md`)
+2. Update the version string in both headers
+3. Add a changelog entry at the bottom of `system.md`:
+   ```
+   ## Changelog
+   - v2.0 (2026-04-06) — migrated to new architecture: boot.md + system.md + core.md + index.md
+   - v1.1 (2026-03-29) — added Claude Code interface section
+   - v1.0 (2026-03-27) — created
+   ```
+4. Update `memory.md` with a note that the agent was versioned
+5. Include in the session's git commit
+
+**Version format:** `vMAJOR.MINOR` (no patch for now — keep it simple)
+
+---
+
 ## Function: Weekly Review
 **Current version:** 1 (April 2026)
 

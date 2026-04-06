@@ -160,6 +160,8 @@ Master List uses inline metadata tags (type:, domain:, status:). Could be querie
 - Command-line MCP → `closed` (built by Alex 2026-03-27)
 - Microsoft ToDo integration → `someday` thread in Master List
 - Messaging system → `closed` (built 2026-03-27)
+- **broadcast.md** — a shared file any agent can write to, broadcasting a message or state update to all other agents without individual inbox messages. Use case: system-wide announcements, status changes, alerts. Format TBD. Consider: append-only log vs. overwrite per agent vs. structured entries with timestamps and sender. Related to triggers.md concept.
+- **note-mcp index cache** — `build_index(path)` command that walks a directory and writes `.note-index.json` with all frontmatter for fast queries. Build when vault hits ~500+ notes. Companion to the note-mcp server Alex is building.
 
 ---
 *This thread is Gaia's, but belongs to the whole system.*
