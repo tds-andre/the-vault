@@ -3,6 +3,43 @@
 
 ---
 
+## Session: 2026-04-06b (sync after Claude Code sessions)
+
+### Code sessions completed
+- **Session 1:** Full vanilla JS MVP scaffold. FastAPI backend (3 endpoints, mock Friis + random terrain), MapLibre map, Plotly charts, two-click flow, Reset button. All working.
+- **Session 2:** React migration on `react` branch. Vite + React, react-map-gl (MapLibre), react-plotly.js. Draggable Tx/Rx markers with live API re-calls (AbortController for rapid drags). Charts taller (320px), legend overlap fixed. All original tasks complete.
+
+### Current repo state
+- **Branch:** `react` (active development)
+- **Backend:** FastAPI, unchanged, 5/5 tests passing
+- **Frontend:** `frontend/` — Vite + React, 5 components (Header, MapView, LinkSummary, ElevationChart, PathLossChart)
+- **Dev flow:** Vite on :5173 proxies `/api` to FastAPI on :8000
+- **Production:** `vite build` outputs to `../static`, served by FastAPI
+
+### CLAUDE.md updated
+- Project structure now reflects React app layout
+- Tech stack: react-map-gl, react-plotly.js, Vite
+- Frontend approach section updated
+
+### Mock analysis reviewed
+- Elevation: random walk + cumulative sum + smoothing, seeded by coordinate hash, ~50m base
+- Path loss: Friis free-space + terrain-correlated fading (0-6 dB excess)
+- Known limitation: terrain not spatially continuous — hash seeding means nearby positions can produce very different profiles. Visible when dragging markers. Will be replaced by Jesse's real API.
+
+### Three-way workflow validated
+- Claude Code left clean session logs in tasks.md ✅
+- Kaybee (me) was able to sync by reading tasks.md + scanning repo ✅
+- CLAUDE.md was not modified by Claude Code ✅
+- Workflow is working as designed
+
+### Open threads
+- [ ] **Jesse's API spec** — still waiting. When it arrives, update CLAUDE.md + implement real_link.py
+- [ ] Friday meeting with Jesse — show React prototype with draggable markers
+- [ ] André exploring Copilot/VS Code as alternative coding client
+- [ ] Future: Fresnel zone decoration, link budget details, coverage heatmaps
+
+---
+
 ## Session: 2026-04-06 (MVP pivot + repo setup)
 
 ### Major pivot from meeting transcript (0401)
