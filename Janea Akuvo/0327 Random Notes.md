@@ -25,10 +25,4 @@ engagement: any direct/personal outreach activity during a dq episode
 response timeframe: a set number of hours after an engagement (e.g., 72h)
 positive response: an activity enacted by an account after an engagement and within the response timeframe, that serves as an indication that the account is moving towards cure (e.g., text reply, payment, promisse, etc) - issues with this definition: attribution problem, double counting, uniform importance
 
-Sunscreen
-Peptides
-Light mosturizer
-Potassium
-Microneddlling
-High quality red light
-Zinc
+
