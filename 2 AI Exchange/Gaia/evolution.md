@@ -120,6 +120,22 @@ Unofficial WhatsApp automation using Baileys (or whatsapp-web.js) — open sourc
 `2026-03-31`
 Once WhatsApp MCP is live: messages sent to a designated number/contact are captured by the Baileys service and written to `2 AI Exchange/Gaia/inbox/` as properly formatted message files. Enables mobile-native capture — André messages Gaia from his phone naturally, no Obsidian or GitHub needed. Depends on WhatsApp MCP above.
 
+### Context architecture — notes vs. Claude's intrinsic capability
+`2026-04-05`
+Deep conversation about the philosophy behind the vault system. Key aspirations identified:
+- **Rebootable/transferable state** — vault in plain markdown/git means no vendor lock-in; works with any future AI
+- **Infinite local RAG** — local storage is unlimited, notes accumulate indefinitely; true RAG (semantic search across vault) not yet implemented — gap worth addressing
+- **Asymptotic context** — the agent should approach André's context level over time; session-limited interaction is the enemy; infinite chat + vault memory is the current workaround
+- **Cross-intelligence medium** — plain markdown is readable by humans, any LLM, any search engine; storing state as notes rather than encoded vectors makes it inspectable, editable, portable
+
+Key insight: vault should store *state* (what's happening, decisions, progress) and *identity* (who André is, his systems) — NOT *capability* (how to do things Claude already knows). Current system is slightly over-indexed on capability in system prompts, appropriately calibrated on state/identity.
+
+Real gap: memory.md files are curated summaries, not transcripts — they lose texture and the *why* behind decisions. Weekly reviews (in André's own voice) are the highest-fidelity memory. The "infinite chat session" pattern is a workaround for session limits, not a sustainable solution — the vault should eventually be rich enough that a fresh session feels continuous.
+
+Pattern observed: André uses a single long-running chat per agent rather than new sessions per topic. Goal: agent context should approach André's context asymptotically via vault accumulation.
+
+To revisit: true RAG implementation (vector index over vault), richer memory.md format that captures *why* not just *what*, reducing capability instructions in system prompts in favor of accumulated personal context.
+
 ### Asana MCP integration
 `2026-03-29`
 Asana MCP connected to Claude Desktop (2026-03-29) but pointing to personal workspace (andrebahamut@gmail.com, old 2015 tasks). The correct workspace is "Grieb Emmerich" which is likely tied to a different/work email account. Need to re-authenticate or add a second Asana connection with the correct account. Once connected to Grieb Emmerich, most relevant for: Janea agent (Akuvo deliverables), Gaia (weekly review). MCP tools available: get_projects, get_tasks, create_task, create_project, get_task, get_stories, search, etc.

@@ -12,19 +12,27 @@ A thread is any evolving unit of intent — from a single action to a years-long
 
 ## Directory
 
-All threads live in `1 OFP/Threads/` as individual markdown files.
+All threads live in `1 OFP/Threads/` as individual markdown files, organized into three tiers:
 
 ```
 1 OFP/
-  Threads/
+  Threads/                  ← working set: prioritized, active, captured
     life-bonaire-north-trip.md
     professional-cbrs-studio.md
-    enzo-cursos-extracurriculares.md
     ...
-  Thread System.md       ← this file
-  Thread Index.md        ← Gaia's fast-load overview
-  Threads.base           ← André's UI (Obsidian Base)
+  Threads/postponed/        ← not now: eventually + dormant
+    life-sao-paulo-trip.md
+    building-andre-cursos.md
+    ...
+  Threads/closed/           ← done: closed
+    meta-command-line-mcp.md
+    ...
+  Thread System.md          ← this file
+  Thread Index.md           ← Gaia's fast-load overview
+  Thread Base.base          ← André's UI (Obsidian Base)
 ```
+
+**Rule:** files move between tiers as status changes. The working set is the default scan target. Gaia never needs to scan `postponed/` or `closed/` at session start.
 
 ---
 
@@ -67,29 +75,29 @@ All properties are required except `due`, `parent`, and `tags`.
 
 ## Types
 
-| Type | Description | Closes? |
-|---|---|---|
-| `action` | Single step | Yes — when done |
-| `project` | Multi-step, known shape and end | Yes — when complete |
-| `mission` | Long endeavor, steps not yet clear | Yes — when resolved |
-| `decision` | Needs deliberation | Yes — once decided |
-| `system` | Ongoing strategic behavior | No — cycles |
-| `skill` | Capability building | No — has milestones |
-| `routine` | Recurring task | No — resets |
-| `habit` | Behavior change | Yes — when embedded |
+| Type       | Description                        | Closes?             |
+| ---------- | ---------------------------------- | ------------------- |
+| `action`   | Single step                        | Yes — when done     |
+| `project`  | Multi-step, known shape and end    | Yes — when complete |
+| `mission`  | Long endeavor, steps not yet clear | Yes — when resolved |
+| `decision` | Needs deliberation                 | Yes — once decided  |
+| `system`   | Ongoing strategic behavior         | No — cycles         |
+| `skill`    | Capability building                | No — has milestones |
+| `routine`  | Recurring task                     | No — resets         |
+| `habit`    | Behavior change                    | Yes — when embedded |
 
 ---
 
 ## Status
 
-| Status | Meaning |
-|---|---|
-| `prioritized` | Active and urgent — needs attention this week |
-| `active` | Active but not urgent — will get prioritized when relevant |
-| `eventually` | Postponed — below active in priority, no timeline |
-| `dormant` | On hold indefinitely — not forgotten, not active |
-| `captured` | Needs evaluation — initial state for most new threads |
-| `closed` | Done, canceled, or archived — add a final update note |
+| Status        | Meaning                                                    |
+| ------------- | ---------------------------------------------------------- |
+| `prioritized` | Active and urgent — needs attention this week              |
+| `active`      | Active but not urgent — will get prioritized when relevant |
+| `eventually`  | Postponed — below active in priority, no timeline          |
+| `dormant`     | On hold indefinitely — not forgotten, not active           |
+| `captured`    | Needs evaluation — initial state for most new threads      |
+| `closed`      | Done, canceled, or archived — add a final update note      |
 
 Note: `prioritized` is a subset of `active`. All prioritized threads are active. When nothing is urgent, `prioritized` is simply empty.
 
@@ -155,8 +163,15 @@ YYYY-MM-DD — second update
 
 **Thread state changes:**
 1. Update the thread file (status in frontmatter, add update note)
-2. Update `Thread Index.md` entry
-3. Commit
+2. Update `Thread Index.md` entry (same operation — never one without the other)
+3. If status moves to eventually/dormant: move file to `Threads/postponed/`
+4. If status moves to closed: move file to `Threads/closed/`
+5. Commit
+
+**File move command (Python via vault-mcp:shell):**
+```python
+python -c "import shutil; shutil.move('1 OFP/Threads/file.md', '1 OFP/Threads/postponed/file.md')"
+```
 
 **New thread:**
 1. Create file in `1 OFP/threads/`

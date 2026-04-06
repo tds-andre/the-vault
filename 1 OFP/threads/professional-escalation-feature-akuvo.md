@@ -1,18 +1,26 @@
 ---
 created: 2026-03-29
-updated: 2026-03-29
+updated: 2026-04-05
 domain: professional
 type: project
-status: closed
+status: active
 due:
 parent:
 ---
 
-next: wrap Phase 1 into a clean presentation for stakeholders; schedule Phase 2
+next: FUP Filip's message Sunday/Monday — then Phase 3
 
 ## Context
-Phase 1 proven (COMFIRSTCU, prod-33, data to Feb 2026). Key numbers: 37% of accounts have escalation potential, 33% of multi-account holders DQ in 2+, 1.3x likelihood multiplier, shared accounts 30% more DQ episodes. Phase 2 missing: outcome analysis (charge-offs, repossessions, timing of detection).
+Multi-phase escalation analysis project at Akuvo. Full reference: `Janea Akuvo/Escalation Analysis/status-overview.md`
+
+## Phases
+
+- **Phase 1** ✅ — Single-client deep dive (prod-31). 23% coverage, 3.5x negative lift, 69% recurrence at 30d. Presented Friday Apr 4.
+- **Phase 2** ✅ — Cross-client pipeline + validation. 21/21 Rich clients ran, all lifts positive, 100% consistency.
+- **Phase 2.5** ✅ — Cross-client data quality sanity check. Key decisions: exclude DQ ≤1 day, remove clients 60/91/96, normalize activity sets. 18 clients remaining.
+- **Phase 3** ← current — Cross-client analysis. Update pipeline with normalized sets + DQ filter, re-run 18 clients, Layer 1 (universality) + Layer 2 (variation drivers), cross-client report + presentation.
 
 ## Updates
-2026-03-29 — thread created, Phase 1 complete, Phase 2 pending
-2026-04-03 — FUP on Filip's message — do Sunday/Monday morning
+2026-03-29 — thread created, Phase 1 complete
+2026-04-03 — FUP Filip flagged for Sunday/Monday
+2026-04-05 — Phase 1 presented Friday. Phase 2 + 2.5 done. Phase 3 is current. Thread updated with full phase structure from status-overview.md.

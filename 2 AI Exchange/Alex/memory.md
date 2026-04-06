@@ -4,6 +4,30 @@
 
 ---
 
+## Session: 2026-04-06
+
+### python, pip, venv_list, node tools shipped
+- `vault_mcp/tools/python_tool.py` — `python(code, venv, cwd)`, `pip(packages, venv)`, `venv_list()`
+- `vault_mcp/tools/node_tool.py` — `node(code, cwd)`
+- Venvs managed at `C:\Users\tdsnit\Work26\venvs\`
+- Root cause of delayed load: stale import of `SHELL_ALLOWED_DIRS` in python_tool.py — fixed
+- shell timeout raised to 120s; full venv python paths now allowed in shell tool
+- node, npm, npx added to SHELL_ALLOWED_COMMANDS
+- Work26 added to SHELL_ALLOWED_DIRS (informational)
+
+### git mv shipped
+- Added `mv` to GIT_ALLOWED_SUBCOMMANDS — enables clean file moves within vault
+- Requested by Gaia for Threads directory reorganization
+- Gaia notified via inbox
+
+### Open threads
+- [ ] Set up Alex as Claude Project
+- [ ] Evaluate Cursor/Windsurf
+- [ ] Consider Toggl API wrapper as next vault-mcp tool
+- [ ] `chickendrive` missing from filesystem allowlist — intentional?
+
+---
+
 ## Session: 2026-03-29 (shell MCP shipped)
 
 ### shell.py shipped
