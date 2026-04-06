@@ -3,7 +3,7 @@ created: 2026-03-29
 updated: 2026-03-29
 domain: life
 type: mission
-status: merged
+status: (close it)
 due: 2026-05-30
 parent:
 ---

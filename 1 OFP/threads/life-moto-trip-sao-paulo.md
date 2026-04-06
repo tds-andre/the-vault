@@ -24,6 +24,7 @@ Airbnb options for Itatiaia researched — see previous session for links.
 - [ ] setup working environment in notebook (main) `urgent`
 - [ ] setup working environment in secondary PC `urgent`
 - [ ] buy and install bike accessories `urgent`
+- [ ] buy and install mirrors
 - [ ] elaborate trip checklist
 - [ ] book Itatiaia/Resende Apr 11→14
 - [ ] book São Paulo Apr 15→19

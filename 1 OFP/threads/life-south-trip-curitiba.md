@@ -8,31 +8,33 @@ due: 2026-05-05
 parent:
 ---
 
-next: buy Rio → Curitiba tickets (arrive May 5)
+next: book accommodation Curitiba May 5-9
 
 ## Context
 Trip to Paraná, May 5-16.
 
 **Itinerary:**
-- **May 5 (Tue):** Rio → Curitiba, arrive, check in
+- **May 5 (Tue):** Rio → Curitiba — Gol GIG 12:25→14:00 (no checked bag)
 - **May 6 (Wed):** motorcycling course, Rio Negro-PR (120km from Curitiba) — bring own helmet, 09:00-17:00, 1 aluno, 95% na pista
 - **May 7-9 (Thu-Sat):** Curitiba
-- **May 10 (Sun):** Curitiba → Foz do Iguaçu
+- **May 10 (Sun):** Curitiba → Foz do Iguaçu — LATAM CWB 15:25→IGU 16:40 (no checked bag)
 - **May 10-15:** Foz do Iguaçu / Paraguay (Ciudad del Este)
-- **May 16 (Sat):** Foz do Iguaçu → Rio
+- **May 16 (Sat):** Foz → Rio — LATAM IGU 05:00→GIG 06:55 (1 bag 23kg included)
 
 **Paraguay goal:** Ciudad del Este — shopping, buy electric bike.
 Foz do Iguaçu: Cataratas, easier logistics side.
 
 ## Subtasks
-- [ ] buy Rio → Curitiba tickets (May 5) `due: 2026-04-22`
-- [ ] buy Foz do Iguaçu → Rio tickets (May 16) `due: 2026-04-22`
+- [x] buy Rio → Curitiba tickets — Gol GIG 12:25→14:00 May 5
+- [x] buy Curitiba → Foz tickets — LATAM CWB 15:25→IGU 16:40 May 10
+- [x] buy Foz → Rio tickets — LATAM IGU 05:00→GIG 06:55 May 16
 - [ ] segunda parcela R$2.650,00 `due: 2026-04-22`
 - [ ] book accommodation Curitiba May 5-9
 - [ ] plan transport Curitiba → Rio Negro-PR May 6 (120km, must arrive 09:00)
 - [ ] book accommodation Foz do Iguaçu May 10-15
 - [ ] research electric bike options in Ciudad del Este
-- [ ] ship e-bike box Rio → Niterói from Foz (Jadlog/Braspress, drop off May 15-16 before flight)
+- [ ] arrange transfer Foz accommodation → airport May 16 (flight 05:00, need pickup ~03:00)
+- [ ] ship e-bike box Foz → Niterói (Jadlog/Braspress, drop off May 15-16 before flight)
 - [ ] decide if Paraguay overnight or day trip from Foz
 
 ## Comments
