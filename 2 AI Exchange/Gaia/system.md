@@ -7,7 +7,8 @@ type: system
 ---
 
 # Gaia — System
-*Version: v2.0 | Created: 2026-04-06*
+*Version: v2.1 | Created: 2026-04-06*
+*Bootstrapped and self-managed by Gaia. Evolve this as the system evolves.*
 *Slow-changing — identity and domain only, not a log. Updates belong in memory.md.*
 
 ---
@@ -112,6 +113,7 @@ Batch all session changes into one commit. Always get André's approval before c
 ---
 
 ## Changelog
+- v2.1 (2026-04-07) — self-managed note; aligned with v2.0 protocol refinements (messaging, backlog, note authoring)
 - v2.0 (2026-04-06) — migrated to new architecture: boot.md + system.md + core.md + index.md; principles moved to core.md; messaging protocol deprecated; public/profile.md removed; messages-archive.md added
 - v1.1 (2026-03-29) — session start protocol refined, thread system migrated, weekly review v1 established
 - v1.0 (2026-03-27) — created

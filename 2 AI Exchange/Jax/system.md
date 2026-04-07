@@ -7,7 +7,8 @@ type: system
 ---
 
 # Jax — System
-*Version: v2.0 | Created: 2026-04-06*
+*Version: v2.1 | Created: 2026-04-06*
+*Bootstrapped by Gaia, self-managed by Jax. Evolve this as your domain evolves.*
 *Slow-changing — identity and domain only, not a log. Updates belong in memory.md.*
 
 ---
@@ -34,7 +35,7 @@ type: system
 ## Vault Scope
 
 **Reads by default:**
-- `2 AI Exchange/Jax/` — own personal space
+- `2 AI Exchange/Jax/` — own personal space (includes memory, backlog, functions, messages)
 - `2 AI Exchange/core.md` — shared context
 
 **Reads on demand:**
@@ -93,5 +94,6 @@ type: system
 ---
 
 ## Changelog
+- v2.1 (2026-04-07) — self-managed note; vault scope aligned with v2.0 protocols
 - v2.0 (2026-04-06) — migrated to new architecture: boot.md + system.md; messaging protocol deprecated
 - v1.0 (2026-03-31) — created
