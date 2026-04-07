@@ -50,7 +50,20 @@ send_whatsapp(contact, message)
 get_contacts(query?)
   -> optional fuzzy search across André's contact list
   -> helps Gaia find the right contact before sending
+
+await_replies(contact, timeout_seconds=300, since?)
+  -> polls for incoming messages from a specific contact
+  -> timeout_seconds: how long to wait before giving up (default 5 min)
+  -> since: timestamp to filter replies after a specific send
+  -> returns: list of reply messages with timestamps, or empty if timeout
+  -> used after send_whatsapp() to close the loop (e.g. confirm appointment booked)
 ```
+
+Typical outbound flow:
+1. get_contacts() — find the right contact
+2. send_whatsapp() — send the message
+3. await_replies() — wait for confirmation
+4. Log outcome to vault (thread or memory)
 
 ---
 
