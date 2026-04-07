@@ -1,11 +1,13 @@
 ---
 created: 2026-03-29
-updated: 2026-03-29
 domain: meta
+due: null
+parent: null
+status: closed
 type: project
-status: done
-due:
-parent:
+updated: '2026-04-07'
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-07'
 ---
 
 next: set up each agent as a Claude Project using `2 AI Exchange/project-prompt-template.md`
@@ -23,3 +25,4 @@ Agents: Gaia, Alex, Ben, Apollo, Joane, Kaybee. Each needs a Claude Desktop Proj
 
 ## Updates
 2026-03-29 — thread created, agents all initialized, Claude Projects pending
+2026-04-07 — closed: all 9 agents migrated to v2.0 with boot.md as Project Instructions; project-prompt-template.md superseded by boot-template.md

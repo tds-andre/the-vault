@@ -1,11 +1,13 @@
 ---
 created: 2026-04-06
-updated: 2026-04-06
 domain: meta
+due: null
+parent: null
+status: closed
 type: project
-status: active
-due:
-parent:
+updated: '2026-04-07'
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-07'
 ---
 
 next: design simpler messaging mechanism — fewer files, less friction
@@ -21,3 +23,4 @@ Goal: simplify so agents can communicate with less ceremony. Ideas to explore:
 
 ## Updates
 2026-04-06 — thread created
+2026-04-07 — closed: resolved by v2.0 architecture. New protocol: agents write to messages/ dir with frontmatter status fields (sent/read/closed), no lifecycle files, no inbox/, messages/closed/ for resolved items. Ceremonyfree, simple.

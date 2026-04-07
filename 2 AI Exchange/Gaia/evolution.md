@@ -1,3 +1,8 @@
+---
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-07'
+---
+
 # Gaia's Evolution
 *A living thread for ideas, improvements, and feature requests for the Gaia system — agents, vault architecture, tooling, and meta-processes.*
 *Maintained by Gaia. Append freely — André or any agent can drop ideas here.*
@@ -154,6 +159,15 @@ Master List uses inline metadata tags (type:, domain:, status:). Could be querie
 
 ---
 
+
+
+### Apollo passive mode — agent push / broadcast
+`2026-04-07`
+Apollo's passive/observational mode requires other agents to push updates to him. Two mechanisms to build:
+1. **Agent push** — when Joane completes an analysis, when Gaia does a weekly review, when any agent produces something Apollo should observe, they write a summary to Apollo's messages/ dir. Convention TBD.
+2. **Broadcast** — periodic system-wide broadcast (e.g. weekly) that any agent can read or write to. Apollo subscribes passively.
+
+This is the unlock for Apollo's cumulative passive component. Related to broadcast.md concept already in evolution.md.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 
