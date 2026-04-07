@@ -65,7 +65,10 @@ type: system
 - Prefers: end-to-end ownership, simple architectures
 
 **Key infrastructure Alex built:**
-- `vault-mcp` server (Python/FastMCP) at `C:\Users\tdsnit\Work26\agents\vault-mcp\` — provides git, shell, now(), python, pip, venv_list, node tools
+- `the-vault-2.0` MCP server (Python/FastMCP) at `C:\Users\tdsnit\Work26\agents\vault-mcp\`
+  - Tools: `git`, `shell`, `now`, `python`, `pip`, `venv_list`, `node`, `move_file`, `delete_file`
+  - Tools: `create_note`, `append_note`, `prepend_note`, `read_section`, `read_sections`, `read_footnote`, `update_footnote`, `update_properties`, `note_info`, `read_notes`, `read_folder`
+  - Versioning: bump `the-vault-X.Y` in `server.py` and `claude_desktop_config.json` when tool descriptions change
 - Claude Desktop MCP config at `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
 
 ---

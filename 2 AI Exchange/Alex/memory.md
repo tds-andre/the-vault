@@ -17,7 +17,12 @@ type: memory
 ### v2.0 architecture migration
 Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md, messages-archive.md. Messaging protocol deprecated. Old files (system-prompt.md, inbox/, messages/, public/) preserved but superseded.
 
-### python, pip, venv_list, node tools shipped
+### Versioning convention
+- Server renamed from `vault-mcp` → `the-vault-2.0` to bust Claude Desktop tool cache
+- Convention: bump minor version (e.g. 2.1, 2.2) whenever tool descriptions change
+- Change in `FastMCP("the-vault-X.Y")` in `vault_mcp/server.py` AND config key in `claude_desktop_config.json`
+
+### notes tools shipped (11 tools)
 - `vault_mcp/tools/python_tool.py` — `python(code, venv, cwd)`, `pip(packages, venv)`, `venv_list()`
 - `vault_mcp/tools/node_tool.py` — `node(code, cwd)`
 - Venvs managed at `C:\Users\tdsnit\Work26\venvs\`
@@ -26,9 +31,15 @@ Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md
 - node, npm, npx added to SHELL_ALLOWED_COMMANDS
 - Work26 added to SHELL_ALLOWED_DIRS (informational)
 
+### move_file and delete_file tools added
+- Added to `vault_mcp/tools/shell.py` (inline, no new file)
+- `move_file(source, destination)` — uses `pathlib.Path.rename()`, Windows case-safe, creates parent dirs automatically, accepts absolute or vault-relative paths
+- `delete_file(path)` — files only, accepts absolute or vault-relative paths
+- Neither stages git — caller does `git add` afterwards
+- Motivation: `git mv` unreliable on Windows NTFS due to case mismatch (`threads/` tracked vs `Threads/` on disk)
+
 ### git mv shipped
-- Added `mv` to GIT_ALLOWED_SUBCOMMANDS — enables clean file moves within vault
-- Requested by Gaia for Threads directory reorganization
+- Added `mv` to GIT_ALLOWED_SUBCOMMANDS — kept for completeness but move_file preferred on Windows
 
 ### Open threads
 - [ ] Set up Alex as Claude Project

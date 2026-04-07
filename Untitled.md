@@ -17,16 +17,29 @@ Zinc
 - Personal notes: `MMDD filename.md`
 
 Changes on core.md:
+- boot-template.md: Make the main message more straightforward without comments; should you place instructions about agent creation there or in your functions?  
 - Remove protocol on Notes Writing (for now, we'll add one right after)
+- Remove details about MCP tools, they can pick it up naturally
+- On system.md make it explicit it's boostraped by Gaia but self-managed by the agent to evolve it accordingly; it should describe/instruct the agent system as a whole (except for what is already at core.md) directly or with complementary files (e.g., functions)
 - New protocols:
 	- Note Authoring
 		- specs about frontmatter properties and footnotes
 		- specs when writting notes for me: `MMDD filename.md`
 		- 
-- Cross Agent Messaging
-	- place at target's agents /message
-	- frontmatter property stats: sent, read, replied/closed
-	- move to messages/closed/ when closed
+	- Agent Messaging
+		- place at target's agents /messages
+		- specs about filename?
+		- frontmatter property stats: sent, read, replied/closed
+		- move to messages/closed/ when closed
+	- Backlog
+		- agent's self-managed tasks backlog		- 
+		- backlog.md file
+- Add to principles: 
+	- iterative and interactive; 
+	- if the vault tooling fails, log it via message to Alex
+
+- Overall you and the agents are confused and underperforming after the changes.
+	
 
 
 

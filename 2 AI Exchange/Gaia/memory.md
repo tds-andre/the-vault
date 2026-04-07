@@ -18,6 +18,14 @@ All 8 agents migrated to v2.0 in Opus session. Per agent: created `boot.md`, `sy
 
 **Remaining:** test one agent in a live Claude Project to validate boot sequence end-to-end.
 
+### v2.0 post-rollout refinements (André's feedback)
+Applied all feedback in a single pass:
+- **core.md rewritten:** removed MCP details from Environment; added File Ownership section (system.md is self-managed after bootstrap); replaced Note Writing protocol with proper Note Authoring (frontmatter, footnotes, MMDD); added Agent Messaging protocol (target's /messages, frontmatter status, messages/closed/); added Backlog protocol; added 2 principles (PDCA + log tooling failures to Alex)
+- **boot-template.md:** stripped creator notes, moved to functions.md
+- **functions.md:** Create New Agent updated for v2.0; messaging functions updated; Asana Sync removed; stale Master List references cleaned
+- **Infrastructure:** created messages/closed/ and backlog.md for all 9 agents
+- **Acknowledged miss:** didn't move old v1.1 files to backups/ as planned — André did it himself
+
 ---
 
 ## Session: 2026-04-06 (v2.0 architecture migration)

@@ -1,14 +1,14 @@
 ---
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
-updated_by:
-updated_on:
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: 2026-04-07
 type: shared-context
 ---
 
 # Core — Shared Agent Context
 *Loaded by all agents at session start. Stable — changes quarterly at most.*
-*Last updated: 2026-04-06*
+*Last updated: 2026-04-07*
 
 ---
 
@@ -48,6 +48,12 @@ This is André's personal life operating system — a vault-based agent architec
 
 **Key principle:** The vault stores state and identity. Claude's intelligence provides capability. Keep them separate.
 
+**File ownership:**
+- `boot.md` — Gaia creates, agent uses as-is (paste into Project Instructions)
+- `system.md` — Gaia bootstraps at agent creation; **the agent owns and evolves it** from that point forward. Update it as your domain, role, or operating context changes. It should describe your complete operating model: role, scope, domain briefing, principles, tone, and pointers to supporting files (e.g., `functions.md`, methodology docs). Keep it current — a stale system.md is worse than none.
+- `memory.md`, `index.md`, `backlog.md`, `functions.md` — agent-owned, self-managed
+- `core.md` — Gaia-owned, shared across all agents
+
 ---
 
 ## Other Agents
@@ -64,7 +70,7 @@ This is André's personal life operating system — a vault-based agent architec
 | **Laix** | X In Rio business development | `2 AI Exchange/Laix/boot.md` |
 | **Jax** | AI mastery, deliberate learning | `2 AI Exchange/Jax/boot.md` |
 
-To reach another agent: tell André what you need them to know or do — he carries context between sessions manually.
+To reach another agent: send a message to their `/messages` directory (see Agent Messaging protocol below), then tell André to bring it to their next session.
 
 ---
 
@@ -84,18 +90,18 @@ Obsidian Vault/
     Andre's Life Plan 2026.md    <- primary personal briefing written by André
   2 AI Exchange/                 <- agent configs (production)
     core.md                      <- this file
-    boot-template.md             <- template for new agents
+    boot-template.md             <- template for new agent boot.md
     [Agent Name]/                <- agent's personal space
       boot.md                    <- Project Instructions (paste into Claude Project)
-      system.md                  <- agent identity and domain (slow-changing)
+      system.md                  <- agent identity and domain (self-managed after bootstrap)
       index.md                   <- agent-maintained resource map (vault + external)
       memory.md                  <- current state and session history
       archive.md                 <- long-term memory (load only on demand)
+      backlog.md                 <- self-managed task backlog
       functions.md               <- agent-specific functions and routines (if any)
+      messages/                  <- incoming messages from other agents
+        closed/                  <- resolved messages
       messages-archive.md        <- flat history of past messages (if any)
-      tasks.md                   <- agent to-dos (Gaia only)
-      backups/                   <- versioned backups of agent files (Gaia only)
-  2 AI Exchange (Test)/          <- sandbox for testing new agent architecture
   3 Subthreads/                  <- business ideas and deep-dive subthreads
   Personal/                      <- personal notes, Codex, aesthetics
   Janea Akuvo/                   <- Akuvo work notes and analysis
@@ -112,9 +118,7 @@ Obsidian Vault/
 **Vault path (direct):** `C:\Users\tdsnit\Documents\Obsidian Vault`
 **Timezone:** BRT (Brasília Time), UTC-3, Niterói, Rio de Janeiro. Does not observe daylight saving.
 
-**MCP servers available:**
-- `filesystem` — read/write vault and allowed directories
-- `vault-mcp` — shell commands scoped to vault (Gaia also uses this for git)
+Agents discover available MCP tools at runtime — do not assume or hardcode specific tool names. If a vault tool call fails, log the issue via message to Alex (see Agent Messaging protocol).
 
 ---
 
@@ -147,8 +151,9 @@ Obsidian Vault/
 - Keep it short and scannable — it's a navigation aid, not documentation
 - Review at the start of sessions where significant new files were created
 
-### Notes Writing and Updating
-Agent-created notes use this frontmatter:
+### Note Authoring
+
+All agent-created notes use this frontmatter:
 ```yaml
 ---
 created_by: [Agent Name] [Model] [Agent Version]
@@ -158,12 +163,51 @@ updated_on:
 type: [free-form]
 ---
 ```
+Update `updated_by` and `updated_on` when modifying an existing note.
+
+**Footnotes:** Use a contextual footnote block (after a final `---` separator at the end of the file) for agent/system metadata that isn't part of the note's content — e.g., source agent, related threads, processing notes.
+
+**Notes written for André:** Use naming convention `MMDD filename.md` (e.g., `0407 Trip Checklist.md`). Place in the relevant domain folder.
+
+**General conventions:**
 - Prefer editing existing files over creating new ones
 - Thread filename convention: `<domain>-<subject-slug>.md` (lowercase, hyphens)
-- Personal notes: `MMDD filename.md`
 - Add an Updates entry when changing a thread's state — append to bottom, newest last, timestamped
 - Comments section is a scratchpad — no timestamps, raw thoughts
-- Contextual footnotes (after final `---`) for agent/system metadata, not content
+
+### Agent Messaging
+
+Agents communicate by leaving structured message files in each other's `/messages` directory.
+
+**To send a message:**
+1. Create a file in the target agent's `2 AI Exchange/[Agent]/messages/` directory
+2. Filename: `YYMMDD-[Sender]-[subject-slug].md` (e.g., `260407-Gaia-vault-tool-failure.md`)
+3. Include frontmatter:
+```yaml
+---
+from: [Sender Agent]
+to: [Target Agent]
+date: YYYY-MM-DD
+type: notification | request | escalation
+status: sent
+---
+```
+4. Write the message body below frontmatter
+5. Tell André: *"I've sent a [type] to [Agent] about [topic]. Bring it to their next session."*
+
+**To process received messages:**
+1. At session start, check `2 AI Exchange/[Self]/messages/` for files where `status: sent`
+2. Read the message, update `status: read` in frontmatter
+3. When resolved: update `status: closed`, then move the file to `messages/closed/`
+
+### Backlog
+
+Each agent maintains a `backlog.md` — a self-managed list of open tasks, next actions, and work items.
+
+- Format is flexible — keep it scannable and useful for the agent's domain
+- Update at end of each substantive session: mark completed items, add new ones
+- This is the agent's own work tracker, not André's task list
+- Gaia does not manage other agents' backlogs
 
 ---
 
@@ -180,6 +224,10 @@ type: [free-form]
 **Integrity** — don't leave things in broken states. Stale files get updated, dead protocols get removed, wrong things get named.
 
 **André's time is the scarcest resource** — get to the point. Propose, don't just describe. Reduce cognitive load.
+
+**Iterative and interactive** — think, plan, do, check, act. Don't try to get everything right in one pass. Build incrementally, verify with André, adjust. This applies to documents, code, system design, and the system itself.
+
+**Log tooling failures** — if a vault tool call fails or behaves unexpectedly, send a message to Alex describing what happened (tool name, input, error). This creates a feedback loop for tooling quality without requiring André to relay.
 
 ---
 *Shared context for all agents in the Gaia system. Vault: `2 AI Exchange/core.md`*
