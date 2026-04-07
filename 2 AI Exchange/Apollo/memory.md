@@ -1,6 +1,20 @@
+---
+created_by: Apollo v1.0
+created_on: 2026-03-27
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: 2026-04-06
+type: memory
+---
+
 # Apollo — Memory
 *Persistent context accumulated across sessions. Most recent entries at the top.*
-*Do not load archive.md at session start — only on explicit request.*
+
+---
+
+## Session: 2026-04-06 (v2.0 migration)
+
+### v2.0 architecture migration
+Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md. Messaging protocol deprecated. Old files preserved but superseded.
 
 ---
 
@@ -8,30 +22,22 @@
 
 ### Context established
 - Apollo created as André's personal knowledge agent
-- Primary role: capture, organize, connect and retrieve personal knowledge — learnings, quotes, insights, books, courses, notes
-- Apollo is foundational for the future André (clone) agent — everything organized here feeds that eventually
+- Primary role: capture, organize, connect and retrieve personal knowledge
+- Foundational for the future André (clone) agent
 
-### Knowledge landscape (current state)
-- Obsidian vault is the primary knowledge home but currently disorganized
-- `Personal/` folder exists but is empty — prime territory for Apollo
-- `4 To Follow Up/` contains items needing processing, including `How to capture learnings.md`
-- `1 OFP/Drafts/` contains past reflections with real insight worth preserving
-- `3 Subthreads/X In Rio` has 5 drafts — business thinking worth organizing
-- André has significant accumulated knowledge across ML, software engineering, business — largely uncaptured in structured form
-
-### André's knowledge profile
-- 15+ years in ML/software — deep practitioner knowledge, mostly in his head
-- Strong ability to frame business problems — documented in `Prompt for Framing.md`
-- Reads books and takes courses but has no consistent capture/retention system
-- Obsidian noted as "consistent but very disorganized" — Apollo's core challenge
-- The `How to capture learnings.md` file in `4 To Follow Up/` is a direct signal of this pain point
+### Knowledge landscape
+- Obsidian vault is primary knowledge home but currently disorganized
+- `Personal/` folder exists but is empty — prime territory
+- `4 To Follow Up/` contains items needing processing
+- `1 OFP/Drafts/` contains past reflections with insight worth preserving
+- André has significant accumulated knowledge across ML, software, business — largely uncaptured
 
 ### Open threads
-- [ ] Set up Apollo as Claude Project using template in `2 AI Exchange/project-prompt-template.md`
-- [ ] Read and process `4 To Follow Up/How to capture learnings.md` — this is Apollo's first real task
-- [ ] Establish a knowledge capture convention for `Personal/` folder
-- [ ] Process `1 OFP/Drafts/` for insights worth preserving in structured form
-- [ ] Eventually: build André's professional knowledge base in `Professional/` as structured reference
+- [ ] Set up Apollo as Claude Project
+- [ ] Read and process `4 To Follow Up/How to capture learnings.md`
+- [ ] Establish knowledge capture convention for `Personal/`
+- [ ] Process `1 OFP/Drafts/` for insights worth preserving
+- [ ] Build professional knowledge base in `Professional/`
 
 ---
 *Format: new sessions prepended at top, founding session preserved permanently*

@@ -1,32 +1,36 @@
+---
+created_by: Laix v1.0
+created_on: 2026-03-31
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: 2026-04-06
+type: memory
+---
+
 # Laix — Memory
 *Persistent context. Most recent entries at the top.*
+
+---
+
+## Session: 2026-04-06 (v2.0 migration)
+
+### v2.0 architecture migration
+Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md. Messaging protocol deprecated. Old files preserved but superseded.
 
 ---
 
 ## Session: 2026-03-31 (founding session)
 
 ### Context established
-- Laix created as André's agent for X In Rio business
-- Business: premium all-inclusive adult nightlife packages for international tourists in Rio
+- Laix created for X In Rio business development
 - Status: in development, dormant — rich drafts exist in `3 Subthreads/X In Rio/`
+- 5 drafts in vault: Vision, Site, The Offer, Offering Details
 
-### What exists (5 drafts in vault)
-- **1st Draft — Vision:** Why/What/How, CAPEX, market size (~500k tourists/year in RJ)
-- **3rd Draft — Site:** design directives, site structure, todo list, digital assets needed
-- **4th Draft — The Offer:** 3 tiers defined (Basic $2k, Core $3k, Premium $10k)
-- **5th Draft — Offering Details:** public + private descriptions per feature, operational notes per item
-
-### Offer summary
-- **Basic $2,000** — 4 nights, guided, access to events + penthouse daytime + house parties
-- **Core $3,000** (min 10 pax) — full package: unlimited drinks, penthouse room, VIP presence, transfers, 24/7 support, medical, bikes, yacht party
-- **Premium $10,000** (min 6 pax) — 10 nights, luxury penthouse, private jet to SP, on-demand everything
-
-### Key open items for first real session
-- Site still not built (domain, escrow integration, scheduling)
-- Partner network not yet assembled (venues, guides, security, accommodation, VIP roster)
-- Legal structure not yet set up (R$100 estimated)
-- No marketing yet — waiting on operations
-- Digital assets needed: domain, email, Meta account, Google account
+### Key open items
+- [ ] Site build (domain, escrow, scheduling)
+- [ ] Partner network assembly (venues, guides, security, accommodation, VIP)
+- [ ] Legal structure (~R$100)
+- [ ] Digital assets (domain, email, Meta/Google accounts)
+- [ ] Marketing — waiting on operations
 
 ---
 *Format: new sessions prepended at top, founding session preserved permanently*

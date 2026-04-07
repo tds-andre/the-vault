@@ -1,5 +1,20 @@
+---
+created_by: Cocoria v1.0
+created_on: 2026-03-29
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: 2026-04-06
+type: memory
+---
+
 # Cocoria — Memory
 *Persistent context. Most recent entries at the top.*
+
+---
+
+## Session: 2026-04-06 (v2.0 migration)
+
+### v2.0 architecture migration
+Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md. Messaging protocol deprecated. Old files preserved but superseded.
 
 ---
 
@@ -16,26 +31,19 @@
 - New cost this month: R$1,500/month rent (significant)
 - Online score: **4.6** — lowest ever, urgent
 - André does not enter the store anymore — operational standards have collapsed
-- Operation: disorganized, dirty, lacking standards
 
 ### Team snapshot
-- **Henrique** — cook/butcher/heat operator, critical, irreplaceable, diligent but distressed and resistant to standards
-- **Almir** (André's father) — cashier/all-arounder, hardliner, temporary-permanent
-- **Sofia, Anna, Camila** — rotating packaging/cleaning/cashier; Anna moving toward admin
-- **Max** — motoboy, critical but instable, has secondary roster
-- **Rodrigo** — new test (Anna/Sofia/Camila's father), consulting + blue collar background, tested as cashier, potential tactical/strategic role
+- **Henrique** — cook/butcher/heat, critical, irreplaceable, diligent but distressed
+- **Almir** — cashier/all-arounder, hardliner, temporary-permanent
+- **Sofia, Anna, Camila** — rotating packaging/cleaning/cashier; Anna toward admin
+- **Max** — motoboy, critical but instable
+- **Rodrigo** — new test, consulting + blue collar, potential tactical/strategic role
 
 ### High priority open items
-- Secondary cook: find and train so Henrique can take days off
-- Team formalization: Henrique first (CLT vs Associado)
-- Operational standards: fix the mess (cleanliness, organization, method)
-- Score recovery: 4.6 needs to recover before any marketing push
-
-### Strategic context
-- June/July 2026 hard deadline: profitable or exit
-- Ben handles the financial analysis; Cocoria handles the operational engine
-- Influencer partnership (~500k followers) interested — hold until operations recover
-- Rodrigo potentially valuable in strategic/tactical capacity if operations allow
+- [ ] Secondary cook: find and train
+- [ ] Team formalization: Henrique first (CLT vs Associado)
+- [ ] Operational standards: fix the mess
+- [ ] Score recovery: 4.6 → recover before any marketing push
 
 ---
 *Format: new sessions prepended at top, founding session preserved permanently*

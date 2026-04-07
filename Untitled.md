@@ -14,6 +14,21 @@ Microneddlling
 High quality red light
 Zinc
 
+- Personal notes: `MMDD filename.md`
+
+Changes on core.md:
+- Remove protocol on Notes Writing (for now, we'll add one right after)
+- New protocols:
+	- Note Authoring
+		- specs about frontmatter properties and footnotes
+		- specs when writting notes for me: `MMDD filename.md`
+		- 
+- Cross Agent Messaging
+	- place at target's agents /message
+	- frontmatter property stats: sent, read, replied/closed
+	- move to messages/closed/ when closed
+
+
 
 - agents.md: short summary and pointer to boot.md
 - shared by agents:

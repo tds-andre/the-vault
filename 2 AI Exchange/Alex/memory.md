@@ -1,3 +1,11 @@
+---
+created_by: Alex v1.0
+created_on: 2026-03-27
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: 2026-04-06
+type: memory
+---
+
 # Alex — Memory
 *Persistent context accumulated across sessions. Most recent entries at the top.*
 *Do not load archive.md at session start — only on explicit request.*
@@ -5,6 +13,9 @@
 ---
 
 ## Session: 2026-04-06
+
+### v2.0 architecture migration
+Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md, messages-archive.md. Messaging protocol deprecated. Old files (system-prompt.md, inbox/, messages/, public/) preserved but superseded.
 
 ### python, pip, venv_list, node tools shipped
 - `vault_mcp/tools/python_tool.py` — `python(code, venv, cwd)`, `pip(packages, venv)`, `venv_list()`
@@ -18,7 +29,6 @@
 ### git mv shipped
 - Added `mv` to GIT_ALLOWED_SUBCOMMANDS — enables clean file moves within vault
 - Requested by Gaia for Threads directory reorganization
-- Gaia notified via inbox
 
 ### Open threads
 - [ ] Set up Alex as Claude Project
@@ -44,17 +54,6 @@
 ### git rm added
 - `git rm` added to `GIT_ALLOWED_SUBCOMMANDS` in config.py
 
-### Inbox messages resolved (retroactively)
-- `2026-03-27_Gaia_command-line-mcp-git.md` — resolved by vault-mcp git tool (2026-03-27)
-- `2603291200_Gaia_file-move-tool-vault-mcp.md` — resolved by shell.py mv command
-- `2603291300_Gaia_full-command-line-mcp.md` — resolved by shell.py
-- Reply dispatched to Gaia inbox: `2603291_Alex_shell-mcp-shipped.md`
-
-### Messaging protocol note
-- Gaia noted inter-agent messaging was not followed properly this session
-- Protocol: update `Date read:` in inbox file when read, update `Date dispatched:` when done, write reply to sender's inbox
-- Simpler approach going forward: update lifecycle fields in-place, no need to move files
-
 ### Open threads
 - [ ] Set up Alex as Claude Project
 - [ ] Evaluate Cursor/Windsurf
@@ -69,13 +68,11 @@
 - `vault-mcp` server running at `C:\Users\tdsnit\Work26\agents\vault-mcp`
 - Stack: Python 3.14, FastMCP, asyncio subprocess
 - Launched via: `python.exe server.py` (direct, no cmd wrapper)
-- Config: `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json` (accessible via that path directly)
+- Config: `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
 - Root cause of hang: FastMCP INFO logs polluting stdout/JSON-RPC stream — fixed by `logging.basicConfig(level=WARNING, stream=stderr)`
 - Git tool is async (`asyncio.create_subprocess_exec`) with 10s timeout and `stdin=DEVNULL`
-- Gaia notified via inbox
 
 ### Open threads
-- [ ] Update memory.md at session end (this entry)
 - [ ] Add `PYTHONPATH` env var to config if import issues recur
 - [ ] `chickendrive` missing from filesystem allowlist — was it intentional?
 
@@ -88,8 +85,7 @@
 - Primary role: software development, prototyping, MCP, integrations, automation
 - André is a senior ML engineer — Python Jedi, strong software fundamentals, prefers simple solutions
 - Current AI tooling: Claude + MCP filesystem on Obsidian Vault (already configured)
-- André uses Cursor or considering it — confirm in first real session
-- Vault is git-tracked; Alex will eventually handle git automation when command-line MCP is available
+- Vault is git-tracked; Alex handles git automation via vault-mcp
 
 ### André's tech profile (relevant to Alex)
 - Fluent: Python, JavaScript/HTML/CSS
@@ -101,14 +97,11 @@
 
 ### System context
 - Vault MCP: filesystem access configured and working
-- Future MCP targets: command-line execution (enables git automation, scripting)
 - Agent system: Gaia (meta), Ben (finance), Apollo (knowledge), Alex (tech)
 - Alex builds infrastructure other agents will depend on — think systemically
 
 ### Open threads
-- [ ] Set up Alex as Claude Project using template in `2 AI Exchange/project-prompt-template.md`
 - [ ] Evaluate Cursor/Windsurf if not already in use — high ROI for André
-- [ ] Command-line MCP — when ready, enables git automation and scripting for all agents
 - [ ] n8n or Make for workflow automation — evaluate when André has a specific automation need
 
 ---
