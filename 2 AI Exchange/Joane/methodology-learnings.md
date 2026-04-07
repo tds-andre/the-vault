@@ -7,6 +7,13 @@
 
 ---
 
+### 2026-04-06 | ROI automated cure, denominator framing
+
+**Learning:** The same data can tell completely different stories depending on the denominator. "91% of DQs cure without a phone call" (denominator: all DQs) sounds impressive but is misleading — 88% self-cure with no contact at all. "53% of contacted DQs were handled through automation" (denominator: DQs that received outbound contact) isolates the platform's actual contribution. Always ask: what is the denominator, and does it include a population where the treatment (automation) never had a chance to act? If yes, the metric is inflated by a base rate, not by the intervention.
+**Section:** Principles -> Measurement integrity
+
+---
+
 ### 2026-04-03 | Cross-client escalation, narrative structure
 
 **Learning:** When presenting a cross-client validation story, the narrative arc should include the discovery journey: (1) raw results showing the effect generalizes, (2) anomalies/issues found along the way, (3) how they were addressed, (4) the cleaned results with a "at what cost?" framing. The "at what cost" comparison (before vs after) is powerful because it demonstrates robustness — the signal survived cleaning, not that cleaning created the signal. This is more convincing than just showing clean results.

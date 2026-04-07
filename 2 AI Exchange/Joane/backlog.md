@@ -5,13 +5,10 @@
 
 ## Active
 
-- [x] Update pipeline with normalized outcome sets + DQ ≤1 filter *(done 04-03)*
-- [x] Re-run 18 clients (excl 60, 91, 96) with updated pipeline *(done 04-03)*
-- [x] Phase 3: cross-client analysis (universality, variation drivers, aggregate story) *(done 04-03)*
 - [ ] Review cross-client presentation (13 pages, needs feedback) *(added 04-03)*
 - [ ] Cross-client executive report *(added 04-03)*
-- [x] Save cross-client data quality report as markdown *(done 04-03)*
-- [x] Save presentation v4 jsx to vault (manual: download from Claude artifact) *(added 04-02)*
+- [ ] Run roi_automated_cure.py and review results *(added 04-06)*
+- [ ] Review activity classification with Mike *(added 04-06)*
 - [ ] Update detailed/executive reports with volume analysis findings *(added 04-02)*
 
 ## Backlog
@@ -30,6 +27,9 @@
 
 ## Done
 
+- [x] PDF export of prod-31 presentation via Chrome screenshots *(04-06)*
+- [x] ROI activity classification CSV created *(04-06)*
+- [x] ROI automated cure analysis script written *(04-06)*
 - [x] Cross-client data quality sanity check *(04-03)*
 - [x] Cross-client pipeline: analysis.py + run.py *(04-03)*
 - [x] 21-client run with CSV+JSON metadata *(04-03)*
@@ -38,6 +38,10 @@
 - [x] Cross-client presentation v1 built (13 pages) *(04-03)*
 - [x] Escalation opportunity score defined and added to pipeline *(04-03)*
 - [x] Backlog.md created *(04-03)*
+- [x] Phase 3: cross-client analysis complete *(04-03)*
+- [x] Pipeline updated: outcome hierarchy + DQ filter + esc opportunity score *(04-03)*
+- [x] Cross-client data quality report with before/after *(04-03)*
+- [x] Save presentation v4 jsx to vault *(04-02)*
 - [x] Slide report template + instructions *(04-02)*
 - [x] Presentation v4 final with volume slide *(04-02)*
 - [x] Reports: detailed + executive *(04-02)*
@@ -50,7 +54,10 @@
 ## Decisions
 
 | Date | Decision | Rationale |
-|------|----------|-----------|
+|------|----------|----------|
+| 04-06 | ROI: human intervention = CALL_OUTBOUND + SEND_THIRD_PARTY only | Mike's framing: "cured without a phone call" |
+| 04-06 | ROI: use date-window join (not delinquencyid) for activity-DQ linking | delinquencyid only 24.4% populated; date-window consistent across clients |
+| 04-06 | ROI: frame as "of contacted DQs" not "of all DQs" | 88% self-cure inflates number but hides automation's real contribution |
 | 04-03 | Exclude DQ ≤ 1 day going forward | Not real delinquency; distorts metrics for clients 60/91/96 |
 | 04-03 | Remove clients 60, 91, 96 from cross-client | DQ quality issues (>40% DQs ≤1 day) |
 | 04-03 | Drop SWBC_PAYMENT, SWBC_PORTAL_PAYMENT | Vendor-specific, only 11/21 and 5/21 |

@@ -3,6 +3,44 @@
 
 ---
 
+## Session: 2026-04-06c (cbrs-studio-dark bootstrap)
+
+### New repo: cbrs-studio-dark
+- **Location:** `C:\Users\tdsnit\Work26\cbrs-studio-dark`
+- Fresh project — no shared context with cbrs-studio-lite
+- Same concept but built from scratch with all learnings baked in from the start
+- **CLAUDE.md** written — full spec including: React from day 1, draggable markers, dark theme default, light/dark toggle, mock details inline, all domain context
+- **tasks.md** written — full MVP sprint (backend + React frontend + theme system)
+- **initial-prompt.md** written — comprehensive build prompt including .venv creation
+- André about to run initial prompt in Claude Code
+
+### Key differences from cbrs-studio-lite
+- **Dark theme by default** with light/dark toggle (sun/moon icon)
+- **CSS variables for both themes** via `data-theme` attribute on `<html>`, localStorage
+- **Map basemap switches** — CARTO Dark Matter (dark) / Positron (light)
+- **Charts must respect theme** — backgrounds, grid lines, labels all adapt
+- **React from the start** — no vanilla JS phase
+- **All features from lite's react branch included in initial spec** — draggable markers, AbortController, Fresnel zone, link summary
+- **Mock implementation details fully inline in CLAUDE.md** — Friis formula, terrain generation algorithm, Fresnel math, link budget
+- **.venv explicitly required** in initial prompt
+
+### Current state of both repos
+- **cbrs-studio-lite:** React branch complete (draggable markers, charts fixed). Vanilla JS on main. Waiting for Jesse's API spec.
+- **cbrs-studio-dark:** Bootstrapped, ready for initial prompt.
+
+### Three-way workflow status
+- Workflow validated and working well across both repos
+- Claude Code leaves session logs in tasks.md, Kaybee syncs by reading repo
+- CLAUDE.md never modified by Claude Code ✅
+
+### Open threads
+- [ ] André running initial prompt on cbrs-studio-dark
+- [ ] Jesse's API spec still pending for both repos
+- [ ] Friday meeting with Jesse — show progress
+- [ ] André exploring Copilot/VS Code as alternative coding client
+
+---
+
 ## Session: 2026-04-06b (sync after Claude Code sessions)
 
 ### Code sessions completed

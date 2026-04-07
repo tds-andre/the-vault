@@ -15,28 +15,27 @@ type: index
 
 ## Own Files
 
-| File | Purpose |
-|---|---|
-| `boot.md` | Project Instructions — paste into Claude Project |
-| `system.md` | Identity, role, domain, operating detail |
-| `index.md` | This file |
-| `memory.md` | Current state and session history |
-| `archive.md` | Long-term memory (load only on demand) |
-| `functions.md` | Gaia-specific functions and routines |
-| `tasks.md` | Gaia's to-do items and FUPs |
-| `evolution.md` | System improvement ideas log |
-| `messages-archive.md` | Flat history of past inbox/messages |
-| `backups/` | Versioned backups; see `backups/backups.md` |
+| File                  | Purpose                                          |
+| --------------------- | ------------------------------------------------ |
+| `boot.md`             | Project Instructions — paste into Claude Project |
+| `system.md`           | Identity, role, domain, operating detail         |
+| `index.md`            | This file                                        |
+| `memory.md`           | Current state and session history                |
+| `archive.md`          | Long-term memory (load only on demand)           |
+| `functions.md`        | Gaia-specific functions and routines             |
+| `evolution.md`        | System improvement ideas log                     |
+| `messages-archive.md` | Flat history of past inbox/messages              |
+| `backups/`            | Versioned backups; see `backups/backups.md`      |
 
 ---
 
 ## Shared Files
 
-| File | Purpose |
-|---|---|
-| `2 AI Exchange/core.md` | Shared context: André, vault, protocols, principles |
-| `agents.md` (vault root) | System entry point and agent registry |
-| `2 AI Exchange/boot-template.md` | Template for creating new agents |
+| File                             | Purpose                                             |
+| -------------------------------- | --------------------------------------------------- |
+| `2 AI Exchange/core.md`          | Shared context: André, vault, protocols, principles |
+| `agents.md` (vault root)         | System entry point and agent registry               |
+| `2 AI Exchange/boot-template.md` | Template for creating new agents                    |
 
 ---
 

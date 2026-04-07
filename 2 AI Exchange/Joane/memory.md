@@ -3,6 +3,65 @@
 
 ---
 
+## Session: 2026-04-06
+
+### What we did
+- **PDF export workflow**: used Claude in Chrome to inject html2canvas, screenshot 14 pages of prod-31 presentation, stitched into PDF via Pillow -> `0402/assets/escalation-report-v4.pdf` (2.0 MB)
+- **Cross-client presentation v1 built** (13 pages JSX, needs review) -> `cross-client-report.jsx`
+- **Standalone HTML version** partially built for sharing (React+Recharts via CDN+Babel)
+- **Executive email drafted** for Will/Mike — two variants (results-focused, opportunity-focused)
+- **ROI / Automated Cure Analysis** — new task inherited from Filip
+  - Created activity classification CSV: 76 types classified by channel + human_intervention
+  - Built `notebooks/roi_automated_cure.py` script
+  - Ran analysis across all 21 Rich clients
+  - Key finding: raw "91% cure without phone call" is misleading — 88% self-cure (no contact at all)
+  - Better framing: **of contacted DQs under 30d, 53% resolved through automation alone**
+  - 0-14d band strongest: **70% automated** among contacted DQs
+  - Per-client variation huge: 0% to 96% automated (median 40%)
+  - Report saved: `Janea Akuvo/ROI Analysis/0406 Automated Cure - Initial Findings.md`
+  - Data saved: `analytics/analysis/roi/` (classification CSV, cure channel CSVs, classified parquet)
+- **Escalation feature brainstorm** — 3 tiers: detect+alert (MVP), prioritize+route, prevent (proactive)
+
+### Key analytical insights
+- Escalation touches ~11% of all DQs (81K unique A|B out of 747K), roughly 1 in 9
+- 38K DQs play both A and B roles (chain escalation is common)
+- ROI framing matters enormously: same data supports "91% no call" or "53% automated" depending on denominator
+- The automation story lives in the 0-14d band (70% automated among contacted) and in queue throughput, NOT in raw cure rates
+- Per-client automation adoption varies wildly — some clients (39, 42, 53) barely use automation at all
+
+### Key decisions
+- Escalation opportunity score = (neg_vol_lift + dur_a_lift + recur_lift) * coverage — canonical composite metric
+- Outcome hierarchy renamed: Negative (umbrella) > Non-terminal + Terminal
+- ROI activity classification: human intervention = CALL_OUTBOUND + SEND_THIRD_PARTY (2 types), automated = 9 types
+- Date-window join (not delinquencyid) for linking activities to DQs in ROI analysis
+
+### ROI context (from Filip's briefing)
+- AI competitor claims 20x ROI; Akuvo raised Virtual Agent Collector price $0.05 -> $0.20
+- Mike's specific ask: "X% of DQs under 30 days cure without a phone call"
+- Three value angles: automated cure rate, queue throughput (120->180 items/day), DQ ratio before/after
+- DQ ratio angle problematic (NCUA data shows higher DQ for Akuvo clients)
+- Queue/QueueActivity tables exist but haven't been explored yet
+
+### Feature brainstorm (escalation)
+- Tier 1 (MVP): detect escalation event in real-time, alert collector with context
+- Tier 2: re-prioritize queue using escalation signal (bump escalation DQs up)
+- Tier 3: proactive watch list — flag connected accounts BEFORE they go delinquent
+- Pitch: "1 in 9 of your delinquencies is part of an escalation chain. These are 5.6x worse. We can flag them."
+
+### Files created/modified
+- `Janea Akuvo/Escalation Analysis/0402/assets/escalation-report-v4.pdf` — prod-31 presentation PDF
+- `Janea Akuvo/Escalation Analysis/0403/0403 Cross-Client Detailed Report.md` — full analytical record
+- `Janea Akuvo/Escalation Analysis/cross-client-data-quality.md` — updated with Section 8 before/after
+- `Janea Akuvo/Escalation Analysis/column-metadata-rich18-v2.csv` — 62 columns documented
+- `Janea Akuvo/ROI Analysis/0406 Automated Cure - Initial Findings.md` — ROI report
+- `analytics/analysis/roi/activity-classification.csv` — 76 activity types classified
+- `analytics/analysis/roi/cure-channels-by-dpd.csv` + `cure-channels-by-client-under30.csv`
+- `notebooks/roi_automated_cure.py` — full analysis script
+- Pipeline updated: outcome hierarchy (negative umbrella), escalation_opportunity score, nonterminal category
+- `methodology-learnings.md` — 3 new learnings (narrative structure, audience framing, data quality as prologue)
+
+---
+
 ## Session: 2026-04-03
 
 ### What we did
