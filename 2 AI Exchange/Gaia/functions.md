@@ -4,6 +4,124 @@
 
 ---
 
+## Function: Rebuild Agent
+
+**What:** Back up an agent's current v1.x files, recreate them in the new v2.0 architecture, and prepare a context handoff for the next session. Can be applied to Gaia (self-rebuild) or any subordinate agent.
+
+**When:**
+- Major architecture migration (v1.x → v2.0 or later)
+- Agent has drifted significantly from current architecture standards
+- André explicitly requests a clean rebuild of an agent
+
+**Parameters:**
+- `agent` — name of the agent to rebuild (e.g. "Gaia", "Alex")
+- `date` — YYMMDD string for backup directory name (e.g. "26-04-06")
+- `self` — boolean: true if Gaia is rebuilding herself, false if rebuilding a subordinate
+
+**How:**
+
+*Phase 1 — Backup*
+1. Create `2 AI Exchange/[Agent]/backups/[date]/` directory
+2. Copy all current agent files to the backup directory:
+   - Own files: `system-prompt.md`, `memory.md`, `archive.md`, `functions.md`, `tasks.md`, `evolution.md` (Gaia only), any other files in the agent dir
+   - Own subdirs: `public/`, `inbox/`, `messages/` — copy with contents
+   - If self-rebuild: also copy shared files (`message-template.md`, `project-prompt-template.md`, `agents.md`) into the backup
+3. Create `backups/backups.md` as an index and context file:
+   - What date the backup was taken
+   - What architecture version it captures
+   - What triggered the rebuild
+   - Table of all backed-up files with brief notes
+   - What is NOT backed up (e.g. thread files, domain folders — not agent config)
+
+*Phase 2 — Recreate shared files (self-rebuild only)*
+If rebuilding Gaia (root of the system), also recreate shared files:
+1. `2 AI Exchange/core.md` — copy from test environment or write fresh
+2. `2 AI Exchange/boot-template.md` — copy from test environment or write fresh
+3. `agents.md` (vault root) — slim version: frontmatter + What This Is + agent table + cold-boot instructions
+
+*Phase 3 — Recreate agent files (v2.0 structure)*
+Create the following files in `2 AI Exchange/[Agent]/`:
+
+1. **`boot.md`** — identity + load sequence (Project Instructions):
+   - Frontmatter (created_by, created_on, type: boot)
+   - Version header: `v2.0 | Created: [date] | Domain: [domain]`
+   - Note: paste below frontmatter as Project Instructions
+   - Identity: who this agent is (2-4 lines)
+   - Personal space reference: `2 AI Exchange/[Agent]/`
+   - Load sequence: greet → memory.md → core.md → system.md → index.md → on demand
+   - Cold-boot fallback: read `agents.md` first if no Project Instructions
+   - Footnote
+
+2. **`system.md`** — slow-changing domain content:
+   - Frontmatter (type: system)
+   - Version header + "slow-changing" note
+   - `## Role` — handles / does not handle / escalate to
+   - `## Vault Scope` — reads by default / on demand / does not read
+   - `## Domain` — current briefing, key people, active projects
+   - `## Operating Principles` — 4-6 agent-specific principles
+   - `## Tone and Style`
+   - `## Key Files and Functions` — references to functions.md and key vault files
+   - `## Changelog` — v2.0 entry at minimum
+   - For self-rebuild (Gaia): also add `## Git Operations` section
+
+3. **`index.md`** — agent-maintained resource map:
+   - Frontmatter (type: index)
+   - Own files table
+   - Shared files table
+   - Domain-specific sections (threads, key vault files, etc.)
+   - External resources table (paths, URLs, config locations)
+
+4. **`memory.md`** — preserve existing content, prepend a new session entry noting the rebuild
+
+5. **`archive.md`** — preserve as-is
+
+6. **`functions.md`** — preserve as-is; update `Create New Agent` function to reflect v2.0 structure if rebuilding Gaia
+
+*Phase 4 — Consolidate messages (if any exist)*
+If the agent has content in `inbox/` or `messages/`:
+1. Create `messages-archive.md` as a flat, append-only log
+2. Write one entry per message: date, direction, subject, 1-2 line summary
+3. Do NOT copy the full message files — just the history log
+4. The old `inbox/` and `messages/` dirs remain in the backup; don't recreate them
+
+*Phase 5 — Context dump (self-rebuild only)*
+If rebuilding Gaia (the session will end and restart in a new model/context):
+1. Create `2 AI Exchange/Gaia/OPUS-HANDOFF.md` (or similar name for the target model)
+2. Contents:
+   - What just happened this session (summary)
+   - New file structure and what to read first
+   - What was NOT finished (pending work)
+   - Key decisions made
+   - Urgent items and deadlines
+   - André's current situation snapshot
+   - What to do first in the new session
+   - Note to delete this file after loading
+
+*Phase 6 — Commit*
+1. `vault-mcp:git add .`
+2. `vault-mcp:git commit -m "[agent]-v2-rebuild-[date]"`
+3. `vault-mcp:git push`
+4. Tell André: "Rebuild complete. Boot the new session by pasting `boot.md` as Project Instructions."
+
+**Self vs. subordinate differences:**
+
+| Step | Self-rebuild (Gaia) | Subordinate rebuild |
+|---|---|---|
+| Shared files | Recreate `core.md`, `boot-template.md`, `agents.md` | Skip — shared files already exist |
+| Context dump | Create `OPUS-HANDOFF.md` | Skip — no session handoff needed |
+| Backup includes | Agent files + shared files | Agent files only |
+| Memory.md | Add rebuild entry | Add rebuild entry |
+| Post-rebuild | André restarts with new boot.md | Agent ready for next session as-is |
+
+**Notes:**
+- Thread files (`1 OFP/Threads/`) are never part of the backup — they are André's data, not agent config
+- Domain folders (Janea Akuvo, Key Bridge, Cocoricó) are never backed up — not agent config
+- The backup is a safety net, not an archive — it's there if something goes wrong, not for regular reference
+- `tasks.md` (Gaia only) and `evolution.md` (Gaia only) are preserved as-is, not rebuilt
+- `functions.md` is preserved as-is unless a specific function needs updating (e.g. `Create New Agent` after architecture change)
+
+---
+
 ## Function: Version Agent
 
 **What:** Bump an agent's version number and record what changed.
