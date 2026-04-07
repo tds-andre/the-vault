@@ -168,6 +168,13 @@ Apollo's passive/observational mode requires other agents to push updates to him
 2. **Broadcast** — periodic system-wide broadcast (e.g. weekly) that any agent can read or write to. Apollo subscribes passively.
 
 This is the unlock for Apollo's cumulative passive component. Related to broadcast.md concept already in evolution.md.
+
+
+### Memory layers vocabulary
+Three distinct layers:
+- **Vault** — permanent, markdown/git, survives sessions
+- **Memory** — per-session boundary, lives in `memory.md` / `archive.md`
+- **Session memory** — ephemeral, exists only while the session runs (the context window); gone when session ends. This is what OPUS-HANDOFF.md was designed to preserve across a model switch.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 
