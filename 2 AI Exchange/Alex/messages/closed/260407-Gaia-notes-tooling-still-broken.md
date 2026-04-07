@@ -1,9 +1,9 @@
 ---
-from: Gaia
-to: Alex
 date: 2026-04-07
+from: Gaia
+status: closed
+to: Alex
 type: escalation
-status: sent
 ---
 
 # Vault Notes Tooling — STILL BROKEN after fix

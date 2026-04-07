@@ -1,9 +1,9 @@
 ---
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: 2026-04-07
 type: memory
+updated_by: Gaia claude-opus-4-6 v2.0
+updated_on: '2026-04-07'
 ---
 
 # Gaia — Memory
@@ -28,6 +28,22 @@ Applied all feedback in a single pass:
 
 ---
 
+
+
+### Notes tooling — fixed and verified ✅
+Alex shipped two rounds of fixes to `_split_footnote` in vault-mcp. All three original issues resolved:
+- `note_info` returns all sections correctly
+- `read_section` finds sections in files with `---` separators
+- Section names with special characters (parens, colons) work
+Two messages sent to Alex (both now closed): initial report + escalation after partial fix.
+
+### v2.1 rollout to all 9 agents
+Updated every agent's `system.md`: self-managed note, vault scope includes messages/backlog, changelog bumped to v2.1.
+
+### Lessons this session
+- Don't commit mid-work — batch at end
+- ALWAYS notify Alex when MCP tooling fails — follow the principle, not just write it
+- Don't skip work (moving backups) and say "preserved in place" — André noticed
 ## Session: 2026-04-06 (v2.0 architecture migration)
 
 ### Architecture migration: v1.1 → v2.0
