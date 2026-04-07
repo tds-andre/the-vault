@@ -16,11 +16,15 @@ status: sent
 
 # WhatsApp MCP — Spec
 
-## Context
+## Scope
 
-André wants to be able to send messages from WhatsApp to dispatch tasks to agents and acknowledge incoming messages — without opening Claude Desktop. This is goal 1 of the WhatsApp integration: mobile-native task delegation, same pattern as agent-to-agent messaging but triggered from André's phone.
+Two capabilities in this phase:
 
-Goal 2 (Gaia replies on André's behalf) is future work — not in this spec.
+**Inbound (dispatch to agents):** André sends a self-message on WhatsApp → Baileys captures it → routes to the right agent's messages/ dir in the vault. Gaia picks it up next session.
+
+**Outbound (dispatch to real people):** Gaia composes a WhatsApp message (e.g. "schedule a chiropractor near me", "confirm appointment with X") → Baileys sends it to the specified contact on André's behalf. André is briefed on what was sent.
+
+Guardrail for outbound: never send personal/financial/sensitive information. Contacts and message content are always specified explicitly by Gaia based on André's instruction — no autonomous outbound without a clear instruction in the session.
 
 ## Architecture
 
@@ -72,6 +76,18 @@ Self-messages are the recommended approach — no risk of processing messages fr
 - Service: `C:\Users\tdsnit\Work26\agents\whatsapp-mcp\`
 - Auth store: `C:\Users\tdsnit\Work26\agents\whatsapp-mcp\auth\`
 - Config: which vault path, which contact/self-message trigger, agent keyword routing table
+
+## MCP tools to expose
+
+```
+send_whatsapp(contact, message)
+  -> sends a message to a contact by name or number
+  -> returns sent confirmation + timestamp
+
+get_messages(contact?, limit?)
+  -> reads recent self-messages or messages from a specific contact
+  -> used by Gaia at session start to check for inbound dispatches
+```
 
 ## Deliverable
 
