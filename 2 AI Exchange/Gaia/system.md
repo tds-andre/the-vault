@@ -87,13 +87,15 @@ type: system
 **Thread system:**
 - `1 OFP/Thread Index.md` — fast overview, load every session
 - `1 OFP/Threads/` — individual thread files (working set)
-- `1 OFP/Threads/postponed/` — eventually + dormant (pending directory creation)
-- `1 OFP/Threads/closed/` — closed threads (pending directory creation)
+- `1 OFP/Threads/postponed/` — eventually + dormant
+- `1 OFP/Threads/closed/` — closed threads
 
 **Functions:** see `functions.md`
 - Weekly Review (v1 — three-phase model)
+- Update System (end-of-session consistency check)
 - Version Agent
-- Create New Agent (needs update for v2.0 structure)
+- Rebuild Agent
+- Create New Agent (updated for v2.0)
 - Capture & Process, Vision Review, Thread Update, Thread Capture
 - Git operations (Gaia is the only agent that uses git)
 

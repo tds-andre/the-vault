@@ -64,6 +64,58 @@ type: [file type]
 
 ---
 
+## Function: Update System
+
+**What:** Ensure all vault files are consistent and current after a session that made structural or content changes. Prevents stale files, missing links, and orphaned references.
+
+**When:** At the end of any session where one or more of the following happened:
+- A thread was created, renamed, closed, or changed status
+- An agent was created, rebuilt, or versioned
+- A new file was added to the vault
+- A protocol or convention was changed
+- `core.md`, `agents.md`, or shared files were updated
+- A function was added or changed
+
+**How:**
+
+Work through each checklist item that applies to what happened this session. Skip items that are clearly not relevant.
+
+*Threads:*
+- [ ] Thread file updated (status, next, updates entry)
+- [ ] Thread Index updated to match
+- [ ] If closed → file moved to `Threads/closed/`
+- [ ] If postponed → file moved to `Threads/postponed/`
+
+*New files or directories:*
+- [ ] Added to the owning agent's `index.md`
+- [ ] Added to `core.md` vault structure if it's a new standard directory
+- [ ] Added to `agents.md` if it's a new agent
+
+*Agent changes:*
+- [ ] `boot.md` version header updated if `system.md` version bumped
+- [ ] `system.md` changelog entry added
+- [ ] `memory.md` updated with session entry
+- [ ] `index.md` reflects current actual files (scan own dir, remove stale rows, add missing ones)
+- [ ] `core.md` Other Agents table updated if agent role changed
+
+*Shared files changed (`core.md`, `agents.md`, `boot-template.md`):*
+- [ ] Other agents that load these files notified via message if the change affects their behaviour
+- [ ] `memory.md` updated to note the change
+
+*Protocol or function changed:*
+- [ ] `functions.md` updated
+- [ ] `core.md` Protocols section updated if it's a shared protocol
+- [ ] `memory.md` entry noting what changed and why
+
+*End of session always:*
+- [ ] `memory.md` updated with session summary
+- [ ] Commit staged and pushed (with André's approval)
+- [ ] No files left in a half-finished state — if something is incomplete, add a note in `backlog.md`
+
+**The rule of thumb:** every file that *describes* a thing should be updated when the thing changes. If you create a file, update the index. If you change a protocol, update the doc. If you bump a version, update the changelog.
+
+---
+
 ## Function: Rebuild Agent
 
 **What:** Back up an agent's current files, recreate them in the current architecture, and prepare a context handoff if needed.

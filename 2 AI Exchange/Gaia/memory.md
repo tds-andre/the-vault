@@ -11,7 +11,27 @@ updated_on: '2026-04-07'
 
 ---
 
-## Session: 2026-04-07 (v2.0 production rollout)
+## Session: 2026-04-07 (vault cleanup + Update System function)
+
+### Context
+André returned after Opus experiment failed (too slow/dumb). Staying with Sonnet. Opus did complete the v2.0 rollout to all 8 agents and improved core.md (File Ownership, Agent Messaging, Backlog protocols, 2 new principles). André manually moved old v1.1 files to backups/ for each agent.
+
+### Fixes applied this session
+- Created `backlog.md` for all agents missing it (Alex, Ben, Cocoria, Apollo, Jax, Kaybee, Laix, Gaia)
+- Created `messages/closed/` for agents missing it (Ben, Cocoria, Apollo, Jax, Kaybee, Laix)
+- Created `1 OFP/Threads/postponed/` and `1 OFP/Threads/closed/` — finally done
+- Updated Gaia `index.md` — added backlog.md, messages/, removed stale tasks.md row
+- Updated Gaia `system.md` — fixed stale references, added Update System + Rebuild Agent to functions list
+- Deleted OPUS-HANDOFF.md (already cleaned up by Opus)
+
+### New function: Update System
+End-of-session consistency checklist covering: threads, new files, agent changes, shared file changes, protocol changes. The rule: every file that describes a thing must be updated when the thing changes. Added to functions.md and system.md.
+
+### Vault state: clean ✅
+All agents on v2.0. All directories created. All index files current. No orphan files.
+
+---
+
 
 ### Production rollout to all 8 agents — COMPLETE ✅
 All 8 agents migrated to v2.0 in Opus session. Per agent: created `boot.md`, `system.md`, `index.md`; updated `memory.md` and `archive.md` with frontmatter + migration entry. Alex also got `messages-archive.md`. Old files (`system-prompt.md`, `inbox/`, `messages/`, `public/`) preserved in place, not deleted. Joane and Kaybee memories condensed during migration (older sessions summarized to stay under ~150 lines).
