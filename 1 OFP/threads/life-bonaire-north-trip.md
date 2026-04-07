@@ -1,11 +1,13 @@
 ---
 created: 2026-03-29
-updated: 2026-04-06
 domain: life
-type: mission
-status: prioritized
 due: 2026-05-29
-parent:
+parent: null
+status: prioritized
+type: mission
+updated: 2026-04-06
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-07'
 ---
 
 next: buy Rio → Curaçao tickets (Copa Airlines via Panama, May 30 dep 5:10am GIG)
@@ -24,11 +26,12 @@ Diving trip to Bonaire via Curaçao. All flights confirmed via Copa Airlines.
 - **Back in Rio: Jun 9**
 
 **Hard constraints from agency:**
-- Must land Curaçao by May 30 13:00 ✅ (arrives 14:36 — need to verify with agency)
+- Must land Curaçao by May 30 13:00 ✅ (arrives 14:36 — confirmed ok with agency)
 - Must depart Curaçao after Jun 6 12:00 ✅ (departs 13:23)
 
 ## Subtasks
-- [ ] buy Rio → Curaçao tickets (Copa, May 30 via Panama) — confirm timing ok with agency
+- [x] buy Rio → Curaçao tickets (Copa CM487+CM832 May 30) ✔
+- [x] confirm timing ok with agency ✔
 - [ ] book accommodation Bonaire May 30 → Jun 6
 - [ ] book accommodation Panama Jun 6-8 (2 nights)
 - [ ] buy/fix equipment: bolso colete, válvula colete, mordedor do segundo estágio principal, computador de mergulho
@@ -46,3 +49,4 @@ No Colombia stop — kept it simple.
 2026-03-29 — thread created, tickets not bought
 2026-03-31 — trip extended to Colombia, subtasks added
 2026-04-06 — full itinerary confirmed via Copa Airlines. Panama stopover on return. No Colombia. Updated all constraints.
+2026-04-07 — Copa tickets bought ✅; agency confirmed 14:36 arrival is ok ✅; tickets and internal flights all sorted
