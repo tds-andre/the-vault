@@ -165,6 +165,8 @@ type: [free-form]
 ```
 Update `updated_by` and `updated_on` when modifying an existing note.
 
+**Frontmatter is extensible** — agents should add any additional properties that serve indexing, state management, filtering, or domain-specific purposes. The standard fields above are the minimum; add freely on top. Examples: `status`, `domain`, `parent`, `due`, `source`, `version`, `agent`.
+
 **Footnotes:** Use a contextual footnote block (after a final `---` separator at the end of the file) for agent/system metadata that isn't part of the note's content — e.g., source agent, related threads, processing notes.
 
 **Notes written for André:** Use naming convention `MMDD filename.md` (e.g., `0407 Trip Checklist.md`). Place in the relevant domain folder.

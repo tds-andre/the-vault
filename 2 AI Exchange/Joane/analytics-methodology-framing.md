@@ -1,3 +1,10 @@
+---
+created_by: André
+created_on: 2026-04-02
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: 2026-04-07
+type: methodology-framing
+---
 
 A methodology and skill instruction for developing and progressing Analytics initiatives in paired human-AI/Claude settings.
 

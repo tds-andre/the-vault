@@ -1,3 +1,11 @@
+---
+created_by: Joane v1.0
+created_on: 2026-04-03
+type: backlog
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: '2026-04-07'
+---
+
 # Backlog
 *Updated by Joane each session. Dates on everything so André can ask "what happened when?"*
 
@@ -5,9 +13,11 @@
 
 ## Active
 
+- [ ] Draft seed email for tomorrow's meeting *(added 04-07)*
+- [ ] After meeting: follow-up email with bite-sized topic menu *(added 04-07)*
+- [ ] André to review integrated essay and flag adjustments *(added 04-07)*
 - [ ] Review cross-client presentation (13 pages, needs feedback) *(added 04-03)*
 - [ ] Cross-client executive report *(added 04-03)*
-- [ ] Run roi_automated_cure.py and review results *(added 04-06)*
 - [ ] Review activity classification with Mike *(added 04-06)*
 - [ ] Update detailed/executive reports with volume analysis findings *(added 04-02)*
 
@@ -51,10 +61,17 @@
 - [x] Client segmentation analysis + presentation *(03-31)*
 - [x] DATA.md created *(03-30)*
 
+
+
+- [x] Vault v2.0 audit and cleanup *(done 04-07)*
+- [x] Capability Building integrated essay *(done 04-07)*
 ## Decisions
 
 | Date | Decision | Rationale |
 |------|----------|----------|
+| 04-07 | Capability Building essay is internal-only source; stakeholder materials compiled from it | Avoids presenting raw/honest doc; allows per-audience adaptation |
+| 04-07 | Two-step stakeholder approach: seed email -> meeting -> menu email | Avoids TED-talk risk; gives them ownership of what gets discussed |
+| 04-07 | Three fronts: Front 0 (Capability Building), Front 1 (Escalation), Front 2 (ROI) | Priority order for current period |
 | 04-06 | ROI: human intervention = CALL_OUTBOUND + SEND_THIRD_PARTY only | Mike's framing: "cured without a phone call" |
 | 04-06 | ROI: use date-window join (not delinquencyid) for activity-DQ linking | delinquencyid only 24.4% populated; date-window consistent across clients |
 | 04-06 | ROI: frame as "of contacted DQs" not "of all DQs" | 88% self-cure inflates number but hides automation's real contribution |

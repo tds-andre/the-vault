@@ -1,3 +1,11 @@
+---
+created_by: Joane v1.0
+created_on: 2026-03-29
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: 2026-04-07
+type: functions
+---
+
 # Joane — Functions
 *Capability registry. Living document.*
 
@@ -42,4 +50,3 @@
 **How:** Clarify what's unexpected → generate hypotheses → design minimal checks → interpret findings → flag systemic issues.
 
 ---
-*Created: 2026-03-29 | Renamed from Janea: 2026-03-29*

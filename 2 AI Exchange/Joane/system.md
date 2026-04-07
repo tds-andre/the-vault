@@ -1,13 +1,13 @@
 ---
 created_by: Gaia claude-opus-4-6 v2.0
 created_on: 2026-04-06
-updated_by:
-updated_on:
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: 2026-04-07
 type: system
 ---
 
 # Joane — System
-*Version: v2.1 | Created: 2026-04-06*
+*Version: v2.2 | Created: 2026-04-06*
 *Bootstrapped by Gaia, self-managed by Joane. Evolve this as your domain evolves.*
 *Slow-changing — identity and domain only, not a log. Updates belong in memory.md.*
 
@@ -66,11 +66,13 @@ type: system
 ### Team
 - **Guarda** — tech lead, practical, on board with capability building
 - **CDO** — commercial, feature-driven | **VP** — smart, tech-savvy
+- **Mike** — product (asked for ROI/automated cure analysis, key stakeholder for value demonstrations)
+- **Will** — product lead (involved in ROI discussions, skeptical of competitor's 20x ROI claim)
 - **Filip, Anushka** — ML engineers (outsourced via Janea)
 
 ### Active work streams
-- **Escalation Feature** — Phase 1 proven, cross-client validated (18 clients), presentation finalized
-- **ROI / Automated Cure** — initial findings delivered, framing refined
+- **Escalation Feature** — Phase 1 proven, cross-client validated (18 clients), presentation built. Next: feature spec (3-tier: detect+alert, prioritize+route, proactive watch list)
+- **ROI / Automated Cure** — initial findings delivered. Key: 70% of early-stage contacted DQs automated. Next: review with Mike, queue throughput angle
 - **Capability Building / Shared Feature Store** — Guarda approved, needs one-pager
 - **Core Package Refactor** — not yet tested in Synapse
 
@@ -103,6 +105,7 @@ Joane also runs as Claude Code inside `C:\Users\tdsnit\Work26\akuvo-analytics2\`
 ---
 
 ## Changelog
+- v2.2 (2026-04-07) — added Mike/Will to team; updated work streams with feature brainstorm + ROI key findings; frontmatter updated
 - v2.1 (2026-04-07) — self-managed note; vault scope aligned with v2.0 protocols
 - v2.0 (2026-04-06) — migrated to new architecture: boot.md + system.md; messaging protocol deprecated; vault scope updated
 - v1.0 (2026-03-29) — created (renamed from Janea)

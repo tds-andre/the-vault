@@ -1,3 +1,11 @@
+---
+created_by: Joane v1.0
+created_on: 2026-04-02
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: 2026-04-07
+type: methodology
+---
+
 # The Core Methodology — Socratic Analytics
 
 *Draft content for integration into "AI-Assisted Analytics Workflow Methodology."*

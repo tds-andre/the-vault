@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"7bb822a2070c4859","type":"text","text":"Decisão de Junho Favorável?","x":-280,"y":-235,"width":360,"height":60},
+		{"id":"5e8fe3e989830f8c","type":"text","text":"😄 eba, **adiantamos em 3 meses** o processo que leva 2+ anos ","x":140,"y":-340,"width":360,"height":60,"color":"4"},
+		{"id":"c6c5a054d4b7e4cc","type":"text","text":"😖 ahh, **perdemos dinheiro** e ficamos com lula\n","x":140,"y":-120,"width":360,"height":60,"color":"1"},
+		{"id":"d89e25d220f250f0","type":"text","text":"🙂 eba, **viramos italianos em 2030**","x":140,"y":40,"width":360,"height":60,"color":"4"},
+		{"id":"3d6efa548ea8ba33","type":"text","text":"🙁ahh, ficamos com lula","x":140,"y":240,"width":360,"height":60,"color":"1"},
+		{"id":"1d0601429c2d5c8e","type":"text","text":"Decisão de Junho Favorável?","x":-280,"y":120,"width":360,"height":60},
+		{"id":"a08c144b6e480cdd","type":"text","text":"Entrar agora ou depois de Junho?","x":-720,"y":-60,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"9f12741fa29880e1","fromNode":"7bb822a2070c4859","fromSide":"top","toNode":"5e8fe3e989830f8c","toSide":"left","label":"sim"},
+		{"id":"0bcb5ac110052b68","fromNode":"7bb822a2070c4859","fromSide":"bottom","toNode":"c6c5a054d4b7e4cc","toSide":"left","label":"não"},
+		{"id":"5135f71b5b771987","fromNode":"a08c144b6e480cdd","fromSide":"right","toNode":"7bb822a2070c4859","toSide":"left","label":"sim,\nentrar agora"},
+		{"id":"a098b1bea65c0991","fromNode":"a08c144b6e480cdd","fromSide":"right","toNode":"1d0601429c2d5c8e","toSide":"left","label":"não,\nentrar depois"},
+		{"id":"0f3de90ce4d799d0","fromNode":"1d0601429c2d5c8e","fromSide":"top","toNode":"d89e25d220f250f0","toSide":"left","label":"sim\n\n"},
+		{"id":"88d3570a8b6d6073","fromNode":"1d0601429c2d5c8e","fromSide":"bottom","toNode":"3d6efa548ea8ba33","toSide":"left","label":"não"}
+	]
+}

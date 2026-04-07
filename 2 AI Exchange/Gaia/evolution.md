@@ -175,6 +175,19 @@ Three distinct layers:
 - **Vault** — permanent, markdown/git, survives sessions
 - **Memory** — per-session boundary, lives in `memory.md` / `archive.md`
 - **Session memory** — ephemeral, exists only while the session runs (the context window); gone when session ends. This is what OPUS-HANDOFF.md was designed to preserve across a model switch.
+
+
+### Document type and metadata registry
+`2026-04-07`
+As agents create more notes with varied frontmatter, a central registry of known `type` values and domain-specific properties would help consistency and discoverability. Registry would define: known types, recommended additional properties per type, conventions. Could live at `2 AI Exchange/metadata-registry.md`. Apollo is a natural owner — ties into the methodology/ontology goal.
+
+### Link update on file move
+`2026-04-07`
+Obsidian automatically updates internal links when files are moved via its UI. Agents moving files via shell/Python bypass this — links break silently. Options: (1) note-mcp `move_file` runs a vault-wide link-update scan after moving, (2) agents avoid moving files that are heavily linked, (3) accept breakage and fix on next Obsidian open. Option 1 is cleanest — Alex to add link-rewrite step to `move_file` tool.
+
+### Cross-machine agent system setup
+`2026-04-07`
+The vault is portable via git, but MCP server setup (vault-mcp, note-mcp, filesystem config) is machine-specific. Need: a bootstrap script or setup guide that installs and configures all MCP servers on a new machine from scratch. Makes the system truly cross-machine. Alex's territory. Relevant when setting up the secondary PC for the SP moto trip.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 

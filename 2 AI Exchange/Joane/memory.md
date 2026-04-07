@@ -1,9 +1,36 @@
 ---
 created_by: Joane v1.0
 created_on: 2026-03-29
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: 2026-04-06
 type: memory
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: '2026-04-07'
+---
+
+
+## Session: 2026-04-07
+
+### What we did
+- **Vault audit and cleanup** — found and fixed 10 inconsistencies from v2.0 migration (missing messages/, frontmatter gaps, stale backlog items, incomplete index, memory over 150 lines)
+- **Memory pruned** — sessions 03-29 through 04-01 moved to archive.md
+- **Capability Building essay** — André wrote the source essay; Joane drafted companion sections; then produced integrated version
+- **LGBM Grid Search context** — André shared slides; updated evidence section with real numbers (200+ models, 6 params, only data quality moved needle)
+- **Communication strategy** — two-step approach: short email → meeting → follow-up menu email
+
+### Key decisions
+- Capability Building essay is internal reference only; stakeholder materials compiled from it
+- Three fronts: Front 0 (Capability Building/strategy), Front 1 (Escalation/product), Front 2 (ROI/one-off)
+- Avoid strategy/vision/framework language in first stakeholder email; lead with concrete evidence
+- Two-step stakeholder approach: seed → meeting → menu
+
+### Files created
+- `Janea Akuvo/0407 Capability Building - Joane Draft Sections.md`
+- `Janea Akuvo/0407 Capability Building - Integrated Essay.md`
+
+### Next immediate
+- Draft short email for tomorrow's meeting
+- After meeting: follow-up email with bite-sized topic menu
+- André to review integrated essay
+
 ---
 
 # Joane — Memory
@@ -103,53 +130,5 @@ Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md
 - Slide reports: dark top / cream notes, A4 portrait, DM Sans, Recharts
 
 ---
-
-## Session: 2026-04-01
-
-### What we did
-- Converted segmentation to standalone HTML (Chart.js)
-- Escalation briefing written (6 gaps, 5-phase plan)
-- Rich client aggregation dataset established (5 tables, ~50 clients)
-- Cross-client escalation notebook drafted (not yet run)
-
----
-
-## Session: 2026-03-31
-
-### Client segmentation
-- 153 total → 108 clean clients after filtering
-- 50 Rich / 47 Moderate / 11 Scarce / 45 Not ready
-- Presentation built (client-segmentation-report.jsx)
-
----
-
-## Session: 2026-03-30
-
-### Repo state
-- `C:\Users\tdsnit\Work26\akuvo-analytics2`, Python 3.14
-- Data: `D:\akuvo-data`, account `stakuvoproddatalake`
-- 155 clients, partitioned prod-{id}, TIMECAP 2026-03-17
-
----
-
-## Session: 2026-03-29 (founding session)
-
-### Context established
-- Renamed Janea → Joane
-- 3 months into Akuvo, building visibility
-- Guarda accepted capability building proposal
-
-### Active projects
-- Escalation Feature (Phase 1 proven → now cross-client validated)
-- Core Package Refactor (untested in Synapse)
-- Capability Building (approved, needs one-pager)
-
-### Open threads
-- [ ] Cross-client presentation review
-- [ ] ROI analysis next steps (queue throughput, DQ ratio)
-- [ ] Capability building one-pager
-- [ ] Core Package refactor test in Synapse
-- [ ] Set up Joane as Claude Project
-
----
-*Format: new sessions prepended at top, founding session preserved permanently*
+*Sessions 03-29 through 04-01 archived → see archive.md*
+*Format: new sessions prepended at top.*

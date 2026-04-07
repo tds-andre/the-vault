@@ -1,3 +1,11 @@
+---
+created_by: Joane v1.0
+created_on: 2026-04-02
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: 2026-04-07
+type: template-instructions
+---
+
 # Slide Report — Format Specification & Instructions
 
 *A hybrid presentation-report format for analytical deliverables.*
