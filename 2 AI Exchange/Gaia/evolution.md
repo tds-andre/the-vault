@@ -188,6 +188,29 @@ Obsidian automatically updates internal links when files are moved via its UI. A
 ### Cross-machine agent system setup
 `2026-04-07`
 The vault is portable via git, but MCP server setup (vault-mcp, note-mcp, filesystem config) is machine-specific. Need: a bootstrap script or setup guide that installs and configures all MCP servers on a new machine from scratch. Makes the system truly cross-machine. Alex's territory. Relevant when setting up the secondary PC for the SP moto trip.
+
+
+### WhatsApp agentic communication — reply on André's behalf
+`2026-04-07`
+Expanded vision beyond the capture bridge. Goal: Gaia reads incoming WhatsApp messages and replies on André's behalf for appropriate conversations.
+
+**Layers required:**
+1. Baileys bridge (already in evolution.md) — messages land in vault as structured notes
+2. Routing/classification — handle vs. escalate to André vs. ignore; needs rules per contact/category
+3. Context to reply well — who is this person, conversation history, relationship tone; Apollo's relationship profiles are upstream dependency
+4. Confirmation step (initially) — Gaia drafts reply, André approves before sending; autonomy earned over time
+5. Sending — Baileys send_whatsapp() writes reply back
+
+**What makes it hard:** judgment, not technology. Replying well requires knowing André's voice per relationship, which conversations are safe to handle, when to escalate. Apollo's "encode André completely" goal is a direct prerequisite — voice and relationship profiles make replies accurate.
+
+**Risk:** wrong auto-reply to wrong person creates real-world friction. Confirmation-first mandatory until system proves itself on low-stakes categories (scheduling, professional logistics, Cocoricó ops).
+
+**Natural autonomy progression:**
+- Phase 1: Gaia drafts, André approves all replies
+- Phase 2: Autonomous for low-stakes categories (logistics, professional, Cocoricó team)
+- Phase 3: Broader autonomy as Apollo's profiles mature
+
+**Dependency chain:** Baileys MCP → routing layer → Apollo relationship/voice profiles → confirmation UX → autonomous replies
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 
