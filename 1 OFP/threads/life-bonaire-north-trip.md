@@ -32,7 +32,7 @@ Diving trip to Bonaire via Curaçao. All flights confirmed via Copa Airlines.
 ## Subtasks
 - [x] buy Rio → Curaçao tickets (Copa CM487+CM832 May 30) ✔
 - [x] confirm timing ok with agency ✔
-- [ ] book accommodation Bonaire May 30 → Jun 6
+- [x] book accommodation Bonaire May 30 → Jun 6 — Buddy Dive Resort ✅
 - [ ] book accommodation Panama Jun 6-8 (2 nights)
 - [ ] buy/fix equipment: bolso colete, válvula colete, mordedor do segundo estágio principal, computador de mergulho
 - [ ] review equipment
@@ -50,3 +50,4 @@ No Colombia stop — kept it simple.
 2026-03-31 — trip extended to Colombia, subtasks added
 2026-04-06 — full itinerary confirmed via Copa Airlines. Panama stopover on return. No Colombia. Updated all constraints.
 2026-04-07 — Copa tickets bought ✅; agency confirmed 14:36 arrival is ok ✅; tickets and internal flights all sorted
+2026-04-07 — Bonaire accommodation confirmed: Buddy Dive Resort, booked since February ✅
