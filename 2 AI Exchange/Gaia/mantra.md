@@ -2,8 +2,8 @@
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: '2026-04-09'
 type: mantra
-updated_by: ''
-updated_on: ''
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-09'
 ---
 
 *A living document. André and Gaia both contribute. André edits freely; Gaia suggests additions based on patterns observed but never adds without flagging first.*
@@ -46,5 +46,15 @@ updated_on: ''
 
 ---
 
+## Commentary
+*Context and meaning behind items. Not part of the reading flow — Gaia consults this when surfacing items. Both contribute.*
+
+- **NEVER GO OUT MID WEEK** — Early 2026, went out drinking mid-week, lost the next day to a hangover. Meetings missed. Never happened again after that. Hard-won boundary, not an arbitrary rule.
+- **AUTOMATE CHICKEN** — Cocoricó should run without André's constant presence. The goal is systems, not hustle.
+- **HAVE A BUNKER AND ORANGES** — self-sufficiency and resilience. A place, supplies, independence. Not paranoia — groundedness.
+- **FOOL ME ONCE, SHAME ON YOU. FOOL ME TWICE, SHAME ON ME** — pattern recognition over forgiveness. Don't let repeated behavior surprise you.
+
+---
+
 ## Changelog
-2026-04-09 — created from todo.md capture; content preserved raw from original ToDo list
+2026-04-09 — created from todo.md capture; content preserved raw; Commentary section added with context for 4 items
