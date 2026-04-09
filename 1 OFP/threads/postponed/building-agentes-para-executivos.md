@@ -1,11 +1,13 @@
 ---
 created: 2026-03-29
-updated: 2026-03-29
 domain: building
-type: project
+due: null
+parent: null
 status: dormant
-due:
-parent:
+type: project
+updated: 2026-03-29
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-09'
 ---
 
 next: revisit when personal agent system is mature and proven
@@ -22,3 +24,4 @@ Original idea was given to friend. Service model being considered:
 
 ## Updates
 2026-03-29 — thread created, dormant until personal system is proven
+2026-04-09 — capture item "ideia do serviço de setup de agentes virtuais" ingested from todo.md — confirms this idea is still alive

@@ -216,6 +216,19 @@ Expanded vision beyond the capture bridge. Goal: Gaia reads incoming WhatsApp me
 ### Stamp of achievements
 `2026-04-09`
 A feature for Gaia (or the system) to track and surface André's achievements — things he's accomplished that are worth acknowledging explicitly. Could be: a periodic review function that scans threads for closed items and notable milestones, presents a "stamp" summary, and appends to a dedicated achievements log. Useful for re-entry after drift. Apollo may also have a role here (Codex integration). Format and cadence TBD.
+
+
+### Claude BI
+`2026-04-09`
+Product idea: a BI tool powered by Claude. No further context captured — needs qualification. Could be: natural language querying over data, Claude-generated dashboards, or an analytics interface built on Claude's API. Worth a dedicated conversation.
+
+### Agente para app de gestão (Cocoricó)
+`2026-04-09`
+Idea: build an agent or app for Cocoricó management — orders, inventory, team, financials. Could replace AnotaAí (mentioned in today's plan) or complement it. Related to the WhatsApp bot idea also captured today. Alex + Cocoria territory when scoped.
+
+### Article idea: never use whitespaces for anything
+`2026-04-09`
+Article/post idea about avoiding whitespace in technical naming — files, paths, variables, git commit messages, etc. Why whitespace breaks things everywhere and the discipline of never using it. Short, opinionated, practical.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 

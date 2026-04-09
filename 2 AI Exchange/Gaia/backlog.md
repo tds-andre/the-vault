@@ -3,7 +3,7 @@ created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-07
 type: backlog
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-07'
+updated_on: '2026-04-09'
 ---
 
 # Gaia — Backlog
@@ -21,6 +21,8 @@ updated_on: '2026-04-07'
 - [ ] personal-eye-improvement and personal-skin-improvement show Prioritized in index but active in frontmatter
 - [ ] personal-qoves-fotos-cirurgicas domain is "aesthetics" in frontmatter, should be "personal"
 - [ ] Consider replacing Thread Index with live read_folder queries — eliminates manual maintenance drift
+
+- [ ] "Ask claude count lines" appeared twice in todo.md — figure out what this task refers to and route or close it
 
 ---
 *No items yet.*
