@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/C","C:\\Progra~1\\nodejs\\npx.cmd","-y","@modelcontextprotocol/server-filesystem","C:/Users/tdsnit/winlinks/gdrive/the_gdrive/0_ofp","C:/Users/tdsnit/winlinks/gdrive/the_gdrive/1_docs/2_resume/V6","C:/Users/tdsnit/Work26/agents","C:/Users/tdsnit/Work26/sod-report","C:/Users/tdsnit/Work26/cbrs-studio-lite","C:/Users/tdsnit/Work26/cbrs-studio-dark","C:/Users/tdsnit/Work26/akuvo-analytics2","C:/Users/tdsnit/winlinks/obsidian-default-vault","C:/Users/tdsnit/winlinks/gdrive/mess/Cocoricó","C:/Users/tdsnit/winlinks/cyborg2drive/frango","D:/akuvo-data/","C:/Users/tdsnit/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude"]
+    },
+    "whatsapp-mcp": {
+      "command": "node",
+      "args": ["C:\\Users\\tdsnit\\Work26\\agents\\whatsapp-mcp\\server.js"]
+    },
+    "the-vault-2.1": {
+      "command": "C:\\Users\\tdsnit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "args": ["C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp\\server.py"],
+      "env": {"PYTHONUNBUFFERED": "1", "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp"}
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true,
+    "keepAwakeEnabled": true,
+    "coworkOnboardingResumeStep": null
+  }
+}

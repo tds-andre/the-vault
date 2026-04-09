@@ -12,6 +12,34 @@ type: memory
 
 ---
 
+## Session: 2026-04-07
+
+### whatsapp-mcp shipped
+- Repo at `C:\Users\tdsnit\Work26\agents\whatsapp-mcp`
+- Stack: Node.js, Baileys (@whiskeysockets/baileys), PM2
+- PM2 installed globally, service runs as `whatsapp-baileys`
+- Ecosystem config: `ecosystem.config.cjs` (CJS, not ESM — PM2 can't load ESM configs)
+- Tools: `send_whatsapp`, `get_contacts`, `check_replies`, `await_replies`, `get_chat_history`
+- Registered in `claude_desktop_config.json` as `whatsapp-mcp`
+- Auth stored in `./auth/`, contacts cached in `D:\vault-data\whatsapp\contacts\contacts.json`
+- History persisted to `D:\vault-data\whatsapp\history\<jid>.json`, deduped by message ID
+- History built from real-time `messages.upsert` events (not initial sync — Baileys v6 limitation)
+- `the-vault` bumped to `2.1` — now has unrestricted `run` tool (pm2.cmd etc.)
+- MCP config backup added to `2 AI Exchange/Alex/db/claude_desktop_config.backup.json`
+- **Always update backup after every config change**
+
+### Versioning convention
+- Server renamed from `vault-mcp` → `the-vault-2.0` to bust Claude Desktop tool cache
+- Convention: bump minor version (e.g. 2.1, 2.2) whenever tool descriptions change
+- Change in `FastMCP("the-vault-X.Y")` in `vault_mcp/server.py` AND config key in `claude_desktop_config.json`
+
+### notes tools shipped (11 tools)
+- `vault_mcp/tools/notes.py` — create_note, append_note, prepend_note, read_section, read_sections, read_footnote, update_footnote, update_properties, note_info, read_notes, read_folder
+- Bug fixed: `_split_footnote` was splitting on all `---` lines; now only splits on `---` followed by `*` (italic footnote)
+- `read_notes` / `read_folder` return `{notes: [...]}` dict to avoid FastMCP single-item list unwrapping
+
+---
+
 ## Session: 2026-04-06
 
 ### v2.0 architecture migration

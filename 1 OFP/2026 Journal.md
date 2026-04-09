@@ -1,5 +1,16 @@
 [[0 PDS#Baseline Journaling]]
 
+## April 8, Wednsday, 7am
+- Slept good
+- Housekeepin
+- Have to buy shit for bike travel on Saturdary
+	- [x] suporte
+	- [x] bau
+	- [x] suporte cel
+	- [ ] negocio de tanque
+	- [x] mochila bau
+	- [x] joelheira
+	- [ ] pads
 
 # April 6, Monday, 4am
 - Active but shit weekend; Jessica really takes up too much time for too little benefit

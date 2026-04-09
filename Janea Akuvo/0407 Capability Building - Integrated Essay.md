@@ -2,8 +2,8 @@
 created_by: Joane claude-opus-4-6 v2.0
 created_on: '2026-04-07'
 type: essay
-updated_by: ''
-updated_on: ''
+updated_by: Joane claude-opus-4-6 v2.0
+updated_on: '2026-04-08'
 ---
 
 # Building Akuvo's Capability in Analytics
@@ -67,6 +67,13 @@ This is a long-term provocation, not a near-term recommendation. But it's worth 
 
 ---
 
+
+
+
+### The Firework Analogy (André, 04-08)
+> Trying to solve the Big Problem now would be equivalent to trying to go to the moon with a firework strapped to your back: You won't get to the moon and you might burn your ass.
+
+*Use in stakeholder presentations to explain why The Big Problem is a guiding star, not a project plan.*
 ## Part II: The Evidence
 
 Before diagnosing problems in the abstract, we present four concrete experiences from recent analytical work. Each one surfaces a specific gap that a proper analytics foundation would have prevented.
@@ -399,5 +406,4 @@ See `0325 Random Notes, Attributes Ontology.md` — placeholder for future devel
 See `0329 ML x Conventional Software workflows.md` — placeholder for future development.
 
 ---
-
 *This document is maintained as the canonical reference for capability building strategy. Stakeholder-facing materials are compiled from it, never the reverse.*

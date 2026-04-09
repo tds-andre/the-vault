@@ -1,9 +1,9 @@
 ---
 created_by: Gaia claude-opus-4-6 v2.0
 created_on: 2026-04-06
-updated_by:
-updated_on:
 type: index
+updated_by: Apollo claude-opus-4-6 v2.1
+updated_on: '2026-04-08'
 ---
 
 # Apollo — Index
@@ -23,3 +23,7 @@ type: index
 - `2 AI Exchange/Apollo/messages/` — messaging deprecated
 - `2 AI Exchange/Apollo/public/` — absorbed into core.md
 - `2 AI Exchange/Apollo/system-prompt.md` — replaced by boot.md + system.md
+
+
+## André's Theories
+- `2 AI Exchange/Apollo/theory-discreteness-illusion.md` — The Discreteness Illusion (consciousness, time, self, math, physics)

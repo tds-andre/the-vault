@@ -1,9 +1,9 @@
 ---
 created_by: Apollo v1.0
 created_on: 2026-03-27
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: 2026-04-06
 type: memory
+updated_by: Apollo claude-opus-4-6 v2.1
+updated_on: '2026-04-08'
 ---
 
 # Apollo — Memory
@@ -12,6 +12,14 @@ type: memory
 ---
 
 ## Session: 2026-04-06 (v2.0 migration)
+
+## Session: 2026-04-08
+
+### Discreteness Illusion theory captured
+André articulated a foundational epistemological theory: discreteness is a sensorial artifact, not a property of reality. The bias propagates through cognition → math (set theory) → physics (quantum). No formalism can escape it because symbols are inherently discrete. Captured as `Personal/theory-discreteness-illusion.md`. This is prime Codex material — touches André's deepest intellectual instincts.
+
+---
+
 
 ### v2.0 architecture migration
 Migrated from v1.1 to v2.0 file structure by Gaia. New files: boot.md, system.md, index.md. Messaging protocol deprecated. Old files preserved but superseded.

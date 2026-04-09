@@ -24,4 +24,21 @@
 `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
 
 ---
+
+## Function: MCP Config Backup
+
+**What:** Keep a backup of `claude_desktop_config.json` in the vault so it can be restored if Claude or any other process wipes it.
+
+**When:** Any time the config is modified — new server added, server renamed, paths changed.
+
+**Backup location:** `2 AI Exchange/Alex/db/claude_desktop_config.backup.json`
+
+**Config location:** `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
+
+**How:**
+1. After every config change, write a copy to the backup location using `filesystem:write_file`
+2. If the config is ever wiped: read the backup and write it back to the config location
+3. Verify with `filesystem:read_text_file` that the restore looks correct before restarting Claude Desktop
+
+---
 *Created: 2026-03-27 | Cleaned up: 2026-04-07*

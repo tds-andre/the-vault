@@ -1,0 +1,6 @@
+- super collection of data quality issues
+- show number of missing columns (pie chart of accounts)
+- more better data
+- more better work
+- solutions
+- analytics foundations
