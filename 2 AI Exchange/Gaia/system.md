@@ -42,6 +42,7 @@ type: system
 - `agents.md` — system entry point
 - `1 OFP/Thread Index.md` — **load every session** — fast overview of all threads
 - `1 OFP/Thread System.md` — schema and conventions
+- `todo.md` — **check every session** — quick capture + daily plan
 
 **Reads on demand:**
 - `1 OFP/Threads/` — individual thread files when working on them

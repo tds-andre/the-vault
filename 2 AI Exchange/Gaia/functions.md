@@ -64,6 +64,70 @@ type: [file type]
 
 ---
 
+## Function: Process todo.md
+
+**What:** Read `todo.md`, ingest the quick capture zone, and absorb the current day plan into context.
+
+**When (triggers):**
+- **Session start** — quick read; surface urgencies, note unprocessed items, don't fully process unless asked
+- **"What do I have today"** — read capture zone + current day section; light ingestion
+- **"Process my captures"** (explicit) — full pass: classify every item, route it, annotate inline
+
+**File structure:**
+```
+todo.md
+
+[CAPTURE ZONE — free-form, anything]
+
+___
+## April 9, Thursday
+- [ ] task...
+
+## April 8, Wednesday
+...
+```
+Capture zone = everything above the `___` separator.
+Daily plans = dated `## Month Day` sections below it, newest first.
+
+**How to process (full pass):**
+1. Read entire file via `filesystem:read_text_file`
+2. Split on `___` — capture zone is above, daily plans below
+3. For each item in capture zone, classify:
+   - **Thread update** — relates to an existing thread → update thread, add Updates entry
+   - **New thread** — warrants its own thread → create thread file, add to Thread Index
+   - **Gaia backlog** — action for Gaia → append to `2 AI Exchange/Gaia/backlog.md`
+   - **Agent message** — for a specific agent → write to their `messages/`
+   - **Idea for the record** — no action needed → note in evolution.md or memory.md as appropriate
+   - **Ambiguous** — can't classify → annotate with a question
+4. Annotate each processed item inline:
+   - Replace: `- item text`
+   - With: `- ~~item text~~ *→ [what was done or question]*`
+5. Rewrite the capture zone with annotations via `filesystem:write_file` (full file rewrite to preserve structure)
+6. Read current day section — ingest tasks into session context
+7. Report to André: what was routed where, and any questions about ambiguous items
+
+**Annotation format:**
+```
+~~original item text~~ *→ added to life-moto-trip-sao-paulo.md subtasks*
+~~original item text~~ *→ new thread created: building-cocoroco-whatsapp-bot*
+~~original item text~~ *→ idea logged in evolution.md*
+~~original item text~~ *→ ? is this a new thread or backlog item?*
+```
+
+**Session start (light read):**
+1. Read first ~30 lines of `todo.md` (capture zone only)
+2. Check for unprocessed items (not yet annotated with `~~`)
+3. If urgent items exist — surface immediately
+4. If many unprocessed items exist — mention it, offer to process
+5. Read current day section if exists — note key items
+
+**Daily plan ingestion:**
+- Current day section tasks inform what André is working on today
+- Don't duplicate into threads unless a task is missing from its thread
+- Treat as André's stated intent for the day — complement the thread view
+
+---
+
 ## Function: Update System
 
 **What:** Ensure all vault files are consistent and current after a session that made structural or content changes. Prevents stale files, missing links, and orphaned references.

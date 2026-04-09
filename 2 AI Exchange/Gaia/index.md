@@ -28,13 +28,15 @@ updated_on: '2026-04-09'
 | `messages/` | Incoming messages from other agents |
 | `messages/closed/` | Resolved messages |
 | `backups/` | Versioned backups; see `backups/backups.md` |
+| `notes/` | Specialized knowledge notes (evergreen, subject-specific) |
 
 ---
 
+## Key External Files
 
-| `notes/` | Specialized knowledge notes (evergreen, subject-specific) |
-| `notes/index.md` | Append-only quick index of notes |
-## Shared Files
+| File | Purpose |
+|---|---|
+| `todo.md` (vault root) | Quick capture + daily plans — check every session |
 
 | File | Purpose |
 |---|---|
