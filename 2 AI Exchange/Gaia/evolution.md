@@ -1,6 +1,6 @@
 ---
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-07'
+updated_on: '2026-04-09'
 ---
 
 # Gaia's Evolution
@@ -211,6 +211,11 @@ Expanded vision beyond the capture bridge. Goal: Gaia reads incoming WhatsApp me
 - Phase 3: Broader autonomy as Apollo's profiles mature
 
 **Dependency chain:** Baileys MCP → routing layer → Apollo relationship/voice profiles → confirmation UX → autonomous replies
+
+
+### Stamp of achievements
+`2026-04-09`
+A feature for Gaia (or the system) to track and surface André's achievements — things he's accomplished that are worth acknowledging explicitly. Could be: a periodic review function that scans threads for closed items and notable milestones, presents a "stamp" summary, and appends to a dedicated achievements log. Useful for re-entry after drift. Apollo may also have a role here (Codex integration). Format and cadence TBD.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 

@@ -98,7 +98,9 @@ Daily plans = dated `## Month Day` sections below it, newest first.
    - **Gaia backlog** — action for Gaia → append to `2 AI Exchange/Gaia/backlog.md`
    - **Agent message** — for a specific agent → write to their `messages/`
    - **Idea for the record** — no action needed → note in evolution.md or memory.md as appropriate
-   - **Ambiguous** — can't classify → annotate with a question
+   - **Apollo territory** — mantras, reflections, identity captures, knowledge notes → write to `2 AI Exchange/Apollo/messages/` with brief context; annotate item accordingly
+   - **Other agent territory** — clearly belongs to a specific agent but Gaia shouldn't process directly → write to that agent's `messages/`; annotate item
+   - **Ambiguous / uncertain** — can't classify with confidence → append to `meta-capture-inbox.md` under `## Uncertain items` as a subtask; annotate with a question
 4. Annotate each processed item inline:
    - Replace: `- item text`
    - With: `- ~~item text~~ *→ [what was done or question]*`
