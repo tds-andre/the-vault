@@ -32,6 +32,8 @@ updated_on: '2026-04-09'
 
 ---
 
+
+| `mantra.md` | Living mantra — Compass + Self-talk; both André and Gaia contribute |
 ## Key External Files
 
 | File | Purpose |
