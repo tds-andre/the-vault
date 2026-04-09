@@ -1,9 +1,9 @@
 ---
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: 2026-04-07
 type: shared-context
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-09'
 ---
 
 # Core — Shared Agent Context
@@ -102,6 +102,8 @@ Obsidian Vault/
       messages/                  <- incoming messages from other agents
         closed/                  <- resolved messages
       messages-archive.md        <- flat history of past messages (if any)
+      notes/                     <- specialized knowledge notes (evergreen, subject-specific)
+        index.md                 <- append-only quick index of all notes in this dir
   3 Subthreads/                  <- business ideas and deep-dive subthreads
   Personal/                      <- personal notes, Codex, aesthetics
   Janea Akuvo/                   <- Akuvo work notes and analysis
@@ -210,6 +212,46 @@ Each agent maintains a `backlog.md` — a self-managed list of open tasks, next 
 - Update at end of each substantive session: mark completed items, add new ones
 - This is the agent's own work tracker, not André's task list
 - Gaia does not manage other agents' backlogs
+
+### Specialized Notes
+
+Agents maintain subject-specific knowledge files in `notes/` — deep, evergreen briefings on topics they develop genuine depth on within their domain. This complements `memory.md` (session log) and `archive.md` (pruned history) with structured, permanent reference documents.
+
+**When to create a note:**
+- Explicitly requested by André
+- Agent recognises a subject has appeared across multiple interactions with non-trivial depth building — enough that a briefing would be genuinely useful to a fresh session
+
+**Note structure:**
+```
+notes/[subject-slug].md
+
+Frontmatter: standard + subject, domain, agent fields
+## Overview     ← synthesized current understanding; rewritten on consolidation
+## Details      ← expanding body; append-only between consolidations
+## Changelog    ← records when consolidations happened and why
+## Updates      ← append-only dated entries; newest at bottom; last section; no footnote
+```
+
+**How to update (default — append):**
+- New understanding, fact, or nuance → append a dated entry to `## Updates`
+- Do not rewrite the whole note on every update
+- `## Updates` format: `YYYY-MM-DD — [new understanding]`
+
+**When to consolidate:**
+- `## Updates` accumulates ~10 entries, OR
+- `## Overview` feels clearly stale relative to what has accumulated below it, OR
+- Triggered alongside `memory.md` pruning — same maintenance event, both distilled at once
+
+**Consolidation steps:**
+1. Rewrite `## Overview` to absorb the current understanding
+2. Integrate relevant Updates into `## Details`
+3. Append to `## Changelog`: `YYYY-MM-DD — consolidated [N] updates; reason`
+4. Clear `## Updates` (the Changelog records that it happened)
+
+**`notes/index.md`:**
+- Append-only quick index — one line per note: `YYYY-MM-DD | [slug] | [one-sentence description]`
+- Never rewritten, just grows
+- Scan at session start for orientation; read individual notes on demand
 
 ---
 

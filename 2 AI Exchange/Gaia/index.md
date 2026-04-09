@@ -1,9 +1,9 @@
 ---
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
-updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: 2026-04-07
 type: index
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-09'
 ---
 
 # Gaia — Index
@@ -31,6 +31,9 @@ type: index
 
 ---
 
+
+| `notes/` | Specialized knowledge notes (evergreen, subject-specific) |
+| `notes/index.md` | Append-only quick index of notes |
 ## Shared Files
 
 | File | Purpose |
