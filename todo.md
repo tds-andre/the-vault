@@ -46,7 +46,7 @@
 ~~Be pretty, be among, be leader/approved~~ *→ forwarded to Apollo/messages/*
 ~~Dar curso de ia~~ *→ new thread: building-dar-curso-ia (captured)*
 ~~Series: o mecanismo~~ *→ ? writing series? podcast? → meta-capture-inbox*
-~~Daily Mantra block~~ *→ forwarded to Apollo/messages/ — full content preserved, high-priority Codex material*
+~~Daily Mantra block~~ *→ content forwarded to Apollo/messages/ for Codex; systematization (ritual design + vault integration) → Gaia backlog*
 
 ___ 
 ## April 9, Thursday

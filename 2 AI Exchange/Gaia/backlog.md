@@ -24,5 +24,7 @@ updated_on: '2026-04-09'
 
 - [ ] "Ask claude count lines" appeared twice in todo.md — figure out what this task refers to and route or close it
 
+- [ ] Daily Mantra ritual — design how to systematize it: format in vault, cadence (weekly?), how André accesses/reads it, whether Gaia surfaces it periodically. Content already sent to Apollo for Codex.
+
 ---
 *No items yet.*
