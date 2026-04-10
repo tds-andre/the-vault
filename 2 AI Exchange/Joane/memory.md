@@ -3,9 +3,44 @@ created_by: Joane v1.0
 created_on: 2026-03-29
 type: memory
 updated_by: Joane claude-opus-4-6 v2.0
-updated_on: '2026-04-07'
+updated_on: '2026-04-10'
 ---
 
+
+## Session: 2026-04-08
+
+### What we did
+- **Concepts & definitions doc** — created `Janea Akuvo/Escalation Analysis/concepts-and-definitions.md` with core metrics (coverage, impact = duration + fallout + relapse), updated escalation opportunity score formula
+- **One-pager infographic v4** — dark theme, scannable, with coverage/impact/consistency/opportunity score sections. Title: "Delinquency Escalation: How Actionable is it?" Placeholder client codes.
+- **Data infrastructure diagram** — Data Lake → Quality Control → Analytical Data Store (integration → cubes → apps → sandbox). André has canonical version in PowerPoint.
+- **QC system spec discussed** — 5-step pipeline (rules → detect → score/tier → sort → downstream + report), rule types (atomic/relational/statistical) mapped to compute patterns, autofix between steps
+- **Capability building SCR framing** — Situation (cash flow → data is king) → Complications (data quality + suboptimal workflows) → Resolution (4 components: variability analysis, QC, feature store, toolkit)
+- **Seed email sent** — subject "Feature Store & company", to Mike/Will, cc Guarda/Filip. Meeting set for Tuesday.
+- **Firework analogy saved** to essay
+
+### Key decisions
+- Coverage = % of all DQs escalated (B-side, ~8%, "1 in 12") — not A+B union
+- Duration = mean(A lift, B lift) vs intra
+- Fallout = negative volume lift vs intra (TODO: add vs random to pipeline)
+- Relapse = recurrence lift vs random
+- Escalation opportunity score = coverage × mean(duration, fallout, relapse) — can exceed 100%
+- Random baseline already conditions on ≥1 DQ — correct
+- "Feature Store" as outer name for Analytical Data Store (Will's language)
+- QC sits between Core/integration and Cubes (not before integration)
+- Integration = staging area, minimal processing; Cubes = value-add layer
+
+### Files created
+- `Janea Akuvo/Escalation Analysis/concepts-and-definitions.md`
+- `Janea Akuvo/0408 Seed Email - Productivity Variant.md`
+- One-pager v4: `/mnt/user-data/outputs/escalation-one-pager-v4.jsx`
+
+### Next immediate
+- Tuesday meeting: walk through capability building framing + ideas
+- After meeting: follow-up email with bite-sized topic menu
+- Finalize one-pager with real client codes and recomputed scores
+- André to review integrated essay
+
+---
 
 ## Session: 2026-04-07
 

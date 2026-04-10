@@ -40,6 +40,14 @@ updated_on: '2026-04-09'
 |---|---|
 | `todo.md` (vault root) | Quick capture + daily plans — check every session |
 
+## Special Threads
+
+| Thread | Purpose |
+|---|---|
+| `1 OFP/Threads/meta-capture-inbox.md` | Staging area for uncertain/unqualified captures |
+| `1 OFP/Threads/meta-revisit-inbox.md` | Links and resources to revisit when there's reflective time |
+| `1 OFP/Threads/personal-watch-read-list.md` | Books, series, documentaries, movies to consume |
+
 | File | Purpose |
 |---|---|
 | `2 AI Exchange/core.md` | Shared context: André, vault, protocols, principles |

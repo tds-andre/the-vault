@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520"
+     font-family="'Courier New', monospace" font-size="12">
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff6b35"/>
+    </marker>
+    <marker id="arr-white" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#aaa"/>
+    </marker>
+    <!-- coverage gradient (inferno-ish) -->
+    <radialGradient id="cov" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fcffa4" stop-opacity="0.9"/>
+      <stop offset="25%"  stop-color="#f98e09" stop-opacity="0.85"/>
+      <stop offset="55%"  stop-color="#bc3754" stop-opacity="0.75"/>
+      <stop offset="80%"  stop-color="#57106e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000004" stop-opacity="0.0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#0d0d0d"/>
+
+  <!-- ── Dark-matter style basemap tile grid ── -->
+  <g opacity="0.35">
+    <!-- tile background -->
+    <rect x="160" y="60" width="480" height="380" fill="#1a1a2e" rx="4"/>
+    <!-- faint street grid -->
+    <!-- horizontals -->
+    <line x1="160" y1="155" x2="640" y2="155" stroke="#2a2a3e" stroke-width="1.5"/>
+    <line x1="160" y1="250" x2="640" y2="250" stroke="#2a2a3e" stroke-width="2.5"/>
+    <line x1="160" y1="345" x2="640" y2="345" stroke="#2a2a3e" stroke-width="1.5"/>
+    <!-- verticals -->
+    <line x1="280" y1="60" x2="280" y2="440" stroke="#2a2a3e" stroke-width="1.5"/>
+    <line x1="400" y1="60" x2="400" y2="440" stroke="#2a2a3e" stroke-width="2.5"/>
+    <line x1="520" y1="60" x2="520" y2="440" stroke="#2a2a3e" stroke-width="1.5"/>
+    <!-- block fills -->
+    <rect x="180" y="75"  width="75" height="60"  fill="#222238" rx="2"/>
+    <rect x="295" y="170" width="80" height="55"  fill="#222238" rx="2"/>
+    <rect x="430" y="80"  width="65" height="50"  fill="#222238" rx="2"/>
+    <rect x="195" y="265" width="60" height="50"  fill="#222238" rx="2"/>
+    <rect x="430" y="265" width="70" height="45"  fill="#222238" rx="2"/>
+    <rect x="535" y="170" width="75" height="65"  fill="#222238" rx="2"/>
+    <rect x="300" y="355" width="80" height="55"  fill="#222238" rx="2"/>
+    <rect x="440" y="360" width="65" height="50"  fill="#222238" rx="2"/>
+    <rect x="175" y="360" width="80" height="55"  fill="#222238" rx="2"/>
+    <rect x="535" y="355" width="70" height="60"  fill="#222238" rx="2"/>
+  </g>
+
+  <!-- ── Coverage image overlay ── -->
+  <ellipse cx="400" cy="250" rx="195" ry="175" fill="url(#cov)"/>
+
+  <!-- Bounding box (image corners) -->
+  <rect x="205" y="75" width="390" height="350" fill="none"
+        stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6,4" rx="2"/>
+
+  <!-- Corner dots + labels -->
+  <!-- top-left -->
+  <circle cx="205" cy="75"  r="5" fill="#ff6b35"/>
+  <text x="170" y="65" fill="#ff6b35" font-size="10" text-anchor="middle">[min_lon, max_lat]</text>
+  <text x="170" y="77" fill="#888"    font-size="9"  text-anchor="middle">top-left</text>
+
+  <!-- top-right -->
+  <circle cx="595" cy="75"  r="5" fill="#ff6b35"/>
+  <text x="630" y="65" fill="#ff6b35" font-size="10" text-anchor="middle">[max_lon, max_lat]</text>
+  <text x="630" y="77" fill="#888"    font-size="9"  text-anchor="middle">top-right</text>
+
+  <!-- bottom-right -->
+  <circle cx="595" cy="425" r="5" fill="#ff6b35"/>
+  <text x="630" y="433" fill="#ff6b35" font-size="10" text-anchor="middle">[max_lon, min_lat]</text>
+  <text x="630" y="445" fill="#888"    font-size="9"  text-anchor="middle">bottom-right</text>
+
+  <!-- bottom-left -->
+  <circle cx="205" cy="425" r="5" fill="#ff6b35"/>
+  <text x="170" y="433" fill="#ff6b35" font-size="10" text-anchor="middle">[min_lon, min_lat]</text>
+  <text x="170" y="445" fill="#888"    font-size="9"  text-anchor="middle">bottom-left</text>
+
+  <!-- TX marker -->
+  <polygon points="400,238 408,258 392,258" fill="#ff6b35"/>
+  <circle  cx="400" cy="250" r="18" fill="none" stroke="#ff6b35" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6"/>
+  <circle  cx="400" cy="250" r="35" fill="none" stroke="#ff6b35" stroke-width="0.8" stroke-dasharray="3,5" opacity="0.35"/>
+  <text x="415" y="244" fill="#ff6b35" font-size="11" font-weight="bold">gNB</text>
+  <text x="415" y="258" fill="#888"    font-size="10">30 m</text>
+
+  <!-- ── Code snippet ── -->
+  <rect x="22" y="310" width="115" height="115" fill="#111" stroke="#333" rx="4"/>
+  <text x="32" y="326" fill="#888" font-size="9">MapLibre source:</text>
+  <text x="32" y="341" fill="#4ec9b0" font-size="8.5">type: "image",</text>
+  <text x="32" y="355" fill="#4ec9b0" font-size="8.5">url: coveragePNG,</text>
+  <text x="32" y="369" fill="#4ec9b0" font-size="8.5">coordinates: [</text>
+  <text x="40" y="383" fill="#ce9178" font-size="8.5">top-left,</text>
+  <text x="40" y="397" fill="#ce9178" font-size="8.5">top-right,</text>
+  <text x="40" y="411" fill="#ce9178" font-size="8.5">bottom-right,</text>
+  <text x="40" y="420" fill="#ce9178" font-size="8.5">bottom-left ]</text>
+
+  <!-- Arrow from code to bounding box -->
+  <line x1="137" y1="367" x2="198" y2="250" stroke="#aaa" stroke-width="1"
+        marker-end="url(#arr-white)" stroke-dasharray="4,3"/>
+
+  <!-- ── Opacity slider label ── -->
+  <rect x="663" y="220" width="118" height="65" fill="#111" stroke="#333" rx="4"/>
+  <text x="673" y="237" fill="#aaa" font-size="10">Coverage opacity</text>
+  <rect x="673" y="245" width="95" height="6" fill="#333" rx="3"/>
+  <rect x="673" y="245" width="68" height="6" fill="#ff6b35" rx="3"/>
+  <circle cx="741" cy="248" r="6" fill="white"/>
+  <text x="673" y="272" fill="#666" font-size="9">slider: 0 — 100%</text>
+
+  <!-- Arrow from slider to overlay -->
+  <line x1="663" y1="250" x2="600" y2="250" stroke="#aaa" stroke-width="1"
+        marker-end="url(#arr-white)" stroke-dasharray="4,3"/>
+
+  <!-- ── North arrow ── -->
+  <g transform="translate(600,110)">
+    <line x1="0" y1="18" x2="0"  y2="-18" stroke="white" stroke-width="1.5"
+          marker-end="url(#arr)"/>
+    <text x="0" y="30" fill="white" font-size="11" text-anchor="middle">N</text>
+  </g>
+
+  <!-- ── Title ── -->
+  <text x="400" y="488" fill="white" font-size="13" font-weight="bold"
+        text-anchor="middle">
+    Step 5 — Geo-referenced coverage overlay on MapLibre GL JS basemap
+  </text>
+  <text x="400" y="506" fill="#666" font-size="10" text-anchor="middle">
+    Image source pinned to scene bounding box  |  Adjustable opacity  |  CARTO Dark Matter tiles
+  </text>
+
+</svg>

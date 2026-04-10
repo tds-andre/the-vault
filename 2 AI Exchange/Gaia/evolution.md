@@ -1,6 +1,6 @@
 ---
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-09'
+updated_on: '2026-04-10'
 ---
 
 # Gaia's Evolution
@@ -229,6 +229,15 @@ Idea: build an agent or app for Cocoricó management — orders, inventory, team
 ### Article idea: never use whitespaces for anything
 `2026-04-09`
 Article/post idea about avoiding whitespace in technical naming — files, paths, variables, git commit messages, etc. Why whitespace breaks things everywhere and the discipline of never using it. Short, opinionated, practical.
+
+
+### Cowork as agent execution layer
+`2026-04-10`
+André has Cowork working with Jax imported natively. Both share the vault so memory/notes sync automatically. No programmatic trigger for Cowork exists yet (Scheduled Tasks is the closest). Conway (unreleased, ~Q2-Q3 2026) is the likely unlock for truly autonomous triggering.
+
+Current best pattern: Gaia writes a structured task file to target agent's messages/ → André opens Cowork session for that agent → agent reads task + executes autonomously → result lands in vault → Gaia picks up next session. Cowork = execution layer, vault = coordination layer.
+
+Worth revisiting when Conway ships or when Scheduled Tasks is better understood.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 

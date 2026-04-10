@@ -1,10 +1,17 @@
+
+- shit I would like to do:
+	- integrate all agentic modes
+	- develop app/view for my week/day
+	- automatic toggle
+	- multiplataform
+- check with Filip and Guarda about new meeting time on Tuesday (1h earlier)
+- everything upstream of data can be solved with data, and everything downstream of data highly depends on it
+- more better data, more better work
 - janea next week:
-	- escalation - wrap presentation for operations team
-	- strategy - wrap presention for core idea + 2 complications + solutions
+	- escalation - wrap presentation for operations team (Wedsnday)
+	- strategy - wrap presention for core idea + 2 complications + solutions (Tuesday)
 	- idea: share data quality reports
-	- idea: **LLM SEARCH DATA BASE/INDEX**
-- **today: email package blogpost screenshots**
-- for tomorrow: pay dentist, check iptu and car
+	- idea: **LLM SEARCH DATA BASE/INDEX** 
 - idea for the weekend: built app + whatsapp bot to replace AnotaAí
 - important: how to systematically leverage my trips and lifestyle (e.g., diving, moto funny guy, photography) to acrue popularity online w/ girls
 - important: how to systematically leverage everything I know (and before AI makes it irrelevant) for professional visibility; and, given the doomtrain of AI, how should I reposition myself professionally (since a good portion of my skillset has been automated)
@@ -22,7 +29,18 @@
 
 ___ 
 ## April 10, Friday
-- [ ] wrap jan
+- [ ] pay dentist, check iptu and car
+- [x] set up bike
+- [ ] prep and package for trip (& test work setup)
+- [ ] printout airbnb details
+- [ ] charge phones and bateries
+- [x] kb:
+	- [x] finish blog post
+	- [x] add images
+	- [x] package and email
+- [x] janea:
+	- [x] talk about the presentation in the meeting
+	- [x] send outline email of the presentation
 
 ## April 9, Thursday
 - [x] **dentist** at 12h

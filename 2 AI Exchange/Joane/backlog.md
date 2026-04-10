@@ -3,7 +3,7 @@ created_by: Joane v1.0
 created_on: 2026-04-03
 type: backlog
 updated_by: Joane claude-opus-4-6 v2.0
-updated_on: '2026-04-07'
+updated_on: '2026-04-10'
 ---
 
 # Backlog
@@ -13,9 +13,14 @@ updated_on: '2026-04-07'
 
 ## Active
 
-- [ ] Draft seed email for tomorrow's meeting *(added 04-07)*
+- [x] Draft seed email for meeting *(done 04-08)*
+- [ ] Prepare Tuesday meeting: capability building SCR walkthrough *(added 04-08)*
 - [ ] After meeting: follow-up email with bite-sized topic menu *(added 04-07)*
 - [ ] André to review integrated essay and flag adjustments *(added 04-07)*
+- [ ] Finalize one-pager with real client codes and recomputed scores *(added 04-08)*
+- [ ] Add negative volume lift vs random to pipeline *(added 04-08)*
+- [ ] Formally define control groups, sample sizes, confidence intervals *(added 04-08)*
+- [ ] Recompute escalation opportunity score with updated formula *(added 04-08)*
 - [ ] Review cross-client presentation (13 pages, needs feedback) *(added 04-03)*
 - [ ] Cross-client executive report *(added 04-03)*
 - [ ] Review activity classification with Mike *(added 04-06)*
@@ -65,6 +70,11 @@ updated_on: '2026-04-07'
 
 - [x] Vault v2.0 audit and cleanup *(done 04-07)*
 - [x] Capability Building integrated essay *(done 04-07)*
+
+
+- [x] Concepts and definitions document *(done 04-08)*
+- [x] One-pager infographic v4 *(done 04-08)*
+- [x] Seed email for capability building meeting sent *(done 04-08)*
 ## Decisions
 
 | Date | Decision | Rationale |
@@ -89,3 +99,9 @@ updated_on: '2026-04-07'
 | 04-02 | Positive outcomes out of main narrative | Confusing for audience |
 | 04-02 | Deliverables in vault: Janea Akuvo/Escalation Analysis/MMDD/ | Convention |
 | 04-02 | Slide Report as default presentation format | Dark top / cream notes, assertion titles |
+
+| 04-08 | Coverage = B-side only (~8%, "1 in 12"), not A+B union | Matches formal definition; cleaner for stakeholders |
+| 04-08 | Duration = mean(A,B) lift vs intra; Fallout = neg vol lift vs intra; Relapse = recur lift vs random | Core metric definitions — see concepts-and-definitions.md |
+| 04-08 | Opp score = coverage × mean(duration, fallout, relapse); can exceed 100% | Simplified formula, index not probability |
+| 04-08 | QC sits between integration and cubes, not before integration | Integration is staging; QC gates promotion to curated layer |
+| 04-08 | "Feature Store" as stakeholder-facing name for the Analytical Data Store | Uses Will's existing mental model |

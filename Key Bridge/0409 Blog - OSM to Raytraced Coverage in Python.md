@@ -1,3 +1,4 @@
+![](hero.png)
 # From OpenStreetMap to Ray-Traced Radio Coverage in Python
 
 *André Teixeira dos Santos — Electronics Engineer, Key Bridge Wireless*
@@ -34,6 +35,8 @@ Each step feeds into the next through simple files on disk — GeoJSON, Mitsuba 
 
 ## Step 1: Real Buildings from Open Data
 
+![step1_osm](step1_osm.png)
+
 The foundation of realistic radio propagation is realistic geometry. Fortunately, OpenStreetMap has remarkably detailed building coverage for most urban areas worldwide, including footprint polygons and — crucially — a `building:levels` tag that tells us how many stories each building has.
 
 Using the [osmnx](https://osmnx.readthedocs.io/) library, we define a circular area of interest (200 meters radius for this tutorial), pull all buildings that fall inside it, and project everything from geographic coordinates (latitude/longitude) into a metric coordinate system (UTM) so we can work in meters. Building heights are derived from the levels tag at 3.5 meters per floor, defaulting to one story where the tag is missing.
@@ -46,6 +49,8 @@ A note on why metric projection matters: ray tracing and mesh operations need to
 
 ## Step 2: From Footprints to a 3D Scene
 
+![step2_3d_scene](step2_3d_scene.png)
+
 A building footprint on its own is just a 2D polygon. To model radio propagation, we need to give those polygons physical height — walls that rays can bounce off of, rooftops that signals can diffract around.
 
 For each building, we take the 2D footprint (already in meters), centre it at the scene origin, triangulate the base with a Delaunay mesh, and extrude it vertically to the computed height. We use [PyVista](https://pyvista.org/) for the mesh operations and [Open3D](http://www.open3d.org/) for a cleanup pass that ensures proper vertex normals, which are important for how Sionna computes ray-surface interactions.
@@ -57,6 +62,8 @@ The result is a complete 3D urban canyon in a format ready for electromagnetic s
 ---
 
 ## Step 3: Ray Tracing with Sionna RT
+
+![step3_pathgain](step3_pathgain.png)
 
 [Sionna RT](https://nvlabs.github.io/sionna/) is NVIDIA's open-source radio propagation library. Unlike empirical models (like Hata or COST-231) which estimate path loss from statistical curves, Sionna shoots actual rays through the 3D scene and computes the physics:
 
@@ -74,6 +81,8 @@ The output is a 2D numpy array of path gain values — essentially a heat map of
 
 ## Step 4: From Numbers to a Coverage Image
 
+![step4_pipeline](step4_pipeline.png)
+
 The raw path-gain array is a grid of floating-point numbers. To turn it into something visually useful, we apply four transformations:
 
 **Smoothing.** A Gaussian blur (σ=1.5) reduces pixelation from the coarse 10-meter grid.
@@ -89,6 +98,8 @@ The result is an RGBA PNG where strong coverage is bold and opaque, weak coverag
 ---
 
 ## Step 5: Putting It on the Map
+
+![step5_map_diagram](step5_map_diagram.svg)
 
 The final step ties everything together. We take the coverage PNG and overlay it on a [MapLibre GL JS](https://maplibre.org/) web map using the `image` source type. MapLibre needs four corner coordinates — the geographic bounding box of the scene — to position the image correctly on the map. These were saved during the OSM fetch step.
 
