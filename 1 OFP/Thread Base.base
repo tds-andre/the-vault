@@ -10,6 +10,9 @@ views:
       - status
       - type
       - updated
+    sort:
+      - property: status
+        direction: DESC
     image: note.Acquisition
     indentProperties: true
   - type: table

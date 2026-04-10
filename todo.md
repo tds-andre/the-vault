@@ -1,22 +1,46 @@
+- janea next week:
+	- escalation - wrap presentation for operations team
+	- strategy - wrap presention for core idea + 2 complications + solutions
+	- idea: share data quality reports
+	- idea: **LLM SEARCH DATA BASE/INDEX**
+- **today: email package blogpost screenshots**
+- for tomorrow: pay dentist, check iptu and car
+- idea for the weekend: built app + whatsapp bot to replace AnotaAí
+- important: how to systematically leverage my trips and lifestyle (e.g., diving, moto funny guy, photography) to acrue popularity online w/ girls
+- important: how to systematically leverage everything I know (and before AI makes it irrelevant) for professional visibility; and, given the doomtrain of AI, how should I reposition myself professionally (since a good portion of my skillset has been automated)
+- recurring monthly task (day 1): send equipment test report of Carsystem (bike insurance)
+- recurring monthly task (day 10): pay Myconn 
+- recurring monthly task (day 10): pay Dentist
+- devolver foam spray
+- for Ben: how to invest the dollars?
+- beuaty items arrived:
+	- La Roche-posay Pigmentclar
+	- Sérum Facial Mix 02 5% Cafeína + 3% Tranexâmico + Ferúlico Skincare
+	- PROTETOR SOLAR FACIAL ANTHELIOS AE-PIGMENTATION FPS50 40G
+	- LOCAO DE LIMPEZA HIDRATANTE DE BANHOSEM ESPUMA CERAVE 473ML
+	  
 
 ___ 
+## April 10, Friday
+- [ ] wrap jan
+
 ## April 9, Thursday
-- [ ] dentist at 12h
+- [x] **dentist** at 12h
 - [ ] trip prep: tomorrow is last day before the trip
-	- [ ] **make checklist of things to pack**
-	- [ ] **prep notebook**
+	- [x] **make checklist of things to pack**
+	- [ ] prep notebook
 		- [ ] (critical) teamviewer in main pc for ip whitelisting - test access
 		- [ ] install claude ecosystem (how to sync environments)
 		- [ ] download core datasets and test with joane
 		- [ ] pull akuvo-analytics and test
 	- [ ] (optional) remaining accommodations: são paulo, ubatuba, angra
 - [ ] key bridge:
-	- [ ] **(important) blog post about OSM + maps + ?raytrace**
-	- [ ] incorporate feedbacks
-	- [ ] transit to new environment
+	- [x] **(important) blog post about OSM + maps + ?raytrace**
+	- [x] incorporate feedbacks
+	- [x] transit to new environment
 - [ ] janea: it's in a good spot; synced with Filip about the feature store and quality control system
-	- [ ] **need to make slides for the core idea **
+	- [ ] need to make slides for the core idea 
 	- [ ] brainstorming list for escalation
 - [ ] cocorico: 
 	- [ ] **(important) consolidate henrique's ledger (again 😕)**
-	- [ ] idea for the weekend: built app + whatsapp bot to replace AnotaAí
+	- [ ] 

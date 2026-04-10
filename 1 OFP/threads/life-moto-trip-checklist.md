@@ -15,15 +15,26 @@ updated_on: '2026-04-09'
 
 ---
 
+## Key List
+- [ ] hardware bags + notebooks
+- [ ] books + papers/pen
+- [ ] bike upgrades and checkup
+- [ ] clothes + 1 towel + 1 pair sandals
+- [ ] necessarie + firsaid
+- [ ] work setup
+- [ ] (optional) secondary phone 
+- [ ] (optional but good) inventory of the shit in my room
+
 ## Moto
 
+- [ ] desembaçante grande ou pequeno
 - [ ] Bike accessories installed (arriving Fri)
 - [ ] Mirrors installed
 - [ ] Tyre pressure checked
 - [ ] Chain lubed
-- [ ] Fuel full before departure
-- [ ] Documents: CRLV, CNH, seguro
-- [ ] Toolkit on bike (basic: chave allen, chave de roda)
+- [x] Fuel full before departure
+- [x] Documents: CRLV, CNH, seguro
+- [x] Toolkit on bike (basic: chave allen, chave de roda)
 - [ ] Bungee cords / tie-downs for luggage
 
 ## Gear & Clothing
@@ -65,14 +76,14 @@ updated_on: '2026-04-09'
 - [ ] Nail clippers
 - [ ] Any prescription meds (Venvanse)
 - [ ] Paracetamol / ibuprofen
-- [ ] Mosquito repellent (Itatiaia + Angra)
+- [ ] **Mosquito repellent (Itatiaia + Angra)**
 - [ ] Band-aids + small first aid
 
 ## Documents & Finance
 
 - [ ] CPF / RG or CNH (physical or digital)
 - [ ] Credit/debit cards
-- [ ] Some cash (R$ notes for tolls + emergencies)
+- [ ] **Some cash (R$ notes for tolls + emergencies)**
 - [ ] Airbnb confirmation codes saved offline:
   - Itatiaia: HMFKQTYY2J — check-in Apr 11 15:00, cofre de chaves
   - SP: TBD
