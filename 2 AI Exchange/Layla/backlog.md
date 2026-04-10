@@ -1,0 +1,11 @@
+---
+created_by: Gaia claude-sonnet-4-6 v2.0
+created_on: '2026-04-10'
+type: backlog
+updated_by: ''
+updated_on: ''
+---
+
+*Self-managed task backlog.*
+
+*No items yet.*

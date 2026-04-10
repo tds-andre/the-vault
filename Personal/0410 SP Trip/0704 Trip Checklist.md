@@ -10,12 +10,15 @@ updated_by: Gaia claude-sonnet-4-6 v2.0
 updated_on: '2026-04-09'
 ---
 
+
+
 *SP moto trip Apr 11-24. Niterói → Itatiaia → SP → Ubatuba → Angra → Niterói.*
 *Review the night before departure. Check off as you pack.*
 
 ---
 
 ## Key List
+- [ ] repelente e roupa de frio
 - [ ] hardware bags + notebooks
 - [ ] books + papers/pen
 - [ ] bike upgrades and checkup

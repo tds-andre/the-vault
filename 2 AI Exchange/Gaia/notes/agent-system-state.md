@@ -45,3 +45,4 @@ The Gaia agent system is a vault-based personal life OS with 9 specialized agent
 ## Updates
 2026-04-09 — initial note seeded from session memory
 2026-04-10 — WhatsApp MCP shipped by Alex ✅ — tools available: send_whatsapp, get_chat_history, get_contacts, await_replies, get_inbox. Baileys service not running on first test — needs pm2 start or manual launch from C:\Users\tdsnit\Work26\agents\whatsapp-mcp\
+2026-04-10 — Layla created (v1.0): relationship intelligence agent. Ingests conversations, builds person profiles in notes/, advises on social dynamics and communication strategy. 10th agent in the system.

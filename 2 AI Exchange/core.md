@@ -68,6 +68,7 @@ This is André's personal life operating system — a vault-based agent architec
 | **Joane** | Akuvo ML/Analytics | `2 AI Exchange/Joane/boot.md` |
 | **Kaybee** | Key Bridge, CBRS Studio | `2 AI Exchange/Kaybee/boot.md` |
 | **Laix** | X In Rio business development | `2 AI Exchange/Laix/boot.md` |
+| **Layla** | Relationship intelligence, person profiles, social strategy | `2 AI Exchange/Layla/boot.md` |
 | **Jax** | AI mastery, deliberate learning | `2 AI Exchange/Jax/boot.md` |
 
 To reach another agent: send a message to their `/messages` directory (see Agent Messaging protocol below), then tell André to bring it to their next session.
