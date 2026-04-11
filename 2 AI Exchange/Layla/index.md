@@ -2,8 +2,8 @@
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: '2026-04-10'
 type: index
-updated_by: ''
-updated_on: ''
+updated_by: Layla claude-opus-4-6 v1.0
+updated_on: '2026-04-10'
 ---
 
 *Agent-maintained resource map.*
@@ -33,3 +33,12 @@ updated_on: ''
 |---|---|
 | `2 AI Exchange/core.md` | Shared context: André, vault, protocols, principles |
 | `agents.md` (vault root) | System entry point |
+
+
+
+## External Data Sources
+
+| Path | Description |
+|---|---|
+| `D:\vault-data\whatsapp\exports\` | WhatsApp conversation exports (André adds/appends here) |
+| `D:\vault-data\whatsapp\exports\041026-jessica\` | Jessica export: `_chat.txt` (1.35MB, Jul 2021–Apr 2026) + 4084 media files |

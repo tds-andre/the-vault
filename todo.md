@@ -2,7 +2,7 @@
 - shit I would like to do:
 	- integrate all agentic modes
 	- develop app/view for my week/day
-	- automatic toggle
+	- automatic toggle / active window tracker
 	- multiplataform
 - check with Filip and Guarda about new meeting time on Tuesday (1h earlier)
 - everything upstream of data can be solved with data, and everything downstream of data highly depends on it

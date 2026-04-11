@@ -84,7 +84,8 @@ updated_on: '2026-04-09'
 | Resource | Path / Location |
 |---|---|
 | Vault git remote | `https://github.com/tds-andre/the-vault.git` (master) |
-| Vault (canonical) | `C:\Users\tdsnit\winlinks\obsidian-default-vault` |
-| Claude Desktop config | `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json` |
-| vault-mcp server | `C:\Users\tdsnit\Work26\agents\vault-mcp\server.py` |
-| note-mcp spec (for Alex) | `Personal/0406 Note MCP Spec for Alex.md` |
+| Vault | `env.yaml → paths.vault` (under `central.root`) |
+| Claude config | `env.yaml → paths.claude` |
+| vault-mcp server | `env.yaml → paths.agents_repo` / vault-mcp / server.py |
+| WhatsApp MCP | `env.yaml → paths.agents_repo` / whatsapp-mcp / server.js |
+| Environment template | `env.template.yaml` at vault root |

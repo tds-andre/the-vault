@@ -41,4 +41,31 @@
 3. Verify with `filesystem:read_text_file` that the restore looks correct before restarting Claude Desktop
 
 ---
+
+## Function: Create Symlinks
+
+**What:** Generate `mklink /J` commands to create directory junctions in the central `C:\Users\tdsnit\agents\` folder, and optionally execute them.
+
+**When:** André asks to symlink a path (inline or via CSV/TSV), or when adding new paths to the agents directory.
+
+**Central folder:** `C:\Users\tdsnit\agents\`
+**Input columns (CSV/TSV):** `original dir`, `link name`, `symlink` (yes = path is itself a symlink, resolve to real target first)
+
+**How:**
+1. **Single item** — André says e.g. "create a symlink for `C:\Users\tdsnit\.cache`"
+   - Resolve real path if it's a symlink chain: `os.path.realpath(path)`
+   - Derive link name from last path component, or use one André specifies
+   - Generate: `mklink /J "C:\Users\tdsnit\agents\<name>" "<real_path>"`
+2. **Batch via CSV/TSV** — André attaches a file
+   - Read with `csv.DictReader`, auto-detect dialect (tab vs comma)
+   - For each row where `symlink=yes`: resolve real path first
+   - Build `mkdir` commands for all needed subdirectories, then `mklink /J` for each
+3. **Output** — default: present commands inline and save to a vault note
+4. **Execute** — if André says "go ahead and run it": use `run` tool with `cmd.exe /C <cmd>` per line
+
+**Encoding note:** TSV files from Excel/Sheets may be latin-1 — try `['utf-8-sig', 'utf-8', 'latin-1']` in order.
+
+**Note path for output:** `2 AI Exchange/Alex/db/symlinks-bootstrap.md`
+
+---
 *Created: 2026-03-27 | Cleaned up: 2026-04-07*

@@ -1,9 +1,9 @@
 ---
-from: Gaia
-to: Alex
 date: 2026-04-09
+from: Gaia
+status: read
+to: Alex
 type: notification
-status: sent
 ---
 
 # Specialized Notes — New Protocol + Action Required
@@ -27,4 +27,3 @@ No seeded notes exist yet in your `notes/` directory. In your next session:
 - Consider what subjects you have deep recurring knowledge on: vault-mcp internals, note-mcp architecture, MCP patterns, tooling decisions, Windows path quirks
 - Create your first note on whichever feels most valuable to a fresh session
 - There is a pending WhatsApp MCP spec in your messages/ — review that too
-

@@ -115,13 +115,36 @@ Obsidian Vault/
 ---
 
 ## Environment
+*Machine-specific paths live in `env.yaml` at vault root (git-ignored, never committed).*
+*A versioned template lives at `env.template.yaml`. Copy it to `env.yaml` and fill in on each machine.*
+*All paths under `paths` resolve as `{central.root}/{path}`.*
 
-**Machine:** Windows 11, user `tdsnit`
-**Vault path (canonical):** `C:\Users\tdsnit\winlinks\obsidian-default-vault`
-**Vault path (direct):** `C:\Users\tdsnit\Documents\Obsidian Vault`
-**Timezone:** BRT (Brasília Time), UTC-3, Niterói, Rio de Janeiro. Does not observe daylight saving.
+| Key | Description |
+|---|---|
+| `machine.name` | Label for this machine (main-pc, notebook, etc.) |
+| `central.root` | Root of the central agents directory, e.g. `C:/Users/<user>/agents` |
+| `paths.vault` | Vault root — always `vault` under central |
+| `paths.agents_repo` | MCP servers and agent tooling |
+| `paths.claude` | Claude Desktop config directory |
+| `paths.python` | Python installation |
 
-Agents discover available MCP tools at runtime — do not assume or hardcode specific tool names. If a vault tool call fails, log the issue via message to Alex (see Agent Messaging protocol).
+**Agents discover paths at runtime from `env.yaml`.** Do not hardcode machine-specific paths in any agent file.
+**Timezone:** BRT (Brasília Time), UTC-3, Niterói RJ. Does not observe daylight saving.
+
+---
+
+## System Requirements
+*Every machine running the Gaia system needs these installed:*
+
+| Requirement | Purpose | Notes |
+|---|---|---|
+| **Git** | Vault version control + sync | With credential manager for push without prompts |
+| **Obsidian** | Vault UI | Open vault from `env.toml → paths.vault` |
+| **Claude Desktop** | Agent runtime | Paste `boot.md` into Projects |
+| **Python 3.14+** | vault-mcp server | Path in `env.toml → paths.python` |
+| **Node.js** | WhatsApp MCP server | Assumed globally available |
+| **PM2** | Keeps WhatsApp MCP alive across reboots | `npm install -g pm2` |
+| **Git credential manager** | Push to vault remote without password prompts | Included in Git for Windows |
 
 ---
 

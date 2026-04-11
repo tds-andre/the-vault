@@ -1,10 +1,10 @@
 ---
+agent: Alex
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-09
-updated_by:
-updated_on:
 type: notes-index
-agent: Alex
+updated_by: Alex claude-sonnet-4-6 v1.0
+updated_on: '2026-04-10'
 ---
 
 # Alex — Notes Index
@@ -13,3 +13,4 @@ agent: Alex
 
 ---
 
+- `vault-mcp.md` — the-vault MCP server internals: architecture, tool inventory, config, versioning, known issues
