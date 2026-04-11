@@ -31,6 +31,7 @@ updated_on: '2026-04-10'
 
 | File | Purpose |
 |---|---|
+| `env.yaml` (vault root) | Machine-specific environment config — paths, central dir |
 | `2 AI Exchange/core.md` | Shared context: André, vault, protocols, principles |
 | `agents.md` (vault root) | System entry point |
 

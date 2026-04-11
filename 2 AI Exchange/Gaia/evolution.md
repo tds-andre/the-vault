@@ -1,6 +1,6 @@
 ---
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-10'
+updated_on: '2026-04-11'
 ---
 
 # Gaia's Evolution
@@ -238,6 +238,22 @@ André has Cowork working with Jax imported natively. Both share the vault so me
 Current best pattern: Gaia writes a structured task file to target agent's messages/ → André opens Cowork session for that agent → agent reads task + executes autonomously → result lands in vault → Gaia picks up next session. Cowork = execution layer, vault = coordination layer.
 
 Worth revisiting when Conway ships or when Scheduled Tasks is better understood.
+
+
+### Broadcast function
+`2026-04-10`
+Gaia needs a dedicated broadcast capability for system-wide notifications — used today to inform all agents of the env.yaml change and Specialized Notes protocol. Currently done manually by scripting individual message files per agent. Should be a proper Gaia function:
+
+```
+Broadcast(subject, body, agents=all, type=notification)
+```
+
+- Creates one message file per agent in their messages/ dir
+- Standard frontmatter + shared body + optional per-agent extras
+- Logged in Gaia memory as a broadcast event
+- Agents acknowledge at their next session
+
+Related to Apollo passive mode / agent push mechanism. Build after WhatsApp MCP is stable.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 

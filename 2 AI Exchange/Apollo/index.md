@@ -27,3 +27,10 @@ updated_on: '2026-04-08'
 
 ## André's Theories
 - `2 AI Exchange/Apollo/theory-discreteness-illusion.md` — The Discreteness Illusion (consciousness, time, self, math, physics)
+
+## Environment
+
+| File | Purpose |
+|---|---|
+| `env.yaml` (vault root) | Machine-specific environment config — paths, central dir |
+| `env.template.yaml` (vault root) | Versioned template — copy to env.yaml on new machine |

@@ -21,3 +21,10 @@ type: index
 - `2 AI Exchange/Laix/messages/` — messaging deprecated
 - `2 AI Exchange/Laix/public/` — absorbed into core.md
 - `2 AI Exchange/Laix/system-prompt.md` — replaced by boot.md + system.md
+
+## Environment
+
+| File | Purpose |
+|---|---|
+| `env.yaml` (vault root) | Machine-specific environment config — paths, central dir |
+| `env.template.yaml` (vault root) | Versioned template — copy to env.yaml on new machine |
