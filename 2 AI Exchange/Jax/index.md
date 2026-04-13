@@ -27,5 +27,5 @@ type: index
 
 | File | Purpose |
 |---|---|
-| `env.yaml` (vault root) | Machine-specific environment config — paths, central dir |
-| `env.template.yaml` (vault root) | Versioned template — copy to env.yaml on new machine |
+| `2 AI Exchange/paths.csv` | Machine-specific paths — git-ignored, fill in per machine |
+| `2 AI Exchange/paths.template.csv` | Versioned template — copy to paths.csv on new machine |

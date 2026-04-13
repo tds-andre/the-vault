@@ -84,8 +84,8 @@ updated_on: '2026-04-09'
 | Resource | Path / Location |
 |---|---|
 | Vault git remote | `https://github.com/tds-andre/the-vault.git` (master) |
-| Vault | `env.yaml → paths.vault` (under `central.root`) |
-| Claude config | `env.yaml → paths.claude` |
-| vault-mcp server | `env.yaml → paths.agents_repo` / vault-mcp / server.py |
-| WhatsApp MCP | `env.yaml → paths.agents_repo` / whatsapp-mcp / server.js |
-| Environment template | `env.template.yaml` at vault root |
+| `paths.csv → vault` | Vault path (machine-specific, from paths.csv) |
+| Claude config | `paths.csv → claude_config` |
+| vault-mcp server | `paths.csv → agents_repo` / vault-mcp / server.py |
+| WhatsApp MCP | `paths.csv → agents_repo` / whatsapp-mcp / server.js |
+| Path template | `2 AI Exchange/paths.template.csv` |

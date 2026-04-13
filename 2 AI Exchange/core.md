@@ -115,20 +115,17 @@ Obsidian Vault/
 ---
 
 ## Environment
-*Machine-specific paths live in `env.yaml` at vault root (git-ignored, never committed).*
-*A versioned template lives at `env.template.yaml`. Copy it to `env.yaml` and fill in on each machine.*
-*All paths under `paths` resolve as `{central.root}/{path}`.*
+*Machine-specific paths live in `2 AI Exchange/paths.csv` (git-ignored, never committed).*
+*A versioned template lives at `2 AI Exchange/paths.template.csv`. Copy to `paths.csv` and fill in the `path` column on each machine.*
 
-| Key | Description |
-|---|---|
-| `machine.name` | Label for this machine (main-pc, notebook, etc.) |
-| `central.root` | Root of the central agents directory, e.g. `C:/Users/<user>/agents` |
-| `paths.vault` | Vault root — always `vault` under central |
-| `paths.agents_repo` | MCP servers and agent tooling |
-| `paths.claude` | Claude Desktop config directory |
-| `paths.python` | Python installation |
+Format: `name, path, description, critical, agents`
+- `name` — stable key used to reference a path (never changes)
+- `path` — absolute path on this machine (fill in per machine)
+- `description` — what it is
+- `critical` — whether the system breaks without it
+- `agents` — which agents use it
 
-**Agents discover paths at runtime from `env.yaml`.** Do not hardcode machine-specific paths in any agent file.
+**Agents reference paths by name** (e.g. `paths.csv → vault`). Do not hardcode absolute paths in any agent file.
 **Timezone:** BRT (Brasília Time), UTC-3, Niterói RJ. Does not observe daylight saving.
 
 ---
