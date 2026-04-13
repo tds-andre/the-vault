@@ -2,8 +2,25 @@
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
 type: memory
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: '2026-04-07'
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-13'
+---
+
+## Session: 2026-04-13 (notebook setup + paths.csv)
+
+### Notebook setup
+André on the road in Itatiaia. Set up notebook with filesystem MCP. Username: `tdsan` (different from main PC `tdsnit`). Vault cloned to `C:/Users/tdsan/agents/vault`. Git identity configured.
+
+### env.yaml → paths.csv migration
+The central directory + symlinks approach failed — filesystem MCP resolves symlinks and blocks paths outside the allowed root. Dropped the whole central/symlinks/env.yaml concept.
+
+New design: `2 AI Exchange/paths.csv` (git-ignored) + `2 AI Exchange/paths.template.csv` (versioned). Flat CSV with columns: name, path, description, critical, agents. Machine-specific — fill in `path` column per machine. All agent index files updated. core.md Environment section updated. Alex bootstrap spec updated accordingly.
+
+### Pending
+- André needs to fill in `paths.csv` on notebook (already done template copy)
+- vault-mcp not set up on notebook yet — using filesystem MCP only for now
+- Two links saved verbally (not yet persisted): youtube + instagram from Itatiaia
+
 ---
 
 # Gaia — Memory
