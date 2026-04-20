@@ -1,0 +1,15 @@
+name,path,description,critical,agents
+vault,,Core Obsidian vault,yes,"Gaia,Alex"
+agents_repo,,MCP servers and agent tooling,yes,"Alex,Gaia"
+claude_config,,Claude Desktop config directory,yes,"Alex,Gaia"
+python,,Python installation,yes,"Alex,Gaia"
+sod_report,,Akuvo sod-report repo,no,Joane
+cbrs,,Key Bridge CBRS Studio repo,no,Kaybee
+akuvo,,Akuvo analytics repo,no,Joane
+raytrace,,Key Bridge raytrace repo,no,Kaybee
+ofp,,Previous personal planning files,no,Gaia
+resume,,Professional resume,no,Gaia
+cocorico,,Current Cocoricó Google Drive,no,Cocoria
+cocorico_old,,Old Cocoricó Google Drive,no,Cocoria
+whatsapp,,WhatsApp local data,no,"Layla,Alex"
+akuvo_data,,Akuvo data lake,no,Joane

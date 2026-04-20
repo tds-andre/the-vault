@@ -31,5 +31,5 @@ desktop.ini
 # Local-only files — sensitive, binary, or not worth tracking
 _local/
 
-# Machine-specific environment config — never commit
-env.yaml
+# Machine-specific path config — never commit
+2 AI Exchange/paths.csv
