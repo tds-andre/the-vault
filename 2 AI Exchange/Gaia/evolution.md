@@ -1,6 +1,6 @@
 ---
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-11'
+updated_on: '2026-04-20'
 ---
 
 # Gaia's Evolution
@@ -254,6 +254,24 @@ Broadcast(subject, body, agents=all, type=notification)
 - Agents acknowledge at their next session
 
 Related to Apollo passive mode / agent push mechanism. Build after WhatsApp MCP is stable.
+
+
+### Cross-machine sync — cloud drive vault
+`2026-04-20`
+Instead of (or alongside) git for sync, mount the vault on a cloud drive (Google Drive, OneDrive) so changes sync automatically across machines without manual git pull. Simpler for non-technical use on the road. Risk: conflicts if both machines write simultaneously — needs a clear "one active machine at a time" convention or conflict resolution strategy.
+
+### System health check / self-diagnose
+`2026-04-20`
+A Gaia function that runs a quick diagnostic on the system state: are MCP tools responding? Is vault accessible? Is git up to date? Are any agent files missing or malformed? Could run at session start or on demand ("diagnose"). Alex territory for the tooling checks, Gaia for the vault/agent checks.
+
+
+### Integrate all agentic modes
+`2026-04-20`
+André wants to integrate all agentic modes into a unified experience — Claude Desktop, Cowork, Claude Code, Claude.ai. Currently fragmented. Worth a design session once the cross-machine setup is stable.
+
+### Automatic Toggl / active window tracker
+`2026-04-20`
+Auto-track time based on active window — eliminate manual Toggl entries. Could hook into Windows event log or foreground window API. Alex territory.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 
