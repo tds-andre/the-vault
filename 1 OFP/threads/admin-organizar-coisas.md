@@ -1,11 +1,13 @@
 ---
 created: 2026-03-29
-updated: 2026-03-29
 domain: admin
-type: project
+due: null
+parent: null
 status: captured
-due:
-parent:
+type: project
+updated: 2026-03-29
+updated_by: Gaia claude-sonnet-4-6 v2.0
+updated_on: '2026-04-20'
 ---
 
 next: —
@@ -15,3 +17,4 @@ Physical assets inventory + digital assets + notes + files + books + courses. Go
 
 ## Updates
 2026-03-29 — thread created
+2026-04-20 — appended context from todo.md: "a system to review the things I own" — confirms this is still alive
