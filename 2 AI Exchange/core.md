@@ -3,7 +3,7 @@ created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
 type: shared-context
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-09'
+updated_on: '2026-04-23'
 ---
 
 # Core — Shared Agent Context
@@ -247,6 +247,15 @@ Agents maintain subject-specific knowledge files in `notes/` — deep, evergreen
 notes/[subject-slug].md
 
 Frontmatter: standard + subject, domain, agent fields
+
+
+### Three-Way Development Workflow
+
+**Load only when needed** — this protocol is only relevant when an agent is acting as Architect on a codebase with a Builder counterpart (Claude Code, Copilot, Cursor, etc.). Do not ingest at session start unless actively working on a software project.
+
+**Location:** `2 AI Exchange/protocol-three-way-workflow.md`
+
+**Summary:** Defines roles (Principal / Architect / Builder), the CLAUDE.md + tasks.md sync contract, bootstrapping steps for new repos, communication patterns, and anti-patterns. Validated on the CBRS Studio project. Builder slot is pluggable across tools.
 ## Overview     ← synthesized current understanding; rewritten on consolidation
 ## Details      ← expanding body; append-only between consolidations
 ## Changelog    ← records when consolidations happened and why

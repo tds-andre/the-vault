@@ -2,10 +2,9 @@
 created_by: Kaybee
 created_on: '2026-04-23'
 type: protocol
-updated_by: ''
-updated_on: ''
+updated_by: Alex claude-sonnet-4-6 v1.0
+updated_on: '2026-04-23'
 ---
-
 
 # Three-Way Development Workflow
 
@@ -18,7 +17,7 @@ A protocol for agents that manage software projects with a Builder counterpart (
 When an agent works on a codebase, the work splits across three participants:
 
 - **Principal** (André) — decides what to build, holds external relationships, bridges the two AIs
-- **Architect** (Chat agent, e.g. Kaybee) — plans, specs, reviews, maintains the project brain. Has vault + browser access but no terminal.
+- **Architect** (Chat agent, e.g. Kaybee) — plans, specs, reviews, maintains the project brain. Has vault + browser access. Terminal access is agent-dependent (e.g. Alex has shell/run tools), not protocol-dependent — the protocol works either way.
 - **Builder** (Claude Code / Copilot / Cursor) — implements, tests, runs code. Has terminal + full repo access but no vault or persistent memory.
 
 All three think, code, and decide — but at different grain and with different access. The Architect gravitates toward specs and targeted fixes; the Builder toward scaffolding and large implementations; the Principal toward judgment calls and minor interventions.
@@ -149,6 +148,8 @@ The Architect syncs by reading the repo — no manual relay needed for routine p
 3. Update `CLAUDE.md` if the project state has evolved
 4. Set next tasks in `tasks.md`
 
+Architects with shell/run tools (e.g. Alex) can sync more actively: run `git log`, `git diff`, scan changed files, or run tests directly. This doesn't change the protocol — it just means less reliance on session logs for those agents.
+
 The Principal only needs to relay:
 - External inputs (meeting feedback, new requirements, API specs from third parties)
 - Decisions that require judgment the Architect can't make alone
@@ -176,7 +177,7 @@ The Builder is pluggable. The contract (CLAUDE.md + tasks.md) works with any too
 - **Architect not reading session logs** — loses sync, starts giving redundant instructions
 - **Principal relaying everything manually** — defeats the purpose of the sync mechanism
 - **CLAUDE.md too vague** — Builder guesses instead of building to spec
-- **CLAUDE.md too long** — Builder context overflows. Keep it under ~400 lines. Reference vault docs for deep context.
+- **CLAUDE.md too long** — Builder context overflows. Keep it under ~400 lines. Externalize deep detail (API contracts, glossaries) into `docs/` subdirectories and reference from CLAUDE.md — keeps it scannable while preserving depth on demand.
 - **No session log** — Architect can't sync, Principal becomes a full-time relay
 
 ---
@@ -192,6 +193,5 @@ This protocol was developed and validated on the CBRS Studio project at Key Brid
 - Session logs in tasks.md kept the Architect in sync ✅
 
 ---
-
-*Protocol created by Kaybee. Based on practical experience from the CBRS Studio project (March-April 2026).*
+*Protocol created by Kaybee. Alex comments integrated by Gaia 2026-04-23. Based on practical experience from the CBRS Studio project (March-April 2026).*
 *Location: `2 AI Exchange/protocol-three-way-workflow.md`*
