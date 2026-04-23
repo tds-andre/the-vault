@@ -1,4 +1,8 @@
 
+- janea, faster horses: 2 SV droppouts + your database + umlimited claude tokens
+	- specific text emails
+	- no rules, spot analysis, preemptive
+	- 
 - shit I would like to do:
 	- integrate all agentic modes
 	- develop app/view for my week/day
@@ -28,12 +32,22 @@
 	  
 
 ___ 
+## April 14, Tuesday
+- [ ] Errands
+	- [ ] Buy batteries for shower
+	- [ ] Food for tonight and tomorrow morning
+	- [ ] opt - haircut, fix watch
+	- [ ] lunch (call dad)
+- [ ] Trip
+	- [ ] Booking: sao paulo
+
+
 ## April 10, Friday
-- [ ] pay dentist, check iptu and car
+- [x] pay dentist, check iptu and car
 - [x] set up bike
-- [ ] prep and package for trip (& test work setup)
-- [ ] printout airbnb details
-- [ ] charge phones and bateries
+- [x] prep and package for trip (& test work setup)
+- [x] printout airbnb details
+- [x] charge phones and bateries
 - [x] kb:
 	- [x] finish blog post
 	- [x] add images
@@ -44,20 +58,20 @@ ___
 
 ## April 9, Thursday
 - [x] **dentist** at 12h
-- [ ] trip prep: tomorrow is last day before the trip
+- [x] trip prep: tomorrow is last day before the trip
 	- [x] **make checklist of things to pack**
-	- [ ] prep notebook
-		- [ ] (critical) teamviewer in main pc for ip whitelisting - test access
-		- [ ] install claude ecosystem (how to sync environments)
-		- [ ] download core datasets and test with joane
-		- [ ] pull akuvo-analytics and test
+	- [x] prep notebook
+		- [x] (critical) teamviewer in main pc for ip whitelisting - test access
+		- [x] install claude ecosystem (how to sync environments)
+		- [x] download core datasets and test with joane
+		- [x] pull akuvo-analytics and test
 	- [ ] (optional) remaining accommodations: são paulo, ubatuba, angra
-- [ ] key bridge:
+- [x] key bridge:
 	- [x] **(important) blog post about OSM + maps + ?raytrace**
 	- [x] incorporate feedbacks
 	- [x] transit to new environment
-- [ ] janea: it's in a good spot; synced with Filip about the feature store and quality control system
-	- [ ] need to make slides for the core idea 
+- [x] janea: it's in a good spot; synced with Filip about the feature store and quality control system
+	- [x] need to make slides for the core idea 
 	- [ ] brainstorming list for escalation
 - [ ] cocorico: 
 	- [ ] **(important) consolidate henrique's ledger (again 😕)**

@@ -1,0 +1,11 @@
+- **What do Akuvo's clients do?** — lend money, get it back
+- **Where does Akuvo sit?** — (focus on) get it back
+- **What are we optimizing?** — recovery minus costs (simplified to recovery only)
+- **What is collection, operationally?** — action prescriptions
+- **What's the lever?** — the right action, on the right account, at the right time. That's what the platform enables.
+- **What would a perfect system look like?** — it would prescribe the optimal action for every account. We're not there, but that's the direction.
+- **What does that require?** — prediction. To prescribe the best action, you need to predict what happens under each option.
+- **What does prediction require?** — features. Account history, payment behavior, DQ patterns, activities. Same inputs regardless of what you're predicting.
+- **What do features require?** — clean, accessible, well-understood data. And here's where the rubber meets the road.
+- **The punchline:** Data is the strategic asset. Models are commodity — everyone has access to the same algorithms. The differentiator is the data ecosystem.
+- **Lead out:** "We have some complications with our data that I'd like to walk through next time — but the reason I wanted to start here is so we're all on the same page about _why_ data quality matters this much."
