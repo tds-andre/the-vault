@@ -56,6 +56,15 @@ ___
 
 =======
 
+- janea, faster horses: 2 SV dropouts + your database + unlimited claude tokens
+	- specific text emails, no rules, spot analysis, preemptive
+- check with Filip and Guarda about new meeting time on Tuesday (1h earlier)
+- everything upstream of data can be solved with data, and everything downstream highly depends on it
+- for Ben: how to invest the dollars?
+- criar perfil de motoboy
+- akuvo: just the data for capedcu
+- how to systematically post current and older trips *→ thread: personal-content-trips-system*
+
 ~~review the shitty stay on airbnb~~ *→ thread created: admin-airbnb-resende-reclamacao (active, due this week)*
 ~~a system to review the things I own~~ *→ existing thread: admin-organizar-coisas (captured) — appended context*
 ~~shit I would like to do: integrate all agentic modes~~ *→ logged in evolution.md*
