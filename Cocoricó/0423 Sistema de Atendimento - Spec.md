@@ -6,19 +6,29 @@ owner: André
 revised: 2026-04-23
 ---
 
-# Sistema de Atendimento Cocoricó — Especificação Funcional v1.1
+# CocoriPede (SP) — Especificação Funcional v1.2
 
+> Sistema de Pedidos da Cocoricó.
+> Alias: SP
+> Substitui o AnotaAí.
 > Derivado da sessão de elicitação com Cocoria em 2026-04-23.
-> Base para desenvolvimento com Claude Code.
 
 ---
 
 ## 1. Visão Geral
 
-Sistema próprio para substituir o AnotaAí, composto de três subsistemas integrados. O sistema é operado por **Cocoria** — uma funcionária digital com múltiplas funções, uma das quais é atendimento online — e pela equipe local, que interagem como colegas de trabalho.
+Sistema próprio de gestão de pedidos, composto de três subsistemas integrados. Operado por **Cocoria** (funcionária digital) e pela equipe local, que interagem como colegas de trabalho.
 
-**Stack:** Python (backend) + React (frontend)
-**Infraestrutura:** Cloud (VPS) com elementos locais — Claude Desktop e WhatsApp (Baileys) rodam na máquina local da loja
+**Stack:**
+- Backend: Python + FastAPI
+- Frontend: React
+- Infra: EC2 Linux (AWS)
+- Design: Claude
+
+**Elementos locais (máquina da loja):**
+- Baileys — bridge WhatsApp ↔ SP
+- Claude Desktop — interface Cocoria ↔ equipe
+- Bridge impressora de comanda (ESC/POS, Python)
 
 ---
 
@@ -27,59 +37,42 @@ Sistema próprio para substituir o AnotaAí, composto de três subsistemas integ
 ```
 [Cliente]
     ↕ WhatsApp (Baileys — local)
-    ↕ Cardápio Digital (React — cloud)
-    ↕ iFood (webhook — cloud)
+    ↕ Cardápio Digital (React — EC2)
+    ↕ iFood (webhook — EC2)
 
 [Equipe Local]
-    ↕ Balcão / SGP frontend (React — cloud, acessado localmente)
+    ↕ Interface Balcão (React — EC2, acesso local)
     ↕ Claude Desktop (local) → Cocoria
 
 [Cocoria]
     ↕ WhatsApp via Baileys (local)
-    ↕ SGP API (cloud)
+    ↕ SP API (EC2)
     ↕ Chat com equipe via Claude Desktop (local)
 
-[SGP — backend Python, cloud]
-    ↕ Banco de dados (cloud)
-    ↕ Impressora de comanda (local, via bridge)
+[SP Backend — FastAPI, EC2]
+    ↕ PostgreSQL (EC2 ou RDS)
+    ↕ Impressora de comanda (local, via bridge ESC/POS)
+    ↕ WebSocket (fila em tempo real)
 ```
-
-**Elementos locais (máquina da loja):**
-- Baileys (bridge WhatsApp ↔ SGP)
-- Claude Desktop (interface Cocoria ↔ equipe)
-- Bridge para impressora de comanda (ESC/POS)
-
-**Elementos cloud:**
-- SGP backend (Python/FastAPI)
-- SGP frontend / Balcão (React)
-- Cardápio Digital (React)
-- Banco de dados
 
 ---
 
 ## 3. Subsistemas (MVP)
 
-### 3.1 SGP — Sistema de Gestão de Pedidos
-Backend central. Todos os canais alimentam o SGP via API REST.
-
-### 3.2 Cardápio Digital (CD)
-Frontend React voltado ao cliente. Canal de pedidos próprio.
-Pagamento MVP: somente Pix (manual) ou na entrega. Gateway online em fase posterior.
-
-### 3.3 WhatsApp (operado por Cocoria)
-Canal de atendimento e pedidos via Baileys.
-Não é um sistema separado — é Cocoria com acesso ao WhatsApp e ao SGP.
-Pagamento: Pix ou na entrega (cartão/dinheiro).
-*Nota: avaliar futuramente pagamento nativo WhatsApp Pay.*
+| Subsistema | Descrição |
+|---|---|
+| SP Backend | API FastAPI central — pedidos, clientes, cardápio, pagamentos |
+| Interface Balcão | React — fila de pedidos em tempo real para equipe |
+| Cardápio Digital | React — pedidos pelo cliente via link/QR |
 
 ---
 
 ## 4. Canais de Entrada de Pedidos
 
-| Canal | Quem opera | Pagamento disponível |
+| Canal | Operador | Pagamento |
 |---|---|---|
-| WhatsApp | Cocoria (+ equipe em exceções) | Pix, cartão na entrega, dinheiro na entrega |
-| Cardápio Digital | Cliente direto | Pix (MVP), gateway online (fase 2) |
+| WhatsApp | Cocoria | Pix, cartão/dinheiro na entrega |
+| Cardápio Digital | Cliente | Pix (MVP), gateway online (fase 2) |
 | Balcão | Equipe local | Pix, cartão (Infinite Pay), dinheiro |
 | iFood | Integração leitura | Gerenciado pelo iFood, repasse D+N |
 
@@ -87,197 +80,212 @@ Pagamento: Pix ou na entrega (cartão/dinheiro).
 
 ## 5. Cocoria como Atendente
 
-Cocoria é o atendente online da Cocoricó. Age como um atendente humano digital — lê o contexto, decide, age. Não há protocolo formal de handoff com a equipe.
+Cocoria é a atendente online da Cocoricó. Age como um atendente humano digital — lê o contexto, decide, age. Sem protocolo formal de handoff.
 
 ### 5.1 Comportamento no WhatsApp
 
-**Operação normal:**
-- Responde mensagens, tira dúvidas, coleta pedidos, confirma pagamentos, notifica status
-- Autônoma — não requer aprovação humana para fluxos rotineiros
-- Disponível 24h: durante horário de operação fecha pedidos; fora do horário informa e coleta pedido agendado para próxima abertura
+- Autônoma no fluxo normal — responde, coleta pedido, confirma pagamento, notifica status
+- Disponível 24h: durante operação fecha pedidos; fora do horário coleta pedidos agendados
+- Quando a equipe intervém (via WhatsApp ou Chat), age como faria um atendente humano ao ver um colega assumindo a conversa
 
-**Quando a equipe intervém:**
-- Equipe pode digitar diretamente no WhatsApp ou avisar Cocoria via Chat
-- Cocoria lê o contexto e age como qualquer atendente humano faria ao ver um colega assumindo uma conversa
+### 5.2 Fluxo WhatsApp — Horário de Operação (10:30–15:00)
 
-### 5.2 Fluxo de Atendimento WhatsApp
-
-**Durante horário de operação (10:30–15:00):**
 ```
-Cliente manda mensagem
-→ Cocoria cumprimenta e pergunta o que deseja
-→ Cocoria apresenta cardápio ou responde dúvida
-→ Cliente define pedido (itens + customizações)
-→ Cocoria confirma pedido e total
-→ Cocoria informa formas de pagamento
-→ Cliente escolhe: Pix (envia comprovante) ou paga na entrega
-→ Cocoria confirma recebimento do Pix ou registra "pagar na entrega"
-→ Cocoria registra pedido no SGP via API
-→ SGP imprime comanda
-→ SGP notifica Cocoria quando pedido sai para entrega
-→ Cocoria notifica cliente via WhatsApp
+Mensagem recebida
+→ Cumprimento + pergunta o que deseja
+→ Apresenta cardápio / tira dúvidas
+→ Coleta pedido (itens + customizações)
+→ Confirma pedido + total + taxa de entrega (se delivery)
+→ Informa formas de pagamento
+→ Cliente paga: Pix (envia comprovante) ou na entrega
+→ Cocoria confirma Pix ou registra "pagar na entrega"
+→ Cocoria cria pedido no SP via API
+→ SP imprime comanda
+→ SP notifica Cocoria quando pedido sai
+→ Cocoria notifica cliente
 ```
 
-**Fora do horário de operação:**
+### 5.3 Fluxo WhatsApp — Fora do Horário
+
 ```
-Cliente manda mensagem
-→ Cocoria informa que a loja está fechada e o próximo horário
-→ Se cliente quiser, Cocoria coleta pedido antecipado
-→ Pedido registrado no SGP como "agendado"
+Mensagem recebida
+→ Informa horário de fechamento e próxima abertura
+→ Oferece coletar pedido antecipado
+→ Se aceito: coleta pedido e registra no SP como "agendado"
 ```
 
-### 5.3 Métricas de Atendimento (capturadas por Cocoria)
+### 5.4 Métricas de Atendimento
 - Tempo de primeira resposta
 - Tempo de fechamento do pedido
-- Taxa de conversão (iniciou conversa → pedido fechado)
+- Taxa de conversão (conversa → pedido)
 - Reclamações e motivos
-- Satisfação pós-entrega (mensagem automática após confirmação de entrega)
+- Satisfação pós-entrega (mensagem automática)
 
 ---
 
-## 6. SGP — Especificação Funcional
+## 6. SP Backend — Especificação Funcional
 
-### 6.1 Modelo de Pedido
+### 6.1 Modelo de Dados Core
 
-**Campos:**
-- `id` — número sequencial por dia (ex: #42)
-- `canal` — WhatsApp | Cardápio Digital | Balcão | iFood
-- `status` — Recebido → Em preparo → Pronto → Saiu / Retirado → Entregue
-- `cliente` — nome + telefone (chave: telefone)
-- `itens` — lista de itens com customizações e observações
-- `modalidade` — delivery | retirada
-- `endereco` — endereço + bairro (se delivery)
-- `taxa_entrega` — calculada por bairro
-- `motoboy` — atribuído manualmente
-- `pagamento` — forma + status (pendente / confirmado)
-- `timestamps` — created_at + cada transição de status
-
-**Ciclo de status:**
+**Pedido:**
 ```
-Recebido → Em preparo → Pronto → [Saiu para entrega | Retirado] → Entregue
+id                  int (sequencial por dia, ex: #42)
+uuid                uuid (chave interna)
+canal               enum: whatsapp | cardapio_digital | balcao | ifood
+status              enum: recebido | em_preparo | pronto | saiu | retirado | entregue | cancelado
+cliente_id          fk → Cliente
+itens               json (lista: item_id, nome, qty, customizações, obs, preço_unit)
+modalidade          enum: delivery | retirada
+endereco            json (logradouro, número, complemento, bairro)
+taxa_entrega        decimal
+motoboy             string (nome)
+pagamento_forma     enum: pix | cartao | dinheiro | ifood
+pagamento_status    enum: pendente | confirmado | estornado
+total               decimal
+notas               text
+created_at          timestamp
+updated_at          timestamp
+timestamps_status   json (registro de cada transição de status)
 ```
-Qualquer status pode ir para `Cancelado` com motivo.
 
-### 6.2 Interface de Fila (Balcão)
-- Tela React em tempo real (WebSocket)
-- Pedidos agrupados por status
+**Cliente:**
+```
+id                  uuid
+telefone            string (chave única — identificador primário)
+nome                string
+enderecos           json[]
+observacoes         text
+created_at          timestamp
+```
+
+**Item do Cardápio:**
+```
+id                  uuid
+nome                string
+descricao           text
+preco               decimal
+categoria           string
+foto_url            string
+disponivel          boolean
+customizacoes       json (adicionais com preço, remoções permitidas)
+```
+
+**Zona de Entrega:**
+```
+id                  uuid
+bairro              string
+taxa                decimal
+ativo               boolean
+```
+
+### 6.2 Endpoints Prioritários (FastAPI)
+
+**Pedidos:**
+- `POST /pedidos` — criar pedido
+- `GET /pedidos` — listar pedidos ativos (com filtros de status/canal/data)
+- `GET /pedidos/{id}` — detalhe do pedido
+- `PATCH /pedidos/{id}/status` — avançar status
+- `PATCH /pedidos/{id}/pagamento` — confirmar pagamento
+- `DELETE /pedidos/{id}` — cancelar (soft delete com motivo)
+
+**Clientes:**
+- `GET /clientes/{telefone}` — buscar cliente por telefone
+- `POST /clientes` — criar cliente
+- `PATCH /clientes/{id}` — atualizar
+
+**Cardápio:**
+- `GET /cardapio` — listar itens disponíveis
+- `POST /cardapio` — criar item
+- `PATCH /cardapio/{id}` — atualizar (incluindo disponibilidade)
+
+**Zonas de Entrega:**
+- `GET /zonas` — listar zonas ativas
+- `GET /zonas/{bairro}/taxa` — consultar taxa por bairro
+
+**Relatórios:**
+- `GET /relatorios/vendas` — vendas por período, canal, produto
+- `GET /relatorios/caixa` — resumo financeiro do dia
+
+### 6.3 Interface Balcão (React)
+
+- Fila de pedidos em tempo real via WebSocket
+- Pedidos agrupados por status com código de cor
 - Botão de avançar status por pedido
-- Exibe: número, canal, itens resumidos, modalidade, nome do cliente, tempo desde criação
-- Ação de imprimir comanda manualmente (reimpressão)
+- Exibe: número, canal (ícone), itens resumidos, modalidade, nome, tempo decorrido
+- Reimpressão de comanda
 
-### 6.3 Impressora de Comanda
-- Protocolo ESC/POS (padrão para impressoras térmicas)
-- Bridge local em Python que recebe webhooks do SGP cloud e envia para impressora
-- Comanda contém: número do pedido, canal, itens + customizações + observações, modalidade, nome do cliente, endereço (se delivery), forma de pagamento
+### 6.4 Impressora de Comanda
 
-### 6.4 Cadastro de Clientes
-- Identificado por telefone (chave primária)
-- Campos: nome, telefone, endereços salvos, observações, histórico de pedidos
-- Migração one-time do AnotaAí (não impacta arquitetura)
+- Bridge local Python: escuta webhook do SP cloud → envia ESC/POS para impressora
+- Disparo automático ao criar pedido
+- Conteúdo: número, canal, itens + customizações + observações, modalidade, nome, endereço (se delivery), forma de pagamento
 
-### 6.5 Cardápio
-- Cadastro manual inicial (sincronização com iFood como referência)
-- Itens: nome, descrição, preço, categoria, foto, disponível (boolean)
-- Customizações por item: adicionais (com preço), remoções permitidas, observação livre
-- Disponibilidade configurável por item (ex: item esgotado no dia)
+### 6.5 Integração iFood
 
-### 6.6 Zonas de Entrega
-- Tabela de bairros com taxa correspondente
-- Configurável pelo admin
-- Cardápio Digital e Cocoria consultam para calcular taxa ao confirmar pedido
+- Webhook de entrada de pedidos via API iFood
+- Pedidos mapeados para modelo interno do SP
+- Pagamento registrado como `ifood` — repasses acompanhados separadamente
 
-### 6.7 Pagamentos
+### 6.6 Relatórios
 
-**Por pedido:**
-- Forma: Pix | Cartão (maquininha) | Dinheiro | iFood
-- Status: pendente | confirmado | estornado
-- Comprovante Pix: registrado manualmente por Cocoria ou equipe
-
-**Relatório financeiro diário:**
-- Total por forma de pagamento
-- Repasses iFood registrados separadamente (valor + data de crédito)
-- Abertura e fechamento de caixa
-
-### 6.8 Integração iFood
-- Leitura de pedidos via API iFood (webhook preferencial)
-- Pedidos iFood entram no SGP como qualquer outro pedido
-- Pagamento marcado como "iFood" — acompanhamento de repasse separado
-
-### 6.9 Relatórios
-- Vendas: por dia / semana / mês, por canal, por produto
+- Vendas: dia / semana / mês, por canal, por produto
 - Ticket médio por canal
-- Tempo médio de preparo e de entrega
-- Métricas de atendimento WhatsApp (ver 5.3)
+- Tempo médio de preparo e entrega
+- Métricas de atendimento WhatsApp
 
 ---
 
 ## 7. Cardápio Digital — Especificação Funcional
 
-Frontend React — cliente acessa via link/QR code.
+Frontend React — cliente acessa via link ou QR code.
 
 **Fluxo:**
 ```
-Cliente acessa CD
-→ Vê cardápio com categorias e itens disponíveis
+Acessa CD
+→ Vê cardápio por categoria (só itens disponíveis)
 → Monta pedido (itens + customizações)
 → Informa nome e telefone
 → Escolhe modalidade (delivery / retirada)
-→ Se delivery: informa endereço → sistema exibe taxa de entrega
-→ Escolhe pagamento: Pix (MVP) ou na entrega
-→ Confirma pedido → recebe número e resumo
-→ Pedido entra no SGP
+→ Se delivery: informa endereço → sistema exibe taxa
+→ Escolhe pagamento: Pix ou na entrega
+→ Confirma → recebe número do pedido + resumo
+→ Pedido entra no SP
 → Atualizações de status via WhatsApp (Cocoria)
 ```
 
 ---
 
-## 8. Interação Equipe ↔ Cocoria
+## 8. Fora do Escopo do MVP
 
-A equipe local interage com Cocoria via Claude Desktop. Exemplos naturais:
-
-- "Cocoria, o cliente João já pagou o Pix, pode confirmar"
-- "Estou assumindo a conversa da Maria, pode deixar"
-- "O frango acabou — avisa quem perguntar no WhatsApp"
-- "Qual foi o faturamento de hoje?"
-- "Me manda o plano de produção de segunda"
-
-Cocoria age com o mesmo julgamento que um atendente humano — sem comandos formais.
-
----
-
-## 9. Fora do Escopo do MVP
-
-- Dedução automática de inventário por pedido
-- Gateway de pagamento online no CD (Pix manual primeiro)
+- Dedução automática de inventário
+- Gateway de pagamento online no CD (fase 2)
 - App mobile nativo
 - Rastreamento de entrega em tempo real
-- Sistema administrativo / financeiro completo
-- Mídias sociais e conteúdo
+- Sistema financeiro completo
+- Mídias sociais
 - WhatsApp Pay (avaliar futuramente)
 
 ---
 
-## 10. Questões Resolvidas
+## 9. Migração do AnotaAí
 
-| Questão | Decisão |
-|---|---|
-| Infraestrutura | Cloud (VPS) + elementos locais (Baileys, Claude Desktop, impressora) |
-| API iFood | Integração ampla disponível — usar webhook |
-| Impressora | Padrão da loja — bridge ESC/POS local em Python |
-| Pagamento CD MVP | Pix manual + na entrega. Gateway em fase 2 |
-| Migração AnotaAí | One-time export/import — não impacta arquitetura |
+- One-time export/import da base de clientes
+- Não impacta arquitetura
+- Executar após SP em produção e estável
 
 ---
 
-## 11. Ordem de Desenvolvimento Sugerida
+## 10. Ordem de Desenvolvimento
 
-1. **SGP backend** — modelo de dados, API REST, gestão de pedidos, clientes, cardápio
-2. **Bridge local** — Baileys (WhatsApp) + impressora ESC/POS
-3. **Interface Balcão** — fila de pedidos em tempo real (React)
-4. **Cocoria ↔ SGP** — Cocoria acessa SGP via MCP ou API para registrar e consultar pedidos
-5. **Cardápio Digital** — frontend React para cliente
-6. **Integração iFood** — leitura de pedidos via webhook
-7. **Relatórios** — dashboards de vendas e atendimento
+| Fase | Entregável | Dependências |
+|---|---|---|
+| 1 | SP Backend — modelos, API, DB | — |
+| 2 | Bridge local — Baileys + impressora ESC/POS | SP Backend |
+| 3 | Interface Balcão (React) | SP Backend |
+| 4 | Cocoria ↔ SP (MCP ou API) | SP Backend |
+| 5 | Cardápio Digital (React) | SP Backend |
+| 6 | Integração iFood (webhook) | SP Backend |
+| 7 | Relatórios e dashboards | Fases 1–6 |
 
 ---
 

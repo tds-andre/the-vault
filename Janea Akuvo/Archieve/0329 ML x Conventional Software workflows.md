@@ -1,3 +1,8 @@
+---
+tags:
+  - reflection
+  - analytics
+---
 
 The takeaways is: having an optimize workflow is very impactful. Things should agile on the prototyping/experimentation phase, so it's important to have good IDE and readily available data, i.e., Synapse is not good for that and the Data Lake is too raw.
 
