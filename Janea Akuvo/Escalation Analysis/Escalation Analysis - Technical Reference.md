@@ -2,7 +2,7 @@
 
 *Internal technical document. Defines terminology, metrics, control groups, and statistical methodology for delinquency escalation analysis across Akuvo's client portfolio.*
 
-*Last updated: 2026-04-22. Status: draft.*
+*Last updated: 2026-04-23. Status: draft.*
 
 ---
 
@@ -141,11 +141,11 @@ Fallout metrics are expressed as **lifts** — ratios of the escalation group's 
 
 ### 5.1 Coverage
 
-| Metric | Shortcut | Definition | Control Group | Pipeline Column | Median | Range |
-|---|---|---|---|---|---|---|
-| **Coverage (total)** | **Coverage** | % of all DQ episodes that are escalated (A or B side) | *none* | `pct_all_dqs_escalated` | 7.5% | 4.2–21.6% |
-| Coverage (network) | | % of DQ episodes on network accounts that are escalated | *none* | `pct_network_dqs_escalated` | 27.6% | — |
-| Escalation pair count | | Absolute number of escalation pairs detected | *none* | `n_escalation_pairs` | 1,839 | — |
+| Metric | Shortcut | Definition | Control Group | Median | Range |
+|---|---|---|---|---|---|
+| **Coverage (total)** | **Coverage** | % of all DQ episodes that are escalated (A or B side) | *none* | 7.5% | 4.2–21.6% |
+| Coverage (network) | | % of DQ episodes on network accounts that are escalated | *none* | 27.6% | — |
+| Escalation pair count | | Absolute number of escalation pairs detected | *none* | 1,839 | — |
 
 **Notes:**
 - "Coverage" without qualifier always means % of total DQs, not % of network DQs.
@@ -170,18 +170,18 @@ Impact is measured in two flavors:
 
 Volume is richer (captures severity, not just presence) but noisier. Incidence is more stable but binary.
 
-| Metric | Shortcut | Definition | Control Group | Pipeline Column | Median |
-|---|---|---|---|---|---|
-| **Negative incidence lift** | **Impact** | Incidence lift of all 15 negative event types | Random | `out_negative_lift_rand` | 8.8x |
-| Negative incidence lift | | Incidence lift of all 15 negative event types | Intra | `out_negative_lift_intra` | 3.4x |
-| Negative volume lift | | Volume lift of all 15 negative event types | Random | — | *not computed* |
-| Negative volume lift | | Volume lift of all 15 negative event types | Intra | `out_negative_vol_lift` | 5.6x |
-| Non-terminal incidence lift | | Incidence lift of 6 distress signal types | Intra | `out_nonterminal_lift_intra` | 3.4x |
-| Non-terminal volume lift | | Volume lift of 6 distress signal types | Intra | `out_nonterminal_vol_lift` | 4.9x |
-| Terminal incidence lift | | Incidence lift of 9 loss event types | Intra | `out_terminal_lift_intra` | 6.2x |
-| Terminal volume lift | | Volume lift of 9 loss event types (noisy — sparse events) | Intra | `out_terminal_vol_lift` | 7.6x |
-| Raw incidence (escalation) | | % of escalation episodes with ≥1 negative event | — | `out_negative_esc_incidence` | 11.5% |
-| Raw incidence (intra) | | % of intra baseline episodes with ≥1 negative event | — | `out_negative_intra_incidence` | 3.3% |
+| Metric | Shortcut | Definition | Control Group | Median |
+|---|---|---|---|---|
+| **Negative incidence lift** | **Impact** | Incidence lift of all 15 negative event types | Random | 8.8x |
+| Negative incidence lift | | Incidence lift of all 15 negative event types | Intra | 3.4x |
+| Negative volume lift | | Volume lift of all 15 negative event types | Random | *not yet computed* |
+| Negative volume lift | | Volume lift of all 15 negative event types | Intra | 5.6x |
+| Non-terminal incidence lift | | Incidence lift of 6 distress signal types | Intra | 3.4x |
+| Non-terminal volume lift | | Volume lift of 6 distress signal types | Intra | 4.9x |
+| Terminal incidence lift | | Incidence lift of 9 loss event types | Intra | 6.2x |
+| Terminal volume lift | | Volume lift of 9 loss event types (noisy — sparse events) | Intra | 7.6x |
+| Raw incidence (escalation) | | % of escalation episodes with ≥1 negative event | — | 11.5% |
+| Raw incidence (intra) | | % of intra baseline episodes with ≥1 negative event | — | 3.3% |
 
 **Shortcut metric:** "Impact" = negative incidence lift vs random (8.8x). This is the headline number for stakeholder communication.
 
@@ -195,14 +195,14 @@ Duration measures how much longer delinquencies last when they are part of an es
 
 Duration is measured separately for A-side (trigger) and B-side (ripple) delinquencies. The core "Duration" metric is the mean of both sides: `(dur_A_lift + dur_B_lift) / 2`.
 
-| Metric                     | Shortcut     | Definition                                                                      | Control Group | Pipeline Column      | Median |
-| -------------------------- | ------------ | ------------------------------------------------------------------------------- | ------------- | -------------------- | ------ |
-| **Duration AB**            | **Duration** | Mean of A-side and B-side duration lift: `(dur_A + dur_B) / 2`                  | Intra         | *derived*            | ~1.9x  |
-| Duration A                 |              | Mean DQ duration of trigger episodes ÷ mean duration of intra baseline episodes | Intra         | `dur_a_lift`         | 2.0x   |
-| Duration B                 |              | Mean DQ duration of ripple episodes ÷ mean duration of intra baseline episodes  | Intra         | `dur_b_lift`         | 1.8x   |
-| Duration A (raw)           |              | Raw mean trigger DQ duration in days                                            | —             | `dur_a_trigger_mean` | 23.6d  |
-| Duration B (raw)           |              | Raw mean ripple DQ duration in days                                             | —             | `dur_b_esc_mean`     | 21.2d  |
-| Baseline duration (global) |              | Mean DQ duration for all non-escalation DQs                                     | —             | `dur_global_mean`    | 15.1d  |
+| Metric | Shortcut | Definition | Control Group | Median |
+|---|---|---|---|---|
+| **Duration AB** | **Duration** | Mean of A-side and B-side duration lift: `(dur_A + dur_B) / 2` | Intra | ~1.9x |
+| Duration A | | Mean DQ duration of trigger episodes ÷ mean duration of intra baseline episodes | Intra | 2.0x |
+| Duration B | | Mean DQ duration of ripple episodes ÷ mean duration of intra baseline episodes | Intra | 1.8x |
+| Duration A (raw) | | Raw mean trigger DQ duration in days | — | 23.6d |
+| Duration B (raw) | | Raw mean ripple DQ duration in days | — | 21.2d |
+| Baseline duration (global) | | Mean DQ duration for all non-escalation DQs | — | 15.1d |
 
 **Primary control group:** Intra-account. Duration vs random is confounded by account-level characteristics (product type, risk tier, tenure) that influence base DQ duration independent of escalation.
 
@@ -216,11 +216,11 @@ Relapse measures how much more likely accounts involved in escalation are to ent
 
 **Unit of analysis shift:** Unlike Impact and Duration (measured at the episode level), Relapse is measured at the **account level** — specifically, the trigger (A) account. The question is whether the account itself relapses, not whether a specific episode relapses.
 
-| Metric | Shortcut | Definition | Control Group | Pipeline Column | Median | Range |
-|---|---|---|---|---|---|---|
-| **Relapse lift (A, 30d)** | **Relapse** | % of A accounts with ≥1 new DQ start within 30d of escalation day ÷ % of random baseline accounts with ≥1 new DQ start in equivalent window | Random | `recur_30d_lift` | 8.0x | 4.8–21.7x |
-| Relapse rate (A, escalation) | | Raw % of trigger accounts that relapse within 30d | — | `recur_30d_esc_pct` | 69.0% | — |
-| Relapse rate (random) | | Raw % of random baseline accounts that relapse within 30d | — | `recur_30d_rand_pct` | 8.8% | — |
+| Metric | Shortcut | Definition | Control Group | Median | Range |
+|---|---|---|---|---|---|
+| **Relapse lift (A, 30d)** | **Relapse** | % of A accounts with ≥1 new DQ start within 30d of escalation day ÷ % of random baseline accounts with ≥1 new DQ start in equivalent window | Random | 8.0x | 4.8–21.7x |
+| Relapse rate (A, escalation) | | Raw % of trigger accounts that relapse within 30d | — | 69.0% | — |
+| Relapse rate (random) | | Raw % of random baseline accounts that relapse within 30d | — | 8.8% | — |
 
 **Primary control group:** Random. The random baseline provides larger samples and a meaningful reference point: "How does escalation recurrence compare to general recurrence among similar accounts?"
 
@@ -232,13 +232,11 @@ Relapse measures how much more likely accounts involved in escalation are to ent
 
 ### 5.5 Composite
 
-| Metric | Shortcut | Definition | Pipeline Column |
-|---|---|---|---|
-| **Escalation Opportunity Score** | | `coverage × mean(Impact, Duration, Relapse)` | `escalation_opportunity` |
+| Metric | Definition |
+|---|---|
+| **Escalation Opportunity Score** | `coverage × mean(Impact, Duration, Relapse)` |
 
-**Formula:** `(pct_all_dqs_escalated / 100) × (impact_lift + duration_lift + relapse_lift) / 3`
-
-Where impact_lift, duration_lift, and relapse_lift are the shortcut metrics defined above (using their respective primary control groups).
+Where coverage is expressed as a proportion (0–1) and Impact, Duration, and Relapse are the shortcut lift metrics defined above (using their respective primary control groups).
 
 **Interpretation:** An index combining prevalence and severity. Higher scores indicate clients where escalation detection would have more potential value. Can exceed 100% — it is an index, not a probability.
 
@@ -291,10 +289,10 @@ Higher consistency (closer to 1.0) means more stable across clients; lower means
 
 ## 7. Known Limitations and Open Items
 
-### 7.1 Gaps in Current Pipeline
+### 7.1 Measurement Gaps
 
 - [ ] **Negative volume lift vs random** — only incidence (not volume) is computed vs random. This is the highest-priority gap; it would complete the 2×2 for Impact.
-- [ ] **Duration AB combined metric** — A-side and B-side lifts are computed separately but the combined mean is not output as a pipeline column.
+- [ ] **Duration AB combined metric** — A-side and B-side lifts are computed separately but the combined mean is not yet reported.
 - [ ] **Escalation opportunity score** — needs recomputation with updated formula and renamed metrics.
 - [ ] **B-side relapse** — recurrence is only measured on trigger (A) accounts; ripple (B) recurrence may show different patterns.
 
@@ -307,7 +305,7 @@ Higher consistency (closer to 1.0) means more stable across clients; lower means
 ### 7.3 Methodological Limitations
 
 - **Correlation, not causation.** Escalation may be a *symptom* of underlying financial distress rather than a *cause* of worse outcomes. Accounts that escalate may be structurally riskier. The intra-account baseline partially addresses this, but temporal confounding remains.
-- **Serial vs concurrent not yet distinguished in pipeline.** The current pipeline implements serial escalation only (B.start ≥ A.end). Concurrent escalation (B.start < A.end) is defined but not yet computed. This may affect coverage numbers and impact signals.
+- **Serial vs concurrent not yet distinguished in implementation.** The current analysis implements serial escalation only (B.start ≥ A.end). Concurrent escalation (B.start < A.end) is defined but not yet computed. This may affect coverage numbers and impact signals.
 - **Observation window sensitivity.** Z=90 is a single configuration. Outcomes measured at Z=30 or Z=180 may tell different stories, particularly for Duration and Relapse.
 - **Heterogeneity across clients.** Coverage ranges from 4.2% to 21.6%, relapse from 4.8x to 21.7x. Per-client differences may reflect true behavioral variation, differences in data recording practices, or both. Clients 60, 91, and 96 have been flagged for DQ recording anomalies.
 - **Activity type classification.** The 15 negative outcome types are derived from Akuvo activity codes. Classification into terminal vs non-terminal is based on domain judgment and has not been validated against actual loss outcomes.

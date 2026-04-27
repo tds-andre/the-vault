@@ -1,6 +1,6 @@
 ---
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-20'
+updated_on: '2026-04-26'
 ---
 
 # Gaia's Evolution
@@ -272,6 +272,10 @@ André wants to integrate all agentic modes into a unified experience — Claude
 ### Automatic Toggl / active window tracker
 `2026-04-20`
 Auto-track time based on active window — eliminate manual Toggl entries. Could hook into Windows event log or foreground window API. Alex territory.
+
+
+### Cross-machine setup — status update (2026-04-26)
+Trip experiment didn't work smoothly enough for reliable remote use. Decision: **fallback to TeamViewer/RDC when remote** until a proper solution is designed. Cross-machine vault sync via cloud drive + health check still on the roadmap but deprioritized. Claude Code CLI now installed on main PC — binary at `C:\Users\tdsnit\.local\bin\claude`.
 ## Graduated to Master List
 *Ideas that became concrete threads — moved here for reference.*
 
