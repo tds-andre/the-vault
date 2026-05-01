@@ -1,0 +1,1 @@
+Index for special notes which are a special type of text-only storage/memory; stuff that is specific, does not need to be loaded often, but must be indexed 

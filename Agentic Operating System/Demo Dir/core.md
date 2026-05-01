@@ -1,0 +1,1 @@
+directory organization; concepts; root/shared index; policies; culture/values; shared protocols; should be a short/minimalist file

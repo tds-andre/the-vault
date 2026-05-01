@@ -1,0 +1,1 @@
+Append-only session logs; should include timestamp

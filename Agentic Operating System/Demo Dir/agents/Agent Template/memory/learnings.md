@@ -1,0 +1,1 @@
+Core learned behaviours; short; loaded at boot and refreshed regurlaryly; long or too specic stuff should be somewhere else

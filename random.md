@@ -1,4 +1,7 @@
 
+Create Python script in cocoripede\resources\import_menu.py (you can assume the repo env is created and with all packages) that will import the menu.yaml file and merge/update with the current menu in the database, matching itens by name; the "available" field in the yaml should be ignored. Then run/test it.
+
+___
 
 doorknocks
 letter

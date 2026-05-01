@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "the-vault-2.1": {
+      "command": "C:\\Users\\tdsnit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "args": [
+        "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp\\server.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp"
+      }
+    }
+  }
+}

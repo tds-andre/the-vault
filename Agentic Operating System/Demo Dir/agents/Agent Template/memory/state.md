@@ -1,0 +1,1 @@
+Full state of the agent; working memory, summaries, references

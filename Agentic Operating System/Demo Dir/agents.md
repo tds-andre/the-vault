@@ -1,0 +1,1 @@
+Similar to current vault root agents.md; short summaries, pointers/routing
