@@ -3,7 +3,7 @@ created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
 type: memory
 updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-04-13'
+updated_on: '2026-05-01'
 ---
 
 ## Session: 2026-04-13 (notebook setup + paths.csv)
@@ -131,6 +131,25 @@ Closed 6, renamed 2, promoted 1 (Jax kickoff), new thread meta-simplify-agent-me
 - Jax kickoff session
 - The Final Push planning (Cocoricó)
 - Bonaire: confirm Copa arrival time with dive agency
+
+
+## Session: 2026-04-28 (v3 redesign + trip planning + async workers + laser)
+
+### Key topics covered
+- Paraná trip: all 3 accommodations confirmed (Curitiba/Bruno pending, Puerto Iguazú/Ezequiel ✅, Foz/I-GUest ✅). Helmet + rental car critical. Course parcela R$2.650 waiting.
+- Async workers: Claude Code CLI as subprocesses (one per conversation). Alex has the problem description. Key issues: concurrency, MCP blocking/timeout, result handoff, failure handling, context sufficiency.
+- MCP Hub discussed — mcp-hub (GitHub) as central endpoint for all MCP servers.
+- Per-agent tool scoping: `.claude/settings.json` allow/deny lists per project.
+- root/ directory created at `C:\Users\tdsnit\root\` with vault/, repos/, storage/, drives/, systems/. Filesystem MCP now includes root/.
+- v3 redesign: André designed the agent memory anatomy (state, sessions, history, character, notes). Specs drafted in `root/vault/2 Agents/metasystem/v3/`. André was frustrated with Gaia's execution — too much invention, not enough faithful capture.
+- MBTI: André confirmed INTP matured toward J. Added to native memory.
+- Laser insect eradication: briefing created at `Personal/0423 Laser Insect Eradication - Briefing.md` (notebook). Needs copying to main vault.
+- Mom interruption problem: behavioral approach (no-reward pattern). Text written by Gaia in Portuguese.
+- Enzo AI setup thread created.
+- Cross-machine: fallback to TeamViewer/RDC. Claude Code CLI binary at `C:\Users\tdsnit\.local\bin\claude`.
+
+### What André wants for v3 (his actual words, not Gaia's interpretation)
+See briefing at `5 Personal/0428 v3 Design Intent Briefing.md` in root vault.
 
 ---
 *Older sessions archived in archive.md*

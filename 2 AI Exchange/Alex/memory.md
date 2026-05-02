@@ -1,14 +1,52 @@
 ---
 created_by: Alex v1.0
 created_on: 2026-03-27
-updated_by: Gaia claude-opus-4-6 v2.0
-updated_on: 2026-04-06
+updated_by: Alex claude-opus-4-7 v2.1
+updated_on: 2026-05-02
 type: memory
 ---
 
 # Alex — Memory
 *Persistent context accumulated across sessions. Most recent entries at the top.*
 *Do not load archive.md at session start — only on explicit request.*
+
+---
+
+## Session: 2026-05-02
+
+### aae-mcp v3.0 scaffold shipped, tested, fixed
+- New repo at `C:\Users\tdsnit\Work26\agents\aae-mcp\` (parallel to vault-mcp).
+- FastMCP server: `aae-mcp-3.0`. Registered in `claude_desktop_config.json` alongside `the-vault-2.1` for parallel testing.
+- Tools live (15 total): `shell`, `move_file`, `delete_file`, `now`, 11 `notes:*`. Spawn stubbed.
+- Dropped: `git` (André commits manually), `python_tool` + `node_tool` (preserved in `aae_mcp/_attic/`, reactivation path in attic README).
+- Machine-specific config: `aae-mcp/env.yaml` (git-ignored) + versioned `aae-mcp/env.template.yaml`. Loaded by `aae_mcp/config.py` at startup. New dep: `pyyaml` (already installed in system Python 3.14). Mirrors vault root `env.yaml` pattern.
+
+### Test harness at `aae-mcp/tests/test_all.py` — 34/34 pass
+- Direct invocation of tool functions (no MCP layer). Run with `python tests/test_all.py`.
+- Coverage: config loading, all shell features (builtins, external exes, cwd, pipes, chaining, error cases), files (abs + vault-relative paths, missing/conflict cases), now format, all 11 notes operations including the `_split_footnote` bug-fix regression test, server boot.
+
+### Bug found and fixed: shell wasn't actually a shell
+- Initial port from vault-mcp's `run.py` used `asyncio.create_subprocess_exec`. On Windows that exec's the executable directly — no `cmd.exe`. Result: `echo`, `dir`, `cd`, `type`, `|`, `>`, `&&`, all failed with `FileNotFoundError`.
+- Since v3 explicitly drops the allowlist for an unrestricted shell, this was a real defect.
+- Fixed by switching to `asyncio.create_subprocess_shell` — routes through `cmd.exe /c` on Windows, `/bin/sh -c` on Unix. All shell features now work; tests cover them.
+- **Same defect is latent in vault-mcp's `shell` and `run` tools.** Not fixing — both are slated for retirement on cutover.
+
+### whatsapp-mcp fully decommissioned
+- Removed from `claude_desktop_config.json`. Backup synced.
+- PM2: process list was already empty (probably wiped on a prior reboot). Saved empty dump, ran `pm2 kill`. If a `pm2 startup` hook exists, it'll spawn an empty daemon on next reboot; `pm2 unstartup` removes it permanently.
+
+### spawn.md locked sync-only
+- `2 Agents/functions/spawn.md` edited directly per André's instruction.
+- Async mode dropped (deferred post-v3.0). Sync timeout = kill subprocess, return error to caller. Servitor template prints to stdout, no inbox write.
+- Notifications to Gaia: `2 AI Exchange/Gaia/messages/260502-Alex-spawn-md-spec-fixes.md` (spec lock) and `260502-Alex-aae-mcp-tested.md` (test report).
+
+### Tooling note for self
+- the-vault-2.1 tools are deferred — must call `tool_search` to load before use. Got this wrong twice in session before André pushed back. Default behavior: when André asks "can you run X", call tool_search BEFORE concluding I can't.
+
+### Next steps
+- André restarts Claude Desktop → verify `aae-mcp-3.0` shows up.
+- Implement spawn tool per locked `spawn.md`. Working dir: `<central root>/spawns/<spawn-id>/`, no auto-cleanup for v3.0.
+- After spawn ships and is verified: deregister `the-vault-2.1`, archive vault-mcp repo.
 
 ---
 

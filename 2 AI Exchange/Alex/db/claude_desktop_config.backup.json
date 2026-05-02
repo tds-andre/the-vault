@@ -18,18 +18,14 @@
         "C:/Users/tdsnit/winlinks/gdrive/mess/Cocoricó",
         "C:/Users/tdsnit/winlinks/cyborg2drive/frango",
         "C:/Users/tdsnit/Work24/raytrace",
+        "C:/Users/tdsnit/agents/repos",
         "D:/vault-data/whatsapp",
-        "D:/akuvo-data/",
-        "C:/Users/tdsnit/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude"
+        "D:/akuvo-data",
+        "C:/Users/tdsnit/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude",
+        "C:/Users/tdsnit/root"
       ]
     },
-    "whatsapp-mcp": {
-      "command": "node",
-      "args": [
-        "C:\\Users\\tdsnit\\Work26\\agents\\whatsapp-mcp\\server.js"
-      ]
-    },
-    "the-vault-2.2": {
+    "the-vault-2.1": {
       "command": "C:\\Users\\tdsnit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
       "args": [
         "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp\\server.py"
@@ -37,6 +33,16 @@
       "env": {
         "PYTHONUNBUFFERED": "1",
         "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp"
+      }
+    },
+    "aae-mcp-3.0": {
+      "command": "C:\\Users\\tdsnit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "args": [
+        "C:\\Users\\tdsnit\\Work26\\agents\\aae-mcp\\server.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\aae-mcp"
       }
     }
   },
