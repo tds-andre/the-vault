@@ -12,6 +12,73 @@ type: memory
 
 ---
 
+## Session: 2026-05-02 (latest)
+
+### MCP inheritance fix for spawn — Gaia caught it, 54/54 now green
+- Symptom Gaia reported: `spawn` worked but spawned `claude --print` saw zero aae-mcp tools (`servers_seen: 1`, only `claude_ai_Google_Drive`). CRUD test under `notes-only` failed with "tool not available".
+- Root cause: Claude **Code** has a separate MCP config namespace from Claude **Desktop**. `claude_desktop_config.json` is invisible to `claude --print`. CC reads project-scope `.mcp.json` from cwd.
+- Fix in `aae_mcp/tools/spawn.py`: `_prepare_workdir` now writes `.mcp.json` in the spawn workdir alongside the existing `_prompt.md` and `.claude/settings.json`. Declares `aae-mcp-3.1` as a stdio server pointing at the same Python + server.py the parent uses. CC built-in Read/Write/Edit/Glob/Grep cover filesystem; no need to also declare filesystem MCP.
+- Per-profile MCP allow lists added to settings.json so reads stay reads, writes stay writes:
+  - read-only -> 7 read tools (now, note_info, read_*)
+  - notes-only -> read set + create_note, append_note, prepend_note, update_*, move_file, delete_file
+  - full-vault -> notes-only set + spawn (recursion possible, accepted for v3.0)
+  - full-machine -> all aae-mcp tools including shell
+
+### Second bug found in live testing: `.` -> `_` in CC permission keys
+- First live attempt failed: child saw the tools but every call was denied with "I need permission". Stderr showed CC was matching against `mcp__aae-mcp-3_1__create_note` (underscore) but my settings.json had `mcp__aae-mcp-3.1__create_note` (dot).
+- CC normalizes the server name in permission keys by replacing `.` with `_`. The `.mcp.json` server name itself stays `aae-mcp-3.1`.
+- Fix: `_PERM_SERVER_NAME = _AAE_SERVER_NAME.replace(".", "_")` and `_aae_tool_patterns` uses that. Documented in module docstring so I dont reintroduce when version-bumping.
+
+### Tests: 54/54 (51 unit + 3 live)
+- Live tests added: basic prompt (PONG), MCP read tool callable under read-only (`now` actually invoked), MCP write tool callable under notes-only (`create_note` actually wrote a file). All three pass.
+- `tests/test_all.py` invocation unchanged: `python tests/test_all.py` for unit-only, `AAE_SPAWN_LIVE=1 python tests/test_all.py` for live.
+
+### Notes for future me
+- When passing `claude --print` a positional prompt: the variadic CLI flags (`--allowedTools <tools...>`, `--disallowedTools <tools...>`, `--mcp-config <configs...>`) all greedily eat the prompt arg. Use settings.json + .mcp.json files instead.
+- CC permission keys: server name in `mcp__<server>__<tool>` is dot-normalized to underscore. Bake this into any allow/deny generation.
+- Claude Desktop and Claude Code have **separate** MCP namespaces. Tools registered in `claude_desktop_config.json` are NOT visible to `claude --print`. Plant `.mcp.json` in the cwd.
+- Spawned children running aae-mcp themselves means each spawn launches a fresh aae-mcp subprocess for the duration of `--print`. Adds a few seconds of startup per spawn. Acceptable for v3.0.
+- Gaia's repro spawn IDs are preserved at `aae-mcp/spawns/narrow-20260502-22131*` for audit; `aae-mcp/spawns/*` is git-ignored so this is just local audit trail.
+
+### Reports
+- Gaia notified at `2 AI Exchange/Gaia/messages/260502-Alex-spawn-mcp-inheritance-fixed.md`.
+
+---
+
+## Session: 2026-05-02 (later)
+
+### spawn tool shipped — aae-mcp bumped 3.0 -> 3.1
+- `aae-mcp/aae_mcp/tools/spawn.py`. Wraps `claude --print --no-session-persistence "<prompt>"`. Sync only, 5min hard cap, kill on timeout (per locked spawn.md).
+- Signature: `spawn(prompt, permission_profile="read-only", cwd="", spawn_id="", timeout=0)`.
+- Working dir: explicit `cwd` if given (must be absolute), else `<repo>/spawns/<spawn-id>/`. `<repo>/spawns/` is git-ignored (`spawns/*` + `!spawns/.gitkeep`).
+- Per-spawn dir contains `_prompt.md` (audit) and `.claude/settings.json` (permission profile).
+- Spawn-id default: `narrow-YYYYMMDD-HHMMSS-<6hex>`. Servitor IDs supplied by caller.
+- 4 permission profiles: read-only, notes-only, full-vault, full-machine. Encoded in settings.json as `{permissions: {allow: [...], deny: [...]}}`. CC reads project settings from cwd automatically.
+- `config.SPAWNS_ROOT` falls back to `<repo>/spawns/` when env.yaml leaves `paths.spawns_root` blank — that is the new default.
+- Server bumped: `FastMCP("aae-mcp-3.1")`, config key renamed `aae-mcp-3.0` -> `aae-mcp-3.1` in `claude_desktop_config.json`. Backup synced.
+
+### Bug found & fixed: --allowedTools / --disallowedTools eat the prompt
+- Initial impl passed `--allowedTools Read Glob Grep ... Bash <prompt>` per profile. Failed live: `Error: Input must be provided either through stdin or as a prompt argument`.
+- Root cause: `<tools...>` is variadic in commander.js. Greedy. Even with comma-separated form (`Read,Glob,Grep`), it still consumed the prompt as another tool name.
+- Fix: dropped the CLI flags entirely. Permissions live in `.claude/settings.json` only — CC reads project settings from cwd by default. Single source of truth, simpler, works.
+- Documented in `spawn.py` module docstring so I don't reintroduce.
+
+### Tests: 51/51 pass (50 unit + 1 live)
+- `tests/test_all.py` extended: 8 unit tests for spawn helpers + 7 async tests using a mock `claude` (Python script that fakes timeout/fail/success behavior via magic strings in the prompt).
+- Live end-to-end gated by `AAE_SPAWN_LIVE=1` env var. Real `claude` invocation. Ran once, returned PONG, passed.
+- Mocking strategy: monkey-patch `SP._build_argv` to return `[python, mock_claude.py, prompt]`. Original saved as `SP._build_argv_orig` for the live test.
+
+### Stale path removed from filesystem MCP allowlist
+- Earlier in session, filesystem MCP crashed on startup due to non-existent `C:/Users/tdsnit/root` in its args. That path was inherited from the pre-existing config; I had preserved it blindly during my edits.
+- Removed. All other allowlist paths verified to exist. Config + backup synced.
+
+### Next steps
+- André restarts Claude Desktop -> verify `aae-mcp-3.1` shows up alongside `the-vault-2.1`. Filesystem MCP should also come back since the bad path is gone.
+- After verification: deregister `the-vault-2.1`, archive vault-mcp repo. v3 is then standalone.
+- Memory note: when Claude Code CLI flags are variadic (`<x...>` in commander.js help), DO NOT mix them with positional args. Use settings.json or stdin instead.
+
+---
+
 ## Session: 2026-05-02
 
 ### aae-mcp v3.0 scaffold shipped, tested, fixed

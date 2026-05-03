@@ -15,6 +15,14 @@ Loaded at boot (ML) for the agent it belongs to.
 | `note-authoring` | `2 Agents/functions/note-authoring.md` | Author/edit notes |
 | `housekeeping` | `2 Agents/functions/housekeeping.md` | Maintenance |
 
+## My notes
+
+| Note | Purpose |
+|---|---|
+| `notes/learnings.md` | Accumulated learnings, blind spots |
+
+*(Add per-topic notes here as they're created.)*
+
 ## My paths
 
 *(Empty.)*

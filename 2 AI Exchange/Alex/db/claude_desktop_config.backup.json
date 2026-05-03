@@ -15,14 +15,13 @@
         "C:/Users/tdsnit/Work26/cbrs-studio-dark",
         "C:/Users/tdsnit/Work26/akuvo-analytics2",
         "C:/Users/tdsnit/winlinks/obsidian-default-vault",
-        "C:/Users/tdsnit/winlinks/gdrive/mess/Cocoricó",
+        "C:/Users/tdsnit/winlinks/gdrive/mess/Cocoric\u00f3",
         "C:/Users/tdsnit/winlinks/cyborg2drive/frango",
         "C:/Users/tdsnit/Work24/raytrace",
         "C:/Users/tdsnit/agents/repos",
         "D:/vault-data/whatsapp",
         "D:/akuvo-data",
-        "C:/Users/tdsnit/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude",
-        "C:/Users/tdsnit/root"
+        "C:/Users/tdsnit/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude"
       ]
     },
     "the-vault-2.1": {
@@ -35,7 +34,7 @@
         "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\vault-mcp"
       }
     },
-    "aae-mcp-3.0": {
+    "aae-mcp-3.1": {
       "command": "C:\\Users\\tdsnit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
       "args": [
         "C:\\Users\\tdsnit\\Work26\\agents\\aae-mcp\\server.py"

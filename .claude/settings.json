@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Task",
+      "mcp__aae-mcp-3_1__now",
+      "mcp__aae-mcp-3_1__note_info",
+      "mcp__aae-mcp-3_1__read_section",
+      "mcp__aae-mcp-3_1__read_sections",
+      "mcp__aae-mcp-3_1__read_footnote",
+      "mcp__aae-mcp-3_1__read_notes",
+      "mcp__aae-mcp-3_1__read_folder",
+      "mcp__aae-mcp-3_1__create_note",
+      "mcp__aae-mcp-3_1__append_note",
+      "mcp__aae-mcp-3_1__prepend_note",
+      "mcp__aae-mcp-3_1__update_footnote",
+      "mcp__aae-mcp-3_1__update_properties",
+      "mcp__aae-mcp-3_1__move_file",
+      "mcp__aae-mcp-3_1__delete_file",
+      "mcp__aae-mcp-3_1__spawn"
+    ],
+    "deny": [
+      "Bash"
+    ]
+  }
+}

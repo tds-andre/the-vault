@@ -17,7 +17,16 @@ Loaded at boot (ML).
 
 ## Primarchs
 
-*(Filled as `agent-init` creates Primarchs.)*
+| Name | Domain | Anchor |
+|---|---|---|
+| Gaia | Meta-layer; system & coherence | `registry/gaia.md` |
+| Alex | Engineering; MCP tooling & infrastructure | `registry/alex.md` |
+| Kaybe | Product / strategy / coding-protocols; Builder workflow; Key Bridge | `registry/kaybe.md` |
+| Joane | Analytics / data-science; Akuvo / Janea ML, methodology, slide reports | `registry/joane.md` |
+| Cocorita | Cocoricó operations; team, product, kitchen, marketing | `registry/cocorita.md` |
+| Ben | Cocoricó financials; P&L, jun/jul decision, citizenship, USD investing | `registry/ben.md` |
+
+*(All initial-wave Primarchs migrated 2026-05-02 / 03. Apollo, Jax, Laix, Layla remain in v2 unmigrated.)*
 
 ---
 

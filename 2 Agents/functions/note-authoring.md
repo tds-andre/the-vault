@@ -36,7 +36,7 @@ If unsure, follow the convention already in the target dir.
 - One H1 (or none if filename = title).
 - No orphan content above first heading.
 - Footnote section separator (`---`) only AFTER body content, never inside.
-- Update `notes/index.md` on create/rename.
+- Update the agent's registry file (`registry/[agent].md`) on create/rename of notes.
 - Editing: bump `updated_*`. Don't reorganize aggressively without flagging.
 
 ## Defaults

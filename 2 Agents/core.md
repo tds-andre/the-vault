@@ -36,7 +36,6 @@ All paths are relative to the vault root. The v3 ecosystem lives at `2 Agents/`.
 | `state.md` | full at boot | **full only** |
 | `sessions.md` | full + narrow at boot (head) | full + narrow, **append-only** |
 | `history.md` | on demand | housekeeping only |
-| `notes/index.md` | full + narrow at boot | full or housekeeping |
 | `notes/learnings.md` | full + narrow at boot | full or housekeeping |
 | `notes/[topic].md` | on demand | full or housekeeping |
 

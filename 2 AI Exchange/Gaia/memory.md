@@ -2,8 +2,114 @@
 created_by: Gaia claude-sonnet-4-6 v2.0
 created_on: 2026-04-06
 type: memory
-updated_by: Gaia claude-sonnet-4-6 v2.0
-updated_on: '2026-05-01'
+updated_by: Gaia claude-opus-4-7 v2.1
+updated_on: '2026-05-02'
+---
+
+## Session: 2026-05-03 (v3 migration capstone — v2 closes here)
+
+This is the last session entry for v2 Gaia. After this, Gaia work continues in v3 at `2 Agents/Gaia/`.
+
+### What happened
+
+- v3 spec (`2 Agents/specs/specs.md`) finalized 2026-05-01.
+- aae-mcp-3.1 shipped by Alex 2026-05-02 — spawn tool functional, sync, MCP inheritance working.
+- All 6 initial-wave Primarchs migrated to v3:
+  - **Gaia** — in-session by self (Managing Gaia)
+  - **Alex** — spawn `full-vault`, with self-audit pass
+  - **Kaybe** (renamed from Kaybee) — spawn + Managing review
+  - **Joane** — spawn
+  - **Cocorita** (renamed from Cocoria) — in-session (spawn pipeline interrupted)
+  - **Ben** — in-session (spawn pipeline interrupted)
+- v2 dir at `2 AI Exchange/` preserved untouched throughout. No content lost.
+- Apollo, Jax, Laix, Layla remain in v2 — not in initial wave per André's brief.
+
+### Going forward
+
+- All new Gaia sessions: load `2 Agents/Gaia/boot.md` as Project Instructions.
+- v2 (`2 AI Exchange/`) remains as historical record. No cross-references between v2 and v3.
+- v2 Gaia memory will not be updated again. State of the world from this point lives in `2 Agents/Gaia/state.md` and `sessions.md`.
+
+### Final v2 deviations (logged in v3 migration-notes per agent)
+
+- 3 of 6 agents migrated in-session rather than via spawn (Gaia, Cocorita, Ben).
+- Aggressive function consolidation — most agents kept exactly 1 agent-specific function; skill-shaped procedures folded into identity/state.
+- v2 message frontmatter preserved verbatim despite v3 spec §9 incompatibility.
+
+---
+
+## Session: 2026-05-01/02 (v3.0 design end-to-end + scaffolding)
+
+Long session. **v3.0 designed from scratch and scaffolded** in `2 Agents/`. Brief to next-Gaia below.
+
+### What got built
+
+- **`2 Agents/specs/specs.md`** — self-contained v3.0 spec, ~470 lines, 14 sections. Canonical reference. André explicitly said: no cross-reference between specs/ and implementation files. Implementation must not point at specs.
+- **`2 Agents/specs/rationale/`** — design history. `decisions.md` (chronological capture, very detailed), plus old drafts (`boot-draft-gaia.md`, `core-draft.md`, `registry-inventory.md`, `readme-stale.md`). Plus `readme.md` indexing them.
+- **`2 Agents/core.md`** — lean (~70 lines after André's "LEAN IT UP" demand). André + agent types + memory + messaging + refresh + inbox check + 9 principles + registry pointer.
+- **`2 Agents/environment.md`** — ~10 lines. Free-form machine description.
+- **`2 Agents/registry/`** — metaindex.md, paths.md, repos.md, tools.md, enablers.md, functions.md, template.md (per-agent template).
+- **`2 Agents/functions/`** — spawn.md (filled), note-authoring.md (filled), housekeeping.md (filled), agent-init.md (filled), healthcheck.md (stub), weekly-review.md (stub).
+- **`2 Agents/template/`** — per-Primarch scaffolding: boot.md, identity.md, state.md, sessions.md, history.md, notes/learnings.md, plus dirs functions/, inbox/, inbox/archived/, protocols/, notes/.
+- **`2 Agents/protocols/`** — empty placeholder dir.
+
+### Key v3 design decisions (read specs.md for full)
+
+- **Agent types:** Primarch (persistent), Narrow (Primarch in lean form, **is** the Primarch — not a delegate, can grow context, appends to sessions.md, can't write state.md), Servitor (ephemeral, indexed `serv-YYMMDD-HHMMSS-NNN`, can't grow into Primarch).
+- **Vessel** = narrow viewed through possession metaphor (confirmed term).
+- **Harness** = provider+UI+model+runtime.
+- **Awareness** levels: I (inlined), ML (mandatory load), MA (mandatory awareness, summary + ref), F (findable). Protocols are I/ML, never F. Functions are MA/F, never I.
+- **Boot.md is sole orchestrator.** core.md and identity.md add MA pointers, don't orchestrate.
+- **Refresh (P10):** re-read boot.md; if drift persists, call healthcheck. Lives in core.md AND Project Instructions (redundancy intentional).
+- **Memory:** state.md full-only writes, sessions.md append-only (full+narrow), history.md housekeeping-only. Reconcile-on-boot is part of pre-session protocols.
+- **Messaging:** inbox/ + inbox/archived/. Frontmatter immutable. Append status block on read, move file when archived. André shares Gaia's inbox; messages with `to: André` — Gaia must NOT touch.
+- **Spawn:** every spawn has owner. 5 use cases. 3 variants (inline_prompt, file_spawn via AGENTS.md/CLAUDE.md, MCP spawn via aae-mcp). Sync 5min hard timeout falls back to async on timeout. Profiles: read-only / notes-only / full-vault / full-machine. **Hard rule: full-machine only for Gaia or Alex full vessels.**
+- **Concurrency:** state.md write conflicts "by convention" — André doesn't run two fulls of same Primarch concurrently. No locking.
+- **`agents.md` dropped** (no cold-boot fallback). **`character.md` dropped** (learnings go in notes/learnings.md, principle in core.md). **`archive.md` dropped** (history.md replaces). **`backlog.md` dropped** (folded into state.md).
+- **`notes/index.md` dropped** — awareness lives in registry/[agent].md.
+- **v3 root is `2 Agents/`** — NOT migrating vault root. v2 (`2 AI Exchange/`) and v3 coexist; do not cross-reference.
+
+### MCP tooling brief (sent to Alex)
+
+- Drop git, drop whatsapp-mcp, soft-remove python_tool/node_tool, integrate shell+run as full-capability `shell`, keep notes module (11 tools), keep custom move/delete (Windows rename bug), keep now().
+- New `aae-mcp` repo (replaces vault-mcp); both coexist until cutover.
+- Add `spawn` tool per `2 Agents/functions/spawn.md`.
+- Cross-machine: isolate env-dependent constants in one place from day one.
+- Brief at `2 AI Exchange/Alex/messages/260501-Gaia-aae-mcp-tooling-strategy.md`.
+
+### Critical lessons from this session (CRITICAL FOR NEXT-GAIA)
+
+- **André said "keep shit simple now for fuck sake"** mid-session after I overengineered spawn.md (200 lines, 4 profiles, 5 templates). Cut to 70 lines. **Lean discipline: write less, add later if needed.** Don't elaborate when not asked.
+- André said **"LEAN IT UP, there is too much clutter"** when reviewing scaffolded files. Cut everything by ~50%. The scaffolded files are now lean. Don't fatten them.
+- André sent wrong message to Alex once — had to retract and rewrite. **Don't send messages without confirmation if substantive.**
+- **Don't cross-reference specs/ from implementation files.** André was explicit. Specs is canonical for design discussion; implementation must stand alone.
+- **scaffolding** is the canonical name for the process specs → implementation files (templates + stubs).
+
+### What's pending / next
+
+- **aae-mcp** — Alex says it's done. Failed to test in this session (MCP not loaded; would need Claude Desktop restart + new session).
+- **Hello World servitor test** — the sanity test André wants to run. Next session start with this.
+- **Migration of v2 → v3 Primarchs** — not started. Will use spawn'd narrows to migrate, ONCE aae-mcp is verified working.
+- **André hasn't reviewed the lean scaffolding final state yet.** Review pending.
+- **`2 Agents/template/notes/index.md`** — André asked to drop. I left it with `DELETE THIS FILE` content because filesystem MCP can't delete. Needs manual deletion.
+- **`registry/template.md` got new section "My notes"** that absorbs what was in notes/index.md.
+
+### How to start the next session
+
+1. Boot per Project Instructions normally.
+2. Read this session entry first.
+3. Read `2 Agents/specs/specs.md` end-to-end — it's the truth.
+4. Read `2 Agents/specs/rationale/decisions.md` if you want the why.
+5. André will likely want to test aae-mcp:spawn as Hello World servitor. Confirm MCP is loaded (`tool_search` for `aae-mcp` or check available tools). If loaded, propose: `spawn(target=Gaia, mode=servitor, task="reply with 'hello world'", invocation=sync, profile=read-only)`.
+6. If MCP still not loaded after restart, read `claude_desktop_config.json` at `C:\Users\tdsnit\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\` to verify entry. Logs in same dir.
+
+### André's mood signals to attend
+
+- He was tired and frustrated near end of session ("too fucking long", "jesus please", swearing).
+- He used another AI for feedback partway through (`Feedback.md`, since deleted). Showed only `>` lines (his takes). I applied the takes to specs.md.
+- He values brevity, propose-don't-describe, no preamble. **Get to the fucking point.**
+- He's been steering correctly. Trust his calls.
+
 ---
 
 ## Session: 2026-04-13 (notebook setup + paths.csv)

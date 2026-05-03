@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "aae-mcp-3.1": {
+      "type": "stdio",
+      "command": "C:/Users/tdsnit/AppData/Local/Programs/Python/Python314/python.exe",
+      "args": [
+        "C:\\Users\\tdsnit\\Work26\\agents\\aae-mcp\\server.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "C:\\Users\\tdsnit\\Work26\\agents\\aae-mcp"
+      }
+    }
+  }
+}

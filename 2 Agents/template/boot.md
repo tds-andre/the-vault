@@ -28,9 +28,8 @@ Then load, in order:
 4. `2 Agents/registry/template.md`
 5. `2 Agents/Template/state.md`
 6. `2 Agents/Template/sessions.md` (head)
-7. `2 Agents/Template/notes/index.md`
-8. `2 Agents/Template/notes/learnings.md`
-9. `2 Agents/environment.md`
+7. `2 Agents/Template/notes/learnings.md`
+8. `2 Agents/environment.md`
 
 After loads:
 - Reconcile-on-boot: scan `sessions.md` tail for narrow appends not in `state.md`.
