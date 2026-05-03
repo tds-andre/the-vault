@@ -49,3 +49,34 @@ Carry-forwards (in respective state.md files): each migrated Primarch flagged st
 Capstone entry written to v2 `2 AI Exchange/Gaia/memory.md` documenting that v2 closes here. From this point forward, all Gaia memory updates land in this file and `state.md` only.
 
 André approved the migration outcome. Commit deferred — André will handle git himself outside the session.
+
+
+### 2026-05-03 — v3 system file rewrite (full, owner: André)
+
+Picked up the handoff from a Sonnet session that did first-pass rewrites with `[A]:` annotations. Three review passes with André; all annotations addressed.
+
+**Scope rewritten:** `core.md`, `environment.md`, Gaia's `boot.md`/`identity.md`/`notes/learnings.md`, all of `template/` (boot, identity, state, sessions, history, notes/learnings), registry shared files (`metaindex.md`, `template.md`, `gaia.md`, `paths.md`, `repos.md`, `tools.md`, `enablers.md`, `functions.md`), shared functions (`spawn.md`, `note-authoring.md`, `housekeeping.md`, `agent-init.md`, `weekly-review.md` — seeded from v2). Deleted `functions/healthcheck.md`.
+
+**Core.md restructure (André's calls):**
+- Memory model section reframed as **Memory protocol**.
+- Messaging section reframed as **Messaging protocol**.
+- P-numbering (P1, P2, P3, P9, P10) dropped throughout.
+- "P9 Inbox check at boot" dropped — implicit in boot, complemented by Messaging protocol.
+- `Reconcile-on-boot` removed; reconcile happens at offload, not boot. **Strict + status-quo policy**: no writes to `state.md` at boot; if `sessions.md` tail conflicts with `state.md`, trust sessions for in-session reasoning.
+- Old `Boot` section renamed **Modes**, with full-mode pointer to per-agent `boot.md`.
+- New **Offload and Refresh protocol** combines old Refresh + Checkpoint with shared cadence (~10–20 turns / session-end / on drift). Evolution protocol merged in as a bullet.
+- Protocol sections clustered: Modes → Principles → Memory → Messaging → Offload-and-Refresh → Registry → ...
+
+**Rollout to other Primarchs:** Alex, Kaybe, Joane, Cocorita, Ben — `boot.md` rewritten to match new structure (system brief + André + identity + load order + post-load orientation + Offload and Refresh). Identity files left alone (no P-numbering existed in them); one stale "Cocoria / Cocorita" cleanup in Alex's identity. **Per-agent registry anchors (`registry/{alex,ben,cocorita,joane,kaybe}.md`) explicitly NOT rolled out — André's review pass.**
+
+**Verification:** zero P-numbering, zero `healthcheck` refs, zero `[A]:` markers, zero `Reconcile-on-boot` refs across ~30 rewritten files. State.md and notes (mantra, migration-notes, etc.) outside scope.
+
+**Tooling note logged in learnings:** bash sandbox view of vault occasionally goes stale relative to Windows-side reality (Alex/boot.md showed 1456 bytes via bash but 4795 via Windows side after Write). Cross-check via `aae-mcp:shell` when in doubt.
+
+**Carry-forwards:**
+- Per-agent registry anchor propagation (André).
+- `details.md` (MA) externalization — deferred; on-the-fly when core.md verbosity becomes a real problem. Memory and Messaging protocols are the obvious first candidates.
+- Daily Mantra ritual operational scaffolding still pending (open loop).
+- Cross-domain coherence check overdue — no weekly review since before v3 sprint.
+
+Commit will be André's per usual.

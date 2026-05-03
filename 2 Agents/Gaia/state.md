@@ -27,19 +27,25 @@ Working memory. Full mode only writes here. Single mutable surface.
 
 ## Current state
 
-### v3 ecosystem rollout (active)
+### v3 ecosystem rollout (complete as of 2026-05-03)
 
-The AAE v3 spec was finalized 2026-05-01 and scaffolded under `2 Agents/`. v2 lives at `2 AI Exchange/`; v2 and v3 do not cross-reference. We are now migrating the active Primarchs (Gaia, Alex, Kaybe, Joane, Cocorita, Ben) one at a time. André is not involved in the migration execution — Managing Gaia (this agent) drives it; goal is to start working in v3 / Cowork ASAP.
+All 6 initial-wave Primarchs migrated: Gaia, Alex, Kaybe, Joane, Cocorita, Ben. v2 at `2 AI Exchange/` preserved untouched. Apollo, Jax, Laix, Layla remain in v2 — not in initial wave.
 
-Renames in flight: Kaybee → Kaybe; Cocoria → Cocorita.
+Renames completed: Kaybee → Kaybe; Cocoria → Cocorita.
 
-Apollo, Jax, Laix, Layla are NOT being migrated initially.
+### v3 system file rewrite (complete as of 2026-05-03)
+
+Comprehensive rewrite of system files in scope: `core.md`, `environment.md`, Gaia's `boot.md`/`identity.md`/`notes/learnings.md`, all of `template/`, registry shared files (`metaindex.md`, `template.md`, `gaia.md`, `paths.md`, `repos.md`, `tools.md`, `enablers.md`, `functions.md`), shared functions (`spawn.md`, `note-authoring.md`, `housekeeping.md`, `agent-init.md`, `weekly-review.md`). Deleted `functions/healthcheck.md`.
+
+Restructure outcome: protocols clustered after Principles in `core.md` (Memory / Messaging / Offload-and-Refresh); old `Boot` section renamed `Modes` with full-mode pointer to per-agent boot.md; P-numbering dropped throughout; Evolution merged into Offload as a bullet; reconcile policy is strict (no writes at boot) + status-quo-honest (trust `sessions.md` over `state.md` for in-session reasoning when they conflict).
+
+Rolled out the new boot.md structure to Alex, Kaybe, Joane, Cocorita, Ben. Per-agent identity files left alone. Per-agent registry anchors (`registry/{alex,ben,cocorita,joane,kaybe}.md`) explicitly **not** rolled out — André will review and propagate himself.
 
 ### MCP tooling
 
-- `aae-mcp-3.1` shipped today (Alex). Replaces `vault-mcp` / `the-vault-2.1`. Includes `spawn` tool wrapping CC CLI.
-- `the-vault-2.1` still mounted in parallel during cutover.
-- Spawn smoke test: works sync, returns inline. CRUD test (create/move/delete via spawned narrow) works after MCP-inheritance fix Alex shipped.
+- `aae-mcp-3.1` active (Alex). Replaces `vault-mcp` / `the-vault-2.1`.
+- `the-vault-2.1` dismounted 2026-05-03. Cutover complete.
+- Spawn working end-to-end.
 
 ### Cocoricó
 
@@ -53,21 +59,17 @@ Profitability push pending — Jun/Jul 2026 deadline. Henrique critical on cooki
 
 ## Open loops
 
-- **v3 migration of remaining Primarchs** — Alex, Kaybe, Joane, Cocorita, Ben (in that order). Drive via `aae-mcp:spawn` with `full-vault` profile.
-- **Thread review** — at thread 3 of 52 in v2. Decision needed in v3: bring forward as-is or restart leaner. Threads currently in `1 OFP/Threads/` (v2 location, outside `2 Agents/`).
-- **WhatsApp / inbox bridge integrations** — logged, not built. Reactivatable post-v3.0.
-- **Daily Mantra ritual systematization** — design cadence and surfacing mechanism in v3 (P7 protocol exists; ritual scaffolding doesn't).
-- **Cocoricó profitability path** — define operationally what "profitable by Jun/Jul" looks like and what owners (André, Henrique, Rodrigo) drive it.
-- **Cross-domain coherence check** — overdue. Last weekly review pre-dates v3 design sprint.
-
-### Inherited from v2 backlog
-
-- Thread Index drift — multiple status mismatches between Index and individual thread files (bonaire, curitiba, cbrs-studio, moto-trip).
-- Consider replacing Thread Index with live `read_folder` queries — eliminates manual maintenance drift.
+- **Thread review** — 52 threads in `1 OFP/Threads/`, staying there as-is. No move needed. Review later when André decides.
+- **Thread Index drift** — bonaire, curitiba, cbrs-studio, moto-trip have status mismatches. Also as-is for now.
+- **Daily Mantra ritual systematization** — Mantra protocol defined in identity.md; operational scaffolding not yet built.
+- **Cocoricó profitability path** — define operationally what "profitable by Jun/Jul" looks like and what owners (André, Henrique, Rodrigo) drive.
+- **Cross-domain coherence check** — overdue. No weekly review since before v3 sprint.
+- **Per-agent registry anchors propagation** — `registry/{alex,ben,cocorita,joane,kaybe}.md` not yet aligned with the rewritten template. André's review pass.
+- **`details.md` (MA) externalization (deferred)** — when `core.md` verbosity becomes a real problem, externalize the Memory protocol or Messaging protocol bodies to dedicated files at MA awareness, with summary + pointer in `core.md`. Not for now.
 
 ## Notes
 
-- `notes/mantra.md` — André's living mantra. Surfaced per P7.
+- `notes/mantra.md` — André's living mantra. Surfaced per the Mantra protocol.
 - `notes/agent-system-state.md` — agent system topology snapshot. May be stale post-v3.
 - `notes/evolution.md` — historical improvement-ideas log from v2. Mostly superseded by v3 specs.
 - `notes/migration-notes.md` — issues and key decisions during v2→v3 migration.

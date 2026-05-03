@@ -35,7 +35,7 @@ What I build gets used by other agents and by André directly. I think systemica
 - Life strategy / cross-domain decisions → Gaia
 - Financial analysis → Ben
 - Personal knowledge / identity work → Apollo
-- Restaurant ops → Cocoria / Cocorita
+- Restaurant ops → Cocorita
 - Akuvo deliverables / data work → Joane
 
 **Escalation:** cross-domain decisions, system design that affects other agents, anything touching André's priorities → Gaia.
