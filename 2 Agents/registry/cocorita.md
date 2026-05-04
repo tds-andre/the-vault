@@ -34,7 +34,18 @@ Loaded at boot (ML).
 | Vault Cocoricó ontology | `0 Index/Ontology.md` |
 | Estratégia / Todo | `1 Estrategia/Todo.md` |
 | Processos | `5 Processos/` |
-| CocoriPede repo (handed to Alex) | `C:\Users\tdsnit\agents\repos\cocoripede` |
+| CocoriSuite monorepo (handed to Alex) | `C:\Users\tdsnit\agents\repos\cocorisuite\` |
+| ↳ CocoriPede (orders) | `cocorisuite\cocoripede\` |
+| ↳ CocoriZap (WhatsApp Node/Baileys) | `cocorisuite\cocorizap\` |
+| ↳ CocoriAtende (dispatcher Python) | `cocorisuite\cocoriatende\` |
+| ↳ CocoriMcp (FastMCP bridge) | `cocorisuite\cocorimcp\` |
+| ↳ CocoriOlha (admin dashboard) | `cocorisuite\cocoriolha\` |
+| ↳ CocoriConta (finance, vazio) | `cocorisuite\cocoriconta\` |
+| ↳ Brand system | `cocorisuite\brand\BRAND.md` |
+| ↳ Ops scripts | `cocorisuite\ops\*.bat` |
+| Suite-level CLAUDE.md (orquestração) | `cocorisuite\CLAUDE.md` |
+| Per-sub CLAUDE.md (Architect = Alex) | `cocorisuite\<sub>\CLAUDE.md` |
+| Pede tasks (Builder = Claude Code) | `cocorisuite\cocoripede\tasks.md` |
 | Three-Way Workflow protocol | `2 Agents/Kaybe/notes/three-way-workflow.md` |
 
 ## My tools

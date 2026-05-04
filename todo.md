@@ -1,10 +1,21 @@
+---
+updated_by: Dispatch (Cowork)
+updated_on: '2026-05-04'
+---
 
-	  add ai assistant
+add ai assistant
 
 
 
 
 ___ 
+
+
+## May 3, Sunday - Fuck Me Week + Moto
+- [ ] !! Finish arranges for May 5 trip
+- [ ] !! Janea: move escalation to production
+- [ ] ! KB: mobile version of Studio
+- [ ] Cocoricó: get cocorisuite ready
 
 
 ## April 20, Monday - Chicken Day
@@ -66,4 +77,7 @@ ___
 	- [ ] brainstorming list for escalation
 - [ ] cocorico: 
 	- [ ] **(important) consolidate henrique's ledger (again 😕)**
-	- [ ] 
+	- [ ]
+
+
+- How to Think: How Smart People Think — Divergence vs Convergence

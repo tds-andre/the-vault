@@ -65,22 +65,60 @@ Regra: nada se auto-certifica como `canon` sem validação operacional.
 | Ciclos de Vida (3) | partial / draft |
 | Producao (2) | Template complete; Plano 13 Março complete |
 
-### CocoriPede (sistema de pedidos) — handed to Alex
+### CocoriSuite (monorepo) — handed to Alex
 
-Arquitetado por mim, transferido ao Alex como Architect a partir do Sprint 4 (mensagem 2026-04-28).
+Arquitetado originalmente como CocoriPede standalone (transferido ao Alex como Architect a partir do Sprint 4, mensagem 2026-04-28). Entre 28/abr e 03/mai virou um **monorepo de 5 serviços ativos + 1 vazio**, sob `C:\Users\tdsnit\agents\repos\cocorisuite\` (renomeado de `cocoriatende` durante o processo — daí o nome do DB e do MCP server).
 
-| Sprint | Status | Descrição |
-|---|---|---|
-| 1 | ✅ | Backend: modelos, auth, pedidos, clientes, WebSocket |
-| 2 | ✅ | Backend: menu, customizações, couriers, zonas KML+shapely, caixa, fiado, iFood stubs |
-| 3 | ✅ | Frontend React: kanban, modal, detalhe, clientes, caixa, motoboys |
-| 4 | ⏳ | Cardápio Digital (público) |
-| 5 | ⏳ | iFood real (polling Merchant API) |
-| 6 | 🔄 | Agente Cocorita no WhatsApp (Evolution API + Python + SP API) |
+**Arquitetura distribuída:**
 
-Stack: Python + FastAPI + SQLite + shapely / React 18 + TS + Tailwind / EC2 (a deployar). Repo: `C:\Users\tdsnit\agents\repos\cocoripede`.
+```
+WhatsApp ──► CocoriZap (Node/Baileys, :3579)
+                │ SQLite (data/cocoriatende.db, owned by Zap)
+                ▼
+          CocoriAtende (Python/FastAPI, :8000)
+                │ spawns Claude CLI agents per contact
+                ▼
+          Agente Claude ──► CocoriMcp (FastMCP stdio)
+                                │
+                                ├─► CocoriZap HTTP API (envia msg)
+                                └─► CocoriPede HTTP API (cria pedido)
 
-⚠️ Google Maps API key foi exposta no chat — rotacionar e restringir por HTTP referrer.
+CocoriPede frontend (:5173) ──► CocoriPede backend (:8001)
+CocoriOlha (:8080) ──► dashboard read-only de tudo
+```
+
+| Sub-sistema | Stack | Status | Função |
+|---|---|---|---|
+| **CocoriPede** | Python 3.14 / FastAPI / SQLite / shapely · React 19 / Vite / Tailwind v4 | ✅ Sprints 1-3 done | Pedidos (substitui AnotaAí) |
+| **CocoriZap** | Node 22 / Baileys / better-sqlite3 | ✅ implementado | Monitor WhatsApp, dono do DB |
+| **CocoriAtende** | Python 3.14 / FastAPI / aiosqlite | ✅ implementado | Dispatcher: lê msgs, spawna agentes Claude CLI |
+| **CocoriMcp** | Python 3.14 / FastMCP / httpx | ✅ implementado | MCP bridge agente → APIs (registrado como `cocoriatende-s3`) |
+| **CocoriOlha** | Alpine.js + stdlib Python HTTP | ✅ implementado | Dashboard admin read-only |
+| **CocoriConta** | — | ⏳ vazio (`.placeholder`) | Finance/admin TBD — possível domínio do Ben |
+
+**Suite-level:** `brand/` (BRAND.md + Brand Book.html + styles.css), `ops/` (8 .bat scripts: install/loginzap/runtests/start*), `tests/`, `data/`, `_venv314/` Python compartilhada, `_brand_fix.py` + `_brand_replace.py` (scripts do rename pass).
+
+**Sprint 4 (Cardápio Digital público) e Sprint 5 (iFood real polling)** — não estão no `cocoripede/tasks.md` atual. Deferidos / fora de escopo até segunda ordem.
+
+**Sprint 6 (parcial, no `cocoripede/tasks.md`)** — só pedaço da integração SP-WhatsApp ainda não fechado:
+- [ ] `?phone=` filter em `GET /api/customers`
+- [ ] CocoriPede roda em :8001 (não :8000, conflita com Atende)
+- [ ] User `cocoria` em seeds (role: `cocoria`, sem `must_change_pw`)
+
+**Sprint 7 (specado em `cocoripede/CLAUDE.md`, não em tasks.md ainda)** — refresh grande no frontend do Pede:
+1. Refactor menu domain — drop `Customization`/`MenuItemCustomization`, novos `CustomizationGroup` (radio/check/spin com min/max), `CustomizationItem` (com photo opcional), `MenuItemPhoto` (gallery)
+2. Drop UI de upload KML (KML vira só seed estático em `resources/regions.kml`)
+3. Bug fix: `OrderModal` não reseta `courierId` ao trocar pra `pickup`
+4. Aplicar Brand UI (paper/brasa/ouro/ink + Fraunces/Inter Tight/JetBrains Mono) no Pede frontend
+5. Página `/configuracoes` admin: dias abertos + horário + `is_open_override`
+6. Toggle manual abrir/fechar loja no header do Kanban
+7. Dropdown motoboy inline em cards `ready` + `delivery`
+8. Verificar address autocomplete (`use-places-autocomplete` + Google Maps)
+9. Toggle rápido `available` em items + customization items
+
+**Three-Way Workflow alive:** Architect = Alex, Builder = Claude Code, Principal = André. `cocoripede/CLAUDE.md` ainda diz "Cocoria → Alex" (legado pre-rename).
+
+⚠️ Google Maps API key foi exposta no chat — rotacionar e restringir por HTTP referrer (segue pendente).
 
 ### Three-Way Workflow (delegado)
 
@@ -111,13 +149,9 @@ Protocolo completo em `2 Agents/Kaybe/notes/three-way-workflow.md`.
 - **Bonus / incentivo system** — design financeiro com Ben.
 - **Decisão jun/jul** — fica com Ben + Gaia, com input meu sobre viabilidade operacional.
 
-### CocoriPede
-- **Sprint 4-6 status** — ressincronizar com Alex; última nota Architect-handoff é de 2026-04-28.
-- **EC2 deploy** — pendente.
-- **Bridge ESC/POS para impressora** — pendente.
-- **Google Maps API key rotation** — segurança.
-- **WhatsApp Evolution API** — Sprint 6, em andamento. Status atual?
+### CocoriSuite
+*(Loops específicos da Suite zerados 2026-05-03 a pedido do André. O que vier nasce daqui em diante.)*
 
 ### Stale (resync first session)
-- Estado operacional carregado de v2 memory.md atualizado em 2026-04-29. ~4 dias de drift; pequeno mas confirmar.
+- Estado operacional do restaurante (time, score 4.6, processos, etc.) carregado de v2 memory.md atualizado em 2026-04-29. ~4 dias de drift; pequeno mas confirmar quando puder.
 - Última conversa de realinhamento com Henrique — data exata em `history.md`.

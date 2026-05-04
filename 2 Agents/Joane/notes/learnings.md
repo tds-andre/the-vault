@@ -59,3 +59,14 @@ Distinct from `notes/methodology-learnings.md` (the verbatim staging file for an
 - **Implication for the Tech Reference §5 medians.** Those "cross-client median" values (impact 8.8x, relapse 8.0x, etc.) were inherited from earlier runs — not the canon methodology. Do not present them as comparable to Client 31 canonical numbers.
 - **Why this matters.** Client 31 numbers stand alone until the canon is replicated across clients. Cross-client signal claims need to wait for the local cross-client re-run.
 - Feedback from André 2026-05-03 — corrected me explicitly after I did the bad comparison in AGENTS.md.
+
+
+## Recurring drift patterns — André corrections 2026-05-03
+
+Three patterns that surfaced repeatedly today and André called out hard. Locking them in:
+
+- **Drift back to old methodology.** I keep anchoring to "the 18-client set," "v2 normalization decisions," "cross-client medians," `rich18` outputs, etc. — even after being told the Client 31 deliverable IS the canon and the older methodology is gone. **Rule: forget it.** The old 18-client set is not a reference frame. The exclusion criteria 60/91/96 belong to the old methodology unless reaffirmed under canon. The cross-client medians at Tech Reference §5 are inherited from old runs and not comparable. When tempted to cite an old number as a baseline or anchor, stop — ask whether the canon establishes it, and if not, leave it out.
+- **Pushing work into "tomorrow."** When André sets up a workstream, he means start now. "Tomorrow's task" framing is wrong — the work is **today's work**, iterative, in flight. Stop creating artificial "today / tomorrow" boundaries when he hasn't asked for one.
+- **Asking redundant questions.** When he gives sufficient info to act, asking more questions reads as not paying attention. Reread his message before asking — he often answers things implicitly. Ask only what's actually blocking.
+
+These are correction patterns, not principles to inherit verbatim — but they recur enough to risk drift if I don't bind them.
