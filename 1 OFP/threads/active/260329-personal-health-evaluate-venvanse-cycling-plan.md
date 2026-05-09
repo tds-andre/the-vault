@@ -1,11 +1,11 @@
 ---
 created_on: 2026-03-29
 created_by: André
-updated_on: 2026-05-03
-updated_by: Gaia (cockpit refactor)
+updated_on: 2026-05-08
+updated_by: Gaia (ontology v2)
 domain: personal
 subdomain: health
-type: system
+type: evaluate
 status: active
 due:
 parent:
@@ -19,3 +19,4 @@ Venvanse 70mg. Protocol idea: push hard for a week when needed (overdose if nece
 ## Updates
 2026-03-29 — thread created from Asana note
 2026-05-03 — schema migrated to v3; frontmatter had `domain: health` (now subdomain); routed to personal/health
+2026-05-08 — retyped from `system` → `evaluate` (André's call: this is a protocol to be evaluated, not an ongoing program)

@@ -3,13 +3,23 @@ updated_by: Dispatch (Cowork)
 updated_on: '2026-05-04'
 ---
 
-add ai assistant
+- add ai ops assistant to cocorisuite
 
 
 
 
 ___ 
+## May 8, Friday, 8pm - Curitiba
+A bit overwhelmed by everything I can do; go out normally; try to actuate the girls front; work on the AEE; update linkedin profile and reply messages; pre-shop paraguay itens; draft email for Mike; work on KB stuff; finish/progress Cocorisuite; write about new skills on LinkedIn
 
+
+## May 5, Tuesday, 2:56am - Niterói
+Curitiba trip day.
+- [ ] Janea: Send email about escalation deployment + email of ideas
+- [x] KB: Send email to Jesse
+- [ ] Pack things (leave house 10am)
+	- [x] Print stuff (tickets, car, airbnb)
+	- [x] Get physical cards and doc
 
 ## May 3, Sunday - Fuck Me Week + Moto
 - [ ] !! Finish arranges for May 5 trip

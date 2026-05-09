@@ -1,14 +1,14 @@
 ---
 created_on: 2026-03-29
 created_by: André
-updated_on: 2026-05-03
-updated_by: Gaia (cockpit refactor)
+updated_on: 2026-05-08
+updated_by: Gaia (ontology v2)
 domain: professional
 subdomain: cocorico
-type: system
+type: project
 status: active
 due:
-parent:
+parent: [[260508-professional-cocorico-program-cocorico-revamp]]
 ---
 
 next: define and implement payroll process
@@ -20,3 +20,4 @@ Henrique and team currently have no formal payroll structure — salary anticipa
 2026-03-29 — thread created as "henrique gestao limites"
 2026-04-05 — renamed and reframed as payroll process definition and implementation
 2026-05-03 — schema migrated to v3; domain cocoroco → professional/cocorico
+2026-05-08 — retyped `system` → `project` (multi-step, known shape); parent linked to `cocorico-revamp` program (André's call: subtask of broader Cocoricó thread)

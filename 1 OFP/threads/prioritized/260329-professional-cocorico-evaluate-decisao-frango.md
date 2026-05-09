@@ -1,11 +1,11 @@
 ---
 created_on: 2026-03-29
 created_by: André
-updated_on: 2026-05-03
-updated_by: Gaia (cockpit refactor)
+updated_on: 2026-05-08
+updated_by: Gaia (ontology v2)
 domain: professional
 subdomain: cocorico
-type: decision
+type: evaluate
 status: prioritized
 due: 2026-06-30
 parent:
@@ -24,3 +24,4 @@ next: set time this week to finish planning
 2026-03-29 — thread created, Ben agent initialized for this purpose
 2026-04-05 — renamed to "The Final Push", need to set planning session this week
 2026-05-03 — schema migrated to v3; domain cocoroco → professional/cocorico
+2026-05-08 — type rename: decision → evaluate (ontology v2)

@@ -1,3 +1,27 @@
+
+AAE2
+- Shared 
+- Primarch
+	- Boot
+	- Core
+		- About AAE
+			- How it works; overarching goal; brief concepts
+		- Vault Structure
+		- About André
+
+
+Ontology
+	- Primarch
+		- Functions (callables)
+		- Apps/subsystems
+		- Protocols (Implicit, Explicit)
+			- Messaging
+		- Registry
+		- Memory/Storage
+		- 
+
+___
+
 Possible outputs for escalation
 - code
 - data

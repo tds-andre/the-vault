@@ -84,19 +84,22 @@ Filenames don't encode status — status lives in the directory.
 
 ## Types
 
-| Type | Description | Closes? |
-|---|---|---|
-| `action` | Single step | Yes — when done |
-| `project` | Multi-step, known shape and end | Yes — when complete |
-| `mission` | Long endeavor, steps not yet clear | Yes — when resolved |
-| `decision` | Needs deliberation | Yes — once decided |
-| `system` | Ongoing strategic behavior | No — cycles |
-| `skill` | Capability building | No — has milestones |
-| `routine` | Recurring task | No — resets |
-| `habit` | Behavior change | Yes — when embedded |
-| `special` | Container for items: lists, inboxes, collections | Special — see below |
+| Type | Description | Closes? | Threads as subtasks? |
+|---|---|---|---|
+| `action` | Single step | Yes — when done | No |
+| `mission` | In-between action and project — few steps | Yes — when resolved | No |
+| `project` | Multi-step, known shape and end | Yes — when complete | **Yes** |
+| `program` | Biggest unit. Composition / life-level / ongoing strategic | No — cycles or evolves | **Yes** |
+| `evaluate` | Needs deliberation / evaluation | Yes — once resolved | No |
+| `skill` | Capability building | No — has milestones | No |
+| `routine` | Recurring task or behavior change | No — resets / cycles | No |
+| `special` | Container for items: lists, inboxes, collections | Special — see below | No |
+
+**Subtasks rule:** only `project` and `program` threads may have other Threads as formal subtasks (linked via frontmatter `parent:` from the child, listed in body of parent). Other types may *reference* other threads in their body but never as subordinated subtasks.
 
 **Special threads** are containers (lists of books, links to revisit, capture inbox, financial accounts list). They don't have a `next` action — they have items. Body uses `## Items` (or domain-appropriate header like `## Books`) instead of `## Subtasks`. Cockpit renders them as lists, not as projects.
+
+**Type history:** `system` was renamed to `program` (with semantic expansion to "biggest unit"); `decision` renamed to `evaluate`; `habit` merged into `routine`; `mission` redefined from "long endeavor" to "in-between action and project".
 
 ---
 
