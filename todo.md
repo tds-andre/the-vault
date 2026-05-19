@@ -9,6 +9,21 @@ updated_on: '2026-05-04'
 
 
 ___ 
+
+## May 12, Tuesday, 5am - Puerto Iguazu
+
+
+## May 11, Monday 9am - Puerto Iguazu
+Let's get some shit done today
+- [x] Go out, do a bit of a hunt
+- [x] Schedule transfer for tomorrow; confirm checkout time (check in is 15h)
+- [x] Janea
+	- [x] Run escalation pipe
+	- [x] Consolidade ToDos (note)
+		- [x] How to organize pipelines and packages
+		- [x] AI Analytics Workflow Training (talk to leadership)
+		
+
 ## May 8, Friday, 8pm - Curitiba
 A bit overwhelmed by everything I can do; go out normally; try to actuate the girls front; work on the AEE; update linkedin profile and reply messages; pre-shop paraguay itens; draft email for Mike; work on KB stuff; finish/progress Cocorisuite; write about new skills on LinkedIn
 

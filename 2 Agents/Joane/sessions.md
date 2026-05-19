@@ -66,3 +66,18 @@ Open at session end:
 - Tomorrow: data QV gate first; if cleared, narrow Joane runs canonical methodology across all clients locally.
 - Verify whether current `analysis.py` is the version that produced the Client 31 canon, or needs alignment.
 - Cowork artifact write-path issue still parked with Alex.
+
+
+### 2026-05-04 — escalation pipeline: FeatureStore + run.py + export.py (narrow, owner: André)
+
+Completed the Spark-based escalation detection pipeline (`run.py`) using the FeatureStore abstraction. Reads from `store/rich/{acc_profile, dq_episodes}`, detects active escalation pairs across 12 rich-tier clients, outputs `pairs` and `scores` tables to `apps/escalation/`. Tested locally with `as_of_date=2026-03-01` — 6 active pairs, 7 scores (CAPEDCU 2, PEFCU 1, CUOFCO 2, FAIRWINDS 1). Environment-transparent: local Spark or Synapse via `is_synapse()`.
+
+Built `export.py` (Synapse-only): reads today's scores from app store, diffs against existing `dbo.Scores` in SQL on `(clientcode, scorecode, accountid, delinquencyid)`, inserts new, deletes stale immediately. Uses JDBC + PreparedStatement batches for deletes, Spark JDBC append for inserts. Can't test locally (needs `mssparkutils`).
+
+Also fixed multiple supporting modules during session: `featurestore.py` (baseurl typo, write_table signature), `clientstats/run.py` (SparkSession import, write_table), `union/run.py` (variable shadowing, dead references). Deleted obsolete `run_scores.py`.
+
+Open: deploy to Synapse (step 6 of work plan), cross-client analysis validation still pending reconciliation against canon.
+
+### 2026-05-11 — Filip escalation notebook review (narrow, owner: André)
+
+Reviewed Filip's docs/AKUVO_ESCALATION.ipynb — a production Synapse notebook that scores accounts 0–5 based on count of recently-DQ related accounts. Produced two reports in /docs: FILIP_ESCALATION_REVIEW.md (full comparative analysis vs canon methodology + our pipeline) and FILIP_VS_RUNPY.md (focused comparison of the two production-oriented pipelines: our pair-based un.py vs Filip's count-based scoring). Key findings: Filip's is a simpler point-in-time neighbour count (no pairs, no W/Z windows, no directionality, no outcome data), but has solid production infrastructure (Cosmos DB client discovery, change detection, shared scores table, structured logging). Our un.py preserves escalation pair structure with A/B roles and temporal constraints. Natural merge path: Filip's plumbing + our detection logic. Also flagged a hard bug (DQ_RECENT_LOOKBACK_DAYS undefined) and a stray expression in his notebook.

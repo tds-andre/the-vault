@@ -5,6 +5,7 @@ Almir
 Jeff
 Nando
 Fernando
+Alex
 
 Victor
 Pedro
