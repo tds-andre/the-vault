@@ -50,35 +50,20 @@ Filenames don't encode status — status lives in the directory.
 
 ---
 
-## Domains and Subdomains
+## Domains
 
-| Domain | Subdomains |
+| Domain | Scope |
 |---|---|
-| `professional` | janea, key-bridge, cocorico, ai-mastery |
-| `family` | brother, other |
-| `personal` | aesthetics, health, assets, skills, life, chores |
-| `ventures` | *(none — defaults to ventures)* |
-| `meta` | *(none — defaults to meta)* |
+| `professional` | Paid work, current jobs, deliberate skill building toward those jobs |
+| `family` | Relationships and obligations with family members |
+| `personal` | André's own body, mind, life, identity, social presence |
+| `assets` | Possessions, finances, legal/bureaucratic standing — what he owns or owes |
+| `ventures` | Business ideas, future plays, side ventures (not current jobs) |
+| `meta` | The system itself: agents, vault, OFP, tooling, operating layer |
 
-**Definitions:**
+**Subdomains are dynamic** — not prescribed by this spec. They emerge per domain as patterns surface (e.g. `professional/janea`, `personal/aesthetics`, `assets/management`). When a subdomain is `Other` or unclear, default to the domain name in the filename slot.
 
-- **professional** — paid work, current jobs, deliberate skill building toward those jobs.
-  - `janea` — Akuvo / Janea Systems work
-  - `key-bridge` — Key Bridge / CBRS / Jesse
-  - `cocorico` — Cocoricó (André is co-owner; treated as a job here)
-  - `ai-mastery` — deliberate AI/ML capability building (Jax-territory historically)
-- **family** — relationships and obligations with family members.
-  - `brother` — Enzo
-  - `other` — parents, extended family
-- **personal** — André's own body, mind, life, possessions, obligations.
-  - `aesthetics` — visual: skin, eye, jaw, dental, image
-  - `health` — medical: exams, meds, supplements, mental
-  - `assets` — possessions and what they need (moto, equipment, etc.)
-  - `skills` — non-professional capability building (languages, hobbies, social)
-  - `life` — fun stuff: trips, hobbies, experiences
-  - `chores` — bureaucracy, finance, logistics, errands
-- **ventures** — business ideas, future plays, side ventures (not current jobs).
-- **meta** — the system itself: agents, vault, OFP, tooling.
+Domains stabilize first; subdomains live in frontmatter and filename without ceremony.
 
 ---
 
@@ -92,14 +77,17 @@ Filenames don't encode status — status lives in the directory.
 | `program` | Biggest unit. Composition / life-level / ongoing strategic | No — cycles or evolves | **Yes** |
 | `evaluate` | Needs deliberation / evaluation | Yes — once resolved | No |
 | `skill` | Capability building | No — has milestones | No |
-| `routine` | Recurring task or behavior change | No — resets / cycles | No |
-| `special` | Container for items: lists, inboxes, collections | Special — see below | No |
+| `special` | Container for items: lists, inboxes, collections, routines | Special — see below | No |
 
 **Subtasks rule:** only `project` and `program` threads may have other Threads as formal subtasks (linked via frontmatter `parent:` from the child, listed in body of parent). Other types may *reference* other threads in their body but never as subordinated subtasks.
 
-**Special threads** are containers (lists of books, links to revisit, capture inbox, financial accounts list). They don't have a `next` action — they have items. Body uses `## Items` (or domain-appropriate header like `## Books`) instead of `## Subtasks`. Cockpit renders them as lists, not as projects.
+**Use markdown links liberally** between related Threads, back and forth. Forward link from parent listing, back-reference from any thread that touches the topic. Wikilink format: `[[YYMMDD-domain-subdomain-type-subject]]`.
 
-**Type history:** `system` was renamed to `program` (with semantic expansion to "biggest unit"); `decision` renamed to `evaluate`; `habit` merged into `routine`; `mission` redefined from "long endeavor" to "in-between action and project".
+**Special threads** are containers (lists of books, links to revisit, capture inbox, routines tracker, chores tracker, financial accounts list). They don't have a `next` action — they have items. Body uses `## Items` (or domain-appropriate header like `## Books`, `## Routines`) instead of `## Subtasks`. Cockpit renders them as lists, not as projects.
+
+**Routines have no type** — all recurring obligations live as items inside a single Routines special thread (`meta/routines`), regardless of which domain they belong to.
+
+**Type history:** `system` → `program` (semantic expansion to "biggest unit"); `decision` → `evaluate`; `habit` merged into `routine`; `routine` removed (absorbed into Routines special); `mission` redefined from "long endeavor" to "in-between action and project".
 
 ---
 

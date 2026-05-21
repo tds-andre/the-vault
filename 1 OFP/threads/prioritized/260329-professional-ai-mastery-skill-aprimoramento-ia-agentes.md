@@ -10,6 +10,7 @@ status: prioritized
 due:
 parent:
 ---
+Move from prioritized to active, and let's promote it to a program
 
 next: kickoff session with Jax this week
 

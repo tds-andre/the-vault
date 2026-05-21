@@ -10,6 +10,7 @@ status: active
 due:
 parent:
 ---
+Make this into a program.
 
 next: define first concrete step — publish, build in public, speak at events?
 

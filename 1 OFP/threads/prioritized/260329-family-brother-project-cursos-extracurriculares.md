@@ -12,14 +12,13 @@ parent:
 tags:
   - todo-in-rio
 ---
-
-next: follow up with father on English at CNA enrollment
+English course is postponed to next semester. Already did a bunch of things for my brother this month (bought tablet, patinete, album). We can move this from prioritized to active. And the type to program.
 
 ## Context
 Priority activities: English at CNA, piano, martial arts (Taekwondo/Muay Thai/JiuJitsu), scouts, coding/computers. Ideas pool also includes: drone, airsoft, archery, sailing, scuba, karting, theater. Goal: help Enzo develop into a happy, capable, smart person.
 
 ## Subtasks
-- [ ] follow up on English at CNA — already talked to father, pending enrollment
+- [x] follow up on English at CNA — already talked to father, pending enrollment
 - [ ] enroll in martial arts
 - [ ] enroll in piano
 

@@ -80,3 +80,65 @@ Picked up the handoff from a Sonnet session that did first-pass rewrites with `[
 - Cross-domain coherence check overdue — no weekly review since before v3 sprint.
 
 Commit will be André's per usual.
+
+
+### 2026-05-03 — 2026-05-08 — Cockpit arc + Thread review v1+v2 + Cockpit retirement (full, owner: André)
+
+Multi-day session spanning Cockpit experimentation, two passes of OFP thread review, and Cockpit retirement.
+
+**Cockpit arc:**
+- Explored JSX-as-artifact pattern (artifact-test.jsx at vault root, opened in Claude UI right pane — works).
+- Built v0.1 cockpit.jsx (Resurface view, sidebar nav, inline data snapshot).
+- Pivoted to fetch + file-picker fallback (CORS-blocked locally per expectation).
+- Pivoted to Cowork HTML artifact (gaia-cockpit) with live MCP via `window.cowork.callMcpTool('aae-mcp:read_folder', ...)`. Probe diagnosed 400 error across all path variations — root cause: **aae-mcp is not in Cowork artifact runtime's MCP allowlist** (separate from per-artifact mcp_tools whitelist). No setting found in Claude Desktop to change this.
+- Pivoted to scan.py + template HTML + inline data build. Functional but snapshot-only.
+- André chose to **retire the Cockpit** after the pivot — all files deleted from `2 Agents/Gaia/apps/cockpit/`. Cowork artifact `gaia-cockpit` needs manual removal via UI (no delete API). Features captured in chat as bullet-point spec for future revival.
+
+**Thread review v1 — mechanical migration (2026-05-03/04):**
+- Migrated 64 working-set threads to v3 schema (filesystem-as-index, YYMMDD-domain-subdomain-type-subject filename, status subdirs prioritized/active/captured/postponed/closed).
+- Domain reroutes: enzo → family/brother, building → ventures (later promoted to top-level), cocoroco → professional/cocorico, life → personal/{life,skills}, admin → personal/chores (later mostly → assets/*).
+- Subdomains assigned per content.
+- Thread System.md rewritten with v3 spec.
+- 22 postponed + 10 closed legacy files left for next pass.
+
+**Trip prep interlude (2026-05-04):** Curitiba accommodation switched (Bruno→Mariele/HMRA8D459D), rental car booked (#31477925 Localiza-style), physical credit cards confirmation reminder added — validated by rental pre-auth requirement.
+
+**Thread review v2 — semantic refinement (2026-05-08):**
+- André added `[A]:` annotations to 21 working-set threads.
+- Ontology v2 derived from his calls:
+  - `system` → `program` (with semantic expansion: biggest unit, composition or ongoing strategic)
+  - `decision` → `evaluate`
+  - `mission` redefined (in-between action and project)
+  - `habit` merged into `routine`, then `routine` retired entirely
+  - All routines now live as items in single `meta/routines` special
+  - `assets` promoted to top-level domain
+  - Subdomains made dynamic (not prescribed in spec)
+- Created 3 new threads: `meta/routines` (absorbs rudder/myconn/carsystem + aesthetic daily), `meta/chores` (absorbs devolver-keyway), `personal/aesthetics/face-revamp` (parent of eye/skin/qoves).
+- Created `cocorico-revamp` macro program (absorbs reuniao-rotina-time, parent of payroll/ajustar-cnpj/inventario-frango).
+- Closes: decisao-frango (superseded by revamp), leverage-popularity (not enough detail), toggl (with Resurface Queue reminder in scratchpad), venvanse (content folded into exames-medicos).
+- Type/status changes across ~10 more threads (back-pay→mission/prioritized with subtasks, weekly-review→program/active/maintenance/May 24, declarar-ir/limpar-nome→assets/management, etc).
+- `estrutura-learnings` dispatched to Apollo v2 inbox + closed.
+
+**Thread review v2 — legacy sweep (32 files):**
+- All 22 postponed + 10 closed legacy schema files migrated to v3 (mechanical).
+- Domain reroutes applied per new ontology (building → ventures, life → personal/skills or assets, etc).
+- Parent links updated where applicable (capability-building, decisao-frango).
+
+**Cleanup:**
+- `Thread Index.md` deleted (filesystem is the index).
+- `Thread Base.base` patched: `updated` → `updated_on`. Folder filter validation flagged in scratchpad.
+- `2 Agents/Gaia/apps/cockpit/` emptied.
+- Cowork artifact gaia-cockpit pending manual removal.
+
+**New surfaces created this session:**
+- `notes/scratchpad.md` — working surface for in-flight observations, side quests, resurface queue. Promotion/folding/pruning during offload.
+- Concept "Program" formally surfaced (in scratchpad — not yet a spec construct, still incubating).
+
+**Carry-forwards (now in state.md open loops):**
+- Cockpit live-data path blocked at Cowork allowlist
+- Side quests pile in scratchpad
+- Per-agent registry anchors propagation (still pending)
+- Weekly review restart 2026-05-24
+- Cocorico-revamp first execution sweep
+
+Apollo got a v3→v2 message (rare crossover, explicitly requested by André). Commit deferred per usual.

@@ -8,7 +8,7 @@ subdomain: aesthetics
 type: action
 status: active
 due:
-parent:
+parent: [[260508-personal-aesthetics-project-face-revamp]]
 ---
 
 next: upload additional photos to QOVES for surgical recommendations

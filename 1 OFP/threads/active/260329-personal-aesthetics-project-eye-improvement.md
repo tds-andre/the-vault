@@ -8,7 +8,7 @@ subdomain: aesthetics
 type: project
 status: active
 due:
-parent:
+parent: [[260508-personal-aesthetics-project-face-revamp]]
 ---
 
 next: start routine when products arrive April 15

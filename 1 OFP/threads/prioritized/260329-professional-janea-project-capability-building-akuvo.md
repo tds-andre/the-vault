@@ -5,11 +5,12 @@ updated_on: 2026-05-03
 updated_by: Gaia (cockpit refactor)
 domain: professional
 subdomain: janea
-type: project
+type: mission
 status: prioritized
 due:
 parent:
 ---
+Close this. It is on top of mind and doesn't have enough details to be worth keeping.
 
 next: consolidate scattered notes into a single document
 

@@ -9,7 +9,7 @@ views:
       - domain
       - status
       - type
-      - updated
+      - updated_on
     sort:
       - property: status
         direction: DESC
@@ -29,7 +29,7 @@ views:
       - domain
       - status
       - type
-      - updated
+      - updated_on
       - file.links
       - file.backlinks
       - file.ctime

@@ -1,0 +1,28 @@
+- [x] Impressão
+	- [x] Seguro Viagem (Itau)
+	- [x] Seguro Mergulho
+	- [x] Taxa Natureza
+	- [ ] Taxa Visitação
+	- [x] Certificado Mergulhador
+	- [x] Tickets Viagem
+	- [ ] DiCard Curaçao
+	- [ ] CNH Física
+	- [ ] Óculos de Sol
+- [ ] Passaporte
+- [ ] Dolares
+- [ ] Equipamento
+	- [ ] Bolso (comprado)
+	- [ ] Mordedor (comprado)
+	- [ ] <strike>Computador</strike>
+	- [ ] Bolsa (comprado)
+	- [ ] Consertar colete
+- [ ] Mala (verde + grande (bolsa dentro) + mochila)
+	- [ ] Roupas sociais
+	- [ ] Roupas de mergulho
+	- [ ] Acessórios
+	- [ ] Necesserie
+	- [ ] Notebook
+	- [ ] Pasta de documentos
+	- [ ] Camera
+	- [ ] Cabos e carregadores
+- [ ] Chegar 3h antes no aeroporto + check-in online

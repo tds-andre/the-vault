@@ -10,6 +10,7 @@ status: active
 due: 2026-04-08
 parent:
 ---
+This is done, close it. We have to figure out a way for you to be more proactive in closing Threads (but also precise).
 
 next: working prototype of new MVP definition ready for Monday morning
 

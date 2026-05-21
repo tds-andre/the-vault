@@ -4,6 +4,9 @@ updated_on: '2026-05-04'
 ---
 
 - add ai ops assistant to cocorisuite
+- cirurgia refrativa está nas threads?
+- existe thread para eu me alavancar digitalmente para fins professionais?
+- falar com Sofia
 
 
 

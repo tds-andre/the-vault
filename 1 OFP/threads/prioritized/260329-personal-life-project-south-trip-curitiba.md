@@ -10,6 +10,7 @@ status: prioritized
 due: 2026-05-05
 parent:
 ---
+This is done. Move to closed.
 
 next: book accommodation Curitiba May 5-9
 

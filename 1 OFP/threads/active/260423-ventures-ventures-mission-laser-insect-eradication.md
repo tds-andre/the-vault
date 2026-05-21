@@ -11,6 +11,10 @@ due:
 parent:
 ---
 
+domain: professional, subdomain: ventures
+
+Move this to postponed
+
 next: research existing technology + define MVP for fixed station prototype
 
 ## Context

@@ -10,6 +10,9 @@ status: prioritized
 due: 2026-05-29
 parent:
 ---
+All tickets are bought. New todo:
+- leave insta 360 config/learning for the flight; anything that should be set up on land (e.g. charging)?
+
 
 next: buy Rio → Curaçao tickets (Copa Airlines via Panama, May 30 dep 5:10am GIG)
 
@@ -35,7 +38,7 @@ Diving trip to Bonaire via Curaçao. All flights confirmed via Copa Airlines.
 - [x] confirm timing ok with agency ✔
 - [x] book accommodation Bonaire May 30 → Jun 6 — Buddy Dive Resort ✅
 - [ ] book accommodation Panama Jun 6-8 (2 nights)
-- [ ] buy/fix equipment: bolso colete, válvula colete, mordedor do segundo estágio principal, computador de mergulho
+- [ ] buy/fix equipment: bolso colete, válvula colete, mordedor do segundo estágio principal, computador de mergulho, mala de equipamentos
 - [ ] review equipment
 - [ ] make list of travel items (including laptop)
 

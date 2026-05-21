@@ -10,6 +10,9 @@ status: active
 due:
 parent:
 ---
+domain: professional, subdomain: ventures
+
+This is a program.
 
 next: open Laix session — 5 drafts already exist, start with offer refinement and site
 
